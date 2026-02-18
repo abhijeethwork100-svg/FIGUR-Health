@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Referral Programme — Figur Health</title>
+  <meta name="description" content="Refer a friend to Figur Health and earn free Mounjaro vials or 25% off your next kit. Simple, transparent rewards." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --navy: #0A192F;
+      --navy-mid: #112240;
+      --navy-light: #1a2f52;
+      --gold: #D4AF37;
+      --gold-light: rgba(212,175,55,0.12);
+      --gold-border: rgba(212,175,55,0.25);
+      --white: #FAFAFA;
+      --text: #1a1a2e;
+      --text-muted: #4a5568;
+      --grey-50: #f8f9fa;
+      --grey-100: #e9ecef;
+      --grey-200: #dee2e6;
+      --radius: 16px;
+      --radius-sm: 10px;
+      --shadow: 0 4px 24px rgba(10,25,47,0.10);
+      --shadow-lg: 0 20px 60px rgba(10,25,47,0.18);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.6; }
+    h1,h2,h3,h4 { font-family: 'Montserrat', sans-serif; letter-spacing: -0.02em; }
+    a { color: inherit; text-decoration: none; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+    .section { padding: 80px 0; }
+
+    /* ── NAV ── */
+    .nav { position: sticky; top: 0; z-index: 100; background: var(--navy); border-bottom: 1px solid rgba(255,255,255,0.06); }
+    .nav__inner { display: flex; align-items: center; justify-content: space-between; height: 68px; }
+    .nav__logo { display: flex; align-items: center; gap: 10px; }
+    .nav__logo-mark { width: 34px; height: 34px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 0.75rem; color: var(--navy); letter-spacing: 0.02em; }
+    .nav__logo-text { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1rem; color: var(--white); letter-spacing: 0.04em; }
+    .nav__logo-text span { color: var(--gold); }
+    .nav__links { display: flex; gap: 28px; list-style: none; }
+    .nav__links a { font-size: 0.85rem; font-weight: 500; color: rgba(255,255,255,0.72); transition: color 0.2s; }
+    .nav__links a:hover, .nav__links a.active { color: var(--gold); }
+    .nav__cta { background: var(--gold); color: var(--navy); font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.8rem; padding: 9px 20px; border-radius: 100px; letter-spacing: 0.04em; transition: opacity 0.2s; }
+    .nav__cta:hover { opacity: 0.88; }
+
+    /* ── HERO ── */
+    .hero { background: var(--navy); padding: 80px 0 70px; text-align: center; position: relative; overflow: hidden; }
+    .hero::before { content: ''; position: absolute; inset: 0; background: radial-gradient(ellipse at 50% 0%, rgba(212,175,55,0.08) 0%, transparent 70%); pointer-events: none; }
+    .hero__eyebrow { display: inline-flex; align-items: center; gap: 8px; background: var(--gold-light); border: 1px solid var(--gold-border); border-radius: 100px; padding: 6px 16px; font-size: 0.75rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold); margin-bottom: 28px; }
+    .hero h1 { font-size: clamp(2.2rem, 5vw, 3.4rem); font-weight: 900; color: var(--white); margin-bottom: 20px; line-height: 1.1; }
+    .hero h1 span { color: var(--gold); }
+    .hero__sub { font-size: 1.1rem; color: rgba(255,255,255,0.65); max-width: 560px; margin: 0 auto 48px; line-height: 1.7; }
+    .gold-rule { width: 56px; height: 3px; background: var(--gold); margin: 0 auto 48px; border-radius: 2px; }
+
+    /* ── REWARD CARDS ── */
+    .rewards-section { padding: 80px 0; background: var(--grey-50); }
+    .section-title { text-align: center; margin-bottom: 60px; }
+    .section-title .eyebrow { display: inline-block; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold); margin-bottom: 12px; }
+    .section-title h2 { font-size: clamp(1.8rem, 3vw, 2.4rem); color: var(--navy); margin-bottom: 12px; }
+    .section-title p { color: var(--text-muted); font-size: 0.95rem; max-width: 520px; margin: 0 auto; }
+
+    .rewards-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; max-width: 860px; margin: 0 auto; }
+
+    .reward-card { background: var(--white); border-radius: var(--radius); box-shadow: var(--shadow-lg); overflow: hidden; display: flex; flex-direction: column; border: 1px solid var(--grey-100); transition: transform 0.2s, box-shadow 0.2s; }
+    .reward-card:hover { transform: translateY(-4px); box-shadow: 0 28px 80px rgba(10,25,47,0.22); }
+
+    .reward-card__header { background: var(--navy); padding: 32px 32px 28px; position: relative; }
+    .reward-card__header::after { content: ''; position: absolute; bottom: 0; left: 0; right: 0; height: 3px; background: var(--gold); }
+    .reward-card__icon { width: 56px; height: 56px; background: rgba(212,175,55,0.15); border: 1.5px solid var(--gold-border); border-radius: 14px; display: flex; align-items: center; justify-content: center; font-size: 1.6rem; margin-bottom: 18px; }
+    .reward-card__name { font-size: 0.68rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
+    .reward-card__title { font-size: 1.35rem; font-weight: 800; color: var(--white); line-height: 1.2; }
+    .reward-card__subtitle { font-size: 0.88rem; color: rgba(255,255,255,0.55); margin-top: 8px; line-height: 1.5; }
+
+    .reward-card__body { padding: 32px; flex: 1; display: flex; flex-direction: column; gap: 24px; }
+
+    .reward-block { background: var(--grey-50); border-radius: var(--radius-sm); padding: 20px; border: 1px solid var(--grey-100); }
+    .reward-block__label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+    .reward-block__value { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--navy); line-height: 1.4; }
+
+    .trigger-block { background: rgba(10,25,47,0.04); border-radius: var(--radius-sm); padding: 20px; border: 1px solid rgba(10,25,47,0.08); }
+    .trigger-block__label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-muted); margin-bottom: 8px; }
+    .trigger-block__value { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--navy); line-height: 1.4; }
+
+    /* "YOUR REWARD" highlighted block */
+    .your-reward { background: linear-gradient(135deg, rgba(212,175,55,0.14) 0%, rgba(212,175,55,0.06) 100%); border: 1.5px solid var(--gold-border); border-radius: var(--radius-sm); padding: 22px 20px; }
+    .your-reward__label { font-size: 0.65rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #7a5c00; margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .your-reward__value { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--navy); line-height: 1.3; }
+    .your-reward__note { font-size: 0.8rem; color: var(--text-muted); margin-top: 6px; }
+
+    .reward-card__footer { padding: 0 32px 28px; }
+    .btn-share { display: block; width: 100%; text-align: center; background: var(--navy); color: var(--white); font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.85rem; padding: 14px 20px; border-radius: 100px; letter-spacing: 0.04em; transition: background 0.2s, transform 0.15s; }
+    .btn-share:hover { background: var(--navy-light); transform: translateY(-1px); }
+
+    /* ── HOW IT WORKS ── */
+    .how-section { background: var(--navy); padding: 80px 0; }
+    .how-section .section-title h2 { color: var(--white); }
+    .how-section .section-title p { color: rgba(255,255,255,0.6); }
+    .how-section .eyebrow { color: var(--gold); }
+
+    .steps-row { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; margin-top: 56px; position: relative; }
+    .steps-row::before { content: ''; position: absolute; top: 28px; left: 10%; right: 10%; height: 1px; background: linear-gradient(90deg, transparent, rgba(212,175,55,0.35), rgba(212,175,55,0.35), transparent); pointer-events: none; }
+
+    .step-card { text-align: center; position: relative; }
+    .step-card__num { width: 56px; height: 56px; border-radius: 50%; background: rgba(212,175,55,0.12); border: 1.5px solid var(--gold-border); display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem; color: var(--gold); margin: 0 auto 20px; }
+    .step-card__title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem; color: var(--white); margin-bottom: 10px; }
+    .step-card__desc { font-size: 0.85rem; color: rgba(255,255,255,0.55); line-height: 1.6; }
+
+    /* ── TERMS ── */
+    .terms-section { padding: 64px 0; }
+    .terms-box { max-width: 760px; margin: 0 auto; background: var(--white); border: 1px solid var(--grey-200); border-radius: var(--radius); padding: 36px 40px; box-shadow: var(--shadow); }
+    .terms-box h3 { font-size: 1rem; color: var(--navy); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--grey-100); }
+    .terms-box ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .terms-box li { font-size: 0.875rem; color: var(--text-muted); display: flex; gap: 10px; line-height: 1.6; }
+    .terms-box li::before { content: '—'; color: var(--gold); flex-shrink: 0; font-weight: 700; }
+
+    /* ── CTA ── */
+    .cta-banner { background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%); padding: 80px 0; text-align: center; }
+    .cta-banner h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--white); margin-bottom: 16px; }
+    .cta-banner p { color: rgba(255,255,255,0.65); font-size: 1rem; margin-bottom: 36px; }
+    .btn-primary { display: inline-block; background: var(--gold); color: var(--navy); font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.9rem; padding: 15px 36px; border-radius: 100px; letter-spacing: 0.04em; transition: opacity 0.2s, transform 0.15s; }
+    .btn-primary:hover { opacity: 0.88; transform: translateY(-2px); }
+    .btn-ghost { display: inline-block; border: 1.5px solid rgba(212,175,55,0.4); color: rgba(255,255,255,0.8); font-family: 'Montserrat', sans-serif; font-weight: 600; font-size: 0.88rem; padding: 14px 28px; border-radius: 100px; margin-left: 14px; transition: border-color 0.2s, color 0.2s; }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+
+    /* ── FOOTER ── */
+    .footer { background: #060f1e; color: rgba(255,255,255,0.45); padding: 48px 0 32px; }
+    .footer__inner { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+    .footer__brand p { font-size: 0.85rem; line-height: 1.7; margin-top: 12px; }
+    .footer__col h4 { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.78rem; letter-spacing: 0.08em; text-transform: uppercase; color: rgba(255,255,255,0.7); margin-bottom: 14px; }
+    .footer__col ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .footer__col a { font-size: 0.85rem; transition: color 0.2s; }
+    .footer__col a:hover { color: var(--gold); }
+    .footer__bottom { border-top: 1px solid rgba(255,255,255,0.07); padding-top: 24px; font-size: 0.78rem; display: flex; justify-content: space-between; align-items: center; }
+    .footer__logo { display: flex; align-items: center; gap: 8px; margin-bottom: 12px; }
+    .footer__logo-mark { width: 28px; height: 28px; background: var(--gold); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: 'Montserrat', sans-serif; font-weight: 900; font-size: 0.65rem; color: var(--navy); }
+    .footer__logo-text { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 0.9rem; color: rgba(255,255,255,0.85); }
+    .footer__logo-text span { color: var(--gold); }
+
+    @media (max-width: 768px) {
+      .nav__links, .nav__cta { display: none; }
+      .rewards-grid { grid-template-columns: 1fr; }
+      .steps-row { grid-template-columns: 1fr 1fr; }
+      .steps-row::before { display: none; }
+      .footer__inner { grid-template-columns: 1fr 1fr; }
+      .btn-ghost { display: block; margin: 12px auto 0; width: fit-content; }
+      .terms-box { padding: 24px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo">
+          <div class="nav__logo-mark">FH</div>
+          <span class="nav__logo-text">FIGUR <span>HEALTH</span></span>
+        </a>
+        <ul class="nav__links">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-pricing.html">Pricing</a></li>
+          <li><a href="new-health-guide.html">Health Guide</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="referral.html" class="active">Referral</a></li>
+        </ul>
+        <a href="medical-quiz.html" class="nav__cta">Check Eligibility</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero__eyebrow">
+        🎁 Referral Programme
+      </div>
+      <h1>Share Figur Health.<br/><span>Earn real rewards.</span></h1>
+      <p class="hero__sub">When a friend you refer joins Figur Health and makes their first purchase, you both win — every time.</p>
+      <div class="gold-rule"></div>
+    </div>
+  </section>
+
+  <!-- REWARD CARDS -->
+  <section class="rewards-section">
+    <div class="container">
+      <div class="section-title">
+        <div class="eyebrow">Two Ways to Earn</div>
+        <h2>Choose your reward</h2>
+        <p>We offer two distinct rewards depending on what your friend purchases. The bigger their commitment, the bigger your reward.</p>
+      </div>
+
+      <div class="rewards-grid">
+
+        <!-- CARD 1: Taste Test Reward -->
+        <div class="reward-card">
+          <div class="reward-card__header">
+            <div class="reward-card__icon">🧪</div>
+            <div class="reward-card__name">Reward One</div>
+            <div class="reward-card__title">The Taste Test<br/>Reward</div>
+            <div class="reward-card__subtitle">For when a friend wants to try just one vial to see how it goes.</div>
+          </div>
+
+          <div class="reward-card__body">
+            <div class="trigger-block">
+              <div class="trigger-block__label">⚡ The Trigger</div>
+              <div class="trigger-block__value">Your referral buys a <strong>Single Vial</strong> (any dose).</div>
+            </div>
+
+            <div class="your-reward">
+              <div class="your-reward__label">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="#D4AF37"><path d="M6.5 0L8.2 4.7L13 5.1L9.5 8.1L10.6 12.8L6.5 10.5L2.4 12.8L3.5 8.1L0 5.1L4.8 4.7L6.5 0Z"/></svg>
+                Your Reward
+              </div>
+              <div class="your-reward__value">A FREE 2.5mg Mounjaro Vial</div>
+              <div class="your-reward__note">Automatically added to your next shipment. No code needed — we'll track it.</div>
+            </div>
+
+            <div style="background:var(--grey-50); border-radius:var(--radius-sm); padding:16px 18px; border:1px solid var(--grey-100);">
+              <div style="font-size:0.78rem; color:var(--text-muted); line-height:1.65;">
+                Perfect for friends who want to ease in. They try one vial, you get your starter dose on us. Win-win from day one.
+              </div>
+            </div>
+          </div>
+
+          <div class="reward-card__footer">
+            <a href="medical-quiz.html" class="btn-share">Share &amp; Earn a Free Vial</a>
+          </div>
+        </div>
+
+        <!-- CARD 2: Commitment Reward -->
+        <div class="reward-card" style="border-color:var(--gold-border);">
+          <div class="reward-card__header" style="background: linear-gradient(135deg, var(--navy) 0%, #0e2040 100%);">
+            <div class="reward-card__icon" style="background:rgba(212,175,55,0.22); border-color:var(--gold);">💎</div>
+            <div class="reward-card__name">Reward Two</div>
+            <div class="reward-card__title">The Commitment<br/>Reward</div>
+            <div class="reward-card__subtitle">For when a friend is ready to fully commit to their transformation.</div>
+          </div>
+
+          <div class="reward-card__body">
+            <div class="trigger-block">
+              <div class="trigger-block__label">⚡ The Trigger</div>
+              <div class="trigger-block__value">Your referral buys a <strong>1-Month Kit</strong> (4 vials, any dose).</div>
+            </div>
+
+            <div class="your-reward" style="background: linear-gradient(135deg, rgba(212,175,55,0.20) 0%, rgba(212,175,55,0.08) 100%); border-color: var(--gold);">
+              <div class="your-reward__label">
+                <svg width="13" height="13" viewBox="0 0 13 13" fill="#D4AF37"><path d="M6.5 0L8.2 4.7L13 5.1L9.5 8.1L10.6 12.8L6.5 10.5L2.4 12.8L3.5 8.1L0 5.1L4.8 4.7L6.5 0Z"/></svg>
+                Your Reward
+              </div>
+              <div class="your-reward__value" style="font-size:1.3rem; color:var(--navy);">25% OFF Your Next<br/>Monthly Kit</div>
+              <div class="your-reward__note">Valid on any dose. Applied automatically at checkout. No expiry.</div>
+            </div>
+
+            <div style="background:var(--grey-50); border-radius:var(--radius-sm); padding:16px 18px; border:1px solid var(--grey-100);">
+              <div style="font-size:0.78rem; color:var(--text-muted); line-height:1.65;">
+                Your friend commits to a full month, you save a quarter of your next monthly kit — regardless of which dose you're on. No cap on how many times you can earn.
+              </div>
+            </div>
+          </div>
+
+          <div class="reward-card__footer">
+            <a href="medical-quiz.html" class="btn-share" style="background: var(--gold); color: var(--navy);">Share &amp; Earn 25% Off</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Summary comparison strip -->
+      <div style="max-width:860px; margin:36px auto 0; background:var(--white); border:1px solid var(--grey-200); border-radius:var(--radius-sm); overflow:hidden; box-shadow:var(--shadow);">
+        <table style="width:100%; border-collapse:collapse;">
+          <thead>
+            <tr style="background:var(--navy);">
+              <th style="padding:14px 20px; text-align:left; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5);">Reward</th>
+              <th style="padding:14px 20px; text-align:left; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.5);">Friend Purchases</th>
+              <th style="padding:14px 20px; text-align:left; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; color:var(--gold);">You Receive</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr style="border-bottom:1px solid var(--grey-100);">
+              <td style="padding:16px 20px; font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.88rem; color:var(--navy);">🧪 Taste Test Reward</td>
+              <td style="padding:16px 20px; font-size:0.875rem; color:var(--text-muted);">Single Vial (any dose)</td>
+              <td style="padding:16px 20px; font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.88rem; color:var(--navy);">FREE 2.5mg Vial</td>
+            </tr>
+            <tr>
+              <td style="padding:16px 20px; font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.88rem; color:var(--navy);">💎 Commitment Reward</td>
+              <td style="padding:16px 20px; font-size:0.875rem; color:var(--text-muted);">1-Month Kit (4 vials)</td>
+              <td style="padding:16px 20px; font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.88rem; color:var(--navy);">25% Off Your Next Monthly Kit</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how-section">
+    <div class="container">
+      <div class="section-title">
+        <div class="eyebrow">How It Works</div>
+        <h2>Four simple steps</h2>
+        <p>No codes, no paperwork. Our system tracks everything automatically.</p>
+      </div>
+
+      <div class="steps-row">
+        <div class="step-card">
+          <div class="step-card__num">01</div>
+          <div class="step-card__title">Share your link</div>
+          <div class="step-card__desc">Get your personal referral link from your Figur Health account page and share it with friends, family, or followers.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-card__num">02</div>
+          <div class="step-card__title">Friend signs up</div>
+          <div class="step-card__desc">Your friend clicks your link, completes the medical quiz, and gets approved. They're now tagged as your referral.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-card__num">03</div>
+          <div class="step-card__title">They make a purchase</div>
+          <div class="step-card__desc">When your friend buys their first vial or monthly kit, the corresponding reward is triggered automatically.</div>
+        </div>
+        <div class="step-card">
+          <div class="step-card__num">04</div>
+          <div class="step-card__title">You get rewarded</div>
+          <div class="step-card__desc">Your free vial is added to your next shipment, or your 25% discount is applied to your next monthly kit — no action needed.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TERMS -->
+  <section class="terms-section">
+    <div class="container">
+      <div class="terms-box">
+        <h3>Programme Terms &amp; Conditions</h3>
+        <ul>
+          <li>Referral rewards are only triggered by a friend's <em>first</em> qualifying purchase through your unique referral link.</li>
+          <li>The Taste Test Reward (free 2.5mg vial) is added to your next scheduled shipment and cannot be exchanged for cash or credit.</li>
+          <li>The Commitment Reward (25% discount) is applied to your next monthly kit order of any dose. There is no cap on the number of referrals that can earn this reward.</li>
+          <li>Both rewards are void if the referred friend's account is found to be a duplicate, fraudulent, or associated with an existing member.</li>
+          <li>Figur Health reserves the right to modify or discontinue the referral programme at any time with 30 days' notice.</li>
+          <li>Rewards cannot be combined with other promotional discounts unless explicitly stated.</li>
+          <li>The referral programme is open to active Figur Health members only (i.e. you must have made at least one purchase yourself).</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA BANNER -->
+  <section class="cta-banner">
+    <div class="container">
+      <h2>Start referring today</h2>
+      <p>Your referral link is waiting in your account. Share it anywhere — WhatsApp, Instagram, or just a message to a friend who's been curious about Mounjaro.</p>
+      <a href="medical-quiz.html" class="btn-primary">Get My Referral Link</a>
+      <a href="new-pricing.html" class="btn-ghost">View Pricing</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <div class="footer__logo">
+            <div class="footer__logo-mark">FH</div>
+            <span class="footer__logo-text">FIGUR <span>HEALTH</span></span>
+          </div>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col">
+          <h4>Programme</h4>
+          <ul>
+            <li><a href="new-programme.html">How it works</a></li>
+            <li><a href="new-science.html">The science</a></li>
+            <li><a href="new-pricing.html">Pricing</a></li>
+            <li><a href="referral.html">Refer a friend</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Medication</h4>
+          <ul>
+            <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+            <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+            <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+            <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4>Support</h4>
+          <ul>
+            <li><a href="new-faqs.html">FAQs</a></li>
+            <li><a href="new-health-guide.html">Health Guide</a></li>
+            <li><a href="medical-quiz.html">Eligibility Quiz</a></li>
+            <li><a href="new-success-stories.html">Success Stories</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2026 Figur Health. Referral programme subject to terms. Always follow your doctor's advice.</span>
+        <span>Powered by clinical science.</span>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

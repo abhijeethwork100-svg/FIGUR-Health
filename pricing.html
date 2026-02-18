@@ -162,24 +162,28 @@
 </head>
 <body>
 
-  <!-- NAV -->
-  <nav class="nav">
+    <!-- NAV -->
+  <nav class="nav" style="position:sticky;top:0;z-index:100;background:#0A192F;border-bottom:1px solid rgba(255,255,255,0.06);">
     <div class="container">
-      <div class="nav__inner">
+      <div class="nav__inner" style="display:flex;align-items:center;justify-content:space-between;height:68px;">
         <a href="index.html" class="nav__logo">
-          <img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img" style="height:44px;background:#FAFAFA;border-radius:8px;padding:3px 6px;" />
-          <span class="nav__logo-text" style="display:flex;flex-direction:column;line-height:1;"><span class="logo-name" style="font-family:Montserrat,sans-serif;font-weight:800;font-size:1.1rem;color:#FAFAFA;letter-spacing:-0.02em;">Figur<span style="color:#D4AF37;">.</span></span><span style="font-family:Montserrat,sans-serif;font-size:0.6rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(212,175,55,0.7);margin-top:2px;">Health</span></span>
+          <img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img" style="height:44px;background:#FAFAFA;border-radius:8px;padding:3px 6px;flex-shrink:0;" />
+          <span class="nav__logo-text" style="display:flex;flex-direction:column;line-height:1;">
+            <span style="font-family:Montserrat,sans-serif;font-weight:800;font-size:1.1rem;color:#FAFAFA;letter-spacing:-0.02em;">Figur<span style="color:#D4AF37;">.</span></span>
+            <span style="font-family:Montserrat,sans-serif;font-size:0.6rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:rgba(212,175,55,0.7);margin-top:2px;">Health</span>
+          </span>
         </a>
-        <ul class="nav__links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="programme.html">Programme</a></li>
-          <li><a href="science.html">Science</a></li>
-          <li><a href="pricing.html" class="active">Pricing</a></li>
-          <li><a href="health-guide.html">Health Guide</a></li>
-          <li><a href="faqs.html">FAQs</a></li>
-          <li><a href="referral.html">Referral</a></li>
+        <ul class="nav__links" id="navLinks" style="display:flex;gap:24px;list-style:none;">
+          <li><a href="index.html" style="font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.72);">Home</a></li>
+          <li><a href="programme.html" style="font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.72);">Programme</a></li>
+          <li><a href="science.html" style="font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.72);">Science</a></li>
+          <li><a href="health-guide.html" style="font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.72);">Health Guide</a></li>
+          <li><a href="success-stories.html" style="font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.72);">Success Stories</a></li>
+          <li><a href="faqs.html" style="font-size:0.85rem;font-weight:500;color:rgba(255,255,255,0.72);">FAQs</a></li>
+          <li><a href="pricing.html" style="font-size:0.85rem;font-weight:500;color:#D4AF37;">Pricing</a></li>
         </ul>
-        <a href="medical-quiz.html" class="nav__cta">Check Eligibility</a>
+        <a href="programme.html" class="nav__cta" style="background:#D4AF37;color:#0A192F;font-family:Montserrat,sans-serif;font-weight:700;font-size:0.8rem;padding:9px 20px;border-radius:100px;letter-spacing:0.04em;text-decoration:none;">Check Eligibility</a>
+        <button id="hamburger" style="display:none;background:none;border:none;cursor:pointer;padding:8px;"><span style="display:block;width:22px;height:2px;background:#FAFAFA;margin:4px 0;"></span><span style="display:block;width:22px;height:2px;background:#FAFAFA;margin:4px 0;"></span><span style="display:block;width:22px;height:2px;background:#FAFAFA;margin:4px 0;"></span></button>
       </div>
     </div>
   </nav>

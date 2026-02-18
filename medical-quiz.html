@@ -813,9 +813,43 @@
       </div>
     </div>
 
-    <!-- STEP 2: BMI -->
+    <!-- STEP 2: Biological Sex -->
     <div class="step-card" id="step-2">
-      <div class="step-number">Question 2 of 8</div>
+      <div class="step-number">Question 2 of 9</div>
+      <div class="step-question">What is your biological sex?</div>
+      <div class="step-hint">This is medically relevant for GLP-1 dosing, hormonal conditions like PCOS, and pregnancy
+        screening.</div>
+      <div class="options-grid two-col">
+        <button class="option-btn" onclick="selectOption(this, 'sex', 'male', 'ok')">
+          <span class="opt-icon">♂️</span>
+          <span class="opt-text"><strong>Male</strong></span>
+          <span class="check"></span>
+        </button>
+        <button class="option-btn" onclick="selectOption(this, 'sex', 'female', 'ok')">
+          <span class="opt-icon">♀️</span>
+          <span class="opt-text"><strong>Female</strong></span>
+          <span class="check"></span>
+        </button>
+        <button class="option-btn" onclick="selectOption(this, 'sex', 'intersex', 'ok')">
+          <span class="opt-icon">⚧️</span>
+          <span class="opt-text"><strong>Intersex</strong></span>
+          <span class="check"></span>
+        </button>
+        <button class="option-btn" onclick="selectOption(this, 'sex', 'prefer_not', 'ok')">
+          <span class="opt-icon">🔒</span>
+          <span class="opt-text"><strong>Prefer not to say</strong></span>
+          <span class="check"></span>
+        </button>
+      </div>
+      <div class="step-nav">
+        <button class="btn-back" onclick="prevStep(1)">← Back</button>
+        <button class="btn-next" id="next-2" disabled onclick="nextStep(3)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- STEP 3: BMI -->
+    <div class="step-card" id="step-3">
+      <div class="step-number">Question 3 of 9</div>
       <div class="step-question">What is your height and weight?</div>
       <div class="step-hint">We use this to calculate your BMI. GLP-1 treatment is typically recommended for a BMI of
         27+ with a health condition, or 30+ without.</div>
@@ -838,59 +872,53 @@
         <div style="font-size:1.5rem;" id="bmiEmoji">📊</div>
       </div>
       <div class="step-nav">
-        <button class="btn-back" onclick="prevStep(1)">← Back</button>
-        <button class="btn-next" id="next-2" disabled onclick="nextStep(3)">Continue →</button>
-      </div>
-    </div>
-
-    <!-- STEP 3: Health Conditions -->
-    <div class="step-card" id="step-3">
-      <div class="step-number">Question 3 of 8</div>
-      <div class="step-question">Do you have any of these health conditions?</div>
-      <div class="step-hint">Select all that apply. Having a weight-related condition may make you eligible even at a
-        lower BMI.</div>
-      <div id="conditions-list">
-        <label class="checkbox-option" onclick="toggleCheck(this, 'conditions')">
-          <input type="checkbox" value="t2d">
-          <span class="custom-checkbox"></span>
-          <span class="checkbox-label">Type 2 Diabetes <small>Or pre-diabetes / high blood sugar</small></span>
-        </label>
-        <label class="checkbox-option" onclick="toggleCheck(this, 'conditions')">
-          <input type="checkbox" value="hbp">
-          <span class="custom-checkbox"></span>
-          <span class="checkbox-label">High Blood Pressure <small>Hypertension, on medication or
-              uncontrolled</small></span>
-        </label>
-        <label class="checkbox-option" onclick="toggleCheck(this, 'conditions')">
-          <input type="checkbox" value="cholesterol">
-          <span class="custom-checkbox"></span>
-          <span class="checkbox-label">High Cholesterol <small>Elevated LDL or triglycerides</small></span>
-        </label>
-        <label class="checkbox-option" onclick="toggleCheck(this, 'conditions')">
-          <input type="checkbox" value="sleep_apnea">
-          <span class="custom-checkbox"></span>
-          <span class="checkbox-label">Sleep Apnoea <small>Obstructive sleep apnoea or snoring</small></span>
-        </label>
-        <label class="checkbox-option" onclick="toggleCheck(this, 'conditions')">
-          <input type="checkbox" value="pcos">
-          <span class="custom-checkbox"></span>
-          <span class="checkbox-label">PCOS <small>Polycystic ovary syndrome</small></span>
-        </label>
-        <label class="checkbox-option" onclick="toggleCheck(this, 'conditions')">
-          <input type="checkbox" value="none">
-          <span class="custom-checkbox"></span>
-          <span class="checkbox-label">None of the above</span>
-        </label>
-      </div>
-      <div class="step-nav">
         <button class="btn-back" onclick="prevStep(2)">← Back</button>
         <button class="btn-next" id="next-3" disabled onclick="nextStep(4)">Continue →</button>
       </div>
     </div>
 
-    <!-- STEP 4: Previous Attempts -->
+    <!-- STEP 4: Health Conditions -->
     <div class="step-card" id="step-4">
-      <div class="step-number">Question 4 of 8</div>
+      <div class="step-number">Question 4 of 9</div>
+      <div class="step-question">Do you have any of these health conditions?</div>
+      <div class="step-hint">Select all that apply. Having a weight-related condition may make you eligible even at a
+        lower BMI.</div>
+      <div id="conditions-list">
+        <div class="checkbox-option" onclick="toggleCheck(this, 'conditions')" data-value="t2d">
+          <span class="custom-checkbox"></span>
+          <span class="checkbox-label">Type 2 Diabetes <small>Or pre-diabetes / high blood sugar</small></span>
+        </div>
+        <div class="checkbox-option" onclick="toggleCheck(this, 'conditions')" data-value="hbp">
+          <span class="custom-checkbox"></span>
+          <span class="checkbox-label">High Blood Pressure <small>Hypertension, on medication or
+              uncontrolled</small></span>
+        </div>
+        <div class="checkbox-option" onclick="toggleCheck(this, 'conditions')" data-value="cholesterol">
+          <span class="custom-checkbox"></span>
+          <span class="checkbox-label">High Cholesterol <small>Elevated LDL or triglycerides</small></span>
+        </div>
+        <div class="checkbox-option" onclick="toggleCheck(this, 'conditions')" data-value="sleep_apnea">
+          <span class="custom-checkbox"></span>
+          <span class="checkbox-label">Sleep Apnoea <small>Obstructive sleep apnoea or snoring</small></span>
+        </div>
+        <div class="checkbox-option" onclick="toggleCheck(this, 'conditions')" data-value="pcos">
+          <span class="custom-checkbox"></span>
+          <span class="checkbox-label">PCOS <small>Polycystic ovary syndrome</small></span>
+        </div>
+        <div class="checkbox-option" onclick="toggleCheck(this, 'conditions')" data-value="none">
+          <span class="custom-checkbox"></span>
+          <span class="checkbox-label">None of the above</span>
+        </div>
+      </div>
+      <div class="step-nav">
+        <button class="btn-back" onclick="prevStep(3)">← Back</button>
+        <button class="btn-next" id="next-4" disabled onclick="nextStep(5)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- STEP 5: Previous Attempts -->
+    <div class="step-card" id="step-5">
+      <div class="step-number">Question 5 of 9</div>
       <div class="step-question">Have you tried to lose weight before?</div>
       <div class="step-hint">This helps us understand your weight loss history. There's no wrong answer.</div>
       <div class="options-grid">
@@ -920,57 +948,51 @@
         </button>
       </div>
       <div class="step-nav">
-        <button class="btn-back" onclick="prevStep(3)">← Back</button>
-        <button class="btn-next" id="next-4" disabled onclick="nextStep(5)">Continue →</button>
-      </div>
-    </div>
-
-    <!-- STEP 5: Contraindications -->
-    <div class="step-card" id="step-5">
-      <div class="step-number">Question 5 of 8</div>
-      <div class="step-question">Do any of these apply to you?</div>
-      <div class="step-hint">These are medical contraindications for GLP-1 medications. Select all that apply.</div>
-      <div id="contra-list">
-        <label class="checkbox-option" onclick="toggleCheck(this, 'contra')">
-          <input type="checkbox" value="thyroid">
-          <span class="custom-checkbox"></span>
-          <span class="checkbox-label">Personal or family history of medullary thyroid cancer (MTC)</span>
-        </label>
-        <label class="checkbox-option" onclick="toggleCheck(this, 'contra')">
-          <input type="checkbox" value="men2">
-          <span class="custom-checkbox"></span>
-          <span class="checkbox-label">Multiple Endocrine Neoplasia syndrome type 2 (MEN2)</span>
-        </label>
-        <label class="checkbox-option" onclick="toggleCheck(this, 'contra')">
-          <input type="checkbox" value="pancreatitis">
-          <span class="custom-checkbox"></span>
-          <span class="checkbox-label">History of pancreatitis</span>
-        </label>
-        <label class="checkbox-option" onclick="toggleCheck(this, 'contra')">
-          <input type="checkbox" value="pregnant">
-          <span class="custom-checkbox"></span>
-          <span class="checkbox-label">Currently pregnant or breastfeeding</span>
-        </label>
-        <label class="checkbox-option" onclick="toggleCheck(this, 'contra')">
-          <input type="checkbox" value="t1d">
-          <span class="custom-checkbox"></span>
-          <span class="checkbox-label">Type 1 Diabetes</span>
-        </label>
-        <label class="checkbox-option" onclick="toggleCheck(this, 'contra')">
-          <input type="checkbox" value="none_contra">
-          <span class="custom-checkbox"></span>
-          <span class="checkbox-label"><strong>None of the above apply to me</strong></span>
-        </label>
-      </div>
-      <div class="step-nav">
         <button class="btn-back" onclick="prevStep(4)">← Back</button>
         <button class="btn-next" id="next-5" disabled onclick="nextStep(6)">Continue →</button>
       </div>
     </div>
 
-    <!-- STEP 6: Current Medications -->
+    <!-- STEP 6: Contraindications -->
     <div class="step-card" id="step-6">
-      <div class="step-number">Question 6 of 8</div>
+      <div class="step-number">Question 6 of 9</div>
+      <div class="step-question">Do any of these apply to you?</div>
+      <div class="step-hint">These are medical contraindications for GLP-1 medications. Select all that apply.</div>
+      <div id="contra-list">
+        <div class="checkbox-option" onclick="toggleCheck(this, 'contra')" data-value="thyroid">
+          <span class="custom-checkbox"></span>
+          <span class="checkbox-label">Personal or family history of medullary thyroid cancer (MTC)</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleCheck(this, 'contra')" data-value="men2">
+          <span class="custom-checkbox"></span>
+          <span class="checkbox-label">Multiple Endocrine Neoplasia syndrome type 2 (MEN2)</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleCheck(this, 'contra')" data-value="pancreatitis">
+          <span class="custom-checkbox"></span>
+          <span class="checkbox-label">History of pancreatitis</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleCheck(this, 'contra')" data-value="pregnant">
+          <span class="custom-checkbox"></span>
+          <span class="checkbox-label">Currently pregnant or breastfeeding</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleCheck(this, 'contra')" data-value="t1d">
+          <span class="custom-checkbox"></span>
+          <span class="checkbox-label">Type 1 Diabetes</span>
+        </div>
+        <div class="checkbox-option" onclick="toggleCheck(this, 'contra')" data-value="none_contra">
+          <span class="custom-checkbox"></span>
+          <span class="checkbox-label"><strong>None of the above apply to me</strong></span>
+        </div>
+      </div>
+      <div class="step-nav">
+        <button class="btn-back" onclick="prevStep(5)">← Back</button>
+        <button class="btn-next" id="next-6" disabled onclick="nextStep(7)">Continue →</button>
+      </div>
+    </div>
+
+    <!-- STEP 7: Current Medications -->
+    <div class="step-card" id="step-7">
+      <div class="step-number">Question 7 of 9</div>
       <div class="step-question">Are you currently taking any medications?</div>
       <div class="step-hint">Some medications may interact with GLP-1 treatments. Our doctors will review your full
         medication list.</div>
@@ -1000,14 +1022,14 @@
         </button>
       </div>
       <div class="step-nav">
-        <button class="btn-back" onclick="prevStep(5)">← Back</button>
-        <button class="btn-next" id="next-6" disabled onclick="nextStep(7)">Continue →</button>
+        <button class="btn-back" onclick="prevStep(6)">← Back</button>
+        <button class="btn-next" id="next-7" disabled onclick="nextStep(8)">Continue →</button>
       </div>
     </div>
 
-    <!-- STEP 7: Goal -->
-    <div class="step-card" id="step-7">
-      <div class="step-number">Question 7 of 8</div>
+    <!-- STEP 8: Goal -->
+    <div class="step-card" id="step-8">
+      <div class="step-number">Question 8 of 9</div>
       <div class="step-question">How much weight are you looking to lose?</div>
       <div class="step-hint">GLP-1 medications work best for sustained, long-term weight loss. Clinical trials show up
         to 21% body weight reduction.</div>
@@ -1034,14 +1056,14 @@
         </button>
       </div>
       <div class="step-nav">
-        <button class="btn-back" onclick="prevStep(6)">← Back</button>
-        <button class="btn-next" id="next-7" disabled onclick="nextStep(8)">Continue →</button>
+        <button class="btn-back" onclick="prevStep(7)">← Back</button>
+        <button class="btn-next" id="next-8" disabled onclick="nextStep(9)">Continue →</button>
       </div>
     </div>
 
-    <!-- STEP 8: Commitment -->
-    <div class="step-card" id="step-8">
-      <div class="step-number">Question 8 of 8</div>
+    <!-- STEP 9: Commitment -->
+    <div class="step-card" id="step-9">
+      <div class="step-number">Question 9 of 9</div>
       <div class="step-question">Are you ready to commit to a medically supervised programme?</div>
       <div class="step-hint">Our programme includes regular check-ins with a doctor, nutritional guidance, and ongoing
         support for 16 months.</div>
@@ -1064,8 +1086,8 @@
         </button>
       </div>
       <div class="step-nav">
-        <button class="btn-back" onclick="prevStep(7)">← Back</button>
-        <button class="btn-next" id="next-8" disabled onclick="showResult()">See My Results →</button>
+        <button class="btn-back" onclick="prevStep(8)">← Back</button>
+        <button class="btn-next" id="next-9" disabled onclick="showResult()">See My Results →</button>
       </div>
     </div>
 
@@ -1148,7 +1170,7 @@
     // ── State ──
     const answers = {};
     let currentStep = 1;
-    const TOTAL_STEPS = 8;
+    const TOTAL_STEPS = 9;
 
     // ── Single-select option ──
     function selectOption(btn, key, value, flag) {
@@ -1160,43 +1182,31 @@
       document.getElementById('next-' + stepNum).disabled = false;
     }
 
-    // ── Checkbox toggle ──
-    function toggleCheck(label, key) {
-      const cb = label.querySelector('input[type="checkbox"]');
-      const val = cb.value;
+    // ── Checkbox toggle (uses data-value on div, no hidden inputs) ──
+    function toggleCheck(el, key) {
+      const val = el.dataset.value;
+      const container = el.parentElement;
 
-      // "None" option clears others
+      // "None" option clears others; others uncheck "none"
       if (val === 'none' || val === 'none_contra') {
-        const container = label.parentElement;
-        container.querySelectorAll('.checkbox-option').forEach(l => {
-          if (l !== label) {
-            l.classList.remove('checked');
-            l.querySelector('input').checked = false;
-          }
+        container.querySelectorAll('.checkbox-option').forEach(o => {
+          if (o !== el) o.classList.remove('checked');
         });
-        label.classList.toggle('checked');
-        cb.checked = label.classList.contains('checked');
+        el.classList.toggle('checked');
       } else {
-        // Uncheck "none" option if selecting something else
-        const container = label.parentElement;
-        container.querySelectorAll('.checkbox-option').forEach(l => {
-          const v = l.querySelector('input').value;
-          if (v === 'none' || v === 'none_contra') {
-            l.classList.remove('checked');
-            l.querySelector('input').checked = false;
-          }
+        container.querySelectorAll('.checkbox-option').forEach(o => {
+          const v = o.dataset.value;
+          if (v === 'none' || v === 'none_contra') o.classList.remove('checked');
         });
-        label.classList.toggle('checked');
-        cb.checked = label.classList.contains('checked');
+        el.classList.toggle('checked');
       }
 
       // Collect checked values
-      const container = label.parentElement;
-      const checked = [...container.querySelectorAll('input:checked')].map(i => i.value);
+      const checked = [...container.querySelectorAll('.checkbox-option.checked')].map(o => o.dataset.value);
       answers[key] = checked;
 
       // Enable next button if at least one checked
-      const stepNum = label.closest('.step-card').id.replace('step-', '');
+      const stepNum = el.closest('.step-card').id.replace('step-', '');
       document.getElementById('next-' + stepNum).disabled = checked.length === 0;
     }
 
@@ -1205,7 +1215,7 @@
       const h = parseFloat(document.getElementById('height').value);
       const w = parseFloat(document.getElementById('weight').value);
       const resultEl = document.getElementById('bmiResult');
-      const nextBtn = document.getElementById('next-2');
+      const nextBtn = document.getElementById('next-3');
 
       if (h > 0 && w > 0 && h < 250 && w < 300) {
         const bmi = (w / ((h / 100) ** 2)).toFixed(1);
@@ -1251,7 +1261,9 @@
       const pct = Math.round(((currentStep - 1) / TOTAL_STEPS) * 100);
       document.getElementById('progressFill').style.width = pct + '%';
       document.getElementById('progressPct').textContent = pct + '%';
-      document.getElementById('progressLabel').textContent = 'Question ' + currentStep + ' of ' + TOTAL_STEPS;
+      if (currentStep <= TOTAL_STEPS) {
+        document.getElementById('progressLabel').textContent = 'Question ' + currentStep + ' of ' + TOTAL_STEPS;
+      }
     }
 
     // ── Result Logic ──
@@ -1304,10 +1316,7 @@
       Object.keys(answers).forEach(k => delete answers[k]);
       document.querySelectorAll('.result-card').forEach(r => r.classList.remove('active'));
       document.querySelectorAll('.option-btn').forEach(b => b.classList.remove('selected'));
-      document.querySelectorAll('.checkbox-option').forEach(l => {
-        l.classList.remove('checked');
-        l.querySelector('input').checked = false;
-      });
+      document.querySelectorAll('.checkbox-option').forEach(el => el.classList.remove('checked'));
       document.querySelectorAll('.btn-next').forEach(b => b.disabled = true);
       document.getElementById('height').value = '';
       document.getElementById('weight').value = '';

@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Frequently Asked Questions | Figur Health</title>
+  <meta name="description" content="Get answers to common questions about Figur Health — how the programme works, medical consultations, subscriptions, delivery, and more." />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .page-hero { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%); padding: 80px 0 64px; position: relative; overflow: hidden; }
+    .page-hero::after { content: ''; position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(212,175,55,0.07) 0%, transparent 70%); top: -100px; right: -80px; pointer-events: none; }
+    .page-hero__inner { position: relative; z-index: 1; text-align: center; max-width: 600px; margin: 0 auto; }
+    .page-hero__inner .badge { margin-bottom: 20px; }
+    .page-hero__inner h1 { color: var(--white); font-size: clamp(2rem,4vw,3rem); letter-spacing:-0.03em; margin-bottom:16px; }
+    .page-hero__inner p { color: rgba(255,255,255,0.75); font-size:1.05rem; line-height:1.7; }
+
+    /* Search bar */
+    .faq-search { max-width: 560px; margin: 32px auto 0; position: relative; }
+    .faq-search input {
+      width: 100%; padding: 16px 52px 16px 20px;
+      border-radius: var(--radius-md); border: 2px solid rgba(212,175,55,0.3);
+      background: rgba(255,255,255,0.06); color: var(--white);
+      font-size: 0.95rem; font-family: 'Inter', sans-serif;
+      backdrop-filter: blur(8px); outline: none;
+      transition: border-color var(--transition);
+    }
+    .faq-search input::placeholder { color: rgba(255,255,255,0.4); }
+    .faq-search input:focus { border-color: var(--gold); }
+    .faq-search__icon { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); color: rgba(255,255,255,0.4); pointer-events: none; }
+
+    /* FAQ layout */
+    .faq-layout { display: grid; grid-template-columns: 240px 1fr; gap: 48px; align-items: start; }
+    .faq-sidebar { position: sticky; top: 88px; }
+    .faq-nav { list-style: none; display: flex; flex-direction: column; gap: 4px; }
+    .faq-nav li a {
+      display: block; padding: 10px 16px; border-radius: var(--radius-sm);
+      font-size: 0.875rem; font-weight: 500; color: var(--text-secondary);
+      transition: all var(--transition); border-left: 2px solid transparent;
+    }
+    .faq-nav li a:hover { color: var(--navy); background: var(--grey-100); }
+    .faq-nav li a.active { color: var(--navy); font-weight: 700; border-left-color: var(--gold); background: rgba(212,175,55,0.07); }
+
+    .faq-category { margin-bottom: 56px; }
+    .faq-category__title {
+      font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.3rem;
+      color: var(--navy); margin-bottom: 20px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .faq-category__title .icon { font-size: 1.4rem; }
+
+    .faq-item { border: 1px solid var(--grey-100); border-radius: var(--radius-md); overflow: hidden; margin-bottom: 10px; transition: box-shadow var(--transition); }
+    .faq-item:hover { box-shadow: var(--shadow-sm); }
+    .faq-item__question {
+      width: 100%; background: var(--white); border: none;
+      padding: 18px 20px; text-align: left;
+      font-family: 'Inter', sans-serif; font-weight: 600; font-size: 0.93rem;
+      color: var(--navy); cursor: pointer;
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      transition: background var(--transition);
+    }
+    .faq-item__question:hover { background: var(--grey-50); }
+    .faq-item__icon { flex-shrink: 0; width: 22px; height: 22px; border-radius: 50%; background: var(--grey-100); display: flex; align-items: center; justify-content: center; transition: all var(--transition); }
+    .faq-item.open .faq-item__icon { background: var(--gold); transform: rotate(45deg); }
+    .faq-item.open .faq-item__question { background: var(--grey-50); }
+    .faq-item__answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; }
+    .faq-item.open .faq-item__answer { max-height: 600px; }
+    .faq-item__answer-inner {
+      padding: 16px 20px 20px; font-size: 0.91rem; color: var(--text-secondary);
+      line-height: 1.75; border-top: 1px solid var(--grey-100);
+    }
+    .faq-item__answer-inner a { color: var(--gold-dark); text-decoration: underline; }
+    .faq-item__answer-inner ul { margin: 12px 0; padding-left: 20px; }
+    .faq-item__answer-inner ul li { margin-bottom: 6px; }
+
+    /* Contact card */
+    .contact-card {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-lg); padding: 48px;
+      text-align: center; position: relative; overflow: hidden;
+    }
+    .contact-card::before { content: ''; position: absolute; width: 300px; height: 300px; border-radius: 50%; background: radial-gradient(circle, rgba(212,175,55,0.08) 0%, transparent 70%); top: -100px; right: -80px; }
+    .contact-card h3 { color: var(--white); font-size: 1.5rem; margin-bottom: 12px; position: relative; }
+    .contact-card p { color: rgba(255,255,255,0.7); margin-bottom: 28px; position: relative; }
+    .contact-methods { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }
+
+    @media (max-width: 900px) { .faq-layout { grid-template-columns: 1fr; } .faq-sidebar { position: static; } .faq-nav { flex-direction: row; flex-wrap: wrap; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img" /></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html" class="active">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__inner">
+        <span class="badge badge--gold">Support</span>
+        <h1>How can we help?</h1>
+        <p>Find answers to common questions about Figur Health — from how the programme works to delivery and medical consultations.</p>
+        <div class="faq-search">
+          <input type="text" id="faqSearch" placeholder="Search questions..." />
+          <span class="faq-search__icon">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="8" cy="8" r="5"/><path d="M15 15l-3.5-3.5"/></svg>
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ CONTENT -->
+  <section class="section">
+    <div class="container">
+      <div class="faq-layout">
+
+        <!-- Sidebar nav -->
+        <div class="faq-sidebar">
+          <ul class="faq-nav">
+            <li><a href="#about" class="active">About Figur Health</a></li>
+            <li><a href="#medical">Medical consultation</a></li>
+            <li><a href="#subscription">Subscription</a></li>
+            <li><a href="#payment">Payment</a></li>
+            <li><a href="#delivery">Delivery &amp; returns</a></li>
+            <li><a href="#treatment">Treatment</a></li>
+            <li><a href="#changes">Make changes</a></li>
+          </ul>
+        </div>
+
+        <!-- FAQ categories -->
+        <div id="faqContent">
+
+          <!-- About Figur Health -->
+          <div class="faq-category" id="about">
+            <div class="faq-category__title"><span class="icon">🏥</span>About Figur Health</div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                How can I be sure that Figur Health is a legitimate medical provider?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">Figur Health is a regulated health platform that connects you with licensed medical professionals, including doctors and registered pharmacists. All our doctors are verified, licensed practitioners registered with the appropriate medical councils in India. Our pharmacies are registered and comply with all relevant regulations for dispensing prescription medication.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                What makes Figur Health different from other weight loss programmes?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">Unlike generic diets or exercise plans, Figur Health uses clinically proven GLP-1 medications (like Mounjaro and Wegovy) prescribed by licensed Indian doctors. Our approach combines medication with personalised guidance, meal planning, and ongoing medical support — giving you everything you need in one comprehensive programme. Clinical trials show our approach delivers 5× more weight loss than diet and exercise alone.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                Is Figur Health available across India?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">Yes! Figur Health is available nationwide. Our telemedicine consultations are conducted remotely, and our registered partner pharmacies deliver medication to most pin codes across India. You can check delivery availability for your specific location during the sign-up process.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                How do I get started with Figur Health?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">Getting started is simple: <ul><li>Complete our short online medical quiz (about 5 minutes)</li><li>A licensed doctor reviews your answers and assesses your eligibility</li><li>If approved, you receive a personalised prescription and treatment plan</li><li>Your medication is dispensed and delivered to your door</li></ul>There's no obligation until you decide to subscribe, and our team is available to answer any questions throughout the process.</div></div>
+            </div>
+          </div>
+
+          <!-- Medical Consultation -->
+          <div class="faq-category" id="medical">
+            <div class="faq-category__title"><span class="icon">👨‍⚕️</span>Medical consultation</div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                Why do I need to complete a medical consultation?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">GLP-1 medications are prescription-only drugs that are not suitable for everyone. The medical consultation allows our licensed doctors to assess whether the treatment is safe for you based on your health history, current medications, and medical conditions. This is both a regulatory requirement and an essential safety step — it ensures you receive the right medication at the right dosage for your specific situation.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                How long does the medical consultation take?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">The initial online medical quiz takes approximately 5 minutes to complete. Once submitted, our doctors typically review your answers and get back to you within 24–48 hours. There's no need to visit a clinic — everything is done remotely from your phone or computer.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                Who reviews my medical quiz?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">Your quiz is reviewed by one of our licensed, practising Indian doctors who specialises in metabolic health and weight management. They will assess your eligibility for treatment and recommend the most appropriate GLP-1 medication based on your health profile. If they need additional information, they will contact you directly.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                What happens if I'm not approved for treatment?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">If our doctors determine that GLP-1 treatment is not suitable for you at this time, they will explain the reasons and may suggest alternative approaches. You will not be charged if you are not approved. Our doctors can also suggest when or under what circumstances you might become eligible in the future.</div></div>
+            </div>
+          </div>
+
+          <!-- Subscription -->
+          <div class="faq-category" id="subscription">
+            <div class="faq-category__title"><span class="icon">📦</span>Subscription</div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                What does the Figur Health weight loss plan include?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">Your Figur Health subscription includes: <ul><li>Monthly supply of your prescribed GLP-1 medication</li><li>Ongoing access to your prescribing doctor for reviews and dosage adjustments</li><li>A personalised meal plan (no calorie counting required)</li><li>A light exercise plan (no gym visits needed)</li><li>Access to our health guide with 50+ expert articles</li><li>A weight loss diary and progress tracker</li><li>Our messaging centre for any questions</li></ul></div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                How long do I need to stay on the programme?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">GLP-1 medications work best when taken long-term. Clinical trials showing the best results (21% body weight reduction) were conducted over 16 months. While you'll see results within the first few months, most members stay on the programme for at least 12–16 months to achieve and consolidate their weight loss goals. There is no minimum contract — you can cancel at any time.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                Can I cancel my subscription at any time?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">Yes, you can cancel your subscription at any time. There are no long-term contracts or cancellation fees. If you cancel, your next shipment will not be sent. Please note that it's important to taper off GLP-1 medication rather than stopping abruptly — our doctors can advise you on the safest way to conclude your treatment.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                Can I pause my subscription?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">Yes, you can pause your subscription for up to 3 months. This may be useful if you're travelling, recovering from a medical procedure, or simply need a break. Log in to your account or contact our support team to request a pause. Note that pausing your medication may affect your progress and should ideally be discussed with your doctor first.</div></div>
+            </div>
+          </div>
+
+          <!-- Payment -->
+          <div class="faq-category" id="payment">
+            <div class="faq-category__title"><span class="icon">💳</span>Payment</div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                Which payment options do you offer?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">We accept all major payment methods including: UPI (GPay, PhonePe, Paytm), credit and debit cards (Visa, Mastercard, RuPay), net banking, and EMI options from leading banks. All payments are processed through a secure, encrypted payment gateway.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                Will my subscription auto-renew?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">Yes, your subscription is set to auto-renew monthly to ensure continuity of your treatment. You will receive an email reminder 5 days before each renewal. You can cancel or pause your subscription at any time through your account settings before the renewal date.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                Is there any money-back guarantee?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">As a prescription medication service, we are unable to offer blanket money-back guarantees due to medical safety regulations around returned medications. However, if you experience issues with your delivery or the medication supplied, our team will work with you to resolve the situation. Please contact our support team for any concerns about your order.</div></div>
+            </div>
+          </div>
+
+          <!-- Delivery -->
+          <div class="faq-category" id="delivery">
+            <div class="faq-category__title"><span class="icon">🚚</span>Delivery &amp; returns</div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                What are the delivery costs?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">Delivery is included in your subscription cost — there are no additional delivery charges. Your medication is delivered to your door by our registered partner pharmacies. Delivery typically takes 3–5 business days from the time your prescription is approved.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                How is my medication packaged?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">Your medication is packaged discreetly — there is no branding on the outside of the box that indicates it contains medication. GLP-1 injectable medications are stored and shipped in temperature-controlled packaging to maintain their effectiveness. Each shipment includes your medication, a dosing guide, and any other materials recommended by your doctor.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                What if my delivery is delayed or missing?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">If your delivery is delayed beyond the expected timeframe or appears to be missing, please contact our support team immediately. We will investigate with our delivery partners and arrange a replacement shipment if necessary. In the meantime, it's important not to abruptly stop your GLP-1 medication — contact us and your prescribing doctor for guidance on managing a gap in treatment.</div></div>
+            </div>
+          </div>
+
+          <!-- Treatment -->
+          <div class="faq-category" id="treatment">
+            <div class="faq-category__title"><span class="icon">💉</span>Treatment</div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                How do GLP-1 injections work?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">GLP-1 injections work by mimicking a naturally occurring gut hormone called glucagon-like peptide-1. When injected, they activate receptors in your brain and gut that signal satiety (fullness), slow gastric emptying, and reduce appetite. The result is that you feel full with less food and have significantly reduced cravings — making it much easier to eat less and lose weight. The injections are subcutaneous (just under the skin) and come in easy-to-use auto-inject pens. Most people find them painless.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                What is the daily tablet option (Rybelsus)?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">Rybelsus (semaglutide) is the first oral GLP-1 medication. It contains the same active ingredient as Ozempic and Wegovy injections, but in tablet form. It is taken once daily, at least 30 minutes before eating, with a small amount of water. While generally slightly less potent than the injectable versions, it is a good option for people who are uncomfortable with injections. Your doctor will advise on whether it's suitable for you.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                Are there any side effects?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">As with all medications, GLP-1 drugs can have side effects. The most common are gastrointestinal and include: nausea, vomiting, diarrhoea, constipation, and stomach discomfort — particularly in the early weeks of treatment. These typically reduce as your body adjusts, especially as the dose is increased gradually. More serious side effects are rare but can include pancreatitis, gallbladder problems, and changes in kidney function. Your doctor will discuss all potential side effects with you before prescribing, and our team monitors for adverse effects throughout your programme. If you experience any concerning symptoms, contact our medical team immediately.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                How long does it take to start working?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">Most people notice a reduction in appetite within 1–2 weeks of starting GLP-1 medication. Visible weight loss typically begins within 4–8 weeks. The medication works progressively — as you gradually increase your dose over the first few months, the appetite-suppressing effects become stronger, and weight loss accelerates. Maximum results are typically seen at 12–16 months of continuous treatment at the optimal dose.</div></div>
+            </div>
+          </div>
+
+          <!-- Make Changes -->
+          <div class="faq-category" id="changes">
+            <div class="faq-category__title"><span class="icon">⚙️</span>Make changes</div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                How do I change my delivery address?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">You can update your delivery address at any time through your account settings under "Delivery Address". Changes made before your next shipment is dispatched will be applied to that order. If a shipment has already been dispatched, the new address will apply from the following month's delivery.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                Can I switch between different GLP-1 medications?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">Yes, it is possible to switch medications, but this must always be done under medical supervision. Contact our support team or use the messaging centre to speak with your doctor about switching. Your doctor will assess whether a different medication might be more suitable for you and will manage the transition safely, including any dosage adjustments needed.</div></div>
+            </div>
+
+            <div class="faq-item">
+              <button class="faq-item__question" onclick="toggleFaq(this)">
+                How do I update my personal details?
+                <span class="faq-item__icon"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M2 6h8M6 2v8"/></svg></span>
+              </button>
+              <div class="faq-item__answer"><div class="faq-item__answer-inner">You can update your personal details (name, phone number, email address) through your account profile page. If you have experienced changes to your health or are taking new medications, it is important to update your medical information too — please contact our medical team through the messaging centre so your prescribing doctor is aware.</div></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT CARD -->
+  <section class="section--sm section--grey">
+    <div class="container" style="max-width: 800px;">
+      <div class="contact-card">
+        <h3>Still have questions?</h3>
+        <p>Our support team is here to help. Reach out and we'll get back to you as soon as possible.</p>
+        <div class="contact-methods">
+          <a href="contact-us.html" class="btn btn--primary">Contact us</a>
+          <a href="new-programme.html" class="btn btn--outline">Check eligibility</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img" /></a>
+          <p>Science-backed weight loss for modern India.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul><li><a href="new-programme.html">How it works</a></li><li><a href="new-science.html">The science</a></li><li><a href="mounjaro-injection.html">Mounjaro</a></li><li><a href="wegovy-for-weight-loss.html">Wegovy</a></li></ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul><li><a href="new-health-guide.html">Health guide</a></li><li><a href="new-success-stories.html">Success stories</a></li><li><a href="new-faqs.html">FAQs</a></li><li><a href="contact-us.html">Contact us</a></li></ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Medical Disclaimer</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>© 2025 Figur Health. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const navCta = document.getElementById('navCta');
+    hamburger.addEventListener('click', () => { navLinks.classList.toggle('open'); navCta.classList.toggle('open'); });
+
+    function toggleFaq(btn) {
+      const item = btn.parentElement;
+      const wasOpen = item.classList.contains('open');
+      // Close all
+      document.querySelectorAll('.faq-item.open').forEach(i => i.classList.remove('open'));
+      // Open clicked if it was closed
+      if (!wasOpen) item.classList.add('open');
+    }
+
+    // Search functionality
+    const searchInput = document.getElementById('faqSearch');
+    if (searchInput) {
+      searchInput.addEventListener('input', () => {
+        const q = searchInput.value.toLowerCase().trim();
+        document.querySelectorAll('.faq-item').forEach(item => {
+          const text = item.textContent.toLowerCase();
+          item.style.display = !q || text.includes(q) ? '' : 'none';
+        });
+        document.querySelectorAll('.faq-category').forEach(cat => {
+          const visible = [...cat.querySelectorAll('.faq-item')].some(i => i.style.display !== 'none');
+          cat.style.display = visible ? '' : 'none';
+        });
+      });
+    }
+
+    // Sidebar active link on scroll
+    const categories = document.querySelectorAll('.faq-category');
+    const navItems = document.querySelectorAll('.faq-nav a');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      categories.forEach(cat => {
+        if (window.scrollY >= cat.offsetTop - 120) current = cat.id;
+      });
+      navItems.forEach(a => {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+      });
+    });
+  </script>
+</body>
+</html>

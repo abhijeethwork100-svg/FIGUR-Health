@@ -1,0 +1,685 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Confused about the calories in 1 roti? We can help! | Figur Health</title>
+  <meta name="description" content="A medium roti has 106 calories, but the count varies by size & type. Learn the exact values, nutrition facts & tips to make your roti healthier!"/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Nutrition</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">12 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>Confused about the calories in 1 roti? We can help!</h1>
+        <p class="article-hero__desc">A medium roti has 106 calories, but the count varies by size & type. Learn the exact values, nutrition facts & tips to make your roti healthier!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+
+ <div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80" alt="Roti" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>Confused about the calories in 1 roti? We can help!</h1>
+</div>
+<p>
+</p>
+<p>Let’s answer this right away—a <a href="https://wjpr.s3.ap-south-1.amazonaws.com/article_issue/a4567073d02df52687b4aba71c1a5e10.pdf">medium-sized <em>roti</em></a> contains <strong>up to 106 calories</strong>, 22.32g of carbohydrates, 3.84g to 5.28g of protein, 2.84g of fibre, and 0.52g of fats.</p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="calories-in-1-roti.html#key-takeaways">Key takeaways:</a></li>
+<li><a href="calories-in-1-roti.html#is-whole-wheat-roti-really-nutritious">Is whole wheat roti really nutritious?</a></li>
+<li><a href="calories-in-1-roti.html#what-different-types-of-rotis-are-out-there">What different types of rotis are out there?</a></li>
+<li><a href="calories-in-1-roti.html#chapati/roti-math-calories-edition">Chapati/Roti math: Calories edition</a></li>
+<li><a href="calories-in-1-roti.html#the-big-question-will-roti-make-me-fat">The big question: Will roti make me fat?</a></li>
+<li><a href="calories-in-1-roti.html#who-should-avoid-eating-roti">Who should avoid eating roti?</a></li>
+<li><a href="calories-in-1-roti.html#how-to-make-your-rotis-healthier-">How to make your rotis healthier? </a></li>
+<li><a href="calories-in-1-roti.html#wrapping-it-up">Wrapping it up</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways:</h2>
+
+<div>
+<ul>
+<li>A medium-sized whole-wheat <em>roti</em> (approx. 40g in weight) <strong>provides 106 calories</strong> and has a good balance of macronutrients, vitamins, and minerals.</li>
+<li><em>Roti</em> is a versatile meal and can be made from rice flour, <em>jowar, bajra,</em> millet, etc. Multigrain <em>rotis</em> are more nutritious than plain <em>rotis.</em></li>
+<li>The calories in 1 <em>roti</em> will vary with its size and what you eat it with. For example, having <em>dal or sabzi</em> with <em>roti</em> will increase the total calorie count to <strong>170-300 calories</strong>.</li>
+</ul>
+</div>
+<p>It’s a delight to eat piping hot <em>rotis</em> with some delicious homemade <em>sabzi</em> (vegetables) and <em>dals</em> (lentils).</p>
+<p><em>Roti</em>, also known as <em>chapati</em>, <em>phulka</em>, or <em>poli</em> in different regions of India, is an unleavened flatbread usually made with whole wheat flour, water, salt, and a little fat (oil/<em>ghee</em>).</p>
+<p>It is a staple meal in most Indian households and a primary source of energy. Remember how it was the go-to lunch box meal?</p>
+<p>However, is it all still the same?</p>
+<p>Today, you are probably looking at the hot <em>roti</em>, topped with <em>ghee</em>, and wondering if even one <em>roti</em> will add some grams to your weight. </p>
+<p>Maybe, you are <strong>struggling to count the calories in one <em>roti</em></strong> - and that is stopping you from enjoying a satisfying, nostalgia-filled meal.</p>
+<p>The ingredients in the <em>roti</em>—wheat flour, water, salt, and oil/<em>ghee</em> are usually healthy when we eat them in moderate amounts. </p>
+<p>However, in excessive amounts or under certain conditions, these ingredients can have undesirable effects on our health. </p>
+<p>But, several factors influence the calorie content of <em>rotis</em>—the type of flour used, size, thickness, and even cooking methods.</p>
+<p>But does this mean that <strong><em>roti</em> isn’t good for you?</strong> This is far from the truth.</p>
+<p>If you are an avid weight watcher, read on to find out how <em>roti</em> benefits your health, how you can lose weight by eating it, and how you can make it healthier.</p> </div>
+<div>
+<h2>Is whole wheat roti really nutritious?</h2>
+<p><em>Rotis</em> are not only filling, but are equally nutritious. </p>
+<p>With <strong>106 calories in one <em>roti</em></strong>, 22.32g carbs, 3.84g to 5.28g protein, 2.84g dietary fibre, and just 0.52g fat, <em>roti</em> is surely nutritious, provided you eat it in moderate amounts. </p>
+<p>Let’s see the <a href="https://wjpr.s3.ap-south-1.amazonaws.com/article_issue/a4567073d02df52687b4aba71c1a5e10.pdf">nutrients in one <em>roti</em></a>*:</p>
+<p><strong>*The values discussed here are for one medium-sized, whole wheat <em>roti</em>. </strong></p>
+<picture>
+<source alt="Nutritional value of a roti" height="473" width="750">
+<source alt="Nutritional value of a roti" height="473" width="750">
+<img alt="Nutritional value of a roti" height="473" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="750"/>
+</source></source></picture>
+<p></p>
+<br/>
+<div>
+<p><strong>Did you know?</strong></p>
+<p>Multigrain <em>rotis</em> are <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC7333014/">more nutritious</a><a href="calories-in-1-roti.html#refid2_29"><sup>[1]</sup></a> compared to regular wheat <em>rotis.</em> They are a blend of whole grains like wheat, <em>jowar</em>, <em>bajra</em>, and more. With a moderate glycemic index (55-69) and 70-85 calories in one multigrain <em>roti</em>, they prevent huge spikes in blood sugar. </p>
+</div> </div>
+<div>
+<h2>What different types of rotis are out there?</h2>
+<p><em>Rotis</em> are largely made of wheat flour, but wheat isn’t the only kind of flour out there. You can experiment with <em>rotis</em> made from different flours. </p>
+<h3>11 different types of <em>rotis</em> in India</h3>
+<div>
+
+<div>
+<ul>
+<li><em>Roti</em> made with <strong>whole wheat flour</strong></li>
+<li>Served with <em>dals, sabzis, chutney,</em> or plain milk</li>
+<li>Calories: <strong>106 kcal</strong></li>
+</ul>
+</div>
+</div>
+<div>
+
+<div>
+<ul>
+<li>Thick <em>roti</em> made from <strong><em>jowar</em> (sorghum)</strong> </li>
+<li>Gluten-free, fibre-rich, low glycaemic index</li>
+<li>Calories: <strong>56.8 kcal</strong></li>
+</ul>
+</div>
+</div>
+<div>
+
+<div>
+<ul>
+<li><em>Roti</em> made from <strong><em>bajra</em> (pearl millet)</strong></li>
+<li>Rich in fibre, minerals, antioxidants, and omega-3 fatty acids</li>
+<li>Calories: <strong>119 kcal</strong></li>
+</ul>
+</div>
+</div>
+<div>
+
+<div>
+<ul>
+<li><strong>Gluten-free <em>roti</em></strong> made from rice flour</li>
+<li>Soft and easy to digest</li>
+<li>Calories: <strong>83 kcal</strong></li>
+</ul>
+</div>
+</div>
+<div>
+
+<div>
+<ul>
+<li><em>Roti</em> made using <strong>chickpea flour (<em>besan</em>)</strong></li>
+<li>Rich in protein and fibre</li>
+<li>Calories: <strong>104 kcal</strong></li>
+</ul>
+</div>
+</div>
+<div>
+
+<div>
+<ul>
+<li>Found in <strong>dhabas pan-India</strong></li>
+<li><em>Roti</em> cooked in a clay oven (<em>tandoor</em>)</li>
+<li>Calories: <strong>85 kcal</strong></li>
+</ul>
+</div>
+</div>
+<div>
+
+<div>
+<ul>
+<li><em>Roti</em> made from <strong>maize (<em>makka</em>) flour</strong></li>
+<li>Rich in vitamins, minerals, and dietary fibre</li>
+<li>Calories: <strong>90 kcal</strong></li>
+</ul>
+</div>
+</div>
+<div>
+
+<div>
+<ul>
+<li><em>Roti</em> made from <strong>finger millet (<em>ragi</em>)</strong></li>
+<li>High in protein, fibre, calcium, and iron</li>
+<li>Calories: <strong>64-87 kcal</strong></li>
+</ul>
+</div>
+</div>
+<div>
+
+<div>
+<ul>
+<li>Pancake made from <strong>tapioca pearls (<em>sabudana</em>)</strong></li>
+<li>Gluten-free and fast-friendly</li>
+<li>Calories: <strong>120-132 kcal</strong></li>
+</ul>
+</div>
+</div>
+<div>
+
+<div>
+<ul>
+<li><strong>Popular in Maharashtra</strong></li>
+<li>Flatbread made with mix of <em>jowar</em>, <em>bajra</em>, and <em>aata</em></li>
+<li>Calories: <strong>100 kcal</strong></li>
+</ul>
+</div>
+</div>
+<div>
+
+<div>
+<ul>
+<li>Thick <strong>flatbread popular in Gujarat</strong></li>
+<li>Made from whole wheat/millet flour</li>
+<li>Calories: <strong>130 kcal</strong></li>
+</ul>
+</div>
+</div> </div>
+<div>
+<h2>Chapati/Roti math: Calories edition</h2>
+<p>So before you decide how many <em>chapatis/rotis</em> to eat, it is important to know how many calories you would be consuming if you usually have more than one <em>roti.</em></p>
+<p>These are <a href="https://wjpr.s3.ap-south-1.amazonaws.com/article_issue/a4567073d02df52687b4aba71c1a5e10.pdf">approximate values</a> for a medium-sized (18 cm diameter or 40g) <em>chapatis/roti</em>:</p>
+<ul>
+<li>Half a <em>roti/chapati</em> will contain <strong>upto 53 calories</strong></li>
+<li>1 <em>roti/chapati</em> has upto <strong>106 calories</strong></li>
+<li>2 <em>rotis/chapatis</em> have upto <strong>212 calories</strong></li>
+<li>3 <em>rotis/chapatis</em> have upto <strong>318 calories</strong></li>
+<li>4 <em>rotis/chapatis</em> have upto <strong>424 calories</strong></li>
+<li>6 <em>rotis/chapatis</em> may contain upto <strong>636 calories</strong></li>
+</ul>
+<p>The calorie count for a <em>roti/chapati</em> will change if it differs in size or is topped with add-on calories. </p>
+<p>For instance, calories in <em>roti</em> without <em>ghee</em> will be less than calories in <em>roti</em> with <em>ghee</em>. </p>
+<p>Or, 3 small <em>chapati</em> calories may be equal to 1 big <em>chapati</em> calories.</p>
+<p>All of it boils down to how you prefer to eat your <em>rotis</em>.</p>
+<p>Understanding this will either take a masterclass in <em>roti</em> nutrition or you may just have to step into the kitchen with a weighing scale and count the calories in <em>chapatis/roti</em> the right way.</p> </div>
+<div>
+<h2>The big question: Will roti make me fat?</h2>
+<p>The short, and perhaps the only answer you need to hear - <strong>No, it doesn’t!</strong></p>
+<p>The answer is also the same for mangoes, <em>ghee</em>, avocados, <em>parathas</em>, or basically anything you eat.</p>
+<p>The real culprit here is not following healthy practices like portion control, balanced workout, sleeping well, and maintaining a <a href="cico-for-weight-loss.html#:~:text=What%20is%20a%20calorie%20deficit%3F%20%2D%20The%20science%20behind%20CICO">calorie deficit.</a></p>
+<p><strong>So, is <em>roti</em> healthy?</strong></p>
+<p>Fitness and lifestyle coach Arjhan Rai says, “<em>Roti</em> is just a food. It's not going to make you fat or thin. You need to understand your calorie intake and then you can eat whatever you want and still lose weight.”</p>
+<p>He also explains this with an interesting logic in his <a href="https://www.instagram.com/arjhanrai.fitgains/reel/C7_TeJVtC6B/">Instagram post.</a></p>
+<p>TL;DR? Roti comes with some heavy calories. If you want to switch to healthier alternatives, check out our web story below.</p>
+<div>
+
+</div>
+
+<p>Looks interesting, right? Check out <a href="web-stories/index.html">more web stories</a> as well!</p> </div>
+<div>
+<h2>Who should avoid eating roti?</h2>
+<p>While most people enjoy eating wheat <em>rotis</em>, there are certain instances where it is helpful to seek alternatives:</p>
+<ul>
+<li>Those affected with <strong>gluten sensitivity</strong> or celiac disease (an autoimmune disorder that damages the small intestine).</li>
+<li>People with <strong>diabetes</strong>.</li>
+<li>Weight-conscious individuals following a <strong>low-carb or keto diet</strong>.</li>
+<li><strong>Wheat allergy</strong> or <a href="https://pubmed.ncbi.nlm.nih.gov/30978535/">Non-celiac wheat sensitivity</a><a href="calories-in-1-roti.html#refid2_29"><sup>[2]</sup></a> - An allergic reaction can happen to any kind of component in the wheat grain. It may sound similar to gluten sensitivity, but the latter condition is restricted to the protein itself and shows up as gastric discomfort. </li>
+</ul> </div>
+<div>
+<h2>How to make your rotis healthier? </h2>
+<p>Whether <em>roti</em> is healthy or not has been a very controversial topic in health circles. But that doesn’t mean we can’t make it any healthier.</p>
+<p>Curious how to do so? Check out these super useful tips to explore healthy alternatives to <em>roti</em>:</p>
+<ul>
+<li><strong>Use less <em>ghee</em>/oil</strong> while roasting your <em>roti</em> for less fat content</li>
+<li><strong>Cook <em>rotis</em> thoroughly</strong> on a hot <em>tawa</em></li>
+<li><strong>Make <em>rotis</em> with different whole grain flours</strong> like oats, millets, <em>besan</em>, etc</li>
+<li><strong>Add greens</strong> like <em>palak</em>, <em>methi</em>, spring onion, or <em>mung</em> to the dough for more <em>roti</em> nutrition</li>
+<li><strong>Eat <em>rotis</em> with protein-rich sides</strong> like <em>paneer bhurji</em>, <em>egg bhurji</em>, <em>dal</em>, or <em>sabzis</em></li>
+<li><strong>Add <a href="chia-seeds-for-weight-loss.html">chia seeds</a> and flaxseeds</strong> for more <em>roti</em> protein</li>
+</ul>
+<p>If you need more healthy alternatives to <em>roti</em> or explore healthy ways to reduce the amount of calories in chapatis, check out this interesting and ‘nutrient-packed’ thread on Reddit:</p>
+<blockquote><a href="https://www.reddit.com/r/IndianFood/comments/11m2j6d/low_calorie_rotis/">low calorie rotis?</a><br/> by<a href="https://www.reddit.com/user/self_elf1/">u/self_elf1</a> in<a href="https://www.reddit.com/r/IndianFood/">IndianFood</a></blockquote> </div>
+<div>
+<h2>Wrapping it up</h2>
+<p>When eaten right, a <em>roti</em> nourishes you with essential nutrients and keeps you energised throughout the day.</p>
+<p>But like any food that is mostly carbs, <strong>pair it with sufficient protein, fibre, and fats</strong> so you can balance your meals and avoid excess snacking.</p>
+<p>While making your <em>rotis,</em> <strong>prefer whole grain varieties</strong> over refined <em>atta</em> whenever possible, and you are good to go!</p>
+<p>Finding the perfect balance in your diet is just one part of your weight loss plans. If weight management is on your to-do list, <a href="logout.html">Aktive</a> is here for you.</p>
+<p>Our experts understand that every person is unique, and we're here to guide you with hassle-free, evidence-based weight loss plans that do not ask you to starve yourself and yet, help you reach your desired weight.</p> </div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>Can multigrain rotis help with weight loss?</p>
+<div><p></p><p>Yes. Multigrain <em>rotis</em> are a healthy way to lose weight, as they are <strong>rich in dietary fibre</strong>, which reduces hunger levels. </p>
+<p>Multigrain <em>rotis</em> are usually made from a mix of wheat, chickpea flour, millets, <em>bajra,</em> barley, oats, <em>ragi,</em> maize, and <em>jowar</em> (sorghum) flour.  </p>
+<p>They also have a <strong>lower glycemic index</strong> compared to refined wheat atta <em>rotis</em>, which means your blood sugar levels wouldn't spike as much. Both these mechanisms are important for helping you lose weight.</p></div>
+</li>
+<li>
+<p>Are multigrain rotis gluten-free?</p>
+<div><p></p><p>This depends on the type of grain that has been used to make the flour. If they contain a significant portion of wheat flour, they wouldn't be gluten-free.</p>
+<p>On the other hand, <strong>using only gluten-free flour</strong> like <em>bajra, ragi, jowar,</em> millet flour, etc., are more suitable for people with gluten sensitivity.</p>
+</div>
+</li>
+<li>
+<p>How does the size of a roti affect its calorie count?</p>
+<div><p></p><p>The bigger the <em>roti,</em> the more calories are in it. For example, a medium-sized <em>roti</em> (approximately 40 grams) contains <strong>around 112 calories</strong>.</p>
+<p>As the size increases, so will the amount of flour and other ingredients used. Also, a smaller <em>roti</em> might be just as unhealthy as a bigger one if one applies too much <em>ghee/oil</em> to it.  </p>
+<p>What you put inside or outside the <em>roti</em> also affects the calorie count.</p>
+<p>This is why we need to be mindful of our portions to manage the overall calorie intake.</p></div>
+</li>
+<li>
+<p>What’s healthier: Roti or rice?</p>
+<div><p></p><p>In this case, 'healthy' can mean different things to people with different dietary needs. <em>Roti</em> (especially wheat or multigrain) is usually healthier due to its <strong>high fibre and protein content</strong>, but someone with gluten sensitivity can't eat the same <em>roti</em>.</p>
+<p>In such cases, <strong>rice can be a better alternative</strong> as it is a complex carbohydrate, gluten-free, and has some protein. In this case, you can combine it with adequate amounts of vegetables, <em>dals,</em> salad, and buttermilk, which increases its nutrient value.</p></div>
+</li>
+<li>
+<p>Is it okay to eat roti every day?</p>
+<div><p></p><p>Yes, you can surely eat <em>roti</em> every day, but <strong>eat it in limited amounts</strong> and pair it with <em>sabzi, dal,</em> salad, curd, or buttermilk. Eating <em>roti</em> daily takes care of our energy needs and <strong>provides fibre, nutrients, and healthy fats</strong> to the body.</p></div>
+</li>
+<li>
+<p>Is ghee roti bad for you?</p>
+<div><p></p><p>When taken in moderation, <em>ghee</em> is <strong>certainly a healthy addition</strong> to your meals. In fact, doctors recommend eating <strong>upto a teaspoonful of <em>ghee</em> </strong> every day for good health.</p>
+<p>Applying ghee to <em>roti</em> adds flavour and essential fatty acids to it. But yes, its high-fat content can add to your daily calorie intake (<strong>1 <em>ghee roti</em> carries approximately 126-165 calories</strong>), ultimately leading to weight gain. This can be avoided by eating <em>ghee</em> <em>roti</em> in moderation.</p></div>
+</li>
+<li>
+<p>How many calories are in a plain roti with sabzi (vegetable curry)?</p>
+<div><p></p><p>A <em>plain roti</em> paired with <em>sabzi</em> will increase the total <em>roti</em> calories to <strong>170-300</strong>. This depends on the ingredients of the <em>sabzi</em> and how it's made. Eating <em>sabzi</em> made with less oil will add some good calories to your diet.</p></div>
+</li>
+<li>
+<p>How many rotis should I eat for weight loss?</p>
+<div><p></p><p>The number of <em>rotis</em> one needs to eat for weight loss may vary according to one's present health condition, dietary needs, and activity levels. As a rule, you can have <strong>1-2 <em>rotis</em> or <em>phulkas</em> with every meal to lose weight</strong>.</p>
+<p>You can also eat <em>rotis</em> made of <em>jowar, bajra, or ragi</em> flour or mix them with some parts of wheat flour to add more fibre and nutrients to your meal.</p></div>
+</li>
+<li>
+<p>What are some low-calorie side dishes to pair with roti?</p>
+<div><p></p><p>Some <strong>low-calorie dishes</strong> you can enjoy with <em>roti</em> include:</p>
+<ul>
+<li>Vegetable <em>raita</em> (a yoghurt-based dish with cucumbers or other veggies)</li>
+<li>Tomato or cucumber salad</li>
+<li>Steamed vegetables</li>
+<li><em>Dal</em> (lentils)</li>
+<li><em>Paneer bhurji</em> (a dish made from scrambled <em>paneer</em> that adds the right dose of protein)</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Can you freeze rotis to save cooking time during the week?</p>
+<div><p></p><p>Yes, you can prepare <em>rotis</em> in advance and freeze them. Roll the <em>roti</em> dough as usual, but only half-cook them on both sides. Once done, store the <em>rotis</em> together in a zip-lock bag or an airtight container.</p>
+<p><strong>Place parchment paper or cling film</strong> between every <em>roti</em> so that they don't stick. You can <strong>reheat them</strong> on a non-stick <em>tawa</em> or microwave them for 15-20 seconds and enjoy.</p></div>
+</li>
+<li>
+<p>How much protein does a roti have?</p>
+<div><p></p><p>1 medium-sized whole wheat <em>roti</em> (approx. 40g in weight) contains <strong>around 3.84g to 5.28g of protein</strong>. This is dependent on the flour used and the preparation method.  For example, a <em>roti</em> made with <em>besan</em> (chickpea flour) or <em>multigrain atta</em> can have slightly higher amounts of protein. </p>
+<p>If you are wondering how to balance out your overall protein intake throughout the day, you can use these pointers as a general guideline:</p>
+<ul>
+<li>1 <em>roti/chapati</em> contains <strong>about 3.84g to 5.28g of protein</strong>.</li>
+<li>4 <em>rotis/chapatis</em> contain about <strong>15.36g to 21.12g of protein</strong>.</li>
+</ul></div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>April, 25 2025</strong></p><p>Publish date <strong>February, 10 2025</strong></p></div> </div>
+<div>
+<p><strong>References:</strong></p>
+<ul>
+<li>[1] Nagaraju, R., Sobhana, P. P., Thappatla, D., Epparapalli, S., Kandlakunta, B., &amp; Korrapati, D. (2020). Glycemic index and sensory evaluation of whole grain based multigrain Indian breads (ROTIS). <em>Preventive Nutrition and Food Science, 25</em>(2), 194–202. <a href="https://doi.org/10.3746/pnf.2020.25.2.194">https://doi.org/10.3746/pnf.2020.25.2.194</a></li>
+<li>[2] Khan, A., Suarez, M. G., &amp; Murray, J. A. (2019). Nonceliac gluten and wheat sensitivity. <em>Clinical Gastroenterology and Hepatology, 18</em>(9), 1913-1922.e1. <a href="https://doi.org/10.1016/j.cgh.2019.04.009">https://doi.org/10.1016/j.cgh.2019.04.009</a></li>
+</ul> </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,818 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to manage Wegovy side effects? | Figur Health</title>
+  <meta name="description" content="Nausea, fatigue, or bloating on Wegovy? This guide will explain the common side effects of Wegovy, what’s normal, what’s not, & how to feel better quickly."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Wegovy</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">13 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>How to manage Wegovy side effects?</h1>
+        <p class="article-hero__desc">Nausea, fatigue, or bloating on Wegovy? This guide will explain the common side effects of Wegovy, what’s normal, what’s not, & how to feel better quickly.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+<div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80" alt="Wegovy FlexTouch pen" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>How to manage Wegovy side effects?</h1>
+</div>
+<p>
+</p>
+<p><strong>“Has anyone had horrible side effects on Wegovy?”</strong></p>
+<p>A worried Reddit user asked this question.</p>
+<p>And if you're here, reading this, chances are you're wondering the same.</p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="wegovy-side-effects.html#key-takeaways">Key takeaways:</a></li>
+<li><a href="wegovy-side-effects.html#how-does-wegovy-work-in-the-body">How does Wegovy work in the body?</a></li>
+<li><a href="wegovy-side-effects.html#why-does-wegovy-cause-side-effects">Why does Wegovy cause side effects?</a></li>
+<li><a href="wegovy-side-effects.html#what-are-the-side-effects-of-taking-wegovy">What are the side effects of taking Wegovy?</a></li>
+<li><a href="wegovy-side-effects.html#do-the-side-effects-go-away-over-time">Do the side effects go away over time?</a></li>
+<li><a href="wegovy-side-effects.html#how-to-manage-wegovy-side-effects">How to manage Wegovy side effects?</a></li>
+<li><a href="wegovy-side-effects.html#why-wegovy-affects-different-people-in-different-ways">Why Wegovy affects different people in different ways?</a></li>
+<li><a href="wegovy-side-effects.html#when-should-you-visit-the-doctor">When should you visit the doctor?</a></li>
+<li><a href="wegovy-side-effects.html#to-put-it-briefly">To put it briefly</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways:</h2>
+<div>
+<ul>
+<li>Wegovy can cause side effects like nausea, tiredness, constipation, and stomach discomfort.</li>
+<li>Most side effects are seen during dose increase and go away with time.</li>
+<li>Sensitivity to Wegovy can vary based on gut health, age, and medical history.</li>
+</ul>
+</div>
+<p>You have heard about Wegovy’s weight loss results and seen the before-and-after pictures. Your doctor is endorsing it, too.</p>
+<p>It looks promising. But a part of you hesitates.</p>
+<p><em>What if the side effects hit you hard?</em></p>
+<p><em>What if your body reacts badly to it?</em></p>
+<p><em>What if the adverse effects are irreversible?</em></p>
+<p>Yes, Wegovy has some side effects.</p>
+<p>But this is not the full story. In this guide, we’ll walk you through what those side effects look like, why they happen, and what you can do to feel better.</p>
+</div>
+<div>
+<h2>How does Wegovy work in the body?</h2>
+<div>
+<div>
+<span>How does Wegovy work?</span>
+<div>
+<div>
+
+<p>Mimics natural hormone GLP-1</p>
+</div>
+<div>
+
+<p>Slows digestion so you feel fuller for longer</p>
+</div>
+<div>
+
+<p>Signals your brain that you’re full</p>
+</div>
+</div>
+<ul>
+<li>Smaller portions satiate your hunger</li>
+<li>You experience fewer cravings</li>
+<li>Your blood sugar levels stay steady</li>
+<li>You lose weight gradually and healthily</li>
+</ul>
+</div>
+</div>
+<p>To understand Wegovy’s side effects better, we first need to know what exactly happens when we take the medicine.</p>
+<p>Wegovy works by mimicking the actions of a hormone in your body called GLP-1 (glucagon-like peptide-1).</p>
+<ul>
+<li><strong>Controls appetite:</strong> <br/> Wegovy targets the parts of your brain that control hunger. This reduces food cravings and makes it easier to eat less without feeling too hungry.</li>
+<li><strong>Keeps you full for longer:</strong> <br/> It slows how quickly food leaves your stomach. As a result, meals keep you satisfied for longer, which naturally reduces the urge to overeat.</li>
+<li><strong>Supports blood sugar control:</strong> <br/>After meals, Wegovy helps your body release more insulin and lowers glucagon levels in the blood.</li>
+</ul>
+<p>This helps you:</p>
+<ul>
+<li>Stay full even with smaller meals.</li>
+<li>Feel less hungry between meals.</li>
+<li>Cut down on cravings.</li>
+<li>Manage blood sugar more effectively.</li>
+<li>Lose weight steadily over time.</li>
+</ul> </div>
+<div>
+<h2>Why does Wegovy cause side effects?</h2>
+<p>The reason why people experience side effects while on Wegovy is that the body is adjusting to new changes.</p>
+<p>GLP-1 receptors are present in the gut, brain, pancreas, heart, kidneys, and blood vessels. When these receptors are activated by Wegovy, they affect how your body digests food, controls hunger, and regulates insulin.</p>
+<p>That’s why symptoms like nausea, bloating, or tiredness are common in the beginning. They are signs that your body is shifting gears.</p>
+</div>
+<div>
+<h2>What are the side effects of taking Wegovy?</h2>
+<p>Like any medicine, Wegovy can cause side effects. But not everyone gets them, and most are mild and temporary.</p>
+<picture>
+<source alt="Side effects of taking Wegovy" height="904" width="750">
+<source alt="Side effects of taking Wegovy" height="769" width="500">
+
+</source></source></picture>
+<p>According to the <a href="https://pro.novonordisk.co.in/content/dam/hcp-plus/in/en_in/pdfs/wegovy-pds-290_PI.pdf.coredownload.inline.pdf?cid=qr-nc6wu45dnd">patient information leaflet</a>, here are the side effects you must watch out for:</p>
+<h3>Mild side effects</h3>
+<div>
+<p><strong>Very common side effects:</strong></p>
+<div>
+<div>
+<ul>
+<li>Headache</li>
+<li>Nausea</li>
+<li>Vomiting</li>
+<li>Diarrhoea</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Pain in the abdomen</li>
+<li>Fatigue</li>
+<li>Constipation</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<p>
+<strong>Common side effects:</strong>
+</p>
+<div>
+<div>
+<ul>
+<li>Dizziness</li>
+<li>Indigestion or upset stomach</li>
+<li>Swollen abdomen</li>
+<li>Burping or gas</li>
+<li>Gastritis (inflamed stomach lining)</li>
+<li>Heartburn or acid reflux</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Gallstones</li>
+<li>Hair loss</li>
+<li>Injection site reactions</li>
+<li>Low blood sugar</li>
+<li>Diabetic retinopathy (a condition that may cause loss of vision) in people with type 2 diabetes.</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<p><strong>Uncommon side effects:</strong></p>
+<div>
+<ul>
+<li>Faster-than-usual heart rate</li>
+<li>Orthostatic hypotension (low blood pressure that happens while standing up after sitting or lying down)</li>
+<li>Sudden inflammation of the pancreas (acute pancreatitis)</li>
+</ul>
+</div>
+</div>
+<h3>Serious side effects:</h3>
+<div>
+<p>
+        They don’t happen as frequently, but are important to know.
+    </p>
+<div>
+<ul>
+<li>Worsening diabetic retinopathy ( diabetic eye disease)</li>
+<li>Inflamed pancreas (acute pancreatitis)</li>
+<li>Acute gallstone disease</li>
+<li>Kidney or bladder stones</li>
+<li>Thyroid tumours, including cancer</li>
+<li>Severe allergic reactions</li>
+<li>Bowel obstruction</li>
+</ul>
+</div>
+</div>
+<p>These side effects demand prompt medical attention. </p> </div>
+<div>
+<h2>Do the side effects go away over time?</h2>
+<p>Yes, most Wegovy side effects do get better with time. Symptoms like nausea, tiredness, headache, constipation, or diarrhoea are common in the initial days of increasing your dose.</p>
+<ul>
+<li>Nausea often takes 7-8 days to settle.</li>
+<li>Diarrhoea usually lasts 3 days.</li>
+<li>Vomiting gets better after 2 days.</li>
+<li>Constipation can take about 47 days on average to go away.</li>
+</ul>
+<div>
+<strong>Important:</strong>
+<p>Wegovy side effects are temporary and improve as your body adjusts. In case the side effects persist or worsen over time, please get in touch with your doctor.</p>
+</div> </div>
+<div>
+<h2>How to manage Wegovy side effects?</h2>
+<p>Usually, doctors prescribe the lowest dose first and increase gradually. This is to give your body some time to get used to the new medication.</p>
+<p>These simple and easy-to-follow tips will help you manage some common Wegovy side effects better:</p>
+<span>How to manage Wegovy side effects?</span>
+<ul>
+<li>
+<p> For nausea: </p>
+<div>
+<ul>
+<li>Eat several small meals instead of a couple of large ones.</li>
+<li>Start your meals by eating thin <em>dal</em> or clear soup first.</li>
+<li>Avoid <em>masala</em> and oil in your food for some time.</li>
+<li>Eat mindfully.</li>
+<li>Stay hydrated with <em>adrak chai, pudina tea, jeera water, or nimbu paani.</em></li>
+<li>Add <em>hing</em> in <em>dals</em> for better digestion.</li>
+</ul>
+</div>
+</li>
+<li>
+<p> For vomiting:</p>
+<div>
+<ul>
+<li>Drink ORS or sweet lemon water.</li>
+<li>Have light meals like <em>khichdi</em> or curd rice.</li>
+<li>Avoid lying down immediately after meals.</li>
+<li>Take small but frequent sips of water.</li>
+<li>Try taking Wegovy before going to bed to sleep through symptoms.</li>
+</ul>
+</div>
+</li>
+<li>
+<p> For diarrhoea: </p>
+<div>
+<ul>
+<li>Rehydrate with <em>nimbu paani, nariyal paani, or lassi.</em></li>
+<li>Eat apples, bananas, or curd rice.</li>
+<li>Consume <em>isabgol</em> (psyllium husk) if your doctor permits.</li>
+</ul>
+</div>
+</li>
+<li>
+<p> For constipation: </p>
+<div>
+<ul>
+<li>Drink at least 8–10 glasses of water daily.</li>
+<li>Try <em>triphala churna</em> if your doctor permits.</li>
+<li>Consume soaked <em>methi</em> seeds.</li>
+<li>Have more whole vegetables, whole grains, and papaya.</li>
+</ul>
+</div>
+</li>
+<li>
+<p> For decreased appetite: </p>
+<div>
+<ul>
+<li>Eat protein-rich foods like <em>dal, paneer,</em> soya, etc.</li>
+<li>Start taking multivitamins if your doctor permits.</li>
+<li>Eat small meals and do not force-feed yourself.</li>
+</ul>
+</div>
+</li>
+<li>
+<p> For fatigue: </p>
+<div>
+<ul>
+<li>Stay well-hydrated.</li>
+<li>Eat nutritious grains such as <em>ragi, jowar, sattu,</em> etc.</li>
+<li>Consume iron-rich foods like spinach and beetroot.</li>
+</ul>
+</div>
+</li>
+<li>
+<p> For headaches: </p>
+<div>
+<ul>
+<li>Drink 8-10 glasses of water every day.</li>
+<li>Sleep for at least 8 hours a day.</li>
+<li>Sleep at the same time each day.</li>
+<li>Use over-the-counter pain relievers if needed.</li>
+<li>Drink <em>tulsi</em> or chamomile tea for relief.</li>
+</ul>
+</div>
+</li>
+<li>
+<p> For injection site reactions:</p>
+<div>
+<ul>
+<li>Rotate the injection sites every time.</li>
+<li>Use a cold compress if there's swelling or discomfort at the site.</li>
+</ul>
+</div>
+</li>
+</ul>
+<p><strong>Also read: </strong> <a href="wegovy-injection.html">How to take Wegovy injection for weight loss</a></p>
+</div>
+<div>
+<h2>Why Wegovy affects different people in different ways?</h2>
+<p>You might feel, “Why does Wegovy affect me differently than others?”</p>
+<p>You're not imagining it. Sensitivity to a particular medication can be different for everyone.</p>
+<p>Some reasons include:</p>
+<ul>
+<li>You may have medical conditions related to the kidneys, eyes, or thyroid gland, which may affect your body’s ability to process Wegovy.</li>
+<li>You have a sensitive gut (perhaps because of IBS, IBD, Crohn's, etc.)</li>
+<li>Age and metabolism.</li>
+<li>Taking insulin or other medications like antidiabetics, anti-hypertensives, antidepressants, etc.</li>
+<li>Genetics</li>
+</ul>
+<div>
+<strong>Remember:</strong>
+<p>If you feel overwhelmed, talk to your doctor. You might need a slower dose increase, or simply more time to adjust.</p>
+</div> </div>
+<div>
+<h2>When should you visit the doctor?</h2>
+<p>Certain conditions or symptoms while on Wegovy may warrant you to visit your doctor as early as possible:</p>
+<ul>
+<li>A lump in your neck, difficulty swallowing, hoarseness, or shortness of breath.</li>
+<li>Severe or ongoing stomach pain, with or without vomiting.</li>
+<li>Feeling lightheaded, weak, or dehydrated due to nausea, vomiting, or diarrhoea.</li>
+<li>Yellowing of your skin or eyes, dark urine, or pale stools.</li>
+<li>The heartbeat feels fast or irregular while at rest.</li>
+<li>Low blood sugar symptoms such as shakiness, confusion, or sweating.</li>
+<li>Changes in vision, especially if you have diabetes.</li>
+<li>Feeling unusually tired, dizzy, or mentally unwell.</li>
+<li>Swelling, breathing difficulty, or skin reactions after an injection.</li>
+<li>Difficulty urinating, lower abdominal pain, or notice a change in urine colour.</li>
+<li>Bloating or constipation that does not improve.</li>
+</ul> </div>
+<div>
+<h2>To put it briefly</h2>
+<p>Yes, side effects can be frustrating, but they don't last forever. The long-term goal with Wegovy or any weight loss plan is to help you feel better at a sustainable pace.</p>
+<p>And when you stay consistent and ask for help when needed, progress follows.</p>
+<div>
+<p><strong>🎉 Launched in India in June 2025 </strong> <br/>  Wegovy is available in India in the form of pre-filled injection pen (FlexTouch). You can either self-inject it or take it with the help of a healthcare professional.</p>
+</div>
+<a href="wegovy-injection.html">Read more about Wegovy</a>
+</div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>What medications should you not take with Wegovy? </p>
+<div><p></p><p>A drug interaction happens when the presence of one drug affects the actions of the second drug. Wegovy, too, can interact with different medications and supplements.</p>
+<p>Some examples include painkillers (NSAIDs), certain antibiotics, antidepressants, and some blood pressure medications.</p>
+<p>Also, combining Wegovy with insulin, oral diabetes medications and other GLP-1 (or GIP) agents can cause undesirable effects. Always inform your doctor if you are taking any medications.</p>
+</div>
+</li>
+<li>
+<p>Does Wegovy cause hair loss?  </p>
+<div><p></p><p>Although there is no direct link between hair loss and Wegovy, some people do notice more hair fall after starting on the drug. In a clinical trial<a href="wegovy-side-effects.html#refid1_37"><sup>[1]</sup></a> involving around 1961 people over 68 weeks, around 2.5 % participants reported hair loss.</p>
+<p>That said, most participants recovered while still taking the weight loss treatment with Wegovy.</p>
+</div>
+</li>
+<li>
+<p>What happens if you eat too much food on Wegovy? </p>
+<div><p></p><p>Wegovy slows down how quickly your stomach empties, so you'll feel full much sooner than usual. So eating past that new 'full point' will increase the chances of gastrointestinal side effects like:</p>
+<ul>
+<li>Nausea</li>
+<li>Bloating or stomach discomfort</li>
+<li>Acid reflux</li>
+<li>Vomiting, especially during dose escalation</li>
+</ul>
+<p>Overeating on Wegovy isn’t dangerous in most cases, but it can be really uncomfortable.  If it happens, you may need to eat simple, light meals for some time and visit your doctor.</p>
+</div>
+</li>
+<li>
+<p>Which one is safer? Wegovy or Mounjaro?</p>
+<div><p></p><p>Both Wegovy and Mounjaro are considered safe when used as prescribed, but they work slightly differently and may suit different people.</p>
+<p>Wegovy contains semaglutide, while Mounjaro contains tirzepatide, which targets both GLP-1 and GIP hormones.</p>
+<p>Because of this, Mounjaro may cause more gastrointestinal side effects in some users. But it may also offer greater weight loss for others.</p>
+<p>As for safety, both come with similar risks:</p>
+<ul>
+<li>Nausea, vomiting, constipation</li>
+<li>Possible risk of pancreatitis</li>
+<li>A thyroid warning based on animal studies.</li>
+</ul></div>
+</li>
+<li>
+<p>Can Wegovy cause Ozempic face?  </p>
+<div><p></p><p>'Ozempic face' refers to the tired or hollow look some people get after losing weight quickly. It manifests in the form of sunken cheeks, looser skin, or more visible wrinkles. It happens because of quick fat loss throughout the body, and especially from the face.</p>
+<p>Wegovy, like other GLP-1 meds, can lead to similar changes if weight loss happens too fast. Losing weight gradually while focusing on your diet and exercise can help minimise this.</p>
+</div>
+</li>
+<li>
+<p>Can I take a break from Wegovy? </p>
+<div><p></p><p>It’s best not to skip doses of Wegovy on purpose. This medication works best when it’s taken consistently every week. Missing a dose can reduce appetite control and bring back side effects when you restart.</p>
+<p>If you miss a dose:</p>
+<ul>
+<li>Take it within five days.</li>
+<li>If it’s been more than 5 days, skip it and take the next one as scheduled.</li>
+<li>Don’t double-dose.</li>
+</ul>
+<p>If you have missed more than one dose, you should check in with your doctor. They may ask you to go back to a lower dose so you adjust easily.</p>
+</div>
+</li>
+<li>
+<p>Can Wegovy cause heart attacks? </p>
+<div><p></p><p>There’s no direct evidence that Wegovy causes heart attacks in healthy users. In fact, GLP-1 medications like Wegovy have been shown to reduce the risk of heart disease in people with type 2 diabetes.</p>
+<p>However, if you already have a heart condition, your doctor will want to monitor you more closely, especially when you are adjusting to Wegovy during your initial days.</p>
+</div>
+</li>
+<li>
+<p>Why am I still so hungry on Wegovy? </p>
+<div><p></p><p>Wegovy reduces appetite for most people, but not everyone feels that effect right away. If you’re still hungry:</p>
+<ul>
+<li>Your dose may still be too low (especially in the first few weeks).</li>
+<li>You might be confusing emotional hunger or habit-driven eating with real hunger.</li>
+<li>Skipping meals or not eating enough protein and fibre can also make you feel hungrier.</li>
+</ul></div>
+</li>
+<li>
+<p>Who should not use Wegovy? </p>
+<div><p></p><p>Wegovy is not recommended for:</p>
+<ul>
+<li>People with a personal or family history of medullary thyroid cancer.</li>
+<li>Those with multiple endocrine neoplasia syndrome type 2 (MEN 2).</li>
+<li>Women who are pregnant or trying to conceive.</li>
+<li>Women who are currently breastfeeding.</li>
+<li>Anyone allergic to semaglutide or other ingredients in the injection.</li>
+</ul>
+<p>Always talk to your doctor before starting Wegovy to make sure it’s a safe fit.</p>
+</div>
+</li>
+<li>
+<p>Is it safe to take Wegovy for life?  </p>
+<div><p></p><p>Wegovy is generally considered safe for long-term use, but ongoing studies are still tracking its effects beyond 2–3 years.</p>
+<p>However, like any medication, there are potential risks associated with prolonged use. Possible long-term side effects include pancreatitis, gallbladder disease (such as gallstones or inflammation of the gallbladder), and kidney damage.</p>
+<p>If it helps you manage your weight and improve health markers like blood sugar, cholesterol, and blood pressure, your doctor may recommend staying on it long-term and even monitor your health while you are on Wegovy.</p>
+</div>
+</li>
+<li>
+<p>What happens if you stop Wegovy?</p>
+<div><p></p><p>You may also see a reduction in the side effects from the medication, usually within the first week of stopping.</p>
+<p>Although stopping Wegovy is not harmful, it comes with a few changes, like:</p>
+<ul>
+<li>Return of appetite to pre-treatment levels.</li>
+<li>Increased food cravings.</li>
+<li>Weight regain (if a healthy diet, exercise, and lifestyle changes are not followed).</li>
+<li>Feel fatigued than usual.</li>
+<li>Increased blood sugar levels.</li>
+<li>Changes in mood (disappointment, sadness).</li>
+</ul>
+<p>If you're thinking of pausing or quitting Wegovy, don’t do it abruptly. Discuss this with your doctor. They may suggest tapering the dose or suggest alternatives that work better for you.</p>
+</div>
+</li>
+<li>
+<p>Can Wegovy cause depression? </p>
+<div><p></p><p>Although rare, Wegovy might cause or worsen depression and mood changes in some people.</p>
+<p>Recent studies <a href="wegovy-side-effects.html#refid2_37"><sup>[2]</sup></a><a href="wegovy-side-effects.html#refid3_37"><sup>[3]</sup></a> and adverse event reports have linked semaglutide to higher rates of depression, anxiety, and suicidal thoughts, especially at higher doses or in those with a history of mental health issues.</p>
+<p>But in Indian trials or safety monitoring, no statistically significant psychiatric side effects have been reported.</p>
+<p>That said, this aspect needs more research. Still, regulatory agencies advise monitoring mental health during treatment, particularly if you or your family has a history of mental health issues.</p>
+<p>If you notice new or worsening mood symptoms while on Wegovy, it’s important to speak to your doctor.</p>
+</div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>October, 14 2025</strong></p><p>Publish date <strong>October, 14 2025</strong></p></div> </div>
+<div>
+<p><strong>References:</strong></p>
+<ul>
+<li>[1] Semaglutide. (n.d.). <em>Semaglutide injection.</em> <a href="https://pro.novonordisk.co.in/content/dam/hcp-plus/in/en_in/pdfs/wegovy-pds-290_PI.pdf.coredownload.inline.pdf?cid=qr-nc6wu45dnd">https://pro.novonordisk.co.in/content/dam/hcp-plus/in/en_in/pdfs/wegovy-pds-290_PI.pdf.coredownload.inline.pdf?cid=qr-nc6wu45dnd</a></li>
+<li>[2] Kornelius, E., Huang, J., Lo, S., Huang, C., &amp; Yang, Y. (2024). The risk of depression, anxiety, and suicidal behavior in patients with obesity on glucagon like peptide-1 receptor agonist therapy. <em>Scientific Reports, 14(1).</em> <a href="https://doi.org/10.1038/s41598-024-75965-2">https://doi.org/10.1038/s41598-024-75965-2</a></li>
+<li>[3] Schoretsanitis, G., Weiler, S., Barbui, C., Raschi, E., &amp; Gastaldon, C. (2024). Disproportionality analysis from World Health Organization data on semaglutide, liraglutide, and suicidality. <em>JAMA Network Open, 7(8),</em> e2423385. <a href="https://doi.org/10.1001/jamanetworkopen.2024.23385">https://doi.org/10.1001/jamanetworkopen.2024.23385</a></li>
+</ul> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

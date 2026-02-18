@@ -1,0 +1,635 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>11 benefits of drinking hot water you didn’t know about | Figur Health</title>
+  <meta name="description" content="From soothing sore throats to helping with weight loss, the benefits of drinking hot water are undeniable. Find out how this time-tested ritual works."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Nutrition</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">11 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>11 benefits of drinking hot water you didn’t know about</h1>
+        <p class="article-hero__desc">From soothing sore throats to helping with weight loss, the benefits of drinking hot water are undeniable. Find out how this time-tested ritual works.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+<div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80" alt="Hot water" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>11 benefits of drinking hot water you didn’t know about</h1>
+</div>
+<p>
+</p>
+<p>For most people hot water = comforting hot showers.</p>
+<p>But did you know, drinking hot water helps your body destress and benefits your health as well?</p>
+<p>Here’s how.</p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="hot-water-benefits.html#key-takeaways">Key takeaways</a></li>
+<li><a href="hot-water-benefits.html#what-are-the-benefits-of-drinking-hot-water">What are the benefits of drinking hot water?</a></li>
+<li><a href="hot-water-benefits.html#who-must-avoid-drinking-hot-water">Who must avoid drinking hot water?</a></li>
+<li><a href="hot-water-benefits.html#when-is-the-best-time-to-drink-hot-water">When is the best time to drink hot water?</a></li>
+<li><a href="hot-water-benefits.html#how-can-you-make-drinking-hot-water-a-habit">How can you make drinking hot water a habit?</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways</h2>
+<div>
+<ul>
+<li>Drinking hot water relaxes muscles, soothes cramps, and improves skin &amp; hair.</li>
+<li>Hot water has zero calories, which means better metabolism and a lower BMI.</li>
+<li>Hot water boosts digestion by breaking down food faster and softening stools.</li>
+</ul>
+</div>
+<p>How many times have you heard people say, “A glass of warm water is a surefire remedy for weight loss”?</p>
+<p>Almost everyone has a relative or friend who starts their day by boiling water on the stove, filling a thermos, and sipping it plain or flavoured with herbs and spices.</p>
+<p>In fact, our bodies may be 70 percent water, but what water does for us is 100 percent beyond compare.</p>
+<p>According to Ayurveda, <em>Jal</em> (water) is one of the <em>Pancha Mahabhutas</em> (five fundamental elements) and is essential to maintaining a healthy balance among different <em>doshas</em> (<em>Vata, Pitta, and Kapha</em>).</p>
+<p>With adequate intake, water ensures your hunger doesn't overwhelm you, fatigue doesn't touch you, and your energy levels stay steady throughout the day.</p>
+<p>Staying hydrated is one of the easiest ways to keep fit and healthy.</p>
+<p>But does drinking hot water really benefit our health? </p>
+<p>In the next few minutes, as you go through this article, you will see how you can use this simple, plain liquid to stay fit and say bye-bye to your health problems.</p> </div>
+<div>
+<h2>What are the benefits of drinking hot water?</h2>
+<p>Hot water is the unsung hero of good health and vitality. Here are 11 amazing benefits of drinking hot water:</p>
+<picture>
+<source alt="How does drinking hot water benefit my health" height="649" width="670">
+<source alt="How does drinking hot water benefit my health" height="1341" width="400">
+
+</source></source></picture>
+<h3>1. Improves digestion &amp; controls appetite</h3>
+<p>Hot or warm water temperature <strong>helps the digestive system break down food</strong> more easily, absorb nutrients, and process the fats from food efficiently.</p>
+<p>Having hot water before meals <strong>creates a feeling of fullness</strong>. This eliminates any sudden hunger pangs and <strong>prevents unnecessary snacking</strong>.</p>
+<p>It also <a href="https://wjpr.net/abstract_show/14459">flushes out the toxins</a><a href="hot-water-benefits.html#refid1_38"><sup>[1]</sup></a> accumulated in the body through sweat and urine, as well as <strong>softens the stools</strong>.</p>
+<p>This is one of the best benefits of drinking hot water in the morning.</p>
+<h3>2. May help lose weight</h3>
+<p>Hot water has no calories, is light, and can manage hunger pangs well.</p>
+<p>A 3-month <a href="https://biomedicineonline.org/article/intake-of-hot-water-after-each-meal-as-a-weight-reduction-strategy-a-prospective-randomized-controlled-trial/">study</a><a href="hot-water-benefits.html#refid2_38"><sup>[2]</sup></a> drinking warm water after a meal helps <strong>lose approximately 3 kg in weight</strong>.</p>
+<h3>3. Eases menstrual cramps</h3>
+<p>Drinking hot water <strong>relaxes the uterus muscles</strong> and <strong>dulls period pain perception</strong> by activating heat receptors in the skin and blocking the pain signals from reaching the brain.</p>
+<p><a href="https://journaljpri.com/index.php/JPRI/article/view/4983">Studies</a><a href="hot-water-benefits.html#refid4_38"><sup>[4]</sup></a> have shown that drinking hot water during the first three days of their menstrual cycle makes it easier to deal with menstrual cramps.</p>
+<h3>4. Boosts metabolism</h3>
+<p>According to <a href="https://www.jcdr.net/article_fulltext.asp?issn=0973-709x&amp;year=2013&amp;volume=7&amp;issue=9&amp;page=1894&amp;issn=0973-709x&amp;id=3344">research</a><a href="hot-water-benefits.html#refid3_38"><sup>[3]</sup></a>, drinking about 500 ml of water can increase metabolic rate by approximately <strong>30% within 10 minutes</strong>.</p>
+<h3>5. Clears congestion &amp; soothes sore throat</h3>
+<p>Drinking hot water can <strong>loosen mucus</strong> that blocks your airways.</p>
+<p>Moreover, the steam released from boiling water is the quickest and easiest home remedy for relieving nasal congestion.</p>
+<p>Drinking warm water or rinsing your sore throat <strong>helps reduce swelling and battle infections</strong>.</p>
+<p>It also moistens the throat and relieves the dry, sandpapery feeling that makes swallowing difficult.</p>
+<h3>6. Improves blood circulation</h3>
+<p>Warm or hot water allows the blood to flow more freely through your body, relaxing and nourishing <strong>the heart muscles</strong> and supplying the body with more oxygen and nutrients.</p>
+<h3>7. Relaxes muscles</h3>
+<p>Hot water, whether consumed or applied as hot water bags, can <strong>easily relieve muscle stiffness and tension</strong> by increasing blood flow, relaxing the muscles, blocking pain signals, and giving comfort.</p>
+<h3>8. Supports the immune system</h3>
+<p>There is a reason why you feel slightly feverish at the first sight of a cold.</p>
+<p>Your immune system needs a rise in temperature to fight off harmful viruses and bacteria.</p>
+<p>Drink hot water. Your body will thank you.</p>
+<h3>9. Keeps the mouth fresh</h3>
+<p>Most dentists recommend rinsing the mouth with warm water and salt.</p>
+<p>This restores a slightly alkaline pH in the oral cavity, flushes out harmful bacteria, and removes dirt trapped in the gums.</p>
+<p>It also <strong>soothes inflammation</strong> and is an affordable and easy way to keep the mouth fresh.</p>
+<h3>10. Makes skin and hair healthy</h3>
+<p>A <a href="https://www.dovepress.com/dietary-water-affects-human-skin-hydration-and-biomechanics-peer-reviewed-fulltext-article-CCID">study</a><a href="hot-water-benefits.html#refid5_38"><sup>[5]</sup></a> revealed that consuming almost 3.2 litres of water daily (via food or drinks) <strong>improved skin moisture and elasticity</strong>.</p>
+<p>Drinking warm water also <strong>expels toxins that cause breakouts and dull skin</strong>.</p>
+<p>As drinking hot water <strong>increases blood circulation</strong>, the hair follicles in your scalp can receive more nutrients.</p>
+<p>This strengthens your hair, improves its growth, and makes it shinier.</p>
+<h3>11. Improves bladder control</h3>
+<p>The relaxing effect of hot water can also <strong>relieve the tensed muscles in the bladder</strong> and pelvic area.</p>
+<p>A study showed that applying heat (such as hot packs) to the suprapubic (the area above the pubic bone) area can <strong>help relieve urinary retention post-surgery</strong>.</p>
+</div>
+<div>
+<h2>Who must avoid drinking hot water?</h2>
+<p>In certain instances, drinking hot water might not be the best thing to do. There are certain health conditions that may worsen by drinking hot water.</p>
+<p>Scroll down to know in which cases drinking hot water may prove to be more harmful than helpful.</p>
+<picture>
+<source alt="When should you not drink hot water" height="760" width="670">
+<source alt="When should you not drink hot water" height="1083" width="400">
+
+</source></source></picture>
+</div>
+<div>
+<h2>When is the best time to drink hot water?</h2>
+<p>If you are wondering when the best time to drink hot or warm water is, we’ve got you covered.</p>
+<p>While there is technically no right or wrong time to drink hot water, there are certain times of the day when drinking hot water can help you optimise your health in various ways.</p>
+<p>Here is a water ‘time-table’ you can follow at your convenience.</p>
+<div>
+<h1>When is the best time to drink hot water?</h1>
+<div>
+<div>
+<h3>Upon Waking Up</h3>
+<p>1 glass (240 ml)</p>
+<ul>
+<li>Activates internal organs.</li>
+<li>Flushes out overnight toxins.</li>
+<li>Boosts digestion and metabolism.</li>
+</ul>
+</div>
+<div>
+<h3>Before Meals</h3>
+<p>1 glass (240 ml)</p>
+<ul>
+<li>Prepares the digestive system.</li>
+<li>Improves nutrient absorption.</li>
+<li>Controls appetite and makes you feel full.</li>
+</ul>
+</div>
+<div>
+<h3>After Meals (Wait 1 hour)</h3>
+<p>1 glass (240 ml)</p>
+<ul>
+<li>Aids nutrient absorption.</li>
+<li>Doesn’t interfere with digestive juices.</li>
+</ul>
+</div>
+<div>
+<h3>Before Bedtime</h3>
+<p>½ – 1 glass (120–240 ml)</p>
+<ul>
+<li>Calms the body.</li>
+<li>Promotes better sleep.</li>
+<li>Relieves constipation.</li>
+<li>Eases indigestion symptoms.</li>
+<li>Smoothens bowel movements.</li>
+</ul>
+</div>
+<div>
+<h3>Throughout the Day</h3>
+<p>6–8 glasses (1,440–1,920 ml)</p>
+<ul>
+<li>Keeps you hydrated.</li>
+<li>Regulates thirst.</li>
+</ul>
+</div>
+<div>
+<h3>During Cold Weather or Illness</h3>
+<p>6–8 glasses (1,440–1,920 ml)</p>
+<ul>
+<li>Relieves congestion.</li>
+<li>Keeps the body warm.</li>
+<li>Helps manage cold/flu symptoms.</li>
+</ul>
+</div>
+<div>
+<h3>During Panchakarma &amp; Snehapana</h3>
+<p>6–8 glasses (1,440–1,920 ml)</p>
+<ul>
+<li>Supports Ayurvedic detox.</li>
+<li>Helps eliminate toxins.</li>
+</ul>
+</div>
+</div>
+</div> </div>
+<div>
+<h2>How can you make drinking hot water a habit?</h2>
+<p>Adopting a new habit can take some time and effort. But that doesn’t mean it can’t be fun!</p>
+<p>Here are some tried and tested ways in which you can make drinking hot water an easy-to-sustain habit:</p>
+<ul>
+<li><strong>Infuse your warm water</strong> with sliced lemon, berries, or cucumber. You can add ginger, <em>tulsi</em> (holy basil) leaves, <em>jeera</em> seeds, <em>ajwain</em> seeds, or cinnamon for added health benefits.</li>
+<li>Try replacing your high-calorie sugary drinks with <a href="indian-homemade-drinks-for-weight-loss.html">low-calorie options</a> like turmeric water, lemon-honey water, green tea, or any herbal tea you choose.</li>
+<li><strong>Set an hourly reminder</strong> to drink water. Drink at least 2-3 litres of water daily.</li>
+<li>If you enjoy detox drinks, <strong>add mint leaves, ginger and some fennel (<em>saunf</em>) seeds</strong>. You can even include <a href="chia-seeds-for-weight-loss.html">chia seeds</a> for that extra protein, fibre, and nutrients.</li>
+<li><strong>Start small</strong>. Replace one cold beverage with warm water each day for 21 days straight. See how your body responds, and increase your intake if comfortable.</li>
+</ul>
+<p>Does losing weight just with hot water seem a distant dream? Check out <a href="health-guide.html">Aktive's health guide</a> to explore more ways to lose weight and discover science-backed weight loss solutions.</p>
+<p>Have you tried adding warm water to your routine? We would love to hear from you about the benefits of drinking hot water daily. Share your experience with us on our official <a href="https://www.instagram.com/join_aktive/">Instagram</a> page. Tag us for a shoutout!</p>
+</div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>Should I add lemon or other ingredients to hot water?</p>
+<div><p></p><p>Sure, why not? Adding lemon, herbs, ginger, or other ingredients to hot water gives the dual benefit of better flavour and their health effects.</p>
+<p>For example, lemon water nourishes you with vitamin C (which improves your immunity), while ginger has anti-inflammatory properties.</p></div>
+</li>
+<li>
+<p>Can I replace tea or coffee with hot water?</p>
+<div><p></p><p>Yes, hot water can be a good substitute for tea and coffee if you like simple, caffeine-free beverages.</p>
+<p>However, it is advisable to do so gradually as the body might be used to a specific caffeine intake.</p>
+<p>If you crave more flavour, you can use herbal teas that are calorie-free and just as refreshing.</p></div>
+</li>
+<li>
+<p>Is it safe to drink hot water daily?</p>
+<div><p></p><p>Yes, drinking hot water daily is safe as it stimulates digestion, clears waste from your body, manages bloating and constipation, and provides relief when you have a cold or a sore throat.</p>
+<p>It may also help you lose weight by controlling your calorie intake.</p>
+<p>But it is best to drink it warm rather than hot (not more than 60 degrees Celsius) to avoid burns or scalds in the mouth and throat.</p></div>
+</li>
+<li>
+<p>How much weight can I lose in 1 month by drinking hot water?</p>
+<div><p></p><p>Drinking hot water is one factor among many that adds (positively) to your weight loss plans, but there is no specific number of kilos that can be guaranteed by just drinking that.</p>
+<p>Weight loss depends on various factors like your current health, diet, physical activity, emotional health, genetics, and metabolism.</p>
+<p>According to research, drinking hot water can benefit weight loss when combined with healthy eating and exercise.</p>
+</div>
+</li>
+<li>
+<p>Does hot water burn belly fat?</p>
+<div><p></p><p>Hot water won’t magically melt belly fat, but it is a good addition to your weight loss strategy.</p>
+<p>Drinking hot water increases metabolism, helps the body burn calories better, and makes you feel fuller. But regular exercise and a calorie-restricted diet are needed for the best results.</p></div>
+</li>
+<li>
+<p>Can I drink hot water during pregnancy?</p>
+<div><p></p><p>You can enjoy warm to slightly hot water during pregnancy, but do so in moderation.</p>
+<p>Warm water greatly reduces morning sickness and improves digestion, bowel movements, and blood circulation.</p>
+<p>Drinking an excess of hot water in pregnancy can pose risks in the first trimester. Always check in with your doctor before adopting new wellness routine changes.</p></div>
+</li>
+<li>
+<p>Which water is best to drink?</p>
+<div><p></p><p>Be it of any temperature or source, the best water must always be clean, safe, and free from any impurities (physical, chemical, or biological).</p>
+<p>People all over the world enjoy drinking tap water (affordable and readily available), mineral water (rich in calcium and magnesium), spring water (sourced from springs and is natural and refreshing), alkaline water (pH 8–9.5 and has some acid-neutralizing properties), and filtered water (purified tap water with better taste and safety).</p></div>
+</li>
+<li>
+<p>Can drinking hot water cause dehydration?</p>
+<div><p></p><p>Although more studies are needed to confirm this, drinking hot water does not inherently cause dehydration.</p>
+<p>Consuming warm or hot water in moderation still adds to your overall fluid intake.</p>
+<p>But, you must balance this with drinking cooler or room-temperature fluids when sweating or doing heavy physical activities.</p>
+<p>Hot water is especially soothing and encourages you to drink more in colder weather (when people are less likely to hydrate themselves).</p>
+</div>
+</li>
+<li>
+<p>Does hot water help in managing kapha dosha?</p>
+<div><p></p><p>Yes. <em>Kapha dosha</em> is associated with heaviness, stability, coldness, softness, and lubrication. Therefore, when <em>kapha</em> is out of balance, it can lead to weight gain, sluggishness, water retention, depression, and water retention.</p>
+<p>Hot water, being light and drying, can counter the heavy, cold, and oily qualities of this dosha by:</p>
+<ul>
+<li>Increasing metabolism.</li>
+<li>Clearing out excess mucus.</li>
+<li>Improving detoxification.</li>
+<li>Correcting your energy levels.</li>
+</ul></div>
+</li>
+<li>
+<p>Can I drink hot water during exercise?</p>
+<div><p></p><p>Yes, drinking hot water offers many benefits, but body temperature and intensity of exercise are equally important here.</p>
+<p>Drinking hot water can increase body temperature and cause some discomfort. That is why it is best to drink cool, room-temperature, or slightly warm water before and during workouts.</p>
+<p>If you choose to drink warm water post-workout, it may help your muscles relax and recover better.</p>
+</div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>June, 11 2025</strong></p><p>Publish date <strong>June, 10 2025</strong></p></div> </div>
+<div>
+<p><strong>References:</strong></p>
+<ul>
+<li> [1] Baride, P. M., Joshi, D. A., Sir, V. G., Bavage, S., &amp; Bavage, N. B. (n.d.). WJPR - abstract. <a href="https://wjpr.net/abstract_show/14459">https://wjpr.net/abstract_show/14459</a></li>
+<li> [2] Intake of hot water after each meal as a weight reduction strategy – a prospective randomized controlled trial.
+        (n.d.). <a href="https://biomedicineonline.org/article/intake-of-hot-water-after-each-meal-as-a-weight-reduction-strategy-a-prospective-randomized-controlled-trial/">https://biomedicineonline.org/article/intake-of-hot-water-after-each-meal-as-a-weight-reduction-strategy-a-prospective-randomized-controlled-trial/</a>
+</li>
+<li> [3] Vij, V. A. (2013). Effect of ‘Water induced thermogenesis’ on body weight, body mass index and body composition of
+        overweight subjects. <em>JOURNAL OF CLINICAL AND DIAGNOSTIC RESEARCH</em>. <a href="https://doi.org/10.7860/jcdr/2013/5862.3344">https://doi.org/10.7860/jcdr/2013/58632.3344</a></li>
+<li> [4] Rajaselin, A., Sridevi, G., &amp; Preetha, S. (2021). An Evaluation of Hot Water Intake and Relief from Menstrual Cramps
+        among Healthy Females - A Cross Sectional Study. <em>Journal of Pharmaceutical Research International</em>, 319–327.
+        <a href="https://doi.org/10.9734/jpri/2021/v33i58b34207">https://doi.org/10.9734/jpri/2021/v33i58b34207</a></li>
+<li> [5] Rodrigues, L., Palma, L., Marques, L. T., &amp; Varela, J. B. (2015). Dietary water affects human skin hydration and
+        biomechanics. Clinical Cosmetic and Investigational Dermatology, 413. <a href="https://doi.org/10.2147/ccid.s86822">https://doi.org/10.2147/ccid.s86822</a></li>
+</ul> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

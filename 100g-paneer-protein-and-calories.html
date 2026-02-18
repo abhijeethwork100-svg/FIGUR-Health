@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Explained: Calories & protein in 100g paneer | Figur Health</title>
+  <meta name="description" content="How many calories & protein in 100g paneer? Get a full breakdown of its nutritional value, health benefits, and how it can help you lose weight."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Nutrition</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">14 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>Explained: Calories & protein in 100g paneer</h1>
+        <p class="article-hero__desc">How many calories & protein in 100g paneer? Get a full breakdown of its nutritional value, health benefits, and how it can help you lose weight.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+
+ <div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80" alt="Paneer" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>Explained: Calories &amp; protein in 100g paneer</h1>
+</div>
+<p>
+</p>
+<p>Is <em>paneer</em> your friend or foe?</p>
+<p>Many can’t resist this soft, bright white cube in the form of grilled <em>tandoori paneer</em>, <em>paneer frankie,</em> or even <em>paneer butter masala.</em></p>
+<p>Trying to lose weight? Does <em>paneer,</em> with its calorie and protein count, help or harm your weight loss plans?</p>
+<p>Let us answer.</p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="100g-paneer-protein-and-calories.html#key-takeaways">Key takeaways:</a></li>
+<li><a href="100g-paneer-protein-and-calories.html#what-is-paneer">What is paneer?</a></li>
+<li><a href="100g-paneer-protein-and-calories.html#nutritional-value-of-paneer">Nutritional value of paneer</a></li>
+<li><a href="100g-paneer-protein-and-calories.html#7-lesser-known-benefits-of-eating-paneer--">7 lesser-known benefits of eating paneer  </a></li>
+<li><a href="100g-paneer-protein-and-calories.html#how-much-protein-&amp;-calories-does-your-favourite-paneer-dish-have">How much protein &amp; calories does your favourite paneer dish have?</a></li>
+<li><a href="100g-paneer-protein-and-calories.html#6-easy-tips-to-make-paneer-weight-loss-friendly">6 easy tips to make paneer weight loss-friendly</a></li>
+<li><a href="100g-paneer-protein-and-calories.html#paneer,-egg,-or-tofu-which-is-better">Paneer, egg, or tofu? Which is better?</a></li>
+<li><a href="100g-paneer-protein-and-calories.html#6-best-paneer-alternatives-for-lactose-intolerant-people">6 best paneer alternatives for lactose intolerant people</a></li>
+<li><a href="100g-paneer-protein-and-calories.html#paneer-is-precious">Paneer is precious</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways:</h2>
+
+<div>
+<ul>
+<li><em>Paneer</em> is a fresh, non-melting cheese made by breaking milk into small 'curdles' using acidic agents. </li>
+<li>With <strong>25g protein per 100g</strong> and <strong>286-311 calories per 100g,</strong> it is a good food choice for vegetarians.</li>
+<li><em>Paneer</em> is a good food choice if you plan to lose weight. But remember to eat it with other lean protein sources and fibre for the best results.</li>
+</ul>
+</div>
+<p>If you've ever wondered how to <strong>maintain a high-protein diet</strong> and lose weight while keeping things vegetarian, you are in for a treat.</p>
+<p>With <strong>286-331 calories</strong> and upto <strong>25g protein</strong> in a 100g serving of <em>paneer</em>, you can count on this dairy product. </p>
+<p>In this article, we'll talk about what makes <em>paneer</em> so healthy, its benefits, and the best ways to eat it for weight loss. We’ll also see how it compares to other protein sources like eggs and tofu.</p>
+<p>By the end, you’ll know exactly how to enjoy <em>paneer</em> without derailing your weight loss goals.</p>
+</div>
+<div>
+<h2>What is paneer?</h2>
+
+<p><em>Paneer</em> is a fresh, unaged cheese that is made by curdling almost boiled milk with lemon juice, lactic acid, or vinegar. The curds produced are then strained and pressed firmly to form a block.</p>
+<p>When done right, curdling ensures the resulting cheese is soft and has a non-bitter taste. </p>
+<p>It is a <strong>rich source of protein,</strong> and unlike other cheeses, <em>paneer</em> doesn't melt. This way, it maintains its shape and can be easily grilled, fried, or added to gravy-based dishes. </p>
+<p>No wonder some people say, “<em>Paneer</em> toh beta itni itni thailiyon me sunar ki dukan pe bikega…”</p>
+<p>If we compare homemade <em>paneer</em> with store-bought version, <strong>homemade <em>paneer</em> is fresher, softer, and certainly free from preservatives and additives</strong>. You can also make low-fat <em>paneer</em> at home from skimmed milk. This reduces your intake of saturated fat.</p>
+<p>However, its high moisture content makes it more likely to be spoiled by microorganisms. When stored at 4°C or below, <em>paneer</em> can retain its freshness for about three days. Refrigerating it at around -18°C can extend its shelf life for upto four months!</p> </div>
+<div>
+<h2>Nutritional value of paneer</h2>
+<p>A <a href="https://fdc.nal.usda.gov/food-details/1953592/nutrients">100g serving of <em>paneer</em></a> includes several nutrients. Read the food label below to know more about the <em>paneer</em>’s nutritional value.</p>
+
+<br/>
+<div>
+<p><strong>Note:</strong> The nutritional value of <em>paneer</em> largely depends on the kind of milk used.</p>
+</div>
+<p>Sheep milk <em>paneer</em> is <strong>rich in fat</strong> but slightly <strong>low in protein</strong> compared to buffalo and cow milk <em>paneer</em>. </p>
+<p><strong>Goat milk <em>paneer</em></strong> has <strong>low fat</strong> compared to sheep milk <em>paneer</em>. However, it also <strong>lacks protein</strong> compared to buffalo and cow milk <em>paneer</em>.</p>
+<p><strong>Buffalo milk <em>paneer</em></strong> is loved by many for its richness and creamy texture. But this means, that <em>paneer</em> made from buffalo milk has <strong>high fat and high protein.</strong></p>
+<p><strong>Cow milk <em>paneer</em></strong> is soft, <strong>low in fat, and high in protein,</strong> which makes it a good option for people watching their waistline.</p>
+<div>
+<p><em>If you eat <em>paneer</em> made from buffalo milk, it will have more fat, protein, and a higher cholesterol content. <em>Paneer</em> made from cow’s milk has relatively less cholesterol. So, if you enjoy eating <em>paneer</em>, prefer eating the one made from cow’s milk.</em></p>
+<p>- <a href="https://saaol.com/about-dr-bimal">Dr. Bimal Chhajer</a>, Cardiologist, SAAOL</p>
+</div>
+<p>Now that we know <em>paneer</em> is a nutrient-dense food, we need to be careful about the portions we eat. This makes it easier to maximise the benefits of protein without consuming excess fat.</p>
+<p>You can refer to the list below and see how <em>paneer</em>'s calorie count changes with portion size:</p>
+<div>
+<table>
+<thead>
+<tr>
+<th>Paneer (in grams)</th>
+<th>Calories</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>50 grams</td>
+<td>143-166 kcal</td>
+</tr>
+<tr>
+<td>100 grams</td>
+<td>286-331 kcal</td>
+</tr>
+<tr>
+<td>150 grams</td>
+<td>429-497 kcal</td>
+</tr>
+<tr>
+<td>200 grams</td>
+<td>572-662 kcal</td>
+</tr>
+<tr>
+<td>300 grams</td>
+<td>858-993 kcal</td>
+</tr>
+<tr>
+<td>500 grams</td>
+<td>1430-1655 kcal</td>
+</tr>
+</tbody>
+</table>
+</div> </div>
+<div>
+<h2>7 lesser-known benefits of eating paneer  </h2>
+<h3>P = <em>Paneer</em> = Protein</h3>
+<p>We know <em>paneer</em> is a good protein source, but eating this white, blissful cube offers many other benefits as well. Take a look:</p>
+<ul>
+<li>Being high in protein, <em>paneer</em> helps you <strong>feel fuller for longer</strong> and prevents you from unnecessary snacking. This is especially beneficial for weight loss.</li>
+<li>It contains calcium, which is essential for <strong>maintaining healthy bones, muscles, and teeth.</strong></li>
+<li>The potassium in <em>paneer</em> <strong>stabilises blood pressure,</strong> prevents muscle cramps, and strengthens nerve function. </li>
+<li>It is rich in branched-chain amino acids like isoleucine, leucine, and valine. These amino acids <a href="https://innovationsagriculture.pensoft.net/article/124224/">strengthen muscles</a><a href="100g-paneer-protein-and-calories.html#refid1_31"><sup>[1]</sup></a> by helping them <strong>recover quicker after exercise.</strong></li>
+<li>It <strong>prevents sudden blood glucose spikes.</strong> This is an effective way to <a href="https://victorpozzobon.github.io/assets/preprints/Pozzobon_2019_a.pdf">manage blood sugar</a><a href="100g-paneer-protein-and-calories.html#refid2_31"><sup>[2]</sup></a> levels for people with type 2 diabetes.</li>
+<li>The liquid whey that is left over from making <em>paneer</em> may help <a href="https://consumer-voice.org/paneer/which-brands-did-not-clear-the-microbiological-safety-test/#:~:text=The%20whey%20(remaining%20liquid%20part%20while%20making%20paneer)%20cleanses%20the%20bladder%20and%20helps%20prevent%20bladder%20infections.">prevent bladder infections</a> by cleansing the bladder.</li>
+<li>It is a versatile ingredient and can be <strong>easily added to different dishes</strong> or simply enjoyed raw! </li>
+</ul> </div>
+<div>
+<h2>How much protein &amp; calories does your favourite paneer dish have?</h2>
+<p>We now know how many calories are there in 100g of raw <em>paneer</em>.</p>
+<p>But, it can be a little monotonous to eat <em>paneer</em> in its raw form every time, right?</p>
+<p>As Indians, we all love a bit of zing to our dishes, and <em>paneer</em> is no exception. So, why should you miss out on delicious <em>paneer</em> dishes on your way to becoming a healthier, happier you?</p>
+<p>Here’s a quick list of the <strong>calorie and protein content in your favourite <em>paneer</em> dishes*</strong>—so you can keep track of what you ate, <a href="cico-for-weight-loss.html">maintain calorie deficit</a>, and lose weight without losing your mind!</p>
+<h3>Calories &amp; protein in your favourite <em>paneer</em> dishes</h3>
+<div>
+<table>
+<thead>
+<tr>
+<th>Dish</th>
+<th>Calories (kcal)</th>
+<th>Protein (in g) (per serving)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><em>Paneer paratha</em></td>
+<td>189</td>
+<td>6.9</td>
+</tr>
+<tr>
+<td><em>Paneer tikka</em></td>
+<td>424</td>
+<td>12</td>
+</tr>
+<tr>
+<td><em>Paneer bhurji</em></td>
+<td>370</td>
+<td>10.4</td>
+</tr>
+<tr>
+<td><em>Paneer sandwich</em></td>
+<td>476</td>
+<td>18</td>
+</tr>
+<tr>
+<td><em>Palak paneer</em></td>
+<td>366</td>
+<td>15</td>
+</tr>
+<tr>
+<td><em>Paneer butter masala</em></td>
+<td>201</td>
+<td>8.2</td>
+</tr>
+<tr>
+<td><em>Paneer dosa</em></td>
+<td>255</td>
+<td>13</td>
+</tr>
+<tr>
+<td><em>Matar paneer</em></td>
+<td>232</td>
+<td>7.3</td>
+</tr>
+<tr>
+<td><em>Paneer roll</em></td>
+<td>420</td>
+<td>11</td>
+</tr>
+<tr>
+<td><em>Shahi paneer</em></td>
+<td>310</td>
+<td>12</td>
+</tr>
+</tbody>
+</table>
+</div>
+<br/>
+<div>
+<p><strong>Note:</strong> The above values are estimates and can vary based on ingredients, portion size, and cooking methods.</p>
+</div>
+<p>However, if you enjoy eating <em>paneer</em> in its raw form or can’t find the time to cook these elaborate dishes, this Reddit thread has you covered.</p>
+<br/>
+<blockquote><a href="https://www.reddit.com/r/Fitness_India/comments/1d4o7uc/any_tip_to_eat_raw_paneer/">Any tip to eat raw paneer? </a><br/> by<a href="https://www.reddit.com/user/Every-Magician-5182/">u/Every-Magician-5182</a> in<a href="https://www.reddit.com/r/Fitness_India/">Fitness_India</a></blockquote> </div>
+<div>
+<h2>6 easy tips to make paneer weight loss-friendly</h2>
+<p>If <em>paneer</em> is rich in both protein and fats, how do we ensure we get the best of it without adding on the extra calories? The following tips are here to help!</p>
+<h3>1. Choose homemade <em>paneer</em> over store-bought <em>paneer</em></h3>
+<p>This way, you can consume fresh <em>paneer</em> free from additives and chemical preservatives.</p>
+<h3>2. Use healthy oils</h3>
+<p>Cook <em>paneer</em> and other meals with filtered, cold pressed, or monosaturated and polysaturated oils. These include:</p>
+<ul>
+<li>Canola oil</li>
+<li>Olive oil</li>
+<li>Groundnut oil</li>
+<li>Rice bran oil </li>
+</ul>
+<h3>3. Control your portions wisely</h3>
+<p>Eat small portions of <em>paneer</em> per meal. Pair it with more fibre-rich vegetables and lean protein. These include:</p>
+<ul>
+<li><em>Dals</em></li>
+<li><a href="dry-fruits-benefits.html">Nuts</a></li>
+<li><a href="chia-seeds-for-weight-loss.html">Chia seeds</a></li>
+<li>Eggs</li>
+<li>Chicken </li>
+</ul>
+<h3>4. Cook healthier</h3>
+<p>Opt for healthy cooking methods when making a <em>paneer</em> dish. These include:</p>
+<ul>
+<li>Baking</li>
+<li>Grilling</li>
+<li>Air-frying</li>
+<li>Stir-frying</li>
+</ul>
+<h3>5. Switch cream-based gravies</h3>
+<p>Use vegetable or yoghurt-based gravies when cooking <em>paneer</em> to add more fibre to your diet. For vegetable gravy, use veggies such as:</p>
+<ul>
+<li>Tomato</li>
+<li>Onion</li>
+<li>Spinach</li>
+</ul>
+<h3>6. Try healthy versions of <em>paneer</em> dishes </h3>
+<p>Here’s the good news: All your favourite <em>paneer</em> dishes can be cooked in a healthier way. Try these <em>paneer</em> variations if you are focused on health and wellness:</p>
+<ul>
+<li><em>Paneer</em> salad (with sliced tomato, cucumbers, bell peppers, and light dressing).</li>
+<li><em>Paneer bhurji</em> (scrambled <em>paneer</em> with vegetables).</li>
+<li>Grilled <em>paneer tikka</em> (with a marination of your choice).</li>
+<li>Stir-fried <em>paneer</em> with green vegetables (can be eaten as a standalone dish or with <em>roti</em> and rice).</li>
+<li><em>Palak paneer paratha</em> (flatbread made using whole wheat <em>atta</em> and spinach and <em>paneer</em> stuffing).</li>
+<li>Protein bites (a snack made with <em>paneer</em>, garlic chili paste, vegetables, and seasoning wrapped in rice paper).</li>
+</ul> </div>
+<div>
+<h2>Paneer, egg, or tofu? Which is better?</h2>
+<p>How does the pillowy <em>paneer</em> compare to the humble egg or the vegan wonder tofu? Time to find out.</p>
+<p>*Serving size: 100g</p>
+<h3>Protein showdown: Paneer vs egg vs tofu</h3>
+<div>
+
+<div>
+<ul>
+<li>Protein: <strong>18-25g</strong></li>
+<li>Suitable for <strong>Vegetarians</strong></li>
+<li>Calories: <strong>286-331</strong></li>
+<li>Fat: <strong>20-25g</strong></li>
+<li>Carbs: <strong>3.57g</strong></li>
+<li>Other Nutrients <strong>Calcium, Magnesium, Phosphorus, Potassium</strong></li>
+</ul>
+</div>
+</div>
+<div>
+
+<div>
+<ul>
+<li>Protein: <strong>12.58g</strong></li>
+<li>Suitable for <strong>Eggetarians</strong></li>
+<li>Calories: <strong>155</strong></li>
+<li>Fat: <strong>10.61g</strong></li>
+<li>Carbs: <strong>Negligible</strong></li>
+<li>Other Nutrients <strong>Calcium, Iron, Selenium, Copper, Choline, Vitamins A, B2, B5, B6, B12, Folate</strong></li>
+</ul>
+</div>
+</div>
+<div>
+
+<div>
+<ul>
+<li>Protein: <strong>8-17.3g</strong></li>
+<li>Suitable for <strong>Vegans</strong></li>
+<li>Calories: <strong>76-144</strong></li>
+<li>Fat: <strong>4-8.72g</strong></li>
+<li>Carbs: <strong>2.78g</strong></li>
+<li>Other Nutrients <strong>Calcium, Phosphorus, Magnesium, Iron, Manganese, Potassium, Vitamins B1, B3, C, Isoflavones</strong></li>
+</ul>
+</div>
+</div>
+<p>So, <em>paneer</em>, egg or tofu? How do we make the choice? Let's make it simple:</p>
+<ul>
+<li><strong>Paneer</strong>
+<ul>
+<li>Provides more protein than tofu.</li>
+<li>A good option if you want to build muscle and lose weight. </li>
+<li>Good for those with no dietary restrictions. </li>
+</ul>
+</li>
+<li><strong>Tofu</strong>
+<ul>
+<li>A plant-based protein.</li>
+<li>Good for vegans (and everyone else, too).</li>
+<li>Has fewer calories and fats. </li>
+<li>Is also more heart-healthy.</li>
+</ul>
+</li>
+<li><strong>Eggs</strong>
+<ul>
+<li>Have fewer calories than <em>paneer</em>. </li>
+<li>Are more filling. </li>
+<li>Egg protein can be absorbed more easily than <em>paneer</em> or tofu.</li>
+<li>May need to eat more eggs to match <em>paneer</em>’s protein.</li>
+</ul>
+</li>
+</ul>
+<h3>Final verdict:</h3>
+<p>If you are trying to <a href="exercise-to-reduce-belly-fat.html">burn belly fat</a> and lose weight:</p>
+<ul>
+<li>Choose low-fat <em>paneer</em> for a <strong>vegetarian protein boost.</strong></li>
+<li>Go for eggs if you want <strong>better protein absorption</strong> and <strong>fewer calories.</strong></li>
+<li>Pick tofu for a <strong>low-calorie, plant-based, heart-friendly option.</strong></li>
+</ul> </div>
+<div>
+<h2>6 best paneer alternatives for lactose intolerant people</h2>
+<p>Lactose intolerance (or milk intolerance) happens when a person cannot digest the sugar (lactose) found in milk and other dairy products. <em>Paneer</em>, being a dairy product, can be an uncomfortable addition to the diet in such cases. </p>
+<p>So, what is a <strong>good alternative to <em>paneer</em> for lactose-intolerant people?</strong> Here are some options:</p>
+<h3>Lactose-free alternatives to <em>paneer</em></h3>
+<ol>
+<li>Tofu (made from soy milk).</li>
+<li>Tempeh (an Indonesian cake-like product made from fermenting soybeans).</li>
+<li>Vegan cheese (usually made from cashews or coconut milk).</li>
+<li><em>Soy</em> chunks or curls.</li>
+<li><em>Chhena</em> or its fermented version.</li>
+<li>Aged and hard cheeses (cheddar, swiss, colby, and mozzarella).</li>
+</ol> </div>
+<div>
+<h2>Paneer is precious</h2>
+<p>Who said losing weight can't be delicious?</p>
+<p>With the small tweaks discussed in this guide, you can easily make <em>paneer</em> the best addition to your weight loss plan.</p>
+<p>Bake it, grill it, saute it, or add it to a fresh salad. <em>Paneer</em>'s versatility allows it to fit into any healthy diet plan.</p>
+<p>So go ahead and enjoy your <em>paneer</em> guilt-free!</p>
+<p>But eating right is just one aspect of losing weight. It is about understanding your body, keeping cravings in check, and following a plan that fits you best.</p>
+<p>If you're ready to take control of your health and make smarter choices, visit <a href="logout.html">Aktive</a> today and get started on a weight loss plan that actually works.</p> </div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>What are some good paneer alternatives for vegans? </p>
+<div><p></p><p>For vegans looking for alternatives to <em>paneer</em>, here is a list of products you may find useful:</p>
+<ul>
+<li>Tofu (made from soybeans).</li>
+<li>Seitan (made from wheat gluten, has a chewy texture).</li>
+<li>Cashew cheese (soy-free and non-melting).</li>
+<li>Commercial vegan <em>paneer</em> (is plant-based).</li>
+</ul></div>
+</li>
+<li>
+<p>What is analogue paneer?</p>
+<div><p></p><p>It is also known as <strong>synthetic or 'fake <em>paneer</em></strong>,' and is similar to <em>paneer</em> in terms of appearance and texture. It is a <strong>non-dairy alternative to traditional <em>paneer</em></strong> made using starch, vegetable oils, and milk solids. It also contains artificial ingredients and chemical additives. </p>
+<p><strong>Analogue <em>paneer</em> is cheaper</strong> but contains <strong>more trans fats</strong> which makes it unhealthy for heart health.</p>
+<p>According to the <a href="https://fssai.gov.in/upload/uploadfiles/files/FAQs_Diary_12_07_2022.pdf">Food Safety and Standards Authority of India</a> (FSSAI), using analogue <em>paneer</em> (or other products) is legal. Still, it has made it mandatory to convey this explicitly to customers, so they can make an informed decision. </p></div>
+</li>
+<li>
+<p>Is paneer healthier than cheese?</p>
+<div><p></p><p>Both <em>paneer</em> and cheese are healthy. However, <strong><em>paneer</em> is certainly a healthier option</strong> than some cheeses if you wish to reduce your intake of sodium and fat. </p>
+<p>But some cheese types may <strong>provide more protein and vitamins</strong> than <em>paneer</em>. </p>
+<p>Therefore, you must consider the kind of cheese (or <em>paneer</em>), the portion size, and your weight goals before eating them.</p></div>
+</li>
+<li>
+<p>Who should avoid eating paneer?</p>
+<div><p></p><p>People with the following conditions may <strong>benefit from eating <em>paneer</em> less frequently</strong> or avoiding it altogether:</p>
+<ul>
+<li>People with lactose intolerance (or sensitivity).</li>
+<li>Allergy to milk or casein (a protein in milk).</li>
+<li>High cholesterol levels.</li>
+<li>History of kidney stones.</li>
+<li>High blood pressure and diabetes (people falling in this category can continue eating <em>paneer</em> but not more than twice a week).</li>
+</ul></div>
+</li>
+<li>
+<p>Do paneer and cottage cheese mean the same? </p>
+<div><p></p><p>Although the terms are used interchangeably, <strong><em>paneer</em> and cottage cheese are different</strong> in how they are made, as well as their texture, fat, and moisture content. </p>
+<p><strong><em>Paneer</em> is firm</strong> and has a relatively <strong>high-fat content,</strong> while <strong>cottage cheese is low-calorie, soft, and moist.</strong> </p>
+<p><em>Paneer</em> is made by using lemon juice or vinegar to curdle hot milk, which is then drained and pressed into a firm block. </p>
+<p>Cottage cheese is made by fermenting warm milk with rennet or bacterial culture and letting it curdle slowly. It is loose and has a creamy texture.</p></div>
+</li>
+<li>
+<p>Can I eat 200g paneer daily? </p>
+<div><p></p><p>It is best to <strong>limit your daily <em>paneer</em> intake</strong> to no more than 100g, as eating 200g of <em>paneer</em> every day can add to your weight with its high-calorie content. </p>
+<p>For best results, <strong>eat 50-100g of <em>paneer</em> daily</strong> and supplement it with more vegetables and whole grains. This way, you can fulfill your protein needs without consuming extra fat. </p></div>
+</li>
+<li>
+<p>How much protein is needed per day? </p>
+<div><p></p><p>Your protein intake should ideally make up <strong>10% to 35% of the daily calorie intake.</strong></p>
+<p>The recommended daily allowance of protein, as suggested by different health organisations around the world, is <strong>0.8g-1g for every kilogram of body weight.</strong> </p>
+<p>People who are physically active or are weight training will need more protein than the recommendation mentioned above. <em>Paneer</em>, being rich in protein (18-25g per 100g), can be used as a healthy way to supplement their weight loss plans.</p></div>
+</li>
+<li>
+<p>I’m a non-vegetarian. Can I benefit from eating paneer? </p>
+<div><p></p><p>Indeed. Apart from its protein content, <strong><em>paneer</em> is a good source of calcium, phosphorus, and magnesium.</strong> All these minerals ensure your bones and muscles stay strong and digestion remains smooth. It also manages your blood sugar levels and prevents them from spiking.</p></div>
+</li>
+<li>
+<p>Does paneer cause bloating? </p>
+<div><p></p><p>When eaten in a moderate amount, <strong><em>paneer</em> is relatively easy to digest.</strong> However, the presence of lactose, casein, or whey in it can result in indigestion and bloating. </p>
+<p><strong>To prevent bloating,</strong> you can:</p>
+<ul>
+<li>Eat low-fat <em>paneer</em> (as it is easier to digest)</li>
+<li>Consume more vegetables with <em>paneer</em> (helps in better digestion).</li>
+<li>Try not to eat <em>paneer</em> too late in the night, especially if your digestion is weak.</li>
+</ul></div>
+</li>
+<li>
+<p>Can I freeze paneer for later use? </p>
+<div><p></p><p>It is usually best to <strong>eat fresh <em>paneer</em> within 3 days</strong> of buying it. However, you can freeze and use <em>paneer</em> for another 4 months (but its texture may change).</p>
+<p><strong>To freeze <em>paneer</em> properly,</strong> do the following:</p>
+<ul>
+<li>Wrap it in plastic wrap and then in aluminium foil. </li>
+<li>Store it in an airtight container in a freezer (this will prevent any loss of moisture).</li>
+<li>To thaw, <strong>soak in warm water</strong> or <strong>microwave for 30 seconds</strong> before use. </li>
+</ul></div>
+</li>
+<li>
+<p>What is the best time to eat paneer?</p>
+<div><p></p><p>The best part about <em>paneer</em> is that it can be enjoyed at any time of the day. You simply need to make it light or heavy according to your calorie needs and meal timings. </p>
+<ul>
+<li>If eaten at breakfast or lunch, it will keep you feeling full for most of the day.</li>
+<li>You can consume it as a salad or grill it with spices and a little oil. A side of vegetable soup will complete your nutrient quota for the night.</li>
+</ul></div>
+</li>
+<li>
+<p>Can paneer be included in a keto diet?</p>
+<div><p></p><p>Yes. The high protein and fat content in <em>paneer</em> <strong>makes it the perfect addition to keto diet,</strong> especially for vegetarians. </p>
+<p>Why not try these <strong>keto-friendly <em>paneer</em> dishes at home?</strong></p>
+<ul>
+<li><em>Paneer bhurji</em> (without onions, using ghee).</li>
+<li><em>Paneer tikka</em> (grilled, marinated in hung curd &amp; spices).</li>
+<li><em>Paneer</em> &amp; avocado salad (with olive oil dressing).</li>
+<li><em>Paneer</em> cutlets (grated <em>paneer</em>, almond flour, spices, and herbs).</li>
+</ul></div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>April, 25 2025</strong></p><p>Publish date <strong>March, 13 2025</strong></p></div> </div>
+<div>
+<p><strong>References:</strong></p>
+<ul>
+<li>[1] Balakrishnan, I., Vinoj, V., Muthusamy, D., &amp; Vyshak, V. L. (2024). Study of physico-chemical properties and amino acid profiling of buffalo paneer and acid whey. Innovations in Agriculture, 7, 1–4. <a href="https://doi.org/10.3897/ia.2024.124224">https://doi.org/10.3897/ia.2024.124224</a>.</li>
+<li>[2] Pozzobon, V., &amp; Pozzobon, C. (2019). Cottage cheese in a diet – a review. Nutrition &amp; Food Science, 49(6), 1265–1274. <a href="https://doi.org/10.1108/nfs-03-2019-0073">https://doi.org/10.1108/nfs-03-2019-0073</a></li>
+</ul> </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

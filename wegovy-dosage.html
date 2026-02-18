@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wegovy dosage guide for weight loss | Figur Health</title>
+  <meta name="description" content="Starting Wegovy? Follow the Wegovy dose schedule, learn how to increase the dose safely each week, and know what to do if you miss a dose."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Wegovy</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">12 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>Wegovy dosage guide for weight loss</h1>
+        <p class="article-hero__desc">Starting Wegovy? Follow the Wegovy dose schedule, learn how to increase the dose safely each week, and know what to do if you miss a dose.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+<div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80" alt="Wegovy dosage" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>Wegovy dosage guide for weight loss</h1>
+</div>
+<p>
+</p>
+<p>You are planning to start Wegovy for weight loss.</p>
+<p>But not sure how the dosage schedule works? </p>
+<p>Let us help you out.</p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="wegovy-dosage.html#key-takeaways">Key takeaways:</a></li>
+<li><a href="wegovy-dosage.html#what-is-wegovy-how-does-it-work">What is Wegovy? How does it work?</a></li>
+<li><a href="wegovy-dosage.html#wegovy-dosage-chart-a-step-by-step-guide-to-understanding-the-dose-schedule">Wegovy dosage chart: A step-by-step guide to understanding the dose schedule</a></li>
+<li><a href="wegovy-dosage.html#how-do-doctors-decide-which-dose-is-right-for-you">How do doctors decide which dose is right for you?</a></li>
+<li><a href="wegovy-dosage.html#what-to-do-if-you-miss-a-dose">What to do if you miss a dose?</a></li>
+<li><a href="wegovy-dosage.html#managing-side-effects-as-your-dose-increases">Managing side effects as your dose increases</a></li>
+<li><a href="wegovy-dosage.html#tips-to-make-dose-escalation-easier">Tips to make dose escalation easier</a></li>
+<li><a href="wegovy-dosage.html#when-to-pause-or-reduce-your-wegovy-dose">When to pause or reduce your Wegovy dose?</a></li>
+<li><a href="wegovy-dosage.html#weight-loss-at-your-dose,-your-pace">Weight loss at your dose, your pace</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways:</h2>
+<div>
+<ul>
+<li>Wegovy is a once-weekly injection approved in India for managing obesity.</li>
+<li>It is available in 5 dose strengths: <strong>0.25 mg, 0.5 mg, 1.0 mg, 1.7 mg, and 2.4 mg.</strong></li>
+<li>Increasing the dose gradually helps tolerate the medicine and lose weight.</li>
+</ul>
+</div>
+<p>Wegovy is available in five different doses. But, why is that?</p>
+<p>Titrating, adjusting the dose, too quickly can result in intense side effects and might make you discontinue the medicine.</p>
+<p>This guide will help you understand how the Wegovy dosage schedule works, why going slow is better, and when (or if) it’s time to move up.</p>
+</div>
+<div>
+<h2>What is Wegovy? How does it work?</h2>
+<p>Developed by Novo Nordisk, Wegovy is a once-weekly injection designed to help you lose weight. Its active ingredient, <a href="https://www.ncbi.nlm.nih.gov/books/NBK603723/#:~:text=Go%20to%3A-,Mechanism%20of%20Action,-Semaglutide%20operates%20as">Semaglutide</a><a href="wegovy-dosage.html#refid1_40"><sup>[1]</sup></a>, mimics the action of GLP-1, a naturally occurring hormone, which plays an important part in controlling appetite and managing insulin levels.</p>
+<p><strong>What this means is:</strong></p>
+<ul>
+<li>It acts on areas of your brain that control appetite, so you feel full and eat less.</li>
+<li>It slows down how quickly food leaves your stomach.</li>
+<li>It helps regulate blood sugar levels.</li>
+</ul>
+<div>
+<p>Wegovy was approved in India in June 2025 for chronic weight management in people who are overweight or obese. Unlike daily pills or strict diets, it’s taken as a once-weekly injection, which makes it more manageable for many people.</p>
+</div>
+<p>Like Wegovy, another medication known as Mounjaro works by mimicking not just GLP-1, but also GIP for better results. See how <a href="mounjaro-injection.html">Mounjaro helps you lose weight</a>.</p>
+</div>
+<div>
+<h2>Wegovy dosage chart: A step-by-step guide to understanding the dose schedule</h2>
+<p>You will begin taking Wegovy at its lowest dosage - 0.25 mg.</p>
+<p>Your dosage will be increased every month.</p>
+<p>This gradual increase helps your body adjust to the medicine.</p>
+<p>As you progress, your doctor will decide how long to keep you on a particular dose based on how well you are doing.</p>
+<p>Here is a typical dosing schedule doctors usually follow:</p>
+<section>
+<h3>Wegovy dosage schedule</h3>
+<div>
+<table>
+<thead>
+<tr>
+<th>Dose (mg/week)</th>
+<th>Frequency</th>
+<th>Duration</th>
+<th>Purpose</th>
+<th>What you’ll notice</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.25 mg</td>
+<td>Once weekly</td>
+<td>Weeks 1–4</td>
+<td>Starting dose to help your body adjust to Wegovy</td>
+<td>Your appetite begins to reduce</td>
+</tr>
+<tr>
+<td>0.5 mg</td>
+<td>Once weekly</td>
+<td>Weeks 5–8</td>
+<td>Helps build tolerance to side effects and minimises them</td>
+<td>Mild side effects like nausea begin to settle. You crave less food</td>
+</tr>
+<tr>
+<td>1.0 mg</td>
+<td>Once weekly</td>
+<td>Weeks 9–12</td>
+<td>Supports gradual weight loss progression</td>
+<td>You begin to feel full faster than before, calorie intake reduces, and you begin to lose weight</td>
+</tr>
+<tr>
+<td>1.7 mg</td>
+<td>Once weekly</td>
+<td>Weeks 13–16</td>
+<td>Common maintenance dose for long-term use</td>
+<td>Your weight loss continues and energy levels start to improve</td>
+</tr>
+<tr>
+<td>2.4 mg</td>
+<td>Once weekly</td>
+<td>Week 17 onwards (if required)</td>
+<td>For patients who need a higher dose after 1.7 mg</td>
+<td>You have lost a good amount of weight, and you feel more in control of your life</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+<br/>
+<picture>
+<source alt="Wegovy dosage schedule" height="659" width="750">
+<source alt="Wegovy dosage schedule" height="539" width="400">
+
+</source></source></picture>
+<p><strong>Please note that the actual plan may vary based on your doctor's advice.</strong></p>
+<p>Here’s what you can expect to see in the coming weeks when you start taking Wegovy:</p>
+<ul>
+<li><strong>Weeks 1–4:</strong> Semaglutide is gently introduced into your system.</li>
+<li><strong>Weeks 5–8:</strong> Your body gets used to the medicine.</li>
+<li><strong>Weeks 9–12:</strong> You feel less hungry, eat less calories, and notice changes in weight.</li>
+<li><strong>Weeks 13–16:</strong> You continue losing weight.</li>
+<li><strong>Week 17 onwards:</strong> You are on the maintenance dose. You feel more energised and healthy.</li>
+</ul>
+<div>
+<strong>Note:</strong>
+<p>Although 2.4 mg is the maximum dose for Wegovy, many respond well at a lower dose. Your dose may be maintained or escalated based on clinical results and your comfort level.</p>
+</div> </div>
+<div>
+<h2>How do doctors decide which dose is right for you?</h2>
+<p>Your weight isn't the only factor that decides how much Wegovy you need. When prescribing Wegovy, doctors also evaluate the following things:</p>
+<ul>
+<li><strong>Side effects</strong> – Are you tolerating the current dose well, or is it causing discomfort?</li>
+<li><strong>Medical history</strong> – If you have diabetes, kidney or liver issues, or are on any medications.</li>
+<li><strong>Blood sugar response</strong> – Especially in people with type 2 diabetes.</li>
+<li><strong>Your personal weight loss goals</strong> – What you’re hoping to achieve and how your body responds.</li>
+</ul>
+<p>The reason behind doing so is to find the lowest effective dose so that you can lose weight without feeling worse. Some people stay on a lower dose long-term, and that’s perfectly okay.</p>
+</div>
+<div>
+<h2>What to do if you miss a dose?</h2>
+<p>In case you miss your dose, do the following:</p>
+<div>
+<div>
+<div>
+<div>
+<div>
+<p><strong>Less than 2 days (48 hours) away:</strong></p>
+<p>Don't take the missed dose. Take your next dose on your regular scheduled day. Do not take a double dose to make up for the lost one.</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<p><strong>More than 2 days (48 hours) away:</strong></p>
+<p>Take the missed dose as soon as you remember.</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<p><strong>More than 2 weeks (14 days) have passed:</strong></p>
+<p>Wait for your usual injection day, or check with your doctor before restarting. They’ll guide you on whether to continue or adjust your schedule.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>In case you need to change your injection day, make sure there’s a gap of at least two days between doses.</p>
+</div>
+<div>
+<h2>Managing side effects as your dose increases</h2>
+<p>Since Wegovy works by altering your gut hormones, appetite, and insulin response, it can cause some unwanted effects.</p>
+<p>Nausea, diarrhoea, constipation, and vomiting are among the most common side effects of Wegovy.</p>
+<p>You’ll likely feel <a href="wegovy-side-effects.html">side effects of Wegovy</a> early on or when your dose increases. But most of them are mild and disappear with time as your body adjusts to the medicine</p>
+</div>
+<div>
+<h2>Tips to make dose escalation easier</h2>
+<p>It can take some time to get used to a medication, especially one that affects your appetite and blood sugar levels. But with <a href="https://www.wegovy.com/weight-and-wellness/weight-management-tips.html">these small changes</a>, you can adapt to the new dose better:</p>
+<ul>
+<li>Eat light meals and chew food slowly for the first few days after starting Wegovy.</li>
+<li>Drink enough water throughout the day. Set reminders if you forget to hydrate.</li>
+<li>Take a walk, do some yoga, or try some gentle body stretches to manage nausea.</li>
+<li>Avoid eating spicy or fatty food immediately after injecting yourself.</li>
+<li>Always keep emergency contacts readily accessible if you experience an allergic reaction.</li>
+</ul> </div>
+<div>
+<h2>When to pause or reduce your Wegovy dose?</h2>
+<p>Your doctor may advise to pause, delay, or reduce your Wegovy dose in the following situations:</p>
+<ul>
+<li>If you are experiencing severe nausea, vomiting, diarrhoea, or stomach pain.</li>
+<li>If you missed multiple doses of Wegovy.</li>
+<li>If you are pregnant or are planning to conceive.</li>
+<li>If vomiting or diarrhoea dehydrates you.</li>
+<li>If you are undergoing a procedure that requires general anaesthesia or fasting.</li>
+<li>If you have conditions that affect liver or kidney function.</li>
+<li>If you are struggling to tolerate your current dose.</li>
+</ul>
+<p>If you’re unsure about a side effect, missed a dose, or are planning surgery, fasting, or pregnancy, talk to your doctor first before you make a decision.</p>
+<div>
+<strong>Pro tip</strong>
+<p>Use a diary or a tracking app to record your daily weight, mood, energy levels, and any symptoms you experience. These records can help your doctor adjust your dose.</p>
+</div> </div>
+<div>
+<h2>Weight loss at your dose, your pace</h2>
+<p>Everyone experiences weight loss differently. Some people see visible weight loss at a lower dose, while others may need to use the highest dose of Wegovy. What's important is that your body tolerates the dose safely and shows results.</p>
+<p>With the right support and a little patience, you can see progress beyond the weighing scale.</p>
+<div>
+<p><strong>Launched in India in June 2025</strong></p>
+<p>Wegovy is available in India in the form of a pre-filled injection pen (FlexTouch). You can either self-inject it or take it with the help of a healthcare professional.</p>
+<a href="wegovy-injection.html">Read more about Wegovy</a>
+</div> </div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>Can I increase my Wegovy dose faster if I'm not experiencing any side effects?</p>
+<div><p></p><p>Even if you feel completely fine, don’t skip ahead. Each 4-week stage is designed to help your body’s GLP-1 receptors adapt slowly and safely. Rushing doses can trigger sudden side effects or reduce how well the treatment works later.</p>
+</div>
+</li>
+<li>
+<p>Will I regain weight if I stop Wegovy after reaching my goal?</p>
+<div><p></p><p>Yes, there is a risk of <a href="https://www.ajconline.org/article/S0002-9149(24)00319-9/fulltext#:~:text=As%20with%20other,1%20year.18">weight regain</a><a href="wegovy-dosage.html#refid2_40"><sup>[2]</sup></a> if lifestyle habits aren’t in place. But with the right guidance, gradual dose reduction, and adequate lifestyle + diet changes, it’s absolutely possible to maintain your progress, even without staying on the highest dose forever.</p>
+</div>
+</li>
+<li>
+<p>Can my doctor customize my dose schedule differently from the standard plan?</p>
+<div><p></p><p>Yes. The standard Wegovy dosage schedule is a general guideline. It is flexible to an extent, and your doctor may adjust it based on your current health and how your body responds to the medication.</p>
+<p>For instance, someone might remain at 0.5 mg for 8 weeks, while another patient may stabilise at 1.0 mg for maintenance. Trust your doctor’s judgment. They’ll adjust your dose to keep it both safe and effective for you.</p>
+</div>
+</li>
+<li>
+<p>What if I feel nothing after the first few doses of Wegovy?</p>
+<div><p></p><p>Don’t worry, this is normal. The initial 0.25 mg and 0.5 mg doses are meant to help your body adjust. Most people notice effects like appetite control or weight loss from 1.0 mg onwards. Your doctor will guide the pace.</p>
+</div>
+</li>
+<li>
+<p>Why do side effects come back each time I increase the dose?</p>
+<div><p></p><p>This is completely normal. With every dose increase, your body is introduced to a higher level of Semaglutide, so it needs time to settle again. It’s common to experience mild nausea, bloating, or changes in your bowel habits for 3-10 days before they subside.</p>
+<p>These symptoms tend to settle on their own as your body gets used to the new level. That’s exactly why the dose increases are spaced out to help you adapt gradually</p></div>
+</li>
+<li>
+<p>I'm losing weight well on 1.0 mg. Do I still need to increase to higher doses?</p>
+<div><p></p><p>Not always. If you’re losing weight steadily, tolerating the 1.0 mg dose well, and are happy with your progress, your doctor might choose to keep you there. The idea is to find the smallest dose that still helps you progress.</p>
+</div>
+</li>
+<li>
+<p>Can I go back to a lower dose if the side effects become too uncomfortable?</p>
+<div><p></p><p>Yes, it’s possible. If you experience ongoing nausea, vomiting, or other strong side effects after moving up to a higher dose, your doctor might bring you back to a lower dose for a few more weeks.</p>
+<p>Sometimes, staying at a lower dose for some weeks helps your body adjust before switching to a higher dose. And for some people, that’s the right long-term dose.</p>
+<p>Just don’t adjust your dose on your own. Always check with your doctor first.</p>
+</div>
+</li>
+<li>
+<p>Why does the schedule require 4 weeks at each dose level? Can this timing be adjusted?</p>
+<div><p></p><p>The 4-week gap is there for a reason. It lets your body adjust to the new dose and prevents side effects. Still, it’s not a one-size-fits-all rule. If you're struggling with side effects, your doctor may keep you at the same dose for 6–8 weeks instead.</p></div>
+</li>
+<li>
+<p>I've missed 3 weeks of Wegovy. Do I need to restart from 0.25 mg?</p>
+<div><p></p><p>Not always. Resuming your previous dose can be slightly tricky. After a gap of more than two weeks, your body loses some of its tolerance to the medicine. Your doctor will usually restart you at a slightly lower dose, and bring you back up to a higher dose gradually.</p>
+<p>The ramp-up will be quicker this time, but still under your doctor’s supervision. Never restart on your own.</p></div>
+</li>
+<li>
+<p>What should I do if I accidentally inject a higher dose than prescribed?</p>
+<div><p></p><p>If this happens, even if you don't feel any symptoms right now, let your doctor know immediately.</p>
+<p>Accidentally injecting a higher dose, such as 1.0mg instead of 0.5mg, can trigger intense nausea, vomiting, diarrhoea, or low blood sugar.</p>
+<p>Keep monitoring how you feel, and don’t take your next scheduled dose until your doctor advises. They’ll guide you on the safest way to restart.</p>
+</div>
+</li>
+<li>
+<p>Can I stay on the starting dose of 0.25 mg if I see good results?</p>
+<div><p></p><p>Though 0.25 mg is technically a treatment dose, it is intended as a starting point to help you adjust. It keeps side effects low while your system learns to handle the medicine.</p>
+<p>If you’re already seeing results on 0.25 mg, that’s good, but the progress may not last. Your doctor will likely guide you to increase the dose gradually so you get better results.</p>
+</div>
+</li>
+<li>
+<p>My weight loss has plateaued at my current dose. Should I ask my doctor to increase the dose?</p>
+<div><p></p><p>Not necessarily. Weight loss plateaus are common and happen for a few reasons:</p>
+<ul>
+<li>Your body is adjusting to a new metabolic set point.</li>
+<li>Metabolism slows down to compensate for the lost weight.</li>
+<li>To keep up with changing eating habits and activities.</li>
+</ul>
+<p>Before increasing your dose, your doctor will look at:</p>
+<ul>
+<li>How much weight you’ve lost so far.</li>
+<li>Your tolerance to the medicine.</li>
+</ul>
+<p>In many cases, small lifestyle adjustments work better than dose changes. Your doctor will guide you based on your current health status.</p>
+</div>
+</li>
+<li>
+<p>Do all patients have to reach the maintenance dose of Wegovy?</p>
+<div><p></p><p>Not necessarily. While 2.4 mg is the full maintenance dose, not everyone may need to take it. Some people may see good results at a lower dose (this is especially true if they experience side effects at higher levels). Your doctor will help you find the dose that works best for your body.</p>
+</div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>November, 17 2025</strong></p><p>Publish date <strong>November, 17 2025</strong></p></div> </div>
+<div>
+<p><strong>References:</strong></p>
+<ul>
+<li>[1] Kommu, S., &amp; Whitfield, P. (2024, February 11). Semaglutide. StatPearls - NCBI Bookshelf.  <em>Semaglutide.</em> StatPearls - NCBI Bookshelf. <a href="https://www.ncbi.nlm.nih.gov/books/NBK603723/">https://www.ncbi.nlm.nih.gov/books/NBK603723/</a></li>
+<li>[2] Moiz, A., Levett, J. Y., Filion, K. B., Peri, K., Reynier, P., &amp; Eisenberg, M. J. (2024). Long-Term Efficacy and Safety of Once-Weekly semaglutide for weight loss in patients without Diabetes: A Systematic Review and Meta-Analysis of Randomized Controlled Trials. <em>The American Journal of Cardiology, </em> 222, 121–130. <a href="https://doi.org/10.1016/j.amjcard.2024.04.041">https://doi.org/10.1016/j.amjcard.2024.04.041</a></li>
+</ul> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

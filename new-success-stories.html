@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Success Stories — Real Results from Figur Health Members</title>
+  <meta name="description" content="Read real weight loss success stories from Figur Health members. See how people across India are losing weight with GLP-1 medication and expert support." />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .page-hero { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%); padding: 100px 0 80px; position: relative; overflow: hidden; text-align: center; }
+    .page-hero::after { content: ''; position: absolute; width: 600px; height: 600px; border-radius: 50%; background: radial-gradient(circle, rgba(212,175,55,0.07) 0%, transparent 70%); top: -150px; right: -100px; pointer-events: none; }
+    .page-hero__inner { position: relative; z-index: 1; max-width: 660px; margin: 0 auto; }
+    .page-hero__inner .badge { margin-bottom: 20px; }
+    .page-hero__inner h1 { color: var(--white); font-size: clamp(2rem,4vw,3rem); letter-spacing:-0.03em; margin-bottom:16px; }
+    .page-hero__inner p { color: rgba(255,255,255,0.75); font-size:1.05rem; line-height:1.7; }
+
+    .hero-stats { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; margin-top: 48px; }
+    .hero-stat { background: rgba(255,255,255,0.06); border: 1px solid rgba(212,175,55,0.15); border-radius: var(--radius-md); padding: 24px; text-align: center; }
+    .hero-stat__num { font-family: 'Montserrat', sans-serif; font-size: 2.4rem; font-weight: 900; color: var(--gold); line-height: 1; }
+    .hero-stat__label { font-size: 0.85rem; color: rgba(255,255,255,0.65); margin-top: 8px; }
+
+    .stories-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+
+    .story-card {
+      background: var(--white); border-radius: var(--radius-md); padding: 32px;
+      box-shadow: var(--shadow-sm); border: 1px solid var(--grey-100);
+      transition: all var(--transition); position: relative;
+    }
+    .story-card:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .story-card::before { content: '"'; font-family: 'Montserrat', sans-serif; font-size: 5rem; color: var(--gold); opacity: 0.15; position: absolute; top: 8px; left: 16px; line-height: 1; }
+
+    .story-card__result-banner {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      color: var(--white); border-radius: 100px; padding: 6px 14px;
+      font-size: 0.78rem; font-weight: 700; margin-bottom: 16px;
+    }
+    .story-card__result-banner .dot { width: 6px; height: 6px; border-radius: 50%; background: var(--gold); }
+
+    .story-card__text { font-size: 0.93rem; color: var(--text-secondary); line-height: 1.75; margin-bottom: 24px; padding-top: 20px; }
+
+    .story-card__author { display: flex; align-items: center; gap: 14px; padding-top: 20px; border-top: 1px solid var(--grey-100); }
+    .story-card__avatar {
+      width: 48px; height: 48px; border-radius: 50%;
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      color: var(--gold); font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 1.1rem;
+      display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+    }
+    .story-card__name { font-weight: 700; font-size: 0.95rem; color: var(--navy); }
+    .story-card__detail { font-size: 0.8rem; color: var(--text-secondary); margin-top: 3px; }
+
+    .story-card__stars { display: flex; gap: 2px; color: var(--gold); font-size: 0.85rem; margin-bottom: 6px; }
+
+    .before-after { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .ba-card {
+      background: var(--navy-light); border-radius: var(--radius-md); padding: 28px;
+      border: 1px solid rgba(212,175,55,0.12); text-align: center;
+    }
+    .ba-card__label { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.45); margin-bottom: 12px; }
+    .ba-card__value { font-family: 'Montserrat', sans-serif; font-size: 2rem; font-weight: 800; color: var(--gold); line-height: 1; }
+    .ba-card__sublabel { font-size: 0.82rem; color: rgba(255,255,255,0.6); margin-top: 6px; }
+
+    @media (max-width: 900px) { .stories-grid { grid-template-columns: repeat(2,1fr); } .hero-stats { grid-template-columns: 1fr; } }
+    @media (max-width: 600px) { .stories-grid { grid-template-columns: 1fr; } .before-after { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img" /></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html">Health Guide</a></li>
+          <li><a href="new-success-stories.html" class="active">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__inner">
+        <span class="badge badge--gold">Real people. Real results.</span>
+        <h1>Success stories from our community</h1>
+        <p>Hear from Figur Health members across India — real people who have transformed their health, confidence, and quality of life through our programme.</p>
+        <div class="hero-stats">
+          <div class="hero-stat">
+            <div class="hero-stat__num">21%</div>
+            <div class="hero-stat__label">average body weight reduction</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat__num">5×</div>
+            <div class="hero-stat__label">more effective than diet alone</div>
+          </div>
+          <div class="hero-stat">
+            <div class="hero-stat__num">16mo</div>
+            <div class="hero-stat__label">average programme duration</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SUCCESS STORIES -->
+  <section class="section">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge--navy">Community stories</span>
+        <h2>Inspiring journeys toward health &amp; confidence</h2>
+        <p>Every journey is different. These are the real stories of people who chose to take back control of their health.</p>
+      </div>
+
+      <div class="stories-grid">
+
+        <div class="story-card">
+          <div class="story-card__result-banner"><span class="dot"></span>6 kgs lost in 5 months</div>
+          <div class="story-card__stars">★★★★★</div>
+          <p class="story-card__text">Juggling a senior executive role meant constant travel and zero time for myself. Figur Health's science-backed approach was perfectly flexible for my demanding life. The weight is disappearing and my energy is through the roof. I can finally keep up with my kids on weekends.</p>
+          <div class="story-card__author">
+            <div class="story-card__avatar">A</div>
+            <div>
+              <div class="story-card__name">Arjun S.</div>
+              <div class="story-card__detail">Senior Executive, Mumbai</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-card__result-banner"><span class="dot"></span>9 kgs lost in 7 months</div>
+          <div class="story-card__stars">★★★★★</div>
+          <p class="story-card__text">After having my second child, I was stuck. The weight wouldn't move, and I constantly felt exhausted and demotivated. Figur Health showed me how to control my constant food cravings. My clothes fit again and I feel completely like myself.</p>
+          <div class="story-card__author">
+            <div class="story-card__avatar">P</div>
+            <div>
+              <div class="story-card__name">Payal D.</div>
+              <div class="story-card__detail">Mother of two, Bengaluru</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-card__result-banner"><span class="dot"></span>9 kgs lost in 7 months</div>
+          <div class="story-card__stars">★★★★★</div>
+          <p class="story-card__text">Being a business owner meant 12-hour days, constant joint pain, and low energy. Figur Health's simple plan worked even during the busiest seasons. Now, the joint pain is completely gone, and I sleep better than I have in years. My productivity has doubled.</p>
+          <div class="story-card__author">
+            <div class="story-card__avatar">H</div>
+            <div>
+              <div class="story-card__name">Hemant</div>
+              <div class="story-card__detail">Business Owner, Delhi</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-card__result-banner"><span class="dot"></span>7 kgs lost in 5 months</div>
+          <div class="story-card__stars">★★★★★</div>
+          <p class="story-card__text">Starting my first job was overwhelming — I lived on nightly takeout and sacrificed fitness. I gained weight and felt foggy in meetings. Figur Health's realistic plan helped me quickly get back on track without disrupting my new career. I look and feel my best.</p>
+          <div class="story-card__author">
+            <div class="story-card__avatar">K</div>
+            <div>
+              <div class="story-card__name">Kashish</div>
+              <div class="story-card__detail">Software Engineer, Hyderabad</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-card__result-banner"><span class="dot"></span>7 kgs lost in 5 months</div>
+          <div class="story-card__stars">★★★★★</div>
+          <p class="story-card__text">I was constantly battling my sweet tooth and felt like every diet was a losing fight. Figur Health didn't just tell me what to eat — it helped me control my cravings at the source. My clothes fit again and my confidence has completely transformed.</p>
+          <div class="story-card__author">
+            <div class="story-card__avatar">B</div>
+            <div>
+              <div class="story-card__name">Bhoomi K.</div>
+              <div class="story-card__detail">Teacher, Pune</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-card__result-banner"><span class="dot"></span>5 kgs lost in 4 months</div>
+          <div class="story-card__stars">★★★★★</div>
+          <p class="story-card__text">My diet was a disaster with long office hours and client dinners. Figur Health showed me how to manage my diet and deal with stress eating without sacrificing my work-life balance. Five kilos down in four months — and the results keep coming.</p>
+          <div class="story-card__author">
+            <div class="story-card__avatar">T</div>
+            <div>
+              <div class="story-card__name">Tanuj J.</div>
+              <div class="story-card__detail">Marketing Manager, Ahmedabad</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-card__result-banner"><span class="dot"></span>11 kgs lost in 8 months</div>
+          <div class="story-card__stars">★★★★★</div>
+          <p class="story-card__text">I tried everything — keto, intermittent fasting, gym memberships I never used. Nothing worked long-term. With Figur Health, I didn't feel deprived or hungry. The appetite control was genuinely a game-changer. 11 kilos down, and I've kept it off for 3 months now.</p>
+          <div class="story-card__author">
+            <div class="story-card__avatar">S</div>
+            <div>
+              <div class="story-card__name">Sunita R.</div>
+              <div class="story-card__detail">Homemaker, Chennai</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-card__result-banner"><span class="dot"></span>8 kgs lost in 6 months</div>
+          <div class="story-card__stars">★★★★★</div>
+          <p class="story-card__text">My doctor told me I needed to lose weight for my blood pressure and pre-diabetes. I was sceptical about medication, but Figur Health explained everything clearly. My blood sugar is now normal, my BP is controlled, and I feel 10 years younger.</p>
+          <div class="story-card__author">
+            <div class="story-card__avatar">R</div>
+            <div>
+              <div class="story-card__name">Rajiv M.</div>
+              <div class="story-card__detail">Retired, Kolkata</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="story-card">
+          <div class="story-card__result-banner"><span class="dot"></span>6 kgs lost in 5 months</div>
+          <div class="story-card__stars">★★★★★</div>
+          <p class="story-card__text">Managing PCOS made weight loss feel impossible. No matter what I tried, the weight stayed. Figur Health's doctor understood my hormonal challenges and tailored my treatment accordingly. Six kilos down and my PCOS symptoms have improved dramatically.</p>
+          <div class="story-card__author">
+            <div class="story-card__avatar">N</div>
+            <div>
+              <div class="story-card__name">Neha S.</div>
+              <div class="story-card__detail">Graphic Designer, Jaipur</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- TYPICAL RESULTS -->
+  <section class="section section--dark">
+    <div class="container">
+      <div class="section-header section-header--light">
+        <span class="badge badge--gold">Typical results</span>
+        <h2>What members typically experience</h2>
+        <p>Based on aggregated data from Figur Health members and referenced clinical trial results.</p>
+      </div>
+      <div class="grid grid-4" style="gap:20px;">
+        <div class="stats-grid__item" style="background:rgba(255,255,255,0.05);border:1px solid rgba(212,175,55,0.12);border-radius:var(--radius-md);padding:32px;text-align:center;">
+          <div class="stat__number">4–8<span style="font-size:1.5rem;">wk</span></div>
+          <div class="stat__label">First noticeable weight loss for most members</div>
+        </div>
+        <div class="stats-grid__item" style="background:rgba(255,255,255,0.05);border:1px solid rgba(212,175,55,0.12);border-radius:var(--radius-md);padding:32px;text-align:center;">
+          <div class="stat__number">3–5<span style="font-size:1.5rem;">kg</span></div>
+          <div class="stat__label">Average weight loss in the first 3 months</div>
+        </div>
+        <div class="stats-grid__item" style="background:rgba(255,255,255,0.05);border:1px solid rgba(212,175,55,0.12);border-radius:var(--radius-md);padding:32px;text-align:center;">
+          <div class="stat__number">10–16<span style="font-size:1.5rem;">kg</span></div>
+          <div class="stat__label">Average weight loss in the first year</div>
+        </div>
+        <div class="stats-grid__item" style="background:rgba(255,255,255,0.05);border:1px solid rgba(212,175,55,0.12);border-radius:var(--radius-md);padding:32px;text-align:center;">
+          <div class="stat__number">21<span style="font-size:1.5rem;">%</span></div>
+          <div class="stat__label">Average body weight reduction at 16 months (clinical)</div>
+        </div>
+      </div>
+      <p style="text-align:center;margin-top:28px;font-size:0.8rem;color:rgba(255,255,255,0.4);">Individual results vary. These figures are based on clinical trial data for GLP-1 medications and are not guaranteed outcomes for every individual.</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <span class="badge badge--gold" style="margin-bottom:24px;">Your story starts here</span>
+      <h2>Ready to write your own success story?</h2>
+      <p>Join thousands of people across India who are transforming their health with Figur Health.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img" /></a>
+          <p>Science-backed weight loss for modern India.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul><li><a href="new-programme.html">How it works</a></li><li><a href="new-science.html">The science</a></li><li><a href="mounjaro-injection.html">Mounjaro</a></li><li><a href="wegovy-for-weight-loss.html">Wegovy</a></li></ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul><li><a href="new-health-guide.html">Health guide</a></li><li><a href="new-success-stories.html">Success stories</a></li><li><a href="new-faqs.html">FAQs</a></li><li><a href="contact-us.html">Contact us</a></li></ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Medical Disclaimer</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>© 2025 Figur Health. All rights reserved.</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const navCta = document.getElementById('navCta');
+    hamburger.addEventListener('click', () => { navLinks.classList.toggle('open'); navCta.classList.toggle('open'); });
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold: 0.1});
+    document.querySelectorAll('.story-card').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(20px)'; el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      observer.observe(el);
+    });
+  </script>
+</body>
+</html>

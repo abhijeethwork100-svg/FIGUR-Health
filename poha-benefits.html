@@ -1,0 +1,1112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Can a dish of poha a day keep the doctor away? | Figur Health</title>
+  <meta name="description" content="Discover poha health benefits and how they help with weight loss. It’s healthy, tasty, and easy to make. Check out six interesting poha recipes."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Nutrition</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">16 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>Can a dish of poha a day keep the doctor away?</h1>
+        <p class="article-hero__desc">Discover poha health benefits and how they help with weight loss. It’s healthy, tasty, and easy to make. Check out six interesting poha recipes.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+
+ <div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80" alt="Poha" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>Can a dish of poha a day keep the doctor away?</h1>
+</div>
+<p>
+</p>
+<p>Who doesn’t love <em>poha</em>? If you have grown up in a desi household, your mornings would most likely be enveloped in the savoury, wafty fragrance of <em>poha</em> being cooked on medium heat. But, did you know, <em>poha</em> can be much more than a delightful breakfast dish? Read on to know how a plate of <em>poha</em> can benefit your health.</p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="poha-benefits.html#key-takeaways">Key takeaways:</a></li>
+<li><a href="poha-benefits.html#what-is-poha">What is poha?</a></li>
+<li><a href="poha-benefits.html#why-is-poha-healthy">Why is poha healthy?</a></li>
+<li><a href="poha-benefits.html#why-is-poha-(aval)-good-for-weight-loss-">Why is poha (aval) good for weight loss? </a></li>
+<li><a href="poha-benefits.html#six-healthy-poha-recipes-for-weight-loss">Six healthy poha recipes for weight loss</a></li>
+<li><a href="poha-benefits.html#what-is-the-best-time-to-eat-poha">What is the best time to eat poha?</a></li>
+<li><a href="poha-benefits.html#how-to-make-poha-more-weight-loss-friendly">How to make poha more weight-loss-friendly?</a></li>
+<li><a href="poha-benefits.html#how-does-poha-support-weight-loss">How does poha support weight loss?</a></li>
+<li><a href="poha-benefits.html#four-poha-myths-you-must-know-about">Four poha myths you must know about</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways:</h2>
+
+<div>
+<ul>
+<li>There are majorly three types of <em>poha</em> - red <em>poha</em>, white <em>poha</em>, and brown <em>poha</em></li>
+<li><em>Poha</em> comes packed with a variety of vitamins, minerals, and protein. This makes the stomach feel full and offers a wide range of health benefits</li>
+<li>The best time to eat <em>poha</em> is either early morning, at lunch, or during early dinner</li>
+<li>Although <em>poha</em> is a nutritious dish, it cannot replace the essential vegetables from your daily diet</li>
+</ul>
+</div>
+<p><em>Can a humble, flat grain like poha be enough?</em></p>
+<p>The scholar Sudama must have thought about this before he took a bundle of <em>poha</em> for his dearest friend Shri Krishna. But to Shri Krishna, this was the best gift ever.</p>
+<p>Let's try again, "Can a humble, flat grain like <em>poha</em> be good enough for weight loss?"</p>
+<p>To someone trying to lose those extra kilos, it certainly is. </p>
+<p>In this blog, we will understand how <em>poha</em> can help with weight loss. We will also learn some healthy <em>poha</em> recipes that support your fitness goals and some easy tips to get the most out of its weight loss benefits.</p> </div>
+<div>
+<h2>What is poha?</h2>
+<p>If you ever visit any Marathi household for breakfast, it’s very likely that you will be served a nice, warm plate of <em>kanda poha</em> or <em>batata poha.</em></p>
+<p>Famous in Maharashtra, Gujarat, Madhya Pradesh, and several South Indian states, <em>poha</em> is a dish made from rice flakes that have been parboiled, rolled, flattened, and dried. </p>
+<p><em>Poha</em> comes in various forms in different parts of India. </p>
+<img alt="poha images" height="542" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="620"/>
+<p>This simple grain is available in white, brown, or red <em>poha</em> , depending on the kind of rice used for processing. </p>
+<p>Let’s see how these three are different from each other:</p>
+<h3>Red, white, and brown poha: What’s good for you?</h3>
+
+<div>
+<div>
+<p>Red <em>Poha</em> </p>
+</div>
+<div>
+<!-- Nutrition Section -->
+<section>
+<div>
+<svg>
+<path></path>
+</svg>
+<p><strong>Nutritional Content</strong></p>
+</div>
+<div>
+<div>
+<div>
+<div>Fiber</div>
+<div>9g</div>
+<div>per 100g</div>
+</div>
+<div>
+<div>Protein</div>
+<div>7.87g</div>
+<div>per 100g</div>
+</div>
+</div>
+<ul>
+<li>High in fiber</li>
+<li>Rich in antioxidants</li>
+<li>Contains iron</li>
+</ul>
+</div>
+</section>
+<!-- Benefits Section -->
+<section>
+<div>
+<svg>
+<path></path>
+</svg>
+<p><strong>Health Benefits</strong></p>
+</div>
+<div>
+<div>
+<div>
+<ul>
+<li>Aids digestion</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Manages cholesterol</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Stabilizes blood sugar</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Low glycemic index</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<br/>
+<div>
+<div>
+<p>White <em>Poha</em> </p>
+</div>
+<div>
+<!-- Nutrition Section -->
+<section>
+<div>
+<svg>
+<path></path>
+</svg>
+<p>
+<strong>Nutritional Content</strong>
+</p>
+</div>
+<div>
+<div>
+<div>
+<div>Fiber</div>
+<div>3g</div>
+<div>per 100g</div>
+</div>
+<div>
+<div>Protein</div>
+<div>7.44g</div>
+<div>per 100g</div>
+</div>
+</div>
+<ul>
+<li>Lower fiber content</li>
+<li>Moderate protein</li>
+<li>Easy to digest</li>
+</ul>
+</div>
+</section>
+<!-- Benefits Section -->
+<section>
+<div>
+<svg>
+<path></path>
+</svg>
+<p>
+<strong>Health Benefits</strong>
+</p>
+</div>
+<div>
+<div>
+<div>
+<ul>
+<li>Provides instant energy</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Light and easy to digest</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Good for sensitive stomach</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Helps recover from diseases better</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div>
+<br/>
+<div>
+<div>
+<p>Brown <em>Poha</em> </p>
+</div>
+<div>
+<!-- Nutrition Section -->
+<section>
+<div>
+<svg>
+<path></path>
+</svg>
+<p>
+<strong>Nutritional Content</strong>
+</p>
+</div>
+<div>
+<div>
+<div>
+<div>Fiber</div>
+<div>7g</div>
+<div>per 100g</div>
+</div>
+<div>
+<div>Protein</div>
+<div>7g</div>
+<div>per 100g</div>
+</div>
+</div>
+<ul>
+<li>Moderate fiber content</li>
+<li>Contains antioxidants</li>
+<li>Offers essential vitamins</li>
+</ul>
+</div>
+</section>
+<!-- Benefits Section -->
+<section>
+<div>
+<svg>
+<path></path>
+</svg>
+<p>
+<strong>Health Benefits</strong>
+</p>
+</div>
+<div>
+<div>
+<div>
+<ul>
+<li>Helps digest food</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Regulates glucose levels</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Improves metabolism</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Reduces risk of chronic diseaes</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</div>
+</div> </div>
+<div>
+<h2>Why is poha healthy?</h2>
+<p><em>Poha</em> is mostly known for its good carbohydrate content, enough to fuel you for the day ahead. It is also fibre-rich and known for its iron stores. </p>
+<p>Other nutrients that make <em>poha</em> so healthy are:</p>
+<p><strong>Macronutrients:</strong> Carbohydrates, proteins, and fats.</p>
+<p><strong>Vitamins:</strong> Vitamins B1 (thiamine), B6, B9 (folate) and B3 (niacin).</p>
+<p><strong>Minerals:</strong> Iron, magnesium, calcium, zinc, potassium, and phosphorus.</p> </div>
+<div>
+<h2>Why is poha (aval) good for weight loss? </h2>
+<p>Expert cardiologist Dr. Bimal Chhajer of SAAOL Heart Center <a href="https://www.youtube.com/watch?v=__pQetxe2wU&amp;t=4s">explains</a><a href="poha-benefits.html#refid1_25"> how <em>poha (aval)</em> can benefit you.</a></p>
+
+<div>
+<div>
+<span>Why is poha good for you?</span>
+<div>
+<div>
+<div>
+<div>
+<p>Calories per 100g</p>
+<p><strong>130-150 kcal</strong></p>
+</div>
+<div>
+<p>Glycemic index</p>
+<p><strong>38-64 (low - medium)</strong></p>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div>
+<svg height="24" width="24"><circle></circle><path></path><path></path><path></path><path></path><path></path><path></path><path></path><path></path></svg>
+</div>
+<p><strong>Breakfast</strong></p>
+<p>Morning energy boost</p>
+<span>130-150 calories per 100 g serving provides sustained energy throughout the day.</span>
+</div>
+<div>
+<div>
+<svg height="24" width="24"><rect height="10" width="16"></rect><line></line></svg>
+</div>
+<p><strong>Mid-morning</strong></p>
+<p>Sustained satisfaction</p>
+<span>High fiber content keeps the stomach full till lunch. Helps curb unnecessary eating.</span>
+</div>
+<div>
+<div>
+<svg height="24" width="24"><path></path></svg>
+</div>
+<p><strong>Throughout the day</strong></p>
+<p>Blood sugar control</p>
+<span>A glycemic index of 38-64 stabilises blood sugar levels</span>
+</div>
+<div>
+<div>
+<svg height="24" width="24"><path></path><path></path></svg>
+</div>
+<p><strong>Long-term benefits</strong></p>
+<p>Overall good health</p>
+<span>Better nutrient absorption and digestion support metabolism</span>
+</div>
+</div>
+<div>
+<p><strong>Expert recommendations:</strong></p>
+<ul>
+<li>Good for pregnant women</li>
+<li>Ideal for diabetics</li>
+<li>Recommended for weight loss and management</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> </div>
+<div>
+<h2>Six healthy poha recipes for weight loss</h2>
+<h3>1. Dadpe pohe</h3>
+<img alt="A dish of dadpe pohe" height="542" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="620"/>
+<p> <em>Dadpe Pohe</em> is a popular Konkani dish, which can be made with minimal or no fire! The name <em>"Dadpe"</em> comes from the Marathi word <em>dadapne,</em> which means <strong>pressed.</strong> Once all the ingredients are mixed, a soft cloth is used to cover the dish with some weight on top so that all the juices and flavours are infused into the <em>poha</em> .</p>
+<p><strong>Ingredients:</strong></p>
+<ul>
+<li>Raw <em>poha</em> - 1 cup</li>
+<li>Fresh grated coconut - ½ cup </li>
+<li>Coconut water - ¼-½ cup (water from grated cucumber works, too).</li>
+<li>Onion - 1 (small)</li>
+<li>Green chilli - 1-2 pieces</li>
+<li>Lemon - ½ piece</li>
+<li>Peanuts - ¼ cup</li>
+<li><em>Jeera,</em> mustard seeds, curry leaves, and <em>hing</em> - for tempering.</li>
+<li>Salt to taste</li>
+</ul>
+<p><strong>Method:</strong></p>
+<ul>
+<li>Mix <em>poha,</em> grated coconut, and coconut water in a bowl.</li>
+<li>Now chop onions and green chillies and add to the mix. </li>
+<li>Squeeze lemon juice on top. </li>
+<li>Add some salt to taste. </li>
+<li>Now temper peanuts, mustard seeds, <em>hing,</em> and curry leaves and garnish the mix.</li>
+<li>Transfer to a plate and serve immediately.</li>
+</ul>
+<p><strong>Calories:</strong> Approx. 200-250 kcal per serving (1 bowl, or 100-150g).</p>
+<h3>2. Kande pohe or vegetable poha </h3>
+<img alt="A plate of kande pohe" height="542" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="620"/>
+<p>If you ever visit any Marathi household for breakfast, it’s very likely that you will be served a nice, warm plate of <em>kande pohe.</em> It’s tasty, healthy, and one of the easiest ways to impress your guests as a host/hostess.</p>
+<p><strong>Ingredients:</strong></p>
+<ul>
+<li>Raw <em>poha</em> - 1 cup</li>
+<li>Oil - 1 tsp.</li>
+<li>Mustard seeds or <em>jeera</em> - 1 tsp</li>
+<li><em>Hing</em> - a small pinch</li>
+<li>Turmeric - ¼ tsp </li>
+<li>Salt - to taste</li>
+<li>Onion - 1 small.</li>
+<li>Peanuts - ¼ cup</li>
+<li>Vegetables - carrots, peas, tomatoes, french beans, sprouts, etc. - ½ - ¾ cup.</li>
+<li>Coriander for garnishing.</li>
+<li>Lemon - ½ piece</li>
+</ul>
+<p><strong>Method:</strong></p>
+<ul>
+<li>Soak the <em>poha</em> in water for 3-5 minutes and drain the water. </li>
+<li>In a pan, add oil, followed by mustard seeds/<em>jeera, hing,</em> and peanuts.</li>
+<li>Now add the chopped onion and some curry leaves. </li>
+<li>Once the onion turns soft,  add the washed <em>poha</em> , turmeric, mixed vegetables, and salt. </li>
+<li>Cover with a lid and cook for 2-3 minutes. </li>
+<li>Squeeze the lemon juice on top and garnish with coriander.</li>
+</ul>
+<p><strong>Calories:</strong> Approx. 180-350kcal per serving (1 bowl, or 150g).</p>
+<h3>3. Poha chilla</h3>
+<img alt="Unique poha chilla recipe for weight loss" height="542" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="620"/>
+<p>An interesting take on the regular <em>chilla</em> (Indian pancakes), <em>poha chilla</em> is easy to prepare, takes little time to cook, and has ample scope for customisation. Give it a try!</p>
+<p><strong>Ingredients:</strong></p>
+<ul>
+<li>Raw <em>poha</em> - ½ cup</li>
+<li>Semolina (<em>Sooji</em> <em>/Rava</em>): 2 tbsp</li>
+<li>Curd (Yoghurt or <em>dahi</em>): ¼ cup</li>
+<li>Grated ginger - ½ teaspoon</li>
+<li>Green chilli - 1 small, finely chopped</li>
+<li>Water - 2-3 tablespoons</li>
+<li>Onions, tomatoes, bell peppers, or spinach - ¼ cup, finely chopped</li>
+<li>Coriander leaves - 1 tablespoon, finely chopped</li>
+<li>Salt to taste</li>
+<li>ENO fruit salt - ¼ teaspoon</li>
+<li>Oil for greasing the <em>tawa</em> </li>
+</ul>
+<p><strong>Method:</strong></p>
+<ul>
+<li>In a mixer, grind soaked <em>poha</em> , semolina (Sooji<em>/rava</em>), curd, grated ginger, green chilli, and water into a smooth batter. </li>
+<li>Now add chopped veggies, coriander leaves, and salt, and mix nicely. </li>
+<li>Before cooking, add ENO fruit salt and spread the batter on a greased tawa. </li>
+<li>Cook until the <em>chilla</em> gets a nice golden hue and is crispy on both sides. </li>
+<li>Serve with <em>chutney</em> .</li>
+</ul>
+<p>You can also use <em>poha</em> with <em>besan</em> if you wish to make the <em>chilla</em> gluten-free.</p>
+<p><strong>Calories:</strong> Approx. 100-150 kcal per <em>chilla</em> (medium-sized, approx. 100g batter), depending on the amount of oil/<em>ghee</em> used and toppings.</p>
+<h3>4. Oats poha</h3>
+<img alt="Healthy oats poha for weight loss" height="542" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="620"/>
+<p>Tired of making oats <em>upma</em> ? Try this recipe that blends the heart-healthy benefits of oats and the energy boost of <em>poha</em> . A wholesome dish that keeps your tummy full.</p>
+<p><strong>Ingredients:</strong></p>
+<ul>
+<li><em>Poha</em> - 1 cup</li>
+<li>Oats - 1/2 cup</li>
+<li>Oil - 1 tsp</li>
+<li>Mustard seeds - 1 tsp</li>
+<li><em>Jeera</em> - 1/2 tsp</li>
+<li>Curry leaves - 10-12 leaves</li>
+<li>Green chili to taste, finely chopped</li>
+<li>Onion - 1 small, finely chopped</li>
+<li>Carrot, capsicum, and beans - 1/4 cup each, finely chopped</li>
+<li>Turmeric to taste</li>
+<li>Water as needed</li>
+<li>Lemon juice to taste</li>
+</ul>
+<p><strong>Method:</strong></p>
+<ul>
+<li>Rinse <em>poha</em> with water and drain well. Keep aside</li>
+<li>Heat oil in a pan and add mustard seeds, <a href="jeera-water-benefits.html"><em>jeera</em></a>, and curry leaves. Let them crackle.</li>
+<li>Now sauté green chillies and onion. Put some turmeric powder. </li>
+<li>Add the carrots, capsicum, and beans and stir-fry. </li>
+<li>Now add <em>poha</em> and oats and sprinkle some water on them. </li>
+<li>Cook for 3-4 minutes and squeeze some lemon juice on top.</li>
+<li>Transfer to a plate and enjoy.</li>
+</ul>
+<p><strong>Calories:</strong> Approx. 206 kcal per serving (100-150g).</p>
+<h3>5. Soya poha</h3>
+<img alt="A different take on a poha recipe - soya poha" height="542" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="620"/>
+<p>Tired of eating soya <em>sabzi</em> all the time? Try a new twist with <em>poha</em> . 100 g of soya chunks can contain as much as 52 g of proteins!</p>
+<p><strong>Ingredients:</strong></p>
+<ul>
+<li>Washed <em>poha</em> - 1 cup </li>
+<li>Soya granules - ¼ cup</li>
+<li>Water for boiling</li>
+<li>Oil - 1 tsp</li>
+<li>Mustard seeds, <em>hing,</em> curry leaves for tempering</li>
+<li>Turmeric - ¼ tsp</li>
+<li>½ cup mixed vegetables of your choice (e.g., peas, carrots)</li>
+</ul>
+<p><strong>Method:</strong></p>
+<ul>
+<li>Boil some water in a pan and add soya granules. Squeeze out any extra water. </li>
+<li>Grind the soya chunks into small pieces. </li>
+<li>Heat oil and sauté with <em>hing,</em> mustard seeds, curry leaves, turmeric, and mixed vegetables. </li>
+<li>Add washed <em>poha</em> and the soya granules to the tempering. Mix well and cook for 2 minutes.</li>
+<li>Take off the heat, transfer to a plate, and serve.</li>
+</ul>
+<p><strong>Calories:</strong> Approx. 170 kcal per serving (1 bowl, or 100-150g).</p>
+<h3>6. Curd (dahi) poha/Gopalkala</h3>
+<img alt="Gopalkala recipe for weight loss" height="542" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="620"/>
+<p>If you are looking for ways to add some more probiotics to your <em>poha</em> , <em>dahi</em> is the answer. It is super light and healthy for the stomach and is also offered as <em>prasad</em> during <em>Janmashtami</em> and <em>Ganesh Chaturthi.</em></p>
+<p><strong>Ingredients:</strong></p>
+<ul>
+<li>Raw <em>poha</em> - 1 cup </li>
+<li>Water for rinsing</li>
+<li>Salt to taste</li>
+<li>Curd/<em>dahi</em>/yoghurt - 1 cup </li>
+<li>Mustard seeds, curry leaves, green chillies for tempering </li>
+<li>Coriander leaves, finely chopped for garnishing</li>
+<li>Pomegranate seeds for garnishing (optional)</li>
+</ul>
+<p><strong>Method:</strong></p>
+<ul>
+<li>Rinse <em>poha</em> with water. Drain well.</li>
+<li>Mix <em>poha</em> with <em>dahi</em> and some salt. </li>
+<li>Add a tempering of curry leaves, mustard seeds, and green chillies. </li>
+<li>Garnish with chopped coriander leaves and enjoy. </li>
+<li>You can even add pomegranate seeds for some sweet crunch.</li>
+</ul>
+<p><strong>Calories:</strong> Approx. 180-220 kcal per serving (1 bowl, or 100-150g).</p> </div>
+<div>
+<h2>What is the best time to eat poha?</h2>
+<p>When eaten at the right time, <em>poha</em> can be an incredibly delicious and simple way to help with weight loss. Check out the image below to know the best time to eat <em>poha.</em></p>
+
+<div>
+<div>
+<span>The best time to eat poha</span>
+<div>
+<div>
+<div>
+<div>
+<svg height="24" width="24"><circle></circle><path></path><path></path><path></path><path></path><path></path><path></path><path></path><path></path></svg>
+</div>
+<span>Early morning breakfast:</span>
+</div>
+<div>
+<p>Your body is in a fasting state after a long, restful night of sleep. Eating <em>poha</em> right after waking up is good, because: </p>
+<ul>
+<li>It provides the right amount of energy to keep going throughout the day</li>
+<li>Keeps hunger pangs away</li>
+<li>Helps digest breakfast better, and prevents bloating</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div>
+<svg height="24" width="24"><circle></circle><polyline></polyline></svg>
+</div>
+<span>Lunch/dinner:</span>
+</div>
+<div>
+<p>If <em>poha</em> for breakfast feels heavy, you can have it later in the day for lunch or early dinner. Doing so has the following benefits:</p>
+<ul>
+<li>It is a lightweight meal choice</li>
+<li>Helps avoid unnecessary snacking</li>
+<li>Moderate, homemade servings makes the meal nutritious</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<div>
+<svg height="24" width="24"><path></path><path></path><path></path></svg>
+</div>
+<span>Do not eat <em>poha</em> late at night, because doing so can:</span>
+</div>
+<div>
+<ul>
+<li>Affect your blood sugar levels</li>
+<li>Store excess energy as fat</li>
+<li>Disrupt digestion and can keep you uneasy at night</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div> </div>
+<div>
+<h2>How to make poha more weight-loss-friendly?</h2>
+<p>These tried and tested tips will help you ensure that <em>poha</em> helps you lose weight in the best way possible:</p>
+
+<div>
+<table>
+<thead>
+<tr>
+<th colspan="2">Tips to make healthy poha</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><svg height="32" width="32"><path></path><path></path><path></path></svg></td>
+<td>Use less oil (for e.g. reduce from 1.5 tbsp to 1 tbsp)</td>
+</tr>
+<tr>
+<td><svg height="32" width="32"><path></path><path></path><path></path><path></path><path></path></svg></td>
+<td>Limit portion to single serving to control calories</td>
+</tr>
+<tr>
+<td><svg height="32" width="32"><path></path></svg></td>
+<td>Add protein to <em>poha</em> in the form of peanuts, sprouts, or soya chunks</td>
+</tr>
+<tr>
+<td><svg height="32" width="32"><circle></circle><path></path><path></path></svg></td>
+<td>Skip adding sugar to <em>poha</em> to reduce empty calories</td>
+</tr>
+<tr>
+<td><svg height="32" width="32"><path></path><path></path><path></path></svg></td>
+<td>Cook <em>poha</em> in healthy oils such as groundnut oil, olive oil, coconut oil, canola oil, etc.</td>
+</tr>
+<tr>
+<td><svg height="32" width="32"><circle></circle><path></path><path></path></svg></td>
+<td>Add a squeeze of lemon juice for better iron absorption and a zesty taste</td>
+</tr>
+</tbody>
+</table>
+</div> </div>
+<div>
+<h2>How does poha support weight loss?</h2>
+<p><a href="https://ijneronline.com/AbstractView.aspx?PID=2022-10-3-18">In a study</a><a href="poha-benefits.html#refid1_25"><sup>[1]</sup></a>, researchers asked 100 people with diabetes to eat <em>poha</em> daily for 6 days while continuing with their usual diet and medicines. They measured the patients' blood sugar levels on days 1 and 7. </p>
+<p>What they found was that the patient's blood sugar levels were lower than before. This was mainly possible because of its fibre content and low glycemic index. </p>
+<p>Therefore, the study proved that <em>poha</em> can be a cost-effective way to manage blood sugar levels, which also have a huge role to play in weight loss. </p> </div>
+<div>
+<h2>Four poha myths you must know about</h2>
+<p><em>Poha</em> can be a misunderstood food staple. Here are four <em>poha</em> myths that you should be aware of.</p>
+
+<div>
+<div>
+<p>Poha Myths: True or False?</p>
+<p>Test your knowledge about common <em>poha</em> myths!</p>
+</div>
+<main>
+<div>
+<p><strong>1. All flattened rice varieties are exactly the same as <em>poha</em> .</strong></p>
+<div>
+
+
+</div>
+<div>
+<div>
+<span></span>
+</div>
+<p>Different varieties of flattened rice exist across Asia, each with unique processing methods. Examples include Pinipig (Philippines), Ambok (Odisha), Mont Hsan (Myanmar), Khao Mao (Thailand), and Cốm (Vietnam).</p>
+</div>
+</div>
+<div>
+<p><strong>2. <em>poha</em> is universally easy to digest for everyone.</strong></p>
+<div>
+
+
+</div>
+<div>
+<div>
+<span></span>
+</div>
+<p>While <em>poha</em> is generally easy to digest, some people with sensitive guts may have issues. Adding heavy spices, fats, nuts, or soya can also affect digestibility.</p>
+</div>
+</div>
+<div>
+<p><strong>3. Poha always causes stomach aches.</strong></p>
+<div>
+
+
+</div>
+<div>
+<div>
+<span></span>
+</div>
+<p><em>Poha</em> typically aids digestion due to its fiber content. Stomach issues may occur due to improper rinsing, specific ingredients, individual sensitivities, or pre-existing conditions.</p>
+</div>
+</div>
+<div>
+<p><strong>4. <em>poha</em> can completely replace vegetables in your diet.</strong></p>
+<div>
+
+
+</div>
+<div>
+<div>
+<span></span>
+</div>
+<p>While nutritious, <em>poha</em>  cannot replace vegetables entirely. Vegetables provide essential vitamins (A, C, K), minerals, folate, diverse fibers, phytochemicals, and antioxidants that <em>poha</em> alone cannot provide.</p>
+</div>
+</div>
+
+<div>
+<h2>Your Score: <span>0</span> out of 4</h2>
+<p></p>
+</div>
+</main>
+</div>
+
+<h3>Conclusion</h3>
+<p>Healthy eating doesn't have to be boring, and <em>poha</em> proves that. It is a great example of how something simple and affordable can be a healthy weight-loss meal. Be it the regular <em>kande pohe,</em> or the <em>hatke poha chilla,</em> you can whip up your delicacy without compromising on flavour or satisfaction. </p>
+<p>Swap out the high-calorie ingredients, follow portion control, try eating one <em>poha</em> dish a week, and then switch it up. You will not regret it.</p>
+<p>For more deets on weight loss, healthy eating, and easy to do workouts, follow <a href="logout.html">Aktive.</a> Explore how you can lose upto 10% of your body weight in 6 months with clinically proven <a href="weight-loss/index.html">weight loss plans</a> by Aktive.</p> </div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>Can I eat poha while dieting?</p>
+<div><p></p><p>Yes, <em>poha</em> is an excellent meal choice for weight loss due to its low-calorie count (110-354 kcal/100g), high fibre, and complex carbohydrates. Together they help you sustain energy for longer periods of time without spiking blood sugar. It is a versatile ingredient and can be easily combined with different vegetables, protein sources, and nuts to help you with your weight loss goals.</p></div>
+</li>
+<li>
+<p>Is poha better than rice?</p>
+<div><p></p><p>Yes. <em>poha</em> is a healthier alternative to rice, the reasons behind this being:</p>
+<ul>
+<li><em>Poha</em> has fewer calories than rice.</li>
+<li>It is minimally processed, whereas rice is more polished.</li>
+<li><em>Poha</em> has a lower glycemic index than rice.</li>
+<li>It has more nutrient content than rice because it is unpolished.</li>
+<li>It is relatively light on the stomach.</li>
+<li>Some sources suggest that <em>poha</em> has probiotic qualities due to fermentation during its processing.</li>
+</ul></div>
+</li>
+<li>
+<p>What are the disadvantages of eating poha?</p>
+<div><p></p><p>While <em>poha</em> can be weight-loss friendly when taken in moderation, it also has some disadvantages.</p>
+<ul>
+<li>It can irritate people with stomach issues like irritable bowel syndrome (IBS) and cause acidity, bloating, and gas.</li>
+<li>It doesn't have adequate protein compared to other breakfast dishes.</li>
+<li>It can spike blood sugar levels rather quickly if eaten in excess.</li>
+<li>It is low in fibre and protein. </li>
+</ul></div>
+</li>
+<li>
+<p>Is poha a junk food?</p>
+<div><p></p><p>No! On the contrary, <em>poha</em> is a wholesome dish rich in fibre, carbohydrates, iron, vitamins, and minerals. It is best to eat homemade <em>poha</em> with adequate protein and vegetables so you get the best of its nutritional value.</p></div>
+</li>
+<li>
+<p>Can poha help in gaining weight?</p>
+<div><p></p><p>It depends on how you prepare <em>poha</em> , how much you eat, and what you eat it with. Adding calorie-dense foods like peanuts, nuts, seeds, potatoes, or extra oil can cause unhealthy weight gain. Some believe that adding grated coconut or serving it with curd can also increase its calorie content.</p></div>
+</li>
+<li>
+<p>Is poha gluten-free?</p>
+<div><p></p><p><em>Poha</em> is flattened/flaked rice that does not contain gluten, as it is made from white and red rice. This makes it a complex carbohydrate and a convenient option for people with celiac disease or gluten sensitivity.</p></div>
+</li>
+<li>
+<p>How does poha compare to oats for weight loss?</p>
+<div><p></p><p>Oats are nutrient-rich and pack more protein (10-13g) and fibre (10-11g) per 100g. This makes them more filling and helps control hunger. Their low glycemic index makes it easier to stabilise blood sugar levels.</p>
+<p><em>poha</em> , on the other hand, is light and easy to digest, with 130-150 calories per 100g. But it contains less protein (2.5-3g) and fibre (1.5-2g) in comparison and may leave you hungry sooner. So, pick oats if you are looking for satiety and poha if you want a quick, light meal.</p></div>
+</li>
+<li>
+<p>Is poha suitable for people with diabetes?</p>
+<div><p></p><p>Definitely, because of its low glycemic index (38-64) and high fibre content, <em>poha</em> slows down the absorption of carbohydrates. This way, the sugar levels in the blood rise slowly and steadily, rather than in sudden spikes. You can prepare <em>poha</em> with minimal oil and add more veggies and protein to increase its nutritional value.</p></div>
+</li>
+<li>
+<p>How do I store poha, and what is its shelf life?</p>
+<div><p></p><p>As a dry food item, <em>poha</em> has a good shelf life of around six months to a year. Always try to store <em>poha</em> in airtight containers in a moisture-free, cool place to prevent mold and pest attacks. Check for a fresh smell, insects, etc., before you use <em>poha</em> .</p> </div>
+</li>
+<li>
+<p>Can I prepare poha in advance?</p>
+<div><p></p><p>Yes, you can save time while cooking <em>poha</em> . For this, you can chop the vegetables and store them in airtight containers in the refrigerator. This way, you only need to soak the <em>poha</em> before cooking and temper it with spices.</p>
+<p>Also, you can make your <em>poha</em> premix at home by roasting the <em>poha</em> , and then mixing it with spices, peanuts, mustard seeds, and curry leaves. Cool the mixture completely before storing it in an airtight container. Cooked <em>poha</em> can be stored in the fridge for 1-2 days, but it’s best to enjoy it fresh.</p></div>
+</li>
+<li>
+<p>Is poha a complete meal on its own?</p>
+<div><p></p><p>Although <em>poha</em> is a low-calorie, nutritious meal, it still cannot compensate for our daily requirements of proteins, fats, and some other nutrients on its own. Combining it with healthy vegetables, legumes, or <em>dahi</em> can increase its nutritional value.</p></div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>April, 25 2025</strong></p><p>Publish date <strong>December, 20 2024</strong></p></div> </div>
+<div>
+<p><strong>References:</strong></p>
+<ul>
+<li>[1] Jose, N. M. (2022). Poha consumption and Glycemic control, An experimental Study. International Journal of Nursing Education and Research, 267–268. <a href="https://doi.org/10.52711/2454-2660.2022.00062">https://doi.org/10.52711/2454-2660.2022.00062</a></li>
+</ul> </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

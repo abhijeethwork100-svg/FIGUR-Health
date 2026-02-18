@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How many calories does a dosa have? | Figur Health</title>
+  <meta name="description" content="Yes, you can eat dosa for weight loss! Find out the calories in one dosa, its nutritional value, health benefits and tips to make it healthier."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Nutrition</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">12 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>How many calories does a dosa have?</h1>
+        <p class="article-hero__desc">Yes, you can eat dosa for weight loss! Find out the calories in one dosa, its nutritional value, health benefits and tips to make it healthier.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+<div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80" alt="Dosa" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>How many calories does a dosa have?</h1>
+</div>
+<p>
+</p>
+<div>
+<p><em>Thin. Crispy. Golden</em></p>
+</div>
+<p><em>Dosa</em> has become the perfect Sunday brunch.</p>
+<p>But did you know, a medium-sized dosa (97g), has about 168 calories, 3.9 g protein, and 3.7g fat.</p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="dosa-calories.html#key-takeaways">Key takeaways</a></li>
+<li><a href="dosa-calories.html#what-is-a-dosa">What is a dosa?</a></li>
+<li><a href="dosa-calories.html#what-are-the-nutrients-in-a-dosa">What are the nutrients in a dosa?</a></li>
+<li><a href="dosa-calories.html#what-are-the-health-benefits-of-eating-dosa">What are the health benefits of eating dosa?</a></li>
+<li><a href="dosa-calories.html#what-are-the-calories-in-different-types-of-dosa">What are the calories in different types of dosa?</a></li>
+<li><a href="dosa-calories.html#can-dosa-help-with-weight-loss-an-expert’s-opinion">Can dosa help with weight loss? An expert’s opinion</a></li>
+<li><a href="dosa-calories.html#how-to-make-your-dosa-healthier-(without-compromising-on-taste)">How to make your dosa healthier (without compromising on taste)?</a></li>
+<li><a href="dosa-calories.html#5-instant-healthy-dosa-recipes-you-can-try">5 instant healthy dosa recipes you can try</a></li>
+<li><a href="dosa-calories.html#dosing-on-dosas-the-right-way">Dosing on dosas the right way</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways</h2>
+<div>
+<ul>
+<li>A medium-sized dosa (97g) contains about 168 calories.</li>
+<li>It is light on the stomach and rich in probiotics.</li>
+<li>It is gluten-free and safe for people with celiac disease and gluten intolerance.</li>
+<li>You can make dosas a part of your weight loss plan by using healthier ingredients, adding more protein, and using less oil.</li>
+</ul>
+</div>
+<p>We are sure you must have heard this while scrolling through your smartphones.</p>
+<p><em>Dosai Idli Sambar Chutney, Chutney</em></p>
+<p><em>Dosai Idli Sambar Chutney, Chutney</em></p>
+<p>This song has set social media on fire!</p>
+<p>But beyond its mouthwatering appeal, there's a lot to dosa. </p>
+<p>In this guide, we'll learn more about dosa calories, its nutritional value, its health benefits, how it can help you lose weight, and some clever ways to make it even healthier. </p> </div>
+<div>
+<h2>What is a dosa?</h2>
+<img alt="Golden crispy dosas on a plate" height="473" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="750"/>
+<p>While the <em>dosa</em> has its origins in South India, it's enjoyed across India with chutneys, <em>sambhar, podi</em> (a spice powder), <em>palya</em> (vegetables) and even ketchup! </p>
+<p><em>Dosas</em> are fermented, savoury pancakes usually made from rice and black gram (<em>urad dal</em>). </p>
+<p>It is made by soaking a mix of rice and black gram in a ratio of 3:1, grinding it into a batter, and fermenting it overnight. </p>
+<p>The fluffed-up batter is then spread thinly on a hot griddle (<em>tawa</em>) with a touch of oil and then roasted on both sides. </p>
+<p>What makes <em>dosas</em> a fan-favourite is their versatility. You can make them plain, stuff them with masala, cheese, or make a chinese variant of the same.</p>
+<p>But if weight loss is your goal, you can enrich <em>dosas</em> with oats, <a href="types-of-millets.html">millets</a>, or lentils (moong, horse gram, etc.).</p>
+<p>And voila! Your weight loss-friendly meal is ready to be served!</p> </div>
+<div>
+<h2>What are the nutrients in a dosa?</h2>
+<p>Let’s take a look at what can a standard serving of a plain dosa give you:</p>
+
+<p>Source: <a href="http://Nutritionix.com">Nutritionix.com</a></p>
+<p>By this logic:</p>
+<div>
+<div>
+<span>Dosa Calorie Chart</span>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80" alt="South Indian dosa" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+<ul>
+<li>1 <em>Dosa</em> = 168 Calories</li>
+<li>2 <em>Dosas</em> = 336 Calories</li>
+<li>3 <em>Dosas</em> = 504 Calories</li>
+<li>4 <em>Dosas</em> = 672 Calories</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<p>This way, you can plan your meals smartly and enjoy them (in moderation) too. </p> </div>
+<div>
+<h2>What are the health benefits of eating dosa?</h2>
+<p>Did you know, <em>dosa</em> is considered sacred and offered as <em>‘prasad’</em> in many South Indian temples? According to Ayurvedic principles, <em>dosas</em> can be enjoyed all year round.</p>
+<p>So let us take a closer look at how <em>dosas</em> can benefit our health:</p>
+<ul>
+<li>It is gluten-free, which makes it a healthy meal option for those with gluten sensitivity, gluten intolerance, and celiac disease. </li>
+<li>The calcium in the dosa ensures your muscles, bones, and teeth remain strong and healthy.</li>
+<li>Magnesium supports nerve and heart health. It also helps you feel active and energetic throughout the day. </li>
+<li>As it is light on the stomach, <em>dosa</em> seldom causes any bloating.</li>
+<li>It has a good amount of fibre, which means it has a <a href="https://www.ijhsr.org/IJHSR_Vol.9_Issue.3_March2019/30.pdf">low glycemic index</a> (the rate at which sugar levels rise in the blood) and helps you feel full. </li>
+<li><a href="https://www.sciencedirect.com/science/article/pii/S2352618115000438?ref=pdf_download&amp;fr=RR-2&amp;rr=92d7bf29190047f4"><em>Susupe dosa</em></a> (made from boiled red rice) is given to breastfeeding mothers to purify the blood.</li>
+<li><a href="https://journalajst.com/sites/default/files/issues-pdf/4455.pdf">Wheat germ <em>dosa</em></a> (made from rice and wheat germ) has more high-quality protein than a regular dosa, contains omega 3 and 6 fatty acids and is a rich source of antioxidants.</li>
+<li>Fermenting dosa batter makes it:
+      <ul>
+<li>Easily digestible.</li>
+<li>Gut-health friendly</li>
+<li>Possible to break down anti-nutrients (in rice and lentils) and improve the absorption of minerals. </li>
+<li>More nutritious by increasing the content of vitamins B and K, some free amino acids, and a few antibiotic and anti-cancer substances.</li>
+</ul>
+</li>
+</ul> </div>
+<div>
+<h2>What are the calories in different types of dosa?</h2>
+<p>It is human to seek variety, and the same emotion applies to dosas as well. Which is why it is important to know the calories in different types of dosas so that you can choose your alternatives mindfully.</p>
+<p>Here is a quick list for you:</p>
+<div>
+<table>
+<thead>
+<tr>
+<th>Type of Dosa</th>
+<th>Calories (kcal) Per Serving</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Plain Dosa</td>
+<td>168</td>
+</tr>
+<tr>
+<td>Masala Dosa</td>
+<td>210</td>
+</tr>
+<tr>
+<td>Rava/Sooji Dosa</td>
+<td>143</td>
+</tr>
+<tr>
+<td>Wheat Dosa (Godhuma)</td>
+<td>89</td>
+</tr>
+<tr>
+<td>Neer Dosa</td>
+<td>76</td>
+</tr>
+<tr>
+<td>Oats Dosa</td>
+<td>144</td>
+</tr>
+<tr>
+<td>Moong Dal Dosa</td>
+<td>109</td>
+</tr>
+<tr>
+<td>Egg Dosa</td>
+<td>186</td>
+</tr>
+<tr>
+<td>Paneer Dosa</td>
+<td>174</td>
+</tr>
+<tr>
+<td>Mixed Millet Dosa</td>
+<td>109</td>
+</tr>
+<tr>
+<td>Ragi Dosa</td>
+<td>135</td>
+</tr>
+<tr>
+<td>Set Dosa</td>
+<td>167</td>
+</tr>
+<tr>
+<td>Ghee Roast Dosa</td>
+<td>180-270</td>
+</tr>
+<tr>
+<td>Cheese Dosa</td>
+<td>109</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div>
+<h2>Can dosa help with weight loss? An expert’s opinion</h2>
+<p>If dosas are slightly calorie-heavy, then does it make sense to eat them while trying to lose weight? </p>
+<p>In an <a href="https://www.instagram.com/nutritionist_ankita/reel/C5WE49qyfvM/">Instagram post</a>, expert nutritionist Ankita Wassan clarifies that dosa can be a delicious and nutritious addition to your weight loss journey when prepared with the right ingredients and consumed in moderation.</p>
+<p>She states, “When cooked on a non-stick surface with minimal oil, dosa can be relatively low in calories compared to other breakfast options. Opting for smaller-sized dosas or those made with whole grains like oats or millets can further reduce calorie content while increasing fiber intake.”</p> </div>
+<div>
+<h2>How to make your dosa healthier (without compromising on taste)?</h2>
+<p>You know you cannot stop after eating just one dosa—you have to have more! But for the weight-conscious, navigating temptation like this can be tricky. </p>
+<p>Let us help you out. Here’s how you can have a healthy dosa without missing out on the taste:</p>
+<div>
+<div>
+<span>How to make your dosa healthy?</span>
+<div>
+<div>
+<div>
+<p><strong>Use healthier ingredients</strong></p>
+<ul>
+<li>Substitute rice <em>dosa</em> with millet <em>dosa</em></li>
+<li>Use oats, brown rice or quinoa in the batter</li>
+<li>Add more <em>moong dal</em> or <em>urad dal</em> for protein</li>
+<li>Mix in grated spinach, beetroot, or carrot</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<p><strong>Try better cooking methods</strong></p>
+<ul>
+<li>Use oil spray instead of pouring oil</li>
+<li>Prepare cast-iron <em>tawa</em> before adding batter</li>
+<li>Sauté <em>masala</em> instead of frying in too much oil</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<p><strong>Control your portions and mealtimes</strong></p>
+<ul>
+<li>Try to limit yourself to 3 small or 2 medium <em>dosas</em> per meal</li>
+<li>Eat <em>dosas</em> in the morning or afternoon for higher metabolism</li>
+<li>If you plan to eat <em>dosas</em> at night, keep it light and skip heavy sides</li>
+<li>Eat slowly and mindfully in a calm environment</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<p><strong>Add some protein</strong></p>
+<ul>
+<li>Add egg <em>bhurji</em> as a side or topping with dosas</li>
+<li>Try <em>paneer</em> or tofu <em>bhurji</em> if you are a vegetarian or vegan</li>
+<li>Pair with Greek yogurt for added protein</li>
+<li>Serve with soya chunks curry for plant protein</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<h2>5 instant healthy dosa recipes you can try</h2>
+<p>Running short of time but still want something yummy? Don’t forget to try out these deliciously healthy dosa recipes. They are fermentation-free and great for busy mornings (or those guilt-free dinners).</p>
+<h3>1. Oats + moong dal dosa</h3>
+<img alt="Oats and moong dal dosa" height="473" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="750"/>
+<p>Soak moong dal and oats for 2 hours. Then, blend the mixture into a nice smooth batter. Cook like regular dosa.</p>
+<h3>2. Ragi + buttermilk dosa</h3>
+<img alt="Ragi and buttermilk dosa" height="473" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="750"/>
+<p>Take some ragi flour and add buttermilk, jeera (cumin), and salt as per your taste. Let this mixture rest for 15-20 minutes. Spread the batter on a tawa and roast with a little oil.</p>
+<h3>3. Besan + veggie dosa</h3>
+<img alt="Besan and vegetable dosa" height="473" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="750"/>
+<p>Like preparing chillas, take a bowl and whisk besan (gram flour) with turmeric (haldi), spices, veggies, salt, and water. Make the batter thin and pour it into a pan. Cook like a regular dosa.</p>
+<h3>4. All dal + no rice dosa</h3>
+<img alt="All dal dosa" height="473" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="750"/>
+<p>Soak mixed dals (<em>moong, chana, urad, masoor,</em> etc.) overnight. Grind them with spices to get a paste-like consistency. Roast like regular dosas and enjoy!</p>
+<h3>5. Bottle gourd + moong dal dosa</h3>
+<img alt="Bottle gourd and moong dal dosa" height="473" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="750"/>
+<p>Soak moong dal and rice for four hours. Then blend them with bottle gourd (lauki), coriander, ginger, and green chillies into a smooth batter. Add salt to taste. Cook like regular dosas.</p> </div>
+<div>
+<h2>Dosing on dosas the right way</h2>
+<p>We know that a plain dosa contains 168 calories. Eating a dosa benefits your health in many ways, but only if done in moderation.</p>
+<p>But that doesn't mean that dosa is inherently “bad.” </p>
+<p>Dosas can certainly be weight-loss-friendly when you eat them smartly. Portion size matters. And so does what you pair it with. </p>
+<p>Add protein-rich sides like <em>sambhar</em>, vegetables, and chutneys. Choose batters made from different <em>dals</em> or millets to add fibre. And if you love dosa for dinners, just keep it light and balanced.</p>
+<p>At the end of the day, food is meant to nourish and satisfy, not stress you out.</p>
+<p>But eating healthy meals is <em>one facet</em> of weight loss.</p>
+<p>If you are someone who has tried all sorts of diets and workouts but finding it hard to lose those kilos, <a href="logout.html">Aktive</a> can help you stay on track. With a realistic, flexible and science-backed weight loss programme, we're here to help you lose weight in a way that works for you.</p> </div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>What is healthier? Dosa or idli? </p>
+<div><p></p><p>Both dosa and idli are healthy foods. But when it comes to the carbohydrate content, the scales tilt more in favour of idli. A regular-sized idli contains fewer calories than a regular-sized dosa. </p>
+<p>Idlis are steamed and prepared with very little oil. This is especially beneficial for those trying to balance their blood sugar levels and lose weight.</p>
+<p>The problem is modern idlis have become more like fluffy rice cakes (thanks to too much rice), while dosas are often fried with excess oil or ghee, which increases the calorie content. So, if you're going low-carb or oil-free, go for idli. And if you need something more filling and crisp, a dosa with minimal oil can be healthy.</p></div>
+</li>
+<li>
+<p>Is dosa better than roti?</p>
+<div><p></p><p>Both dosa and roti are nutritious and serve different purposes. But roti is slightly better than dosa because it is lower in calories, has more protein and fibre, and has a medium glycemic index.</p>
+<p>Dosa, on the other hand, is a fermented dish, which makes it gut-friendly and easy to digest. It is also a good option for those with gluten sensitivity or intolerance. But it contains more calories and less fibre than roti. </p>
+<p>The trick is to enjoy them with adequate vegetables and protein sources to get their benefits.</p> </div>
+</li>
+<li>
+<p>What is millet dosa, and how is it different?</p>
+<div><p></p><p>As the name suggests, millet dosas are a spin on the regular dosa where <a href="https://www.researchgate.net/publication/263605222_Traditional_Indian_breakfast_Idli_and_Dosa_with_enhanced_nutritional_content_using_millets">rice is replaced with a millet</a> (<em>kangani, bajra, ragi, jowar or kodo</em>). As millets are whole grains, eating millet dosas ensures you get the following:</p>
+<ul>
+<li>Protein</li>
+<li>Fibre</li>
+<li>Minerals</li>
+<li>Antioxidants</li>
+<li>Better control of blood sugar levels</li>
+<li>Lower levels of bad cholesterol</li>
+</ul></div>
+</li>
+<li>
+<p>How many dosas can I eat on a weight loss diet?</p>
+<div><p></p><p>If you are on a weight loss diet, you can eat 1-3 medium-sized, homemade dosas in a meal. They should be prepared in less oil and eaten with high-protein, low-calorie sides like <em>bhurji</em>, vegetable <em>sambhar</em> and mint chutney. </p></div>
+</li>
+<li>
+<p>Are instant dosa mixes healthy?</p>
+<div><p></p><p>Instant <em>dosa</em> mixes are definitely quick and convenient to prepare. But they may contain additives, preservatives, artificial flavours or excess sodium. </p>
+<p>Instead, you can buy fermented <em>dosa</em> batter from the local vendor or the convenience store and prepare them while saving time. </p></div>
+</li>
+<li>
+<p>Which dosa is best for diabetics or PCOS?</p>
+<div><p></p><p>When selecting a meal for someone with diabetes or PCOS, you need something that <strong>doesn't spike blood sugar levels, has adequate protein and healthy fats, and supports gut health.</strong></p>
+<p>In such instances, <em>dosas</em> made from millets (e.g., foxtail millet or finger millet dosa), <em>moong dal</em>, and brown or red rice can provide sufficient fibre and essential nutrients.</p>
+<p>These <em>dosas</em> are low on the glycemic index, stabilise blood sugar levels and can keep you full. These factors help in losing weight and restoring hormonal balance.</p></div>
+</li>
+<li>
+<p>Is masala dosa unhealthy?</p>
+<div><p></p><p>The potato filling in <em>masala dosa</em> adds extra carbohydrates and calories, which can make it less healthy. The oil or ghee used to prepare it can increase the calorie count. </p>
+<p>Instead, you can use less oil and add more vegetables to the filling to make it healthier. That being said, you can enjoy it occasionally without feeling guilty about it. But do remember to get back on track.</p></div>
+</li>
+<li>
+<p>Can I eat dosa at night? </p>
+<div><p></p><p>Yes, you can! Just keep it light.</p>
+<p>If made the traditional way, with minimal oil and a generous veggie filling, eating a <em>dosa</em> at night won’t mess with your goals. One plain dosa has around 168 calories, which is manageable if you eat mindfully.</p>
+<p>That said, <em>dosa</em> is still a high-carb food. Eating too many carbs late at night may slow down your metabolism slightly, especially if you’re inactive or tend to sleep soon after.</p></div>
+</li>
+<li>
+<p>What is the best chutney I can eat with dosa for weight loss? </p>
+<div><p></p><p>Here are some healthy, low-calorie chutneys you can enjoy your <em>dosas</em> with:</p>
+<ul>
+<li>Coriander chutney</li>
+<li>Tomato-onion-garlic chutney</li>
+<li>Mint chutney</li>
+<li>Garlic chutney</li>
+<li>Tamarind chutney</li>
+</ul></div>
+</li>
+<li>
+<p>Is fermented dosa batter better than instant dosa batter? </p>
+<div><p></p><p>Yes, fermented <em>dosa</em> batter does have an edge, especially when it comes to gut health and nutrition. Fermentation makes dosa easier to digest and also increases the availability of vitamin B and minerals to the body.</p>
+<p>Instant batters or quick mixes might save time, but they often skip this natural process. That means you're missing out on those added benefits; in some cases, they can be heavier or less satisfying.</p>
+<p>But if you are in a rush, don't worry about eating an instant <em>dosa</em> occasionally.</p></div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>April, 16 2025</strong></p><p>Publish date <strong>April, 16 2025</strong></p></div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

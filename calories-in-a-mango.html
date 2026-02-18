@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How many calories does a mango have? Find out here | Figur Health</title>
+  <meta name="description" content="Would mangoes ruin your weight loss plans? Know more about calories in a mango, its health benefits, & smart ways to enjoy the seasonal fruit."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Nutrition</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">15 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>How many calories does a mango have? Find out here</h1>
+        <p class="article-hero__desc">Would mangoes ruin your weight loss plans? Know more about calories in a mango, its health benefits, & smart ways to enjoy the seasonal fruit.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+
+ <div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?auto=format&fit=crop&w=1200&q=80" alt="Mango calories" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>How many calories does a mango have? Find out here</h1>
+</div>
+<p>
+</p>
+<p>And the answer is - A whole <strong>100g serving of mango</strong> contains around <strong>64-86 calories</strong>.</p>
+<p>But the joy now comes with a pinch of guilt. “Should I eat mangoes if I am trying to lose weight?”</p>
+<p>Here’s the answer.</p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="calories-in-a-mango.html#key-takeaways">Key takeaways</a></li>
+<li><a href="calories-in-a-mango.html#how-many-calories-does-a-mango-have">How many calories does a mango have?</a></li>
+<li><a href="calories-in-a-mango.html#what-is-the-nutritional-value-of-a-mango">What is the nutritional value of a mango?</a></li>
+<li><a href="calories-in-a-mango.html#what-are-the-health-benefits-of-mangoes">What are the health benefits of mangoes?</a></li>
+<li><a href="calories-in-a-mango.html#are-mangoes-good-for-weight-loss">Are mangoes good for weight loss?</a></li>
+<li><a href="calories-in-a-mango.html#is-mango-good-for-diabetes">Is mango good for diabetes?</a></li>
+<li><a href="calories-in-a-mango.html#5-healthy-mango-recipes-to-try-for-weight-loss">5 healthy mango recipes to try for weight loss</a></li>
+<li><a href="calories-in-a-mango.html#what-is-the-best-time-to-eat-mangoes">What is the best time to eat mangoes?</a></li>
+<li><a href="calories-in-a-mango.html#are-mangoes-really-that-healthy">Are mangoes really that healthy?</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways</h2>
+
+<div>
+<ul>
+<li>A whole <strong>100g serving of mango</strong> contains around <strong>64-86 calories</strong>.</li>
+<li>Mangoes are rich in nutrients and natural sugars, but not inherently fattening.</li>
+<li>Eating mangoes correctly helps control weight, PCOS, diabetes, and thyroid.</li>
+<li>Early studies hint that mangoes might help burn fat and improve gut health.</li>
+</ul>
+</div>
+<p>Whether it was those lazy afternoons at <em>nani</em> or <em>dadi’s</em> house, the dripping <em>aamras</em> after lunch, or simply slurping mango pulp straight off the seed…</p>
+<div>
+<p><em>Mangoes are an emotion.</em></p>
+</div>
+<div>
+<p><em>A season.</em></p>
+</div>
+<div>
+<p><em>A reward we wait for all year.</em></p>
+</div>
+<p>In this article, we break it down—the number of calories in a mango, its nutrition, and whether it makes you lose weight. Find smart, guilt-free ways to enjoy your favourite fruit without compromising your health goals.</p> </div>
+<div>
+<h2>How many calories does a mango have?</h2>
+<picture>
+<source alt="Calories in a Mango" height="473" width="750">
+<source alt="Calories in a Mango" height="473" width="750">
+
+</source></source></picture>
+<p>But, are the calories of a mango the end-all and be-all of your summer diet plan? Read on to know what else a mango is made of.</p>
+</div>
+<div>
+<h2>What is the nutritional value of a mango?</h2>
+
+<p><strong>Mango pulp also contains:</strong></p>
+<ul>
+<li>Natural sugars</li>
+<li>Dietary fibre (insoluble)</li>
+<li>Vitamins (A, C, E, B6, folate)</li>
+<li>Minerals (potassium, magnesium)</li>
+<li>Antioxidants like β-carotene and mangiferin</li>
+</ul>
+<p><strong>The peel is rich in:</strong></p>
+<ul>
+<li>Polyphenols (quercetin, mangiferin, gallic acid)</li>
+<li>Dietary fibre</li>
+<li>Flavonoids</li>
+<li>Essential oils</li>
+<li>Bioactive compounds</li>
+</ul>
+<p>Now that we know how nutritious a mango is, let us understand the multiple health benefits a mango has to offer.</p> </div>
+<div>
+<h2>What are the health benefits of mangoes?</h2>
+<p>Did you know that not just mango pulp, but also mango seeds and leaves benefit your health? Check out how:</p>
+<picture>
+<source alt="benefits of mangoes" height="473" width="750">
+<source alt="benefits of mangoes" height="473" width="750">
+
+</source></source></picture>
+
+<ul>
+<li><strong>Prevent cell damage and inflammation</strong>Natural compounds like mangiferin, quercetin, and gallic acid prevent cell damage and other inflammatory diseases.</li>
+<li><strong>Boosts immunity</strong>With a good amount of vitamin C and A, natural antibacterial and antifungal compounds, mangoes help your body fight off infections and tackle harmful microbes.</li>
+<li><strong>Keeps the gut healthy</strong>The fibre in mango improves bowel movements, supports gut health, and helps you feel light and comfortable after meals.</li>
+<li><strong>Improves vision</strong>The beta-carotene in mango converts to vitamin A, essential for healthy eyesight, and prevents night blindness and age-related blindness.</li>
+<li><strong>Keeps your skin healthy</strong>Antioxidants and vitamin C improve collagen production, give your skin a natural glow, and slow ageing.</li>
+<li><strong>Helps control blood sugar</strong>Certain compounds, especially in the mango’s peel, help slow sugar absorption and reduce sudden blood sugar spikes.</li>
+<li><strong>Protects the liver</strong>Mango seed extract may shield the liver from toxins and may support its healing.</li>
+<li><strong>Prevents cancer</strong>In a <a href="https://onlinelibrary.wiley.com/doi/full/10.1002/fsn3.3869">study</a><a href="calories-in-a-mango.html#refid1_36"><sup>[1]</sup></a>, mango’s bioactive compounds may stop the growth of specific cancer cells, including colon, breast, and cervical cancer cells.</li>
+<li><strong>Improves heart health</strong>The potassium, fibre, and antioxidants help maintain healthy blood pressure and circulation, thereby improving heart health.</li>
+<li><strong>Helps during diarrhoea</strong>Mango seed extract can help slow excessive gut movement and reduce fluid loss during diarrhoea episodes.</li>
+<li><strong>Cools the body in summer</strong>Green mango helps maintain electrolyte balance, prevents dehydration, and protects against heatstroke.</li>
+</ul> </div>
+<div>
+<h2>Are mangoes good for weight loss?</h2>
+<p>The relationship between mangoes and weight loss might be complicated. How can one even resist the temptation?</p>
+<p>However, a <a href="https://pdf.sciencedirectassets.com/273312/1-s2.0-S0939475322X00021/1-s2.0-S093947532100541X/main.pdf?X-Amz-Security-Token=IQoJb3JpZ2luX2VjEHUaCXVzLWVhc3QtMSJHMEUCIQC%2Bs562hCIcL4sJ8fPeammYRYYpzzV3JjwyVjsuAIfARQIgIHxKfMkDqQM2v32l%2FF0F59tHJyzbHtp3xjIcB6aJR9sqsgUIHRAFGgwwNTkwMDM1NDY4NjUiDJ1mKWrBah6pK49H7CqPBXup0%2BOnA2a0PEOjfzG30Yb1s4VCat6jENnv1qZRN3J1MSeTM0oqIjkK7aCqhmL5h4XUf4NRPK3whS58kU8fmpUbkrvl2pdhcRkMpTMhYK6Wg5xSkXHfNhcCDLS9NYvqMpg9jXiOA1C8A0E4qdGoZKzopyCZzoaIyVXIs%2F%2FoESl2XpBqRwlFxMTa2mki4xnEyJdm30GXqfkpaC3UP08OUqmGK2EF2xIZdgVJ5cp%2BZi7RzR%2B13xNyhTH1C%2FVJBiWRrSY3fbVDxE7zz%2F%2FaLWTc7r1LNI0n6p%2BFvWqjrZeR3CSKbQTdHkofz3OBsfGRJQsRKTmGKlVZUN8kXqmAXGSJ3bJb%2BHVr4xLCDgyY8iD%2BawNnfsBKYY5n9dmx5YX9HoqMvwR2oo50mKIjSCTIky%2FeFqDycDmPXNkwRh8%2B3MDZDhIK2bdnnALZ1jlk%2FhK80nE5jwJ4t1m5WBFfBBUflAK%2BxrfhsSgUNCrNb2sFbw6%2FJl6NtKYbtzXUqQwoqnrlk02oqeXbi7wuQnKDPAbEnAUIwRxAOAKRTRD8DZQuILUOisZTbHTXLX%2Flxf9%2BXmspBbiaRTF2fbYscl5S92PeEY%2BKc4pExLeZA3UCtTSWrX3rNASKzqvYy9lwprb2LpcUUmzWaZukew0F6Do0ngo%2Bf3Q0ZXKV3pOfLq5WhhLv9V%2F%2Br7wp%2F0DVlWepJ8X%2FTAFATa3izcQ5uP6MbKYDiBSTcOcUfxwLyfFkvzZZ%2BVwBVLwHIbp%2F%2FHIGtu%2FGfaSZ7EOtKGE1yr%2Bj7gpgkGCdWnlI%2FDogo3UwQptYUsXaF0BGhcdMHOCbTymx%2FwCrj4%2BpqKsWNlRqyea4Pvlg%2FklAh3zSDDRLRQllsd%2BbodCdMz2b4CTlY2gwp5HfwAY6sQEEgk%2FHK1cJBMPlgwjArFZTcM9jRYp%2FBVLI%2BYaykbqmyT2mDQlCYtvabYEkeHj8rssODC6OfJS%2BC1SrN3BYGgv6Wz5gSBeMxTAJ%2FEDJ%2FDX1R5yJzNcBg%2FO6yD0jnDHOAujeWYPCQJHrKnFJOPUg7M5W6jeuBqDijWsCGRu9cxZ6H2%2BE0LouIT6%2FCy4FoXVyKmLfoK83TtzNCA3bifpJX08ov6DTO8ihDusjBcJVehPPH4M%3D&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Date=20250504T211644Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=300&amp;X-Amz-Credential=ASIAQ3PHCVTY3SZJTN4X%2F20250504%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Signature=c28f824bdc99ee4a042b3981758ca393defbfbf822900cb20b994bae8ecf2567&amp;hash=b88d0a65e5007b4a7ed41c899c6059003b03d51da1955bb68d66a9f0a8693d67&amp;host=68042c943591013ac2b2430a89b270f6af2c76d8dfd086a07176afe7c76c2c61&amp;pii=S093947532100541X&amp;tid=spdf-2efde55c-d75b-4528-9825-a3537f59934c&amp;sid=d1a56ebe9d22a7426b79f490c43b10c26de2gxrqb&amp;type=client&amp;tsoh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;rh=d3d3LnNjaWVuY2VkaXJlY3QuY29t&amp;ua=1308595700015757565005&amp;rr=93ab0557ba704166&amp;cc=in">study</a><a href="calories-in-a-mango.html#refid2_36"><sup>[2]</sup></a> suggests that <strong>mangoes can help you lose weight</strong> when eaten smartly. Here’s how:</p>
+<ul>
+<li>Mangoes have a <strong>high water and fibre content</strong>, filling you up faster without adding calories.</li>
+<li>The fibre also <strong>slows digestion</strong>, steadies your blood sugar, and keeps cravings in check.</li>
+<li>Mango’s bioactive compounds, like mangiferin, quercetin, catechins, and gallic acid, can fight oxidative stress, which <strong>helps minimise weight gain and insulin resistance</strong>.</li>
+<li>In <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC6356415/#:~:text=In%20addition%20to%20reducing,oxidative%20stress.&amp;text=obese%20subjects%2C%20gallic%20acid,oxidative%20stress.&amp;text=target%20the%20adipose%20tissue,oxidative%20stress.&amp;text=insulin%20signaling%2C%20and%20concomitantly,oxidative%20stress.">human</a><a href="calories-in-a-mango.html#refid3_36"><sup>[3]</sup></a> and <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0030782#:~:text=Mangiferin%20decreased%20plasma%20FFA,enzymes%20expression&amp;text=through%20promoting%20FFA%20uptake,enzymes%20expression&amp;text=oxidation%2C%20inhibiting%20FFA%20and,enzymes%20expression&amp;text=accumulations%20by%20regulating%20the,enzymes%20expression">animal studies</a><a href="calories-in-a-mango.html#refid4_36"><sup>[4]</sup></a>, these compounds have been shown to:
+        <ul>
+<li>Reduce fat buildup.</li>
+<li>Stop new fat cells from forming.</li>
+<li>Increase fat breakdown (lipolysis).</li>
+</ul>
+</li>
+<li>Mangiferin, found in higher amounts in mango peel and seed, may <strong>help regulate fat metabolism</strong>, support insulin sensitivity, and reduce inflammation.</li>
+<li>Polyphenols might <strong>improve gut bacteria</strong>, which help us digest food, burn calories, and even store fat.</li>
+</ul>
+<p>All of this sounds promising, but there is one caveat:</p>
+<p>Most of these findings come from high-dose extracts tested in animals or lab conditions, not from eating a few mango slices. The mango pulp we eat has much lower concentrations of these compounds.</p>
+<p><strong>Human studies are still catching up,</strong> and we need more research to know what these benefits look like in daily life.</p>
+<p>If you are worried about gaining extra weight after eating mangoes, a <a href="https://www.reddit.com/r/Fitness_India/comments/1kbawan/how_to_manage_calories_during_mango_season/">Reddit post</a> shares ways to compensate your love for mangoes smartly instead of resisting it.</p> </div>
+<div>
+<h2>Is mango good for diabetes?</h2>
+<p><strong>Yes, it is.</strong></p>
+<p>According to expert cardiologist <a href="https://www.youtube.com/watch?v=hYHElcmFBq4">Dr. Bimal Chhajer</a>, mangoes have natural sugars and fall under the medium glycaemic index category (56). They also have a low <a href="https://glycemic-index.net/mango/">glycaemic load of 8.4</a></p>
+<ul>
+<li><strong>Glycaemic index (GI)</strong>  shows how fast a food spikes blood sugar. </li>
+<li><strong>Glycaemic load (GL)</strong>  shows how much blood sugar a portion of food will actually spike.</li>
+</ul>
+<p>This means that <strong>mangoes are a safe choice of fruit</strong>, but people with diabetes should eat them in small portions, and avoid consuming them in juice or dried form. Pairing them with adequate protein and fibre can also help control blood sugar.</p> </div>
+<div>
+<h2>5 healthy mango recipes to try for weight loss</h2>
+<p>Are you ready to sweeten your weight loss journey? Then you will surely love these healthy mango recipes!</p>
+<h3>1. Mango chia pudding</h3>
+<div>
+
+<div>
+<p>Gently stir together two tablespoons of chia seeds with 1/2 cup of unsweetened milk (almond, soy, or skim) and 1/4 cup of ripe mango. Let it thicken in the fridge for at least 30 minutes (or overnight).</p>
+</div>
+</div>
+<h3>2. Green mango smoothie</h3>
+<div>
+
+<div>
+<p>In a mixer, add 1/2 cup of frozen mango chunks (raw), 1 cup of spinach or kale, 1/2 cup of water or unsweetened almond milk, and some lemon juice. Blend until smooth, and enjoy!</p>
+</div>
+</div>
+<h3>3. Mango ice cream</h3>
+<div>
+
+<div>
+<p>Freeze about 1-2 cups of ripe mango chunks for 4-6 hours. Then, blend the frozen mango chunks until it turns smooth, like ice cream. Add a little milk if needed. Freeze it again for 15-30 minutes for that perfect ice-cream finish.</p>
+</div>
+</div>
+<h3>4. No-sugar aam panna</h3>
+<div>
+
+<div>
+<p>Boil or roast 1-2 raw green mangoes until soft. Mash the pulp and mix it with chilled water. Add a pinch of black salt, jaggery powder, roasted cumin powder, and fresh mint leaves. Serve in a glass.</p>
+</div>
+</div>
+<h3>5. Mango smoothie</h3>
+<div>
+
+<div>
+<p>Blend 1 cup chopped mango, ½ cup yogurt, and 1 tbsp powdered flax seeds into a smoothie, chill for 10 minutes, and serve.</p>
+</div>
+</div> </div>
+<div>
+<h2>What is the best time to eat mangoes?</h2>
+<p>Looking for your ideal window to enjoy mangoes?</p>
+<ul>
+<li>Eat mangoes in the morning or early afternoon for easy digestion, nutrient absorption, and steady all-day energy.</li>
+<li>Children can snack on mangoes in the mornings or late in the afternoon for an energy boost.</li>
+<li>Do you have PCOS or diabetes? Eat mangoes in the morning or with lunch for sugar level control. Eat mangoes with curd, nuts, or <em>paneer</em> if you have PCOS or diabetes.</li>
+<li>If you have thyroid, eat mangoes in the morning or at midday after taking your medicines.</li>
+<li>In pregnancy, eat mangoes mid-morning or at lunchtime to ease nausea and get more folate and vitamin C.</li>
+<p><strong>Avoid eating mangoes late in the evening or at bedtime</strong> as the slowed-down digestive system can cause bloating or sleep troubles.</p>
+</ul> </div>
+<div>
+<h2>Are mangoes really that healthy?</h2>
+<p>If you are working hard to lose weight, there's no need to cross mangoes off your list completely! They are delicious, healthy, and nutrient-packed fruits that deserve a place in your diet.</p>
+<p><strong>Eating them regularly</strong> (and in moderate amounts) provides your body with various vitamins, fibre, minerals, and antioxidants.</p>
+<p>Although mangoes contain natural sugars, they can be enjoyed in a healthy way if you <strong>pair them with adequate protein or healthy fats</strong>.</p>
+<p>If you are looking for science-backed ways to get fit and lose weight, try <a href="logout.html">Aktive</a>.</p>
+<p>You don’t have to pick between joy and health. We help you build habits that sync with your body’s natural rhythms, so you can enjoy the foods you love without guilt.</p> </div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>Can I eat mangoes during intermittent fasting?</p>
+<div><p></p><p><strong>Yes</strong>, mangoes can be enjoyed during your eating window, but they must be avoided during fasting. </p>
+<p>They’re rich in natural sugars and calories, so if you’re doing something like a 16:8 fast, eat ½ to 1 cup of mango between 12 and 8 pm, and <strong>pair it with protein or fat to avoid sudden sugar spikes</strong>. Don’t go overboard; too much fruit sugar may interfere with fat burning or ketosis.</p></div>
+</li>
+<li>
+<p>Is it safe to eat mango peel?</p>
+<div><p></p><p>Mango peels are rich in antioxidants, fibre, and compounds like mangiferin that support immunity and inflammation control. That said, <strong>they’re not commonly eaten</strong>, and for good reason. The peel may <strong>taste different, be hard to digest, and contain pesticide residues</strong>.</p>
+<p>Some people may also react to a compound in the peel called urushiol (also found in poison ivy and cashews), which can trigger rashes or allergies.</p>
+<p>Unless you're using organic mangoes, washing them thoroughly, and have no sensitivity, <strong>it’s better to peel </strong>them, especially when serving children, pregnant women, or those with gut issues.</p></div>
+</li>
+<li>
+<p>Can I eat mangoes if I have PCOS?</p>
+<div><p></p><p><strong>Mangoes are safe for people with PCOS if eaten in moderation</strong>. They offer antioxidants like quercetin, vitamin C, and a decent dose of fibre, all of which help manage inflammation and insulin resistance.</p>
+<p>The key is portion control and timing. This helps slow sugar absorption and keeps cravings in check. But yes, too much mango can spike blood sugar and add to calorie load, so enjoy it smartly.</p></div>
+</li>
+<li>
+<p>I have thyroid. Can I eat mangoes?</p>
+<div><p></p><p><strong>Yes, mangoes are generally safe for people with thyroid disorders</strong>.  They’re a good source of antioxidants, vitamin A, and even trace amounts of iodine, all of which support thyroid function.</p>
+<p>They also don’t contain strong goitrogens, so there’s little risk of interference. Just be careful with timing. You can have a mango at least one hour after taking your thyroid medication, like levothyroxine, to avoid absorption issues.</p></div>
+</li>
+<li>
+<p>Which is better, raw or ripe mango?</p>
+<div><p></p><p><strong>Raw mango has fewer sugars, a lower glycaemic index (GI), and fewer calories</strong>, making it better for weight loss, PCOS, or sugar control. It also works beautifully in pickles, salads, and chutneys.</p>
+<p>Conversely, <strong>ripe mango is sweeter and richer in antioxidants like mangiferin and vitamin C</strong>. It’s excellent for general nutrition but needs portion control, especially for those managing weight or diabetes.</p></div>
+</li>
+<li>
+<p>I have irritable bowel syndrome. Can I eat mangoes?</p>
+<div><p></p><p><strong>Mangoes can be eaten by people with IBS or FODMAP</strong> (Fermentable Oligosaccharides, Disaccharides, Monosaccharides, and Polyols) <strong>sensitivities</strong>, but it's best to have them in tiny portions. While the fibre in mangoes might be helpful for some digestion concerns, their FODMAP content could cause some digestive discomfort.</p>
+<p>You can limit your intake to  ¼ cup (about 30–50g) of mangoes, particularly during the initial phases of a low-FODMAP diet.</p>
+<p>Working with a dietitian can be helpful in identifying your specific triggers. It's also a good idea to gradually introduce mangoes and perhaps avoid them if experiencing an IBS flare-up.</p></div>
+</li>
+<li>
+<p>Can children eat mangoes?</p>
+<div><p></p><p><strong>Mangoes are great for kids as they are sweet and nutrient-rich</strong>. Just watch out for the sugar (it can affect teeth) and allergies (like to cashews). </p>
+<p>Cut them into small bits to avoid choking, stick to a small amount (like ¼ cups for little ones, ½ cups for bigger kids), maybe once or twice a day, and rinse their mouths afterwards.</p></div>
+</li>
+<li>
+<p>Is it safe to eat mangoes during pregnancy?</p>
+<div><p></p><p><strong>Yes, a pregnant woman can eat mangoes during her pregnancy in moderation</strong>. Mangoes are a good source of iron, folic acid, fibre, and vitamins (A, B6, &amp; C). These nutrients are essential for neural tube development, immunity, and digestive health.</p>
+<p>However, they are also high in natural sugars, which may increase the chances of getting gestational diabetes. Always consult your doctor or nutritionist before making mangoes a part of your diet.</p></div>
+</li>
+<li>
+<p>Does eating mango have any side effects?</p>
+<div><p></p><p>Eating something as healthy as a mango has a bright side and a downside. Let’s take a quick look at the latter:</p>
+<ul>
+<li>Mangoes may cause weight gain if eaten in excess.</li>
+<li>High fibre content in mangoes can trigger bloating, gas, cramps, and even diarrhoea in some people.</li>
+<li>The fermentable sugar in the fruit may trigger Irritable Bowel Syndrome IBS symptoms.</li>
+<li>Mangoes may cause more spikes in blood sugar levels if not eaten in limited portions.</li>
+<li>Some people with latex allergy have shown a <a href="https://www.researchgate.net/publication/378172776_A_comprehensive_review_on_mango_allergy_Clinical_relevance_causative_allergens_cross-reactivity_influence_of_processing_techniques_and_management_strategies">'mango-allergy'</a>. It may manifest as itchy skin and hives, or become severe as anaphylaxis, throat swelling, and difficulty breathing.</li>
+<li>In some places, mangoes are treated with pesticides or artificial ripening agents (like calcium carbide). They can harm our health if the fruit is not washed properly.</li>
+</ul></div>
+</li>
+<li>
+<p>What factors affect the calorie content of mangoes?</p>
+<div><p></p><p>Some factors have a significant effect on the calorie content of mangoes:</p>
+<ul>
+<li><strong>Size</strong>: The larger the size, more are the calories.</li>
+<li><strong>Ripeness</strong>: Ripe mangoes have slightly more calories due to their higher sugar content.</li>
+<li><strong>Variety</strong>: Some varieties of mango may be sweeter due to their sugar and water content.</li>
+<li><strong>Serving size</strong>: Larger portions can increase the calorie count.</li>
+<li><strong>Preparation</strong>: Dried and canned mangoes will have more calories (for the same serving size) as the sugar is present in more concentrated amounts.</li>
+</ul></div>
+</li>
+<li>
+<p>Do different mango varieties have different calorie counts?</p>
+<div><p></p><p>Yes, the calorie content can vary among mango varieties due to differences in sugar, water, and other nutrients.</p>
+<p>For example, </p>
+<ul>
+<li>The <strong><em>Langra</em> variety</strong> has approximately <strong>67.57 calories per 100 g</strong>.</li>
+<li><strong><em>Chausa</em> mango</strong> provides about <strong>100.26 calories</strong> per <strong>100 g</strong>.</li>
+<li><strong><em>Himsagor</em> mango</strong> contains around <strong>46.14 calories</strong>.</li>
+<li><strong><em>Amrapali</em> mango</strong> has the highest calorie count at <strong>112.12 calories per 100 g</strong> of the edible portion.</li>
+</ul></div>
+</li>
+<li>
+<p>Which fruit is better for workout fuel, a mango or a banana?</p>
+<div><p></p><p><strong>Both mangoes and bananas can be good workout fuel!</strong> <br/> Mangoes might give you a quicker energy boost because of their sugar, which is excellent if you need something fast before a shorter workout.</p>
+<p>On the other hand, bananas have more carbs and potassium, which can help you sustain through longer workouts and help your muscles recover better.</p></div>
+</li>
+<li>
+<p>How not to eat mangoes?</p>
+<div><p></p><p>Ayurvedic and Unani medicine expert <a href="https://www.youtube.com/watch?v=DnfPNAqAJJo">Dr. Saleem Zaidi</a> suggests that combining mango with certain foods is not so beneficial for the body. This food incompatibility (viruddha aahar) can affect digestion. He recommends the following:</p>
+<ul>
+<li><strong>Don’t mix mango with citrus fruits or bananas</strong> it slows digestion and causes gas or acidity.</li>
+<li><strong>Avoid pairing mango</strong> with milk, curd, or lassi. It can weaken digestion and lead to bloating or weight gain.</li>
+<li><strong>Do not drink</strong> water, cold drinks, tea, or coffee right after mango. It may lead to vomiting, stomach pain, and bloating.</li>
+<li><strong>Skip spicy, sour foods or <em>karela</em> before/after eating mango</strong>. This may trigger indigestion, allergies, or nausea.</li>
+</ul>
+<p>If you're into Ayurveda, these suggestions might help keep you comfortable. Otherwise, listen to your body and determine what works best for you.</p></div>
+</li>
+<li>
+<p> Is aamras healthy?</p>
+<div><p></p><p><strong><em>Aamras</em> can be a healthy treat in moderation</strong>. It gives you fibre, good vitamins, and antioxidants. However, if you add sugar or ghee, it can become high in calories. So, if you're watching your weight or blood sugar, it's something to be mindful of.</p>
+<p><strong>To make <em>aamras </em>healthier</strong>, try using just the natural sweetness of ripe mangoes without adding extra sugar or ghee. Eating a small portion (like half a cup) with some protein or a low-GI food like roti is a good way to balance things.</p>
+<p>If you have concerns about blood sugar or weight, enjoying it once or twice a week might be helpful. Having a chat with a dietitian could give you even more personalised advice.</p></div>
+</li>
+<li>
+<p>How to reduce toxicity from mangoes?</p>
+<div><p></p><p>You can follow these <strong>four tips to ensure your mangoes are clean before consuming:</strong></p>
+<ul>
+<li>Always wash mangoes thoroughly under running water.</li>
+<li>Soak for 30 minutes before eating to remove chemicals.</li>
+<li>You can peel the mango to reduce toxin exposure.</li>
+<li>Clean hands, knives, and cutting boards after handling.</li>
+</ul></div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>June, 02 2025</strong></p><p>Publish date <strong>June, 02 2025</strong></p></div> </div>
+<div>
+<p><strong>References:</strong></p>
+<ul>
+<li>[1] Iqbal, H., Inam‐Ur‐Raheem, M., Munir, S., Rabail, R., Kafeel, S., Shahid, A., Khaneghah, A. M., &amp; Aadil, R. M. (2023). Therapeutic potential of mangiferin in cancer: Unveiling regulatory pathways, mechanisms of action, and bioavailability enhancements – An updated review. <em>Food Science &amp; Nutrition</em>, <em>12</em>(3), 1413–1429. <a href="https://doi.org/10.1002/fsn3.3869">https://doi.org/10.1002/fsn3.3869</a></li>
+<li>[2] Rosas, M., Pinneo, S., O’Mealy, C., Tsang, M., Liu, C., Kern, M., Hooshmand, S., &amp; Hong, M. Y. (2021). Effects of fresh mango consumption on cardiometabolic risk factors in overweight and obese adults. <em>Nutrition Metabolism and Cardiovascular Diseases</em>, <em>32</em>(2), 494–503. <a href="https://doi.org/10.1016/j.numecd.2021.11.001">https://doi.org/10.1016/j.numecd.2021.11.001</a></li>
+<li>[3] Dludla, P. V., Nkambule, B. B., Jack, B., Mkandla, Z., Mutize, T., Silvestri, S., Orlando, P., Tiano, L., Louw, J., &amp; Mazibuko-Mbeje, S. E. (2018). Inflammation and oxidative stress in an obese state and the protective effects of gallic acid. <em>Nutrients</em>, <em>11</em>(1), 23. <a href="https://doi.org/10.3390/nu11010023">https://doi.org/10.3390/nu11010023</a></li>
+<li>[4] Niu, Y., Li, S., Na, L., Feng, R., Liu, L., Li, Y., &amp; Sun, C. (2012). Mangiferin Decreases Plasma Free Fatty Acids through Promoting Its Catabolism in Liver by Activation of AMPK. <em>PLoS ONE</em>, <em>7</em>(1), e30782. <a href="https://doi.org/10.1371/journal.pone.0030782">https://doi.org/10.1371/journal.pone.0030782</a></li>
+</ul> </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

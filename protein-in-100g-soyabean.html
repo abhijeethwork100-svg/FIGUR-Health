@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Protein in 100g soya: Benefits, nutrition, & daily intake guide | Figur Health</title>
+  <meta name="description" content="How much protein does 100g of soya have? Learn more about its nutrients, its benefits, and how it helps you lose weight."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  
+<picture>
+<source alt="high-protein soya recipe" height="649" width="670">
+<source alt="high-protein soya recipe" height="1341" width="400">
+<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80" alt="Soya recipes" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</source></source></picture>
+<p>Eating plain soya can be a pretty bland experience. But combine it with different veggies, fruits, or <em>roti</em> and <em>rice</em>, and you can enjoy a lip-smacking high-protein dish.</p>
+<p>So what are you waiting for? Try these weight-loss-friendly soya dishes:</p>
+<div>
+<table>
+<thead>
+<tr>
+<th>Dish</th>
+<th>Protein (g)</th>
+<th>Standard Serving (approx.)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Boiled and roasted soya chunks with spices</td>
+<td>15–18g</td>
+<td>50g cooked soya chunks</td>
+</tr>
+<tr>
+<td>Soya chunk <em>pulao</em> (with brown rice/millet)</td>
+<td>10–12g</td>
+<td>1 cup (about 40g soya + rice; 2 servings total)</td>
+</tr>
+<tr>
+<td>Tofu <em>bhurji</em></td>
+<td>9–26g</td>
+<td>1 medium bowl (100–200g tofu)</td>
+</tr>
+<tr>
+<td>Stir-fried tofu with vegetables</td>
+<td>10–14g</td>
+<td>1 medium bowl (100g tofu + veggies)</td>
+</tr>
+<tr>
+<td>Soya salad (sprouts, cucumbers, lemon)</td>
+<td>11–13g</td>
+<td>1 bowl (35–40g cooked soya + ½ cup sprouts)</td>
+</tr>
+<tr>
+<td>Soya milk smoothie (with oats and fruit)</td>
+<td>8–10g</td>
+<td>200 ml soya milk + 2 tbsp oats + fruit</td>
+</tr>
+<tr>
+<td>Soya flour <em>chapati</em></td>
+<td>4–5g</td>
+<td>1 <em>chapati</em> (1:2 soya flour to wheat flour ratio)</td>
+</tr>
+<tr>
+<td>Clear soup with tofu and vegetables</td>
+<td>6–8g</td>
+<td>1 medium bowl (100g tofu)</td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>Running short on time? Dry fruits can be surprisingly delicious and weight loss-friendly snacks. Discover the <a href="dry-fruits-benefits.html">health benefits of eating dry fruits</a>.</p>
+<p>Your lunch and dinner are sorted with soya recipes, but are you still wondering what to make for breakfast? <em>Poha</em> can be the perfect light, yet filling start to your day, with only 130 calories! Learn how <a href="poha-benefits.html"><em>poha</em> can help you lose weight</a>.</p> </div>
+<div>
+<h2>Conclusion</h2>
+<p>Soya is a complete protein for a reason. It also gives you fibre, healthy fats, and small compounds that support your health. And it's plant-based. A win-win situation.</p>
+<p>If weight loss is on your mind, soya keeps you full and helps cut down cravings. It makes your meals more filling without much effort.</p>
+<p>Add soya to your meals and see the difference for yourself.</p>
+<div>
+<p>Tried everything, but the scale doesn’t budge? It’s not you. It’s the hormones.</p>
+<p>Aktive’s weight loss programme offers a simple, science-backed way to lose weight without compromising your diet.</p>
+<a href="weight-loss/index.html">Check if you are eligible</a>
+</div> </div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>How much protein do I need per day?</p>
+<div><p></p><p>The recommended daily protein intake varies by age, gender, and activity level.</p>
+<p>For maintenance purposes, adults need about <strong>0.8–1g of protein per kg of body weight</strong>. So for a 60kg person, that's 48–60g daily.</p>
+<p>However, if you're active, trying to lose weight, or build muscle, you may need <strong>1.2–2g of protein per kg of body weight</strong>.</p>
+<p>Eating healthy protein sources like soya can help you meet a significant portion of this requirement. 100g of boiled soya provides 18g protein, which is about 30–40% of most people's daily needs.</p></div>
+</li>
+<li>
+<p>Does soya cause weight gain?</p>
+<div><p></p><p>No, soya itself doesn't cause weight gain. Like any food, how much you weigh depends on your eating habits and calorie intake. In fact, soya is relatively low in calories while being high in protein. This way, it keeps you full longer. </p>
+<p><strong>100g of boiled soya has only 172 calories</strong>, which makes it an excellent choice for weight management (when eaten in moderation).</p></div>
+</li>
+<li>
+<p>Can I eat soya every day?</p>
+<div><p></p><p>Yes, eating soya daily is <strong>safe for most people</strong>. Studies suggest that consuming 25–30g of soya protein daily (equivalent to 2–3 servings) can provide a variety of health benefits without side effects.</p>
+<p>This could be a cup of soy milk with breakfast, tofu <em>bhurji</em> for lunch, or soya chunks in your dinner. Try to include soya in different forms in your diet.</p></div>
+</li>
+<li>
+<p>Is soya suitable for people with diabetes?</p>
+<div><p></p><p>Yes, soya is actually beneficial for people with diabetes.</p>
+<p>It has a <strong>low glycaemic index of 15</strong>, which means it doesn't cause sharp spikes in blood sugar levels.</p>
+<p>The protein and isoflavones in soya can also improve insulin sensitivity and keep you away from unwanted food cravings.</p>
+<p>However, you must consult your doctor about adding soya to your meal plan.</p></div>
+</li>
+<li>
+<p>What's the difference between soya chunks and soybeans?</p>
+<div><p></p><p>Soybeans are the whole bean in its natural form (raw or boiled).</p>
+<p>Soya chunks, on the other hand, are made from high-protein, low-fat soy flour by removing oil from soybeans and then shaped into chunks.</p>
+<p><strong>Protein content</strong>:</p>
+<ul>
+<li><strong>Soya chunks (dry):</strong> ~52g protein per 100g</li>
+<li><strong>Boiled soybeans:</strong> ~18g protein per 100g</li>
+</ul>
+<p>Both soybeans and soy chunks are nutritious options, but soy chunks have a higher protein concentration.</p></div>
+</li>
+<li>
+<p>Can men eat soya? Does it affect testosterone?</p>
+<div><p></p><p>Yes, <strong>men can safely eat soya</strong>.</p>
+<p>There’s a huge myth that soya messes with men’s hormones, but studies show this isn’t true.</p>
+<p>The isoflavones in soya are very mild, and when you eat soya in normal portions, they don’t lower testosterone.</p></div>
+</li>
+<li>
+<p>How much soya is safe to eat in a day?</p>
+<div><p></p><p>Most people can safely consume <strong>25–30g of soya protein daily</strong>, which equals about 2–3 servings. For context, this could be:</p>
+<ul>
+<li>1 cup (200ml) of soya milk + 50g of cooked soya chunks</li>
+<li>150g of tofu + 1 cup of soya milk</li>
+<li>1 bowl of soya chunk sabzi + 2 soya flour <em>chapatis</em>.</li>
+</ul>
+<p>This amount provides good protein benefits while staying well within the safe limits established by health authorities worldwide.</p></div>
+</li>
+<li>
+<p>Can eating too much soya cause side effects?</p>
+<div><p></p><p>Eating excessive amounts of soya (significantly more than 50g daily) <strong>may cause digestive discomfort</strong> like bloating or gas, especially if your body isn't used to it.</p>
+<p>In rare cases, excessive intake may affect the absorption of minerals such as iron and zinc.</p>
+<p>To avoid side effects:</p>
+<ul>
+<li>Start with small portions if you're new to soya.</li>
+<li>Drink plenty of water, as soya is high in fibre.</li>
+<li>Limit yourself to eating 25–30g of soya protein per day.</li>
+</ul>
+<p>If you experience persistent digestive issues, reduce your intake or consult a healthcare professional.</p></div>
+</li>
+<li>
+<p>Is soya suitable for children and teenagers?</p>
+<div><p></p><p>Yes, <strong>soya is safe and nutritious for children and teenagers</strong> when consumed in age-appropriate amounts. It provides them with protein, calcium, and iron, which are essential for the healthy development of the brain and body.</p>
+<p>Choose whole soya foods, such as milk, tofu, or boiled soybeans, rather than processed soya supplements.</p>
+<p>If your child has any allergies or health conditions, consult a paediatrician before introducing soya regularly.</p></div>
+</li>
+<li>
+<p>Is soya gluten-free?</p>
+<div><p></p><p>Yes, <strong>soya is naturally gluten-free</strong>. Pure soya products like soybeans, tofu, soya milk, and edamame contain no gluten. This makes them safe for people with coeliac disease or gluten sensitivity.</p>
+<p>However, be cautious with:</p>
+<ul>
+<li><b>Soya sauce:</b> Traditional soya sauce contains wheat and is NOT gluten-free. Look for tamari or gluten-free soya sauce alternatives.</li>
+<li><b>Processed soya products:</b> Some soya chunks, soya-based snacks, or meat substitutes may contain wheat or gluten as fillers.</li>
+</ul>
+<p><b>Tip:</b> Look for "certified gluten-free" labels when buying packaged soya products.</p>
+<p>Many product labels also indicate whether the food item was processed in a facility that also processes allergens such as peanuts, tree nuts, soya, wheat, or dairy.</p></div>
+</li>
+<li>
+<p>Can pregnant or breastfeeding women eat soya?</p>
+<div><p></p><p>Yes, it is <strong>safe for pregnant or breastfeeding women</strong> to eat soya in moderate amounts.</p>
+<p>It provides protein, calcium, and folate. But women with thyroid issues should talk to their doctor before adding large amounts of soya into their diet.</p></div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>December, 10 2025</strong></p><p>Publish date <strong>December, 10 2025</strong></p></div> </div>
+<div>
+<p><strong>References:</strong></p>
+<ul>
+<li>[1] Velasquez, M. T., &amp; Bhathena, S. J. (2007). Role of dietary soy protein in obesity. <em>International Journal of Medical Sciences</em>, 4(2), 72–82. <a href="https://doi.org/10.7150/ijms.4.72">https://doi.org/10.7150/ijms.4.72</a></li>
+<li>[2] Da Silva, S. M. M., Carminati, B. C., De Almeida Santos, V., Junior, &amp; Lollo, P. C. B. (2019). Comparison of the Effects of Soy Protein and Whey Protein Supplementation during Exercise: a Systematic Review. Journal of Health Sciences, 21(4), 397–403. <a href="https://doi.org/10.17921/2447-8938.2019v21n4p397-403">https://doi.org/10.17921/2447-8938.2019v21n4p397-403</a></li>
+<li>[3] Soyfoods, hyperuricemia and gout: a review of the epidemiologic and clinical data. (2011). PubMed. <a href="https://pubmed.ncbi.nlm.nih.gov/21859653/">https://pubmed.ncbi.nlm.nih.gov/21859653/</a></li>
+<li>[4] Mu, Y., Kou, T., Wei, B., Lu, X., Liu, J., Tian, H., Zhang, W., Liu, B., Li, H., Cui, W., &amp; Wang, Q. (2019). Soy products ameliorate Obesity-Related anthropometric indicators in overweight or obese Asian and Non-Menopausal Women: A Meta-Analysis of Randomized Controlled Trials. Nutrients, 11(11), 2790. <a href="https://doi.org/10.3390/nu11112790">https://doi.org/10.3390/nu11112790</a></li>
+<li>[5] Beavers, K. M., Gordon, M., Easter, L., Beavers, D., Hairston, K., Nicklas, B., &amp; Vitolins, M. (2014). Effect of protein source during weight loss on body composition, cardiometabolic risk and physical performance in abdominally obese, older adults: A pilot feeding study. The Journal of Nutrition Health &amp; Aging, 19(1), 87–95. <a href="https://doi.org/10.1007/s12603-015-0438-7">https://doi.org/10.1007/s12603-015-0438-7</a></li>
+<li>[6] Doerge, D. R., &amp; Sheehan, D. M. (2002). Goitrogenic and estrogenic activity of soy isoflavones. Environmental Health Perspectives, 110(suppl 3), 349–353. <a href="https://doi.org/10.1289/ehp.02110s3349">https://doi.org/10.1289/ehp.02110s3349</a></li>
+</ul> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

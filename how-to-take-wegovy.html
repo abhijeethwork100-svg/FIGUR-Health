@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>How to inject Wegovy  - A complete guide | Figur Health</title>
+  <meta name="description" content="Learn how to use the Wegovy injection pen safely with this easy step-by-step guide on preparing, injecting, and storing it."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Wegovy</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">12 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>How to inject Wegovy  - A complete guide</h1>
+        <p class="article-hero__desc">Learn how to use the Wegovy injection pen safely with this easy step-by-step guide on preparing, injecting, and storing it.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+<div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80" alt="Wegovy injection" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>How to inject Wegovy  - A complete guide</h1>
+</div>
+<p>
+</p>
+<p>You’re ready to start Wegovy for weight loss, and it’s a big step.</p>
+<p>Not just because it involves a needle.</p>
+<p>You’re not sure if it’ll help, if it’ll hurt, or if you’ll mess it up.</p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="how-to-take-wegovy.html#key-takeaways">Key takeaways:</a></li>
+<li><a href="how-to-take-wegovy.html#what-is-wegovy">What is Wegovy?</a></li>
+<li><a href="how-to-take-wegovy.html#what’s-inside-a-wegovy-pack">What’s inside a Wegovy pack?</a></li>
+<li><a href="how-to-take-wegovy.html#what-you-should-do-before-injecting-wegovy">What you should do before injecting Wegovy</a></li>
+<li><a href="how-to-take-wegovy.html#how-to-take-wegovy---a-step-by-step-guide">How to take Wegovy - A step-by-step guide</a></li>
+<li><a href="how-to-take-wegovy.html#how-to-store-wegovy">How to store Wegovy?</a></li>
+<li><a href="how-to-take-wegovy.html#take-one-step-at-a-time">Take one step at a time</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways:</h2>
+<div>
+<ul>
+<li>Wegovy is a once-weekly injection approved to manage weight loss in adults.</li>
+<li>Each pack comes with one pre-filled injection pen and four disposable needles.</li>
+<li>If you find it tough to inject Wegovy the first time, ask a healthcare professional for help.</li>
+</ul>
+</div>
+<p>The good part is that injecting Wegovy is simple. All it takes is the proper guidance and a little bit of practice.</p>
+<p>In this guide, explore what Wegovy is, how to take Wegovy, and some important things to keep in mind before, during, and after injecting yourself.</p> </div>
+<div>
+<h2>What is Wegovy?</h2>
+<p>Wegovy, a weight loss injectable, was developed by pharmaceutical giant Novo Nordisk. It is a once-weekly injection that contains semaglutide. It copies the actions of the gut hormone GLP-1.</p>
+<p>It helps you feel full sooner, reduces cravings, and slows down how quickly food leaves your stomach. This results in a lower calorie intake and weight loss.</p>
+<p>Wegovy has been approved for weight loss in overweight or obese adults. It is also approved to lower the risk of major cardiovascular events in overweight or obese adults.</p>
+<div>
+<p><strong>Launched in India in June 2025</strong></p>
+<p><a href="wegovy-injection.html">Wegovy is available in India</a> as 0.25 mg, 0.5 mg, 1 mg, 1.7 mg, and 2.4 mg injection pens, which can be self-injected or taken with the help of a healthcare professional.</p>
+</div> </div>
+<div>
+<h2>What’s inside a Wegovy pack?</h2>
+<p>A package of Wegovy includes:</p>
+<ul>
+<li>1 pre-filled FlexTouch injection pen</li>
+<li>4 disposable hypodermic NovoFine Plus needles</li>
+</ul> </div>
+<div>
+<h2>What you should do before injecting Wegovy</h2>
+<p>Well begun is half done. This applies to injecting Wegovy as well.</p>
+<p>Before we dive deep into how to take Wegovy injection pen, here are a few things to keep in mind.</p>
+<h3>Before you prepare the injection</h3>
+<ul>
+<li>Always wash your hands with soap and water.</li>
+<li>Check the pen label to ensure you are taking your prescribed dose.</li>
+<li>Keep your pen, a new needle, an alcohol swab, and a sharps disposal container nearby.</li>
+<li>If you’re using a new pen, do a flow check before your first injection. This ensures the pen is working correctly.</li>
+</ul>
+<p>Once that’s done, you’re ready to move on to the next step.</p>
+<h3>Know your Wegovy injection pen and needle</h3>
+<p>Knowing how to inject yourself correctly is the first step to ensure that it becomes a comfortable experience.</p>
+<p>But before that, let us see the parts of the injection pen and needle. This will make it easier to follow the steps and avoid hurting yourself.</p>
+<picture>
+<source alt="Wegovy FlexTouch pen" height="659" width="750">
+<source alt="Wegovy FlexTouch pen" height="539" width="400">
+
+</source></source></picture>
+<ul>
+<li>
+<p>Parts of Wegovy injection pen </p>
+<div>
+<ul>
+<li><strong>Pen cap</strong> – it protects the pen before and after use.</li>
+<li><strong>Pen window</strong> – lets you check that the solution is clear and colourless.</li>
+<li><strong>Dose selector</strong> – the dial you turn to select your dose.</li>
+<li><strong>Dose counter</strong> – it shows the dose selected or remaining.</li>
+<li><strong>Dose pointer</strong> – a small arrow that aligns with your selected dose or the flow check symbol.</li>
+<li><strong>Dose button</strong> – press and hold to inject the medicine.</li>
+<li><strong>An expiry label</strong> can be found on the back of the pen.</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Parts of the needle: </p>
+<div>
+<ul>
+<li><strong>Paper tab</strong> – remove this before attaching the needle.</li>
+<li><strong>Outer needle cap</strong> – protects the needle and is used again for safe disposal.</li>
+<li><strong>Inner needle cap</strong> – it is removed before injecting.</li>
+<li><strong>Needle</strong> – it delivers the medicine into the skin, and must stay sterile.</li>
+</ul>
+</div>
+</li>
+</ul>
+<p>It’s time to move to the next step.</p> </div>
+<div>
+<h2>How to take Wegovy - A step-by-step guide</h2>
+<p>Injecting Wegovy might seem like a monumental task, but it isn’t. Follow the step-by-step process below to inject Wegovy the right way.</p>
+<!-- Img -->
+<h3>1. Prepare your pen with a new needle</h3>
+<div>
+<p><strong>Important:</strong></p>
+<p>Check the name and dose of your pen to ensure it contains your prescribed dose of Wegovy.</p>
+</div>
+<ul>
+<li><strong>Remove the pen cap</strong> - Pull it off completely.</li>
+<li><strong>Inspect the solution</strong> - Look through the pen window. Wegovy solution should be clear or slightly yellow in colour.</li>
+<li><strong>Read the expiry label</strong> - Do so before use, as expired Wegovy can be less effective or harmful to your health.</li>
+<li><strong>Check for cloudiness</strong> - If the solution appears cloudy or coloured, do not use the pen.</li>
+<li><strong>Prepare a new needle</strong> - Always use a fresh needle for each injection.</li>
+<li><strong>Remove the paper tab</strong> - Remove it carefully from the needle.</li>
+<li><strong>Attach the needle</strong> - Push it straight onto the pen and turn until it's secure.</li>
+</ul>
+<div>
+<p><strong>Safety check</strong></p>
+<p>Before using your injection, examine the paper tab and outer needle cap for any damage that could affect sterility. If you notice any damage, use a new needle.</p>
+</div>
+<h3>2. Check the flow and set your dose</h3>
+<p><strong>Remove both needle caps:</strong></p>
+<p>The needle has two protective caps that must be removed:</p>
+<ul>
+<li>Remove the outer needle cap and keep it for later use.</li>
+<li>Remove the inner needle cap and dispose of it properly.</li>
+</ul>
+<div>
+<p><strong>Critical</strong></p>
+<p>If you forget to remove both caps, you will not inject any Wegovy. Never use a bent or damaged needle.</p>
+</div>
+<p><strong>Perform a flow check:</strong></p>
+<div>
+<p><strong>For new pens only</strong></p>
+<p>You must check the Wegovy flow before your first injection with each new pen.</p>
+<p><strong>Steps:</strong></p>
+<ul>
+<li>Turn the dose selector until you see the flow check symbol  <span></span>.</li>
+<li>Make sure the flow check symbol aligns with the dose pointer.</li>
+<li>Hold the pen with the needle pointing up.</li>
+<li>Press and hold the dose button until the dose counter shows <span></span>.</li>
+<li>A drop of Wegovy should appear at the needle tip.</li>
+</ul>
+</div>
+<br/>
+<div>
+<p><strong>Troubleshooting</strong></p>
+<p>If no drop appears, check the flow again. This should only be done twice. If there's still no drop, change the needle and check the flow once more.</p>
+</div>
+<p><strong>Set your prescribed dose:</strong></p>
+<ul>
+<li>Turn the dose selector until the dose counter stops and displays your prescribed dose. </li>
+<li>The dashed line [ <span></span> ] in the dose counter will guide you to your correct dose.</li>
+</ul>
+<div>
+<p><strong>Note</strong></p>
+<ul>
+<li>The dose selector clicks when turned forward, backwards, or past your dose.</li>
+<li>Do not set your dose by counting clicks - use the visual display.</li>
+<li>When your prescribed dose aligns with the dose pointer, you have selected your dose.</li>
+</ul>
+</div>
+<h3>3. Choose an injection site and inject your dose</h3>
+<div>
+<p><strong>Select your injection site:</strong></p>
+<p>Recommended injection areas:</p>
+<ul>
+<li>Upper arms</li>
+<li>Upper legs (thighs)</li>
+<li>Stomach area (maintain a distance of 5 cms from the belly button).</li>
+</ul>
+</div>
+<br/>
+<div>
+<p><strong>Pro tip:</strong></p>
+<p>You may inject in the same body area each week, but avoid using the same spot as your previous injection.</p>
+</div>
+<h3>4. Inject Wegovy</h3>
+<ul>
+<li><strong>Insert the needle</strong> into your skin at the chosen site.</li>
+<li><strong>Ensure visibility</strong>. Make sure you can see the dose counter. Don't cover it with your fingers.</li>
+<li><strong>Press and hold</strong> the dose button until the dose counter shows <span></span>.</li>
+<li><strong>Count slowly</strong>. Keep pressing the dose button with the needle in your skin and count slowly: 1-2-3-4-5-6</li>
+<li><strong>Listen for the click</strong>. You may hear or feel a click when the dose counter returns to <span></span>.</li>
+</ul>
+<div>
+<p><strong>Critical</strong></p>
+<p>If you remove the needle too early, medication may leak from the needle tip, and you won't receive your full dose.</p>
+</div>
+<h3>5. After your injection</h3>
+<ul>
+<li><strong>Remove the needle</strong> from your skin after the 6-second count.</li>
+<li><strong>Press lightly</strong> to stop bleeding if blood appears at the injection site.</li>
+<li><strong>You may see a small drop</strong> of Wegovy at the needle tip; this is normal and doesn't affect your dose.</li>
+</ul>
+<h3>6. Disposing of the needle</h3>
+<div>
+<p><strong>Safety first</strong></p>
+<p>Never attempt to replace the inner needle cap - you risk injuring yourself.</p>
+</div>
+<ul>
+<li><strong>Secure the needle.</strong> Carefully guide the needle tip into the outer needle cap without touching the needle.</li>
+<li><strong>Push the cap on</strong> completely once the needle is covered.</li>
+<li><strong>Remove the needle</strong> by unscrewing it and disposing of it according to your healthcare provider's instructions.</li>
+<li><strong>Avoid putting the inner needle cap</strong> back on the needle. You may hurt yourself with the needle.</li>
+<li><strong>Always dispose of needles</strong> immediately after each injection to prevent contamination and ensure safety.</li>
+<li><strong>Never store the pen</strong> with the needle attached.</li>
+</ul>
+<h3>7. Know your needles</h3>
+<div>
+<p><strong>Identifying blocked or damaged needles</strong></p>
+<p>If <span></span> does not appear in the dose counter after continuously pressing the dose button, you may have a blocked or damaged needle. In this case, you have not received any Wegovy, even if the dose counter moved from your original setting.</p>
+</div>
+<br/>
+<div>
+<p><strong>Handling blocked needles</strong></p>
+<p>If you encounter a blocked needle, change it immediately as instructed in <strong>Step 1 - ‘Prepare your pen with a new needle’</strong> and return to <strong>Step 2 - ‘Set your dose’</strong>, to continue with your injection.</p>
+</div>
+<br/>
+<div>
+<p><strong>Proper pen care</strong></p>
+<p>Handle your pen carefully. Rough handling or misuse may result in inaccurate dosing. Store  your pen properly and protect it from extreme temperatures and physical damage.</p>
+</div>
+<p>Want to access the Wegovy injection process anytime, anywhere?</p>
+<p>How to take Wegovy for weight loss - A video</p>
+<div>
+</div> </div>
+<div>
+<h2>How to store Wegovy?</h2>
+<p>These are some quick tips you can use to store Wegovy safely:</p>
+<ul>
+<li>Unopened Wegovy should be kept in a refrigerator (2°C to 8°C).</li>
+<li>Keep Wegovy pen in a designated spot in your fridge to store it safely and avoid temperature fluctuations.</li>
+<li>Wegovy should not be kept in the freezer or used if frozen.</li>
+<li>When in use, you can store the pen inside or outside the fridge as long as the temperature is below 30°C for upto 6 weeks.</li>
+<li>Don’t use the pen if it’s past the expiry date printed on the label.</li>
+<li>The expiry date is valid until the last day of that month.</li>
+<li>If you see a change in the solution’s appearance (not clear or colourless), do not use it.</li>
+</ul> </div>
+<div>
+<h2>Take one step at a time</h2>
+<p>Injecting Wegovy may feel a bit intimidating or overwhelming in the beginning, but with practice, it gets easier. </p>
+<p>Stay consistent, follow the instructions, and ask for help when you feel unclear about something.</p>
+<p>Wegovy is designed to help you lose weight. Trust the process and let the injectable take care of the rest.</p>
+<div>
+<p><strong>Launched in India in June 2025 </strong></p>
+<p>Wegovy is available in India in the form of pre-filled injection pen (FlexTouch). You can either self-inject it or take it with the help of a healthcare professional.</p>
+<a href="wegovy-injection.html">Read more about Wegovy</a>
+</div> </div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>Does the injection hurt?</p>
+<div><p></p><p>No. You might feel a slight pinch or discomfort when the needle enters your skin. However, the injection process is quick and manageable for most people.</p>
+</div>
+</li>
+<li>
+<p>What if I miss a dose?</p>
+<div><p></p><p>If you miss your usual Wegovy dose, here’s what you can do:</p>
+<ul>
+<li>If it’s been 5 days or less, take the missed dose as soon as you remember.</li>
+<li>If it’s been more than 5 days, skip the missed dose and take your next one on schedule.</li>
+<li>But don’t try to make up for the missed dose by taking a double dose.</li>
+</ul></div>
+</li>
+<li>
+<p>How do I care for my Wegovy pen?</p>
+<div><p></p><p>Your pen needs gentle handling to work correctly. If it is damaged, there is a chance of improper dosing.</p>
+<p>Here are some tips you can follow to avoid this:</p>
+<ul>
+<li>Always read the information leaflet before using the pen.</li>
+<li>Don’t inject from a pen that’s frozen, overheated, or exposed to sunlight. It should be disposed of safely.</li>
+<li>Never try to refill, repair, or take the pen apart.</li>
+<li>Keep it away from sunlight, frost, dirt, and water.</li>
+<li>Don’t drop it or knock it against hard surfaces.</li>
+<li>If it gets dirty, wipe it with a damp cloth and mild detergent. Don’t wash or soak it.</li>
+</ul></div>
+</li>
+<li>
+<p>How do you know if you have enough Wegovy?</p>
+<div><p></p><p>If the dose counter on the Wegovy pen stops before you reach your prescribed dose, there might not be enough Wegovy left in the pen. In such a case, dispose of the current pen and use a new one.</p></div>
+</li>
+<li>
+<p>What if I freeze the pen?</p>
+<div><p></p><p>It is not advisable to freeze the Wegovy pen. If this happens, avoid using it. The frozen medication is no longer safe or effective.</p>
+<p>It is best to dispose of it and use a new one.</p></div>
+</li>
+<li>
+<p>How do I know if I’ve taken the full dose?</p>
+<div><p></p><p>Once you have taken the full dose from your Wegovy pen, the dose counter should return to “0.”</p>
+<p>If it doesn’t return to “0”, ask your doctor for further advice.</p></div>
+</li>
+<li>
+<p>What if I see air bubbles?</p>
+<div><p></p><p>It is normal to find tiny air bubbles in the Wegovy pen. It is safe and does not have any harmful effects. So you need not worry about removing them. The pen is designed to deliver the full dose correctly.</p></div>
+</li>
+<li>
+<p>What if I accidentally inject into a muscle or vein?</p>
+<div><p></p><p>Wegovy is meant to be injected into the fatty layer just under the skin (subcutaneous tissue).</p>
+<p>Injecting it in a different tissue, like a muscle or vein, will change how your body absorbs the medication.</p>
+<p>Sometimes, this may show up as bruising, soreness, vomiting, or nerve pain.</p>
+<p>In other cases, there may be absolutely no symptoms at all. However, if you think you injected into the wrong area, contact your doctor as soon as possible.</p>
+</div>
+</li>
+<li>
+<p>What are the signs of an infection at the injection site?</p>
+<div><p></p><p>Infection at the injection site happens when it gets contaminated by microorganisms.</p>
+<p>Here are some signs to watch out for:</p>
+<ul>
+<li>Redness</li>
+<li>Warmth</li>
+<li>Swelling</li>
+<li>Pus</li>
+<li>Rash</li>
+</ul>
+<p>If you feel it is painful, spreading, or if you have a fever, visit your doctor at the earliest.</p></div>
+</li>
+<li>
+<p>Do I need to pinch the skin before injecting?</p>
+<div><p></p><p>You do not need to pinch your skin before injecting. But if you’re injecting into a thinner area (like your upper arm), a gentle pinch will help you deliver the medication into the right layer.</p></div>
+</li>
+<li>
+<p>Can I inject cold medication?</p>
+<div><p></p><p>Yes, you can, but it can be uncomfortable for some people. In such a case, let the pen sit at room temperature for 30 minutes.</p>
+<p>Don’t heat it in a microwave or with hot water.</p></div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>November, 13 2025</strong></p><p>Publish date <strong>November, 13 2025</strong></p></div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

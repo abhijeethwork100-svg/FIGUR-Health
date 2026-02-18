@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tirzepatide vs Semaglutide: Which GLP-1 is better for weight loss? | Figur Health</title>
+  <meta name="description" content="A head-to-head, data-driven comparison of tirzepatide (Mounjaro) and semaglutide (Wegovy/Ozempic) for weight loss — clinical trial results, side-effect profiles, and which drug wins on efficacy."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+  <style>
+    /* ── Article hero ──────────────────────────────────────────────────── */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px; position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content:''; position:absolute; width:500px; height:500px; border-radius:50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.07) 0%, transparent 70%);
+      top:-100px; right:-80px; pointer-events:none;
+    }
+    .article-hero__inner { position:relative; z-index:1; max-width:760px; }
+    .article-hero__meta { display:flex; align-items:center; gap:16px; flex-wrap:wrap; margin-bottom:20px; font-size:0.82rem; }
+    .article-hero__cat { font-weight:700; letter-spacing:0.07em; text-transform:uppercase; color:var(--gold); font-size:0.75rem; }
+    .article-hero__sep { color:rgba(255,255,255,0.25); }
+    .article-hero__info { color:rgba(255,255,255,0.55); }
+    .article-hero h1 { color:var(--white); font-size:clamp(1.7rem,3.5vw,2.6rem); letter-spacing:-0.025em; line-height:1.15; margin-bottom:20px; }
+    .article-hero__desc { color:rgba(255,255,255,0.72); font-size:1.05rem; line-height:1.7; }
+
+    /* ── Layout ────────────────────────────────────────────────────────── */
+    .article-layout { display:grid; grid-template-columns:1fr 300px; gap:64px; align-items:start; padding:64px 0 96px; }
+    .article-body { min-width:0; }
+    .article-sidebar { position:sticky; top:88px; }
+
+    /* ── Article typography ─────────────────────────────────────────────── */
+    .article-body h2 { font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.5rem; color:var(--navy); margin:44px 0 16px; letter-spacing:-0.02em; line-height:1.25; }
+    .article-body h3 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:1.15rem; color:var(--navy); margin:32px 0 12px; letter-spacing:-0.01em; }
+    .article-body h4 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:1rem; color:var(--navy); margin:24px 0 10px; }
+    .article-body p { font-size:1rem; color:var(--text-secondary); line-height:1.8; margin-bottom:18px; }
+    .article-body ul, .article-body ol { margin:16px 0 20px 24px; color:var(--text-secondary); line-height:1.75; font-size:0.97rem; }
+    .article-body li { margin-bottom:8px; }
+    .article-body strong, .article-body b { color:var(--navy); font-weight:700; }
+    .article-body a { color:var(--gold-dark); text-decoration:underline; text-underline-offset:3px; }
+    .article-body a:hover { color:var(--navy); }
+    .article-body img { max-width:100%; border-radius:var(--radius-md); margin:24px 0; display:block; box-shadow:var(--shadow-sm); }
+    .article-divider { border:none; border-top:1px solid var(--grey-100); margin:40px 0; }
+
+    /* ── Tables ────────────────────────────────────────────────────────── */
+    .article-body table { width:100%; border-collapse:collapse; margin:28px 0; font-size:0.9rem; border-radius:var(--radius-md); overflow:hidden; box-shadow:var(--shadow-sm); }
+    .article-body th { background:var(--navy); color:var(--white); font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:0.05em; text-transform:uppercase; padding:14px 18px; text-align:left; }
+    .article-body td { padding:12px 18px; border-bottom:1px solid var(--grey-100); color:var(--text-secondary); line-height:1.55; }
+    .article-body tr:last-child td { border-bottom:none; }
+    .article-body tr:nth-child(even) td { background:var(--grey-50); }
+
+    /* ── Callout / blockquote ─────────────────────────────────────────── */
+    .article-body blockquote { border-left:4px solid var(--gold); background:rgba(212,175,55,0.06); padding:20px 24px; border-radius:0 var(--radius-sm) var(--radius-sm) 0; margin:28px 0; font-style:italic; color:var(--navy); }
+
+    /* ── Key takeaways ──────────────────────────────────────────────────── */
+    .key-takeaways { background:linear-gradient(135deg, var(--navy), var(--navy-mid)); border-radius:var(--radius-md); padding:28px 32px; margin:0 0 40px; }
+    .key-takeaways h2 { color:var(--gold) !important; font-size:1rem !important; letter-spacing:0.08em; text-transform:uppercase; margin:0 0 16px !important; }
+    .key-takeaways p, .key-takeaways li { color:rgba(255,255,255,0.8) !important; font-size:0.93rem !important; }
+    .key-takeaways ul { margin-left:20px; }
+
+    /* ── Stat pills ─────────────────────────────────────────────────────── */
+    .stat-row { display:grid; grid-template-columns:repeat(3,1fr); gap:16px; margin:28px 0; }
+    .stat-pill { background:var(--white); border:1px solid var(--grey-100); border-radius:var(--radius-md); padding:20px; text-align:center; box-shadow:var(--shadow-sm); }
+    .stat-pill__value { font-family:'Montserrat',sans-serif; font-weight:800; font-size:2rem; color:var(--gold-dark); display:block; }
+    .stat-pill__label { font-size:0.78rem; color:var(--grey-400); margin-top:4px; line-height:1.4; }
+
+    /* ── Drug comparison cards ───────────────────────────────────────── */
+    .drug-compare { display:grid; grid-template-columns:1fr 1fr; gap:20px; margin:28px 0; }
+    .drug-card { border-radius:var(--radius-md); padding:24px; border:2px solid transparent; }
+    .drug-card--tirz { background:linear-gradient(135deg, var(--navy) 0%, #0d2240 100%); border-color:var(--gold); }
+    .drug-card--sema { background:var(--white); border-color:var(--grey-200); box-shadow:var(--shadow-sm); }
+    .drug-card__badge { display:inline-block; font-size:0.7rem; font-weight:700; letter-spacing:0.08em; text-transform:uppercase; border-radius:20px; padding:3px 10px; margin-bottom:12px; }
+    .drug-card--tirz .drug-card__badge { background:var(--gold); color:var(--navy); }
+    .drug-card--sema .drug-card__badge { background:var(--grey-100); color:var(--grey-500); }
+    .drug-card--tirz .drug-card__name { color:var(--white); font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.25rem; }
+    .drug-card--sema .drug-card__name { color:var(--navy); font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.25rem; }
+    .drug-card--tirz .drug-card__generic { color:rgba(255,255,255,0.55); font-size:0.8rem; margin-top:2px; margin-bottom:16px; }
+    .drug-card--sema .drug-card__generic { color:var(--grey-400); font-size:0.8rem; margin-top:2px; margin-bottom:16px; }
+    .drug-card__stat { display:flex; justify-content:space-between; align-items:center; padding:8px 0; border-bottom:1px solid rgba(255,255,255,0.08); font-size:0.85rem; }
+    .drug-card--sema .drug-card__stat { border-bottom-color:var(--grey-100); }
+    .drug-card--tirz .drug-card__stat-label { color:rgba(255,255,255,0.6); }
+    .drug-card--sema .drug-card__stat-label { color:var(--grey-400); }
+    .drug-card--tirz .drug-card__stat-value { color:var(--white); font-weight:700; }
+    .drug-card--sema .drug-card__stat-value { color:var(--navy); font-weight:700; }
+    .drug-card__stat:last-child { border-bottom:none; }
+    .drug-card__winner { display:inline-flex; align-items:center; gap:6px; background:var(--gold); color:var(--navy); font-size:0.72rem; font-weight:800; letter-spacing:0.05em; text-transform:uppercase; border-radius:20px; padding:5px 12px; margin-top:16px; }
+
+    /* ── Chart wrapper ───────────────────────────────────────────────── */
+    .chart-wrap { background:var(--white); border:1px solid var(--grey-100); border-radius:var(--radius-md); padding:32px; margin:28px 0; box-shadow:var(--shadow-sm); }
+    .chart-wrap__title { font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.05rem; color:var(--navy); margin-bottom:4px; }
+    .chart-wrap__subtitle { font-size:0.8rem; color:var(--grey-400); margin-bottom:24px; }
+    .chart-canvas-wrap { position:relative; height:360px; }
+    .chart-legend { display:flex; gap:20px; flex-wrap:wrap; margin-top:16px; }
+    .chart-legend__item { display:flex; align-items:center; gap:8px; font-size:0.82rem; color:var(--text-secondary); }
+    .chart-legend__dot { width:12px; height:12px; border-radius:50%; flex-shrink:0; }
+
+    /* ── Reference footnotes ─────────────────────────────────────────── */
+    .references { background:var(--grey-50); border-radius:var(--radius-md); padding:24px 28px; margin:40px 0 0; }
+    .references h4 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--grey-400); margin-bottom:14px; }
+    .references ol { margin-left:20px; }
+    .references li { font-size:0.78rem; color:var(--grey-400); line-height:1.55; margin-bottom:8px; }
+    .ref-num { vertical-align:super; font-size:0.7em; font-weight:700; color:var(--gold-dark); }
+
+    /* ── Sidebar ─────────────────────────────────────────────────────── */
+    .sidebar-card { background:var(--white); border-radius:var(--radius-md); border:1px solid var(--grey-100); padding:24px; margin-bottom:20px; box-shadow:var(--shadow-sm); }
+    .sidebar-card h4 { font-family:'Montserrat',sans-serif; font-weight:700; font-size:0.8rem; letter-spacing:0.08em; text-transform:uppercase; color:var(--grey-500); margin-bottom:16px; }
+    .toc-list { list-style:none; display:flex; flex-direction:column; gap:10px; }
+    .toc-list li a { font-size:0.875rem; color:var(--text-secondary); display:flex; gap:10px; align-items:flex-start; transition:color var(--transition); line-height:1.5; }
+    .toc-list li a:hover { color:var(--gold-dark); }
+    .toc-list li a::before { content:''; flex-shrink:0; width:6px; height:6px; border-radius:50%; background:var(--gold); margin-top:7px; }
+    .sidebar-cta { background:linear-gradient(135deg, var(--navy), var(--navy-mid)); border-radius:var(--radius-md); padding:28px; text-align:center; }
+    .sidebar-cta h4 { color:var(--white); margin-bottom:8px; font-size:1rem; letter-spacing:0; text-transform:none; }
+    .sidebar-cta p { color:rgba(255,255,255,0.7); font-size:0.88rem; line-height:1.6; margin-bottom:16px; }
+
+    /* ── Verdict banner ──────────────────────────────────────────────── */
+    .verdict-banner { background:linear-gradient(135deg, var(--navy) 0%, #0d2240 100%); border-radius:var(--radius-md); padding:32px; margin:32px 0; border:2px solid var(--gold); }
+    .verdict-banner__tag { font-size:0.7rem; font-weight:800; letter-spacing:0.1em; text-transform:uppercase; color:var(--gold); margin-bottom:10px; }
+    .verdict-banner h3 { color:var(--white); font-family:'Montserrat',sans-serif; font-weight:800; font-size:1.3rem; margin:0 0 14px; }
+    .verdict-banner p { color:rgba(255,255,255,0.75); font-size:0.93rem; line-height:1.7; margin:0; }
+
+    @media(max-width:900px){
+      .article-layout { grid-template-columns:1fr; gap:40px; padding:40px 0 64px; }
+      .article-sidebar { position:static; }
+      .drug-compare { grid-template-columns:1fr; }
+      .stat-row { grid-template-columns:1fr 1fr; }
+      .chart-canvas-wrap { height:280px; }
+    }
+    @media(max-width:500px){
+      .stat-row { grid-template-columns:1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">GLP-1 Comparison</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">14 min read</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">Updated 2025</span>
+        </div>
+        <h1>Tirzepatide vs Semaglutide: Which drug produces faster, greater weight loss?</h1>
+        <p class="article-hero__desc">A rigorous, data-driven comparison of the two most powerful GLP-1 receptor agonists available — including head-to-head clinical trial results, weight-loss graphs, and the key differences that matter for your treatment decision.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- BREADCRUMB -->
+  <div style="background:var(--grey-50);border-bottom:1px solid var(--grey-100);padding:12px 0;">
+    <div class="container">
+      <nav style="font-size:0.8rem;color:var(--grey-400);display:flex;align-items:center;gap:8px;">
+        <a href="new-index.html" style="color:var(--grey-400);text-decoration:none;">Home</a>
+        <span>›</span>
+        <a href="new-health-guide.html" style="color:var(--grey-400);text-decoration:none;">Health Guide</a>
+        <span>›</span>
+        <span style="color:var(--navy);">Tirzepatide vs Semaglutide</span>
+      </nav>
+    </div>
+  </div>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- MAIN CONTENT -->
+      <article class="article-body">
+
+        <!-- KEY TAKEAWAYS -->
+        <div class="key-takeaways">
+          <h2>Key Takeaways</h2>
+          <ul>
+            <li>Tirzepatide (Mounjaro) produces <strong>20–22.5% mean body weight loss</strong> at the highest dose — significantly more than semaglutide.</li>
+            <li>Semaglutide (Wegovy) achieves <strong>14.9–17.4% mean body weight loss</strong> — impressive, but consistently lower than tirzepatide in trials.</li>
+            <li>The landmark <strong>SURMOUNT-5 head-to-head trial (2025)</strong> confirmed tirzepatide leads to ~47% more weight loss than semaglutide at equivalent doses.</li>
+            <li>Both drugs share a similar GLP-1 mechanism, but tirzepatide adds GIP receptor agonism — giving it a dual-action advantage for metabolic health.</li>
+            <li>Side-effect profiles are similar: nausea, vomiting, and constipation are the most common with both drugs.</li>
+            <li>Individual response varies — genetics, diet, and exercise all influence outcomes.</li>
+          </ul>
+        </div>
+
+        <h2 id="overview">What are these drugs, and how do they work?</h2>
+        <p>Both tirzepatide and semaglutide belong to the class of drugs known as <strong>GLP-1 receptor agonists</strong> — medications that mimic the gut hormone GLP-1 (glucagon-like peptide-1), which is released naturally after eating. GLP-1 slows gastric emptying, suppresses appetite, and stimulates insulin secretion, all of which create a powerful calorie-reduction effect.</p>
+        <p>However, the two drugs differ in a critical way:</p>
+
+        <div class="drug-compare">
+          <div class="drug-card drug-card--tirz">
+            <span class="drug-card__badge">⭐ Higher Efficacy</span>
+            <div class="drug-card__name">Tirzepatide</div>
+            <div class="drug-card__generic">Brand name: Mounjaro (weight loss: Zepbound)</div>
+            <div class="drug-card__stat">
+              <span class="drug-card__stat-label">Mechanism</span>
+              <span class="drug-card__stat-value">Dual GLP-1 + GIP</span>
+            </div>
+            <div class="drug-card__stat">
+              <span class="drug-card__stat-label">Administration</span>
+              <span class="drug-card__stat-value">Weekly injection</span>
+            </div>
+            <div class="drug-card__stat">
+              <span class="drug-card__stat-label">Dose range</span>
+              <span class="drug-card__stat-value">2.5 mg → 15 mg/week</span>
+            </div>
+            <div class="drug-card__stat">
+              <span class="drug-card__stat-label">Max weight loss</span>
+              <span class="drug-card__stat-value">~22.5% bodyweight</span>
+            </div>
+            <div class="drug-card__stat">
+              <span class="drug-card__stat-label">Key trial</span>
+              <span class="drug-card__stat-value">SURMOUNT-1 &amp; SURMOUNT-5</span>
+            </div>
+            <div><span class="drug-card__winner">🏆 Winner on weight loss</span></div>
+          </div>
+
+          <div class="drug-card drug-card--sema">
+            <span class="drug-card__badge">Standard GLP-1</span>
+            <div class="drug-card__name">Semaglutide</div>
+            <div class="drug-card__generic">Brand names: Wegovy (obesity), Ozempic (diabetes)</div>
+            <div class="drug-card__stat">
+              <span class="drug-card__stat-label">Mechanism</span>
+              <span class="drug-card__stat-value">GLP-1 only</span>
+            </div>
+            <div class="drug-card__stat">
+              <span class="drug-card__stat-label">Administration</span>
+              <span class="drug-card__stat-value">Weekly injection</span>
+            </div>
+            <div class="drug-card__stat">
+              <span class="drug-card__stat-label">Dose range</span>
+              <span class="drug-card__stat-value">0.25 mg → 2.4 mg/week</span>
+            </div>
+            <div class="drug-card__stat">
+              <span class="drug-card__stat-label">Max weight loss</span>
+              <span class="drug-card__stat-value">~14.9–17.4% bodyweight</span>
+            </div>
+            <div class="drug-card__stat">
+              <span class="drug-card__stat-label">Key trial</span>
+              <span class="drug-card__stat-value">STEP-1 &amp; SURMOUNT-5</span>
+            </div>
+          </div>
+        </div>
+
+        <p>The defining difference is tirzepatide's additional action on the <strong>GIP (glucose-dependent insulinotropic polypeptide) receptor</strong>. GIP is another gut hormone that regulates fat storage and energy balance. By activating both receptors simultaneously, tirzepatide creates a synergistic metabolic effect that amplifies weight loss well beyond what GLP-1 agonism alone can achieve.<span class="ref-num">[1]</span></p>
+
+        <h2 id="data">The clinical trial data: what the numbers actually show</h2>
+
+        <h3>Tirzepatide: SURMOUNT-1 trial</h3>
+        <p>The pivotal <strong>SURMOUNT-1 trial</strong> (Jastreboff et al., 2022, <em>New England Journal of Medicine</em>) enrolled 2,539 adults with obesity (BMI ≥30 or ≥27 with a weight-related comorbidity) who did not have type 2 diabetes. Participants received 5 mg, 10 mg, or 15 mg tirzepatide weekly for 72 weeks alongside lifestyle counselling.<span class="ref-num">[2]</span></p>
+
+        <div class="stat-row">
+          <div class="stat-pill">
+            <span class="stat-pill__value">−20.9%</span>
+            <span class="stat-pill__label">Mean bodyweight loss at 10 mg dose (72 weeks)</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-pill__value">−22.5%</span>
+            <span class="stat-pill__label">Mean bodyweight loss at 15 mg dose (72 weeks)</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-pill__value">91%</span>
+            <span class="stat-pill__label">Participants achieved ≥5% weight loss at 15 mg</span>
+          </div>
+        </div>
+
+        <p>At the 15 mg dose, <strong>57% of participants lost ≥20% of their body weight</strong> — a threshold previously only achieved by bariatric surgery. The placebo group lost just 2.4% of body weight over the same period.<span class="ref-num">[2]</span></p>
+
+        <h3>Semaglutide: STEP-1 trial</h3>
+        <p>The landmark <strong>STEP-1 trial</strong> (Wilding et al., 2021, <em>New England Journal of Medicine</em>) enrolled 1,961 adults with obesity and showed that 2.4 mg semaglutide weekly produced substantial weight loss — the best available data for a pure GLP-1 agent at the time of publication.<span class="ref-num">[3]</span></p>
+
+        <div class="stat-row">
+          <div class="stat-pill">
+            <span class="stat-pill__value">−14.9%</span>
+            <span class="stat-pill__label">Mean bodyweight loss (2.4 mg, 68 weeks)</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-pill__value">86%</span>
+            <span class="stat-pill__label">Participants achieved ≥5% weight loss</span>
+          </div>
+          <div class="stat-pill">
+            <span class="stat-pill__value">32%</span>
+            <span class="stat-pill__label">Participants achieved ≥20% weight loss</span>
+          </div>
+        </div>
+
+        <h2 id="graph">Weight loss over time: the graph that settles the debate</h2>
+        <p>The chart below plots mean percent body weight change from baseline, derived from trial data across both the SURMOUNT and STEP programmes. All values are approximate representations based on published trial results and are shown for educational comparison purposes.</p>
+
+        <!-- CHART 1: Weight loss over time -->
+        <div class="chart-wrap">
+          <div class="chart-wrap__title">Mean % Body Weight Change Over Time</div>
+          <div class="chart-wrap__subtitle">Tirzepatide (SURMOUNT-1, 15 mg) vs Semaglutide (STEP-1, 2.4 mg) — approximate trial-reported values</div>
+          <div class="chart-canvas-wrap">
+            <canvas id="weightLossChart"></canvas>
+          </div>
+          <div class="chart-legend">
+            <div class="chart-legend__item"><div class="chart-legend__dot" style="background:#D4AF37;"></div>Tirzepatide 15 mg (Mounjaro)</div>
+            <div class="chart-legend__item"><div class="chart-legend__dot" style="background:#0A192F;"></div>Semaglutide 2.4 mg (Wegovy)</div>
+            <div class="chart-legend__item"><div class="chart-legend__dot" style="background:#ccc;"></div>Placebo</div>
+          </div>
+          <p style="font-size:0.72rem;color:var(--grey-300);margin-top:14px;">Data derived from Jastreboff et al. 2022 (SURMOUNT-1) and Wilding et al. 2021 (STEP-1). Weeks on x-axis normalised for comparison across different trial durations. Values are mean estimates from published figures; individual results vary.</p>
+        </div>
+
+        <!-- CHART 2: Dose comparison bar chart -->
+        <div class="chart-wrap">
+          <div class="chart-wrap__title">Weight Loss by Dose — Tirzepatide vs Semaglutide</div>
+          <div class="chart-wrap__subtitle">Mean % body weight reduction at each dose level at primary endpoint</div>
+          <div class="chart-canvas-wrap" style="height:280px;">
+            <canvas id="doseCompareChart"></canvas>
+          </div>
+          <div class="chart-legend">
+            <div class="chart-legend__item"><div class="chart-legend__dot" style="background:#D4AF37;"></div>Tirzepatide (SURMOUNT-1)</div>
+            <div class="chart-legend__item"><div class="chart-legend__dot" style="background:#0A192F;"></div>Semaglutide (STEP-1/STEP-3)</div>
+          </div>
+          <p style="font-size:0.72rem;color:var(--grey-300);margin-top:14px;">Sources: SURMOUNT-1 (Jastreboff et al. 2022), STEP-1 (Wilding et al. 2021), STEP-3 (Wadden et al. 2021). Tirzepatide doses: 5 mg, 10 mg, 15 mg. Semaglutide doses: 1.0 mg (STEP-2 diabetic cohort), 2.4 mg (STEP-1), 2.4 mg + intensive behavioural (STEP-3).</p>
+        </div>
+
+        <h2 id="surmount5">The definitive head-to-head: SURMOUNT-5 (2025)</h2>
+        <p>While the above comparisons draw from separate trials (which can be confounded by differences in population, duration, and design), the <strong>SURMOUNT-5 trial</strong>, published in early 2025 in <em>The New England Journal of Medicine</em>, provided the first large-scale, randomised, direct head-to-head comparison of tirzepatide vs semaglutide in adults with obesity.<span class="ref-num">[4]</span></p>
+
+        <blockquote>"Tirzepatide resulted in significantly greater weight loss than semaglutide at 72 weeks. The estimated treatment difference was −47% in favour of tirzepatide."<br><em>— SURMOUNT-5 investigators, NEJM 2025</em></blockquote>
+
+        <!-- CHART 3: SURMOUNT-5 head-to-head -->
+        <div class="chart-wrap">
+          <div class="chart-wrap__title">SURMOUNT-5: Direct Head-to-Head Results</div>
+          <div class="chart-wrap__subtitle">Tirzepatide (10+15 mg) vs Semaglutide (2.4 mg) at 72 weeks — NEJM 2025</div>
+          <div class="chart-canvas-wrap" style="height:300px;">
+            <canvas id="surmount5Chart"></canvas>
+          </div>
+          <p style="font-size:0.72rem;color:var(--grey-300);margin-top:14px;">Source: SURMOUNT-5 (Garvey et al. 2025, NEJM). Percentages represent mean body weight reduction from baseline. ≥5%, ≥10%, ≥15%, ≥20% responder rates shown for each drug.</p>
+        </div>
+
+        <p>Specifically, SURMOUNT-5 found:<span class="ref-num">[4]</span></p>
+        <ul>
+          <li>Tirzepatide: <strong>−20.2% mean body weight loss</strong> at 72 weeks</li>
+          <li>Semaglutide: <strong>−13.7% mean body weight loss</strong> at 72 weeks</li>
+          <li><strong>63% of tirzepatide participants</strong> achieved ≥20% weight loss vs only <strong>28% of semaglutide participants</strong></li>
+          <li><strong>31% of tirzepatide participants</strong> achieved ≥25% weight loss vs only <strong>11% of semaglutide participants</strong></li>
+        </ul>
+
+        <h2 id="comparison-table">Side-by-side comparison table</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Feature</th>
+              <th>Tirzepatide (Mounjaro)</th>
+              <th>Semaglutide (Wegovy)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><strong>Mechanism</strong></td>
+              <td>Dual GLP-1 + GIP agonist</td>
+              <td>GLP-1 agonist only</td>
+            </tr>
+            <tr>
+              <td><strong>Max dose</strong></td>
+              <td>15 mg/week</td>
+              <td>2.4 mg/week</td>
+            </tr>
+            <tr>
+              <td><strong>Mean weight loss (max dose)</strong></td>
+              <td><strong>22.5%</strong> (SURMOUNT-1)</td>
+              <td>14.9% (STEP-1)</td>
+            </tr>
+            <tr>
+              <td><strong>≥20% weight loss responders</strong></td>
+              <td><strong>57%</strong> (SURMOUNT-1, 15 mg)</td>
+              <td>32% (STEP-1)</td>
+            </tr>
+            <tr>
+              <td><strong>Head-to-head superiority</strong></td>
+              <td><strong>Yes (+47%, SURMOUNT-5)</strong></td>
+              <td>—</td>
+            </tr>
+            <tr>
+              <td><strong>Cardiovascular benefit</strong></td>
+              <td>SURPASS-CVOT (ongoing; positive data emerging)</td>
+              <td>SELECT trial: −20% MACE risk</td>
+            </tr>
+            <tr>
+              <td><strong>Glycaemic control</strong></td>
+              <td>Superior HbA1c reduction</td>
+              <td>Strong HbA1c reduction</td>
+            </tr>
+            <tr>
+              <td><strong>Common side effects</strong></td>
+              <td>Nausea, vomiting, diarrhoea, constipation</td>
+              <td>Nausea, vomiting, diarrhoea, constipation</td>
+            </tr>
+            <tr>
+              <td><strong>Discontinuation rate (trial)</strong></td>
+              <td>~6.9% (adverse events)</td>
+              <td>~7.0% (adverse events)</td>
+            </tr>
+            <tr>
+              <td><strong>Administration</strong></td>
+              <td>Subcutaneous injection, once weekly</td>
+              <td>Subcutaneous injection, once weekly</td>
+            </tr>
+            <tr>
+              <td><strong>FDA approved for obesity?</strong></td>
+              <td>Yes (Zepbound, 2023)</td>
+              <td>Yes (Wegovy, 2021)</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <hr class="article-divider"/>
+
+        <h2 id="why-tirz-wins">Why does tirzepatide produce more weight loss?</h2>
+
+        <h3>The GIP advantage</h3>
+        <p>The addition of GIP receptor agonism is the key driver of tirzepatide's superior efficacy. GIP acts on adipose (fat) tissue to regulate fat storage and lipolysis. In the presence of a GLP-1 background, GIP receptor activation appears to shift the body's energy balance more aggressively toward fat oxidation.<span class="ref-num">[1]</span></p>
+        <p>Interestingly, research by Finan et al. (2016) showed that GIP receptor agonism alone does not produce meaningful weight loss — but when combined with GLP-1 agonism, the two receptors produce a synergistic, supra-additive response that exceeds what either hormone can achieve alone.<span class="ref-num">[5]</span></p>
+
+        <h3>Greater appetite suppression</h3>
+        <p>Tirzepatide appears to suppress appetite more powerfully. In a sub-study of SURMOUNT-1, participants on tirzepatide reported significantly greater reductions in hunger, food cravings, and prospective food consumption compared to historical semaglutide data — consistent with its dual-receptor action in the hypothalamus.<span class="ref-num">[2]</span></p>
+
+        <h3>Improved insulin sensitivity and fat metabolism</h3>
+        <p>Beyond appetite, tirzepatide produces greater improvements in insulin sensitivity, fasting glucose, triglycerides, and liver fat than semaglutide in comparative analyses. This suggests a broader metabolic benefit that may contribute to its weight-loss advantage over time.<span class="ref-num">[6]</span></p>
+
+        <div class="verdict-banner">
+          <div class="verdict-banner__tag">🏆 Scientific Verdict</div>
+          <h3>Tirzepatide produces substantially more weight loss than semaglutide</h3>
+          <p>Across multiple large-scale randomised controlled trials — and most definitively in the 2025 SURMOUNT-5 direct head-to-head — tirzepatide consistently delivers approximately 5–8 percentage points more body weight reduction than semaglutide. At the highest doses, it nearly doubles the proportion of patients who achieve 20%+ weight loss. For patients whose primary goal is maximum weight reduction, the clinical evidence strongly favours tirzepatide.</p>
+        </div>
+
+        <h2 id="side-effects">Are the side effects different?</h2>
+        <p>Both drugs share a very similar gastrointestinal side-effect profile, reflecting their shared GLP-1 mechanism. The most common adverse events reported in trials were:</p>
+        <ul>
+          <li><strong>Nausea</strong> — most common early on, typically peaks in the first 4–8 weeks</li>
+          <li><strong>Vomiting</strong> — occurs in a minority; usually transient</li>
+          <li><strong>Diarrhoea and constipation</strong> — can alternate; dietary fibre and hydration help</li>
+          <li><strong>Injection site reactions</strong> — mild redness or bruising at the injection site</li>
+        </ul>
+        <p>The rates of adverse events leading to discontinuation were virtually identical in the two pivotal trials: <strong>6.9%</strong> for tirzepatide (SURMOUNT-1) vs <strong>7.0%</strong> for semaglutide (STEP-1). Neither drug has been shown to cause significantly more gastrointestinal distress than the other at equivalent tolerability thresholds.<span class="ref-num">[2,3]</span></p>
+
+        <h3>Rare but serious risks — the same for both</h3>
+        <p>Both drugs carry class warnings for:</p>
+        <ul>
+          <li>Possible risk of medullary thyroid carcinoma (in patients with personal/family history of MEN2)</li>
+          <li>Pancreatitis (rare; patients with a history of pancreatitis should discuss with their doctor)</li>
+          <li>Gallbladder disease (increased rate of gallstones with rapid weight loss)</li>
+          <li>Acute kidney injury (rare; associated with severe vomiting/dehydration)</li>
+        </ul>
+        <p>Neither drug should be used during pregnancy. Medical supervision throughout treatment is essential.</p>
+
+        <hr class="article-divider"/>
+
+        <h2 id="who-wins">Who should take which drug?</h2>
+
+        <h3>Choose tirzepatide (Mounjaro) if:</h3>
+        <ul>
+          <li>Your primary goal is maximum weight loss</li>
+          <li>You have type 2 diabetes (tirzepatide produces superior HbA1c reduction)</li>
+          <li>You have not achieved adequate results with semaglutide</li>
+          <li>You want the drug with the most robust clinical trial evidence for ≥20% weight loss</li>
+        </ul>
+
+        <h3>Choose semaglutide (Wegovy) if:</h3>
+        <ul>
+          <li>You have established cardiovascular disease — the SELECT trial demonstrated a <strong>20% reduction in major adverse cardiovascular events (MACE)</strong> with semaglutide 2.4 mg, making it the first obesity medication with proven CV benefit<span class="ref-num">[7]</span></li>
+          <li>Tirzepatide is not accessible in your region or country</li>
+          <li>You have previously tolerated semaglutide well and are seeing results</li>
+        </ul>
+
+        <blockquote>Neither drug is a one-size-fits-all solution. Your doctor will consider your full medical history, comorbidities, weight loss targets, and individual response before recommending a treatment.</blockquote>
+
+        <h2 id="figur">How Figur Health approaches GLP-1 therapy</h2>
+        <p>At Figur Health, we prescribe both tirzepatide and semaglutide as part of our medically supervised weight management programme. Our clinical team reviews your health history, current medications, BMI, and personal goals to recommend the most appropriate GLP-1 option for you.</p>
+        <p>Every member receives ongoing support from our clinical team, including dosage adjustments, side-effect management guidance, and nutritional coaching — because the medication alone is only part of the picture. Long-term, sustainable weight loss requires lifestyle support that works in synergy with your prescription.</p>
+
+        <hr class="article-divider"/>
+
+        <!-- REFERENCES -->
+        <div class="references">
+          <h4>References</h4>
+          <ol>
+            <li>Müller TD, et al. (2021). "The New Biology and Pharmacology of Glucagon." <em>Pharmacological Reviews.</em> 73(4):1445–1486. DOI: 10.1124/pharmrev.121.000316</li>
+            <li>Jastreboff AM, et al. (2022). "Tirzepatide Once Weekly for the Treatment of Obesity." <em>New England Journal of Medicine.</em> 387:205–216. DOI: 10.1056/NEJMoa2206038 [SURMOUNT-1]</li>
+            <li>Wilding JPH, et al. (2021). "Once-Weekly Semaglutide in Adults with Overweight or Obesity." <em>New England Journal of Medicine.</em> 384:989–1002. DOI: 10.1056/NEJMoa2032183 [STEP-1]</li>
+            <li>Garvey WT, et al. (2025). "Tirzepatide versus Semaglutide for Obesity." <em>New England Journal of Medicine.</em> DOI: 10.1056/NEJMoa2410406 [SURMOUNT-5]</li>
+            <li>Finan B, et al. (2016). "Unimolecular Dual Incretins Maximize Metabolic Benefits in Rodents, Monkeys, and Humans." <em>Science Translational Medicine.</em> 8(369):369ra175. DOI: 10.1126/scitranslmed.aaf9837</li>
+            <li>Frías JP, et al. (2021). "Tirzepatide versus Semaglutide Once Weekly in Patients with Type 2 Diabetes." <em>New England Journal of Medicine.</em> 385:503–515. DOI: 10.1056/NEJMoa2107519 [SURPASS-2]</li>
+            <li>Lincoff AM, et al. (2023). "Semaglutide and Cardiovascular Outcomes in Obesity without Diabetes." <em>New England Journal of Medicine.</em> 389:2221–2232. DOI: 10.1056/NEJMoa2307563 [SELECT]</li>
+          </ol>
+        </div>
+
+      </article>
+
+      <!-- SIDEBAR -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="tocList">
+            <li><a href="#overview">How do they work?</a></li>
+            <li><a href="#data">Clinical trial data</a></li>
+            <li><a href="#graph">Weight loss graphs</a></li>
+            <li><a href="#surmount5">SURMOUNT-5 head-to-head</a></li>
+            <li><a href="#comparison-table">Comparison table</a></li>
+            <li><a href="#why-tirz-wins">Why tirzepatide wins</a></li>
+            <li><a href="#side-effects">Side effects</a></li>
+            <li><a href="#who-wins">Which drug for you?</a></li>
+            <li><a href="#figur">Figur Health approach</a></li>
+          </ul>
+        </div>
+
+        <div class="sidebar-cta">
+          <h4>Ready to start your GLP-1 journey?</h4>
+          <p>Check if you're eligible for tirzepatide or semaglutide through our medically supervised programme.</p>
+          <a href="new-programme.html" class="btn btn--primary" style="width:100%;text-align:center;">Check eligibility</a>
+        </div>
+
+        <div class="sidebar-card" style="margin-top:20px;">
+          <h4>Related articles</h4>
+          <div style="display:flex;flex-direction:column;gap:14px;">
+            <a href="mounjaro-weight-loss-timeline.html" style="text-decoration:none;">
+              <div style="font-size:0.8rem;color:var(--gold-dark);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Mounjaro</div>
+              <div style="font-size:0.88rem;color:var(--navy);font-weight:600;line-height:1.4;">Mounjaro weight loss timeline: what to expect</div>
+            </a>
+            <a href="mounjaro-side-effects.html" style="text-decoration:none;">
+              <div style="font-size:0.8rem;color:var(--gold-dark);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Mounjaro</div>
+              <div style="font-size:0.88rem;color:var(--navy);font-weight:600;line-height:1.4;">Mounjaro side effects: what to expect and manage</div>
+            </a>
+            <a href="wegovy-for-weight-loss.html" style="text-decoration:none;">
+              <div style="font-size:0.8rem;color:var(--gold-dark);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Wegovy</div>
+              <div style="font-size:0.88rem;color:var(--navy);font-weight:600;line-height:1.4;">Wegovy for weight loss: a complete guide</div>
+            </a>
+            <a href="the-science-glp.html" style="text-decoration:none;">
+              <div style="font-size:0.8rem;color:var(--gold-dark);font-weight:700;text-transform:uppercase;letter-spacing:0.06em;margin-bottom:4px;">Science</div>
+              <div style="font-size:0.88rem;color:var(--navy);font-weight:600;line-height:1.4;">The science of GLP-1 medications explained</div>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- CTA STRIP -->
+  <section style="background:linear-gradient(135deg,var(--navy) 0%,#0d2240 100%);padding:64px 0;text-align:center;">
+    <div class="container">
+      <div style="max-width:560px;margin:0 auto;">
+        <span class="badge badge--gold" style="margin-bottom:20px;display:inline-block;">Start today</span>
+        <h2 style="color:var(--white);font-size:clamp(1.6rem,3vw,2.2rem);margin-bottom:16px;letter-spacing:-0.02em;">Ready to find your optimal GLP-1 medication?</h2>
+        <p style="color:rgba(255,255,255,0.72);margin-bottom:32px;font-size:1rem;line-height:1.7;">Our clinical team will review your health history and recommend the right drug — and dose — for your goals.</p>
+        <a href="new-programme.html" class="btn btn--primary" style="font-size:1rem;padding:16px 40px;">Check your eligibility</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <div class="footer__brand">
+          <img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img" style="height:40px;margin-bottom:16px;"/>
+          <p>Medical weight management powered by GLP-1 science. UK registered service.</p>
+          <p style="margin-top:8px;font-size:0.75rem;color:var(--grey-400);">This article is for informational purposes only and does not constitute medical advice. Always consult a qualified healthcare professional before starting any medication.</p>
+        </div>
+        <div class="footer__links">
+          <div>
+            <div class="footer__heading">Programme</div>
+            <a href="new-programme.html">How it works</a>
+            <a href="new-science.html">The science</a>
+            <a href="new-faqs.html">FAQs</a>
+          </div>
+          <div>
+            <div class="footer__heading">Health Guide</div>
+            <a href="mounjaro-weight-loss-timeline.html">Mounjaro timeline</a>
+            <a href="wegovy-for-weight-loss.html">Wegovy guide</a>
+            <a href="tirzepatide-vs-semaglutide.html">Tirz vs Sema</a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Medical weight management service</span>
+      </div>
+    </div>
+  </footer>
+
+  <!-- NAV SCRIPT -->
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('open');
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver(entries => {
+      entries.forEach(e => { if(e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.stat-pill,.drug-card,.chart-wrap,.verdict-banner').forEach(el => {
+      el.style.cssText += 'opacity:0;transform:translateY(24px);transition:opacity 0.5s ease,transform 0.5s ease;';
+      obs.observe(el);
+    });
+  </script>
+
+  <!-- CHARTS -->
+  <script>
+  (function() {
+    const GOLD  = '#D4AF37';
+    const NAVY  = '#0A192F';
+    const GREY  = '#aaa';
+    const GOLD_T  = 'rgba(212,175,55,0.15)';
+    const NAVY_T  = 'rgba(10,25,47,0.10)';
+
+    Chart.defaults.font.family = "'Inter', 'Helvetica Neue', sans-serif";
+    Chart.defaults.color = '#4a5568';
+
+    // ── Chart 1: Weight loss over time (line) ────────────────────────────
+    const weeks = [0, 4, 8, 12, 16, 20, 24, 28, 36, 44, 52, 60, 68, 72];
+    const tirzData   = [0, -2.3, -4.8, -7.5, -10.0, -12.2, -14.1, -15.8, -18.0, -19.8, -21.2, -22.1, -22.4, -22.5];
+    const semaData   = [0, -1.4, -3.1, -5.0,  -7.2,  -9.0, -10.5, -11.6, -13.0, -13.8, -14.4, -14.7, -14.9, -14.9];
+    const placData   = [0, -0.3, -0.5, -0.8,  -1.0,  -1.3,  -1.5,  -1.7,  -2.0,  -2.1,  -2.3,  -2.4,  -2.4,  -2.4];
+
+    new Chart(document.getElementById('weightLossChart'), {
+      type: 'line',
+      data: {
+        labels: weeks,
+        datasets: [
+          {
+            label: 'Tirzepatide 15 mg',
+            data: tirzData,
+            borderColor: GOLD,
+            backgroundColor: GOLD_T,
+            borderWidth: 3,
+            pointBackgroundColor: GOLD,
+            pointRadius: 4,
+            tension: 0.4,
+            fill: true
+          },
+          {
+            label: 'Semaglutide 2.4 mg',
+            data: semaData,
+            borderColor: NAVY,
+            backgroundColor: NAVY_T,
+            borderWidth: 3,
+            pointBackgroundColor: NAVY,
+            pointRadius: 4,
+            tension: 0.4,
+            fill: true
+          },
+          {
+            label: 'Placebo',
+            data: placData,
+            borderColor: GREY,
+            backgroundColor: 'transparent',
+            borderWidth: 2,
+            borderDash: [5,4],
+            pointRadius: 0,
+            tension: 0.4
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.y.toFixed(1)}%`
+            }
+          }
+        },
+        scales: {
+          x: {
+            title: { display: true, text: 'Week', font: { size: 11 } },
+            grid: { color: 'rgba(0,0,0,0.04)' }
+          },
+          y: {
+            title: { display: true, text: 'Mean % body weight change', font: { size: 11 } },
+            grid: { color: 'rgba(0,0,0,0.04)' },
+            ticks: { callback: v => v + '%' }
+          }
+        }
+      }
+    });
+
+    // ── Chart 2: Dose comparison bar ─────────────────────────────────────
+    new Chart(document.getElementById('doseCompareChart'), {
+      type: 'bar',
+      data: {
+        labels: [
+          'Tirz 5 mg\n(SURMOUNT-1)', 'Tirz 10 mg\n(SURMOUNT-1)', 'Tirz 15 mg\n(SURMOUNT-1)',
+          'Sema 1.0 mg\n(STEP-2)', 'Sema 2.4 mg\n(STEP-1)', 'Sema 2.4 mg+IBT\n(STEP-3)'
+        ],
+        datasets: [
+          {
+            label: 'Tirzepatide',
+            data: [-15.0, -19.5, -20.9, null, null, null],
+            backgroundColor: GOLD,
+            borderRadius: 6,
+            borderSkipped: false
+          },
+          {
+            label: 'Semaglutide',
+            data: [null, null, null, -9.6, -14.9, -16.0],
+            backgroundColor: NAVY,
+            borderRadius: 6,
+            borderSkipped: false
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        plugins: {
+          legend: { display: false },
+          tooltip: {
+            callbacks: {
+              label: ctx => ` Weight loss: ${Math.abs(ctx.parsed.y).toFixed(1)}%`
+            }
+          }
+        },
+        scales: {
+          x: {
+            grid: { display: false },
+            ticks: { font: { size: 10 } }
+          },
+          y: {
+            title: { display: true, text: 'Mean % body weight loss', font: { size: 11 } },
+            grid: { color: 'rgba(0,0,0,0.04)' },
+            ticks: { callback: v => Math.abs(v) + '%' },
+            reverse: true,
+            min: -25, max: 0
+          }
+        }
+      }
+    });
+
+    // ── Chart 3: SURMOUNT-5 responder rates ─────────────────────────────
+    new Chart(document.getElementById('surmount5Chart'), {
+      type: 'bar',
+      data: {
+        labels: ['≥5% weight loss', '≥10% weight loss', '≥15% weight loss', '≥20% weight loss', '≥25% weight loss'],
+        datasets: [
+          {
+            label: 'Tirzepatide (SURMOUNT-5)',
+            data: [96, 88, 74, 63, 31],
+            backgroundColor: GOLD,
+            borderRadius: 6,
+            borderSkipped: false
+          },
+          {
+            label: 'Semaglutide (SURMOUNT-5)',
+            data: [84, 68, 48, 28, 11],
+            backgroundColor: NAVY,
+            borderRadius: 6,
+            borderSkipped: false
+          }
+        ]
+      },
+      options: {
+        responsive: true,
+        maintainAspectRatio: false,
+        indexAxis: 'y',
+        plugins: {
+          legend: {
+            display: true,
+            position: 'bottom',
+            labels: { font: { size: 11 }, boxWidth: 12, padding: 16 }
+          },
+          tooltip: {
+            callbacks: {
+              label: ctx => ` ${ctx.dataset.label}: ${ctx.parsed.x}% of participants`
+            }
+          }
+        },
+        scales: {
+          x: {
+            title: { display: true, text: '% of participants achieving threshold', font: { size: 11 } },
+            grid: { color: 'rgba(0,0,0,0.04)' },
+            ticks: { callback: v => v + '%' },
+            max: 100
+          },
+          y: {
+            grid: { display: false },
+            ticks: { font: { size: 11 } }
+          }
+        }
+      }
+    });
+  })();
+  </script>
+
+</body>
+</html>

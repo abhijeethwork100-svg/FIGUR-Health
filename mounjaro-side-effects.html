@@ -1,0 +1,860 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Side effects of Mounjaro & how to manage them | Figur Health</title>
+  <meta name="description" content="Mounjaro comes with common side effects like nausea or fatigue. Discover how to manage them and when to seek help for a safer weight loss experience."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Mounjaro</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">13 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>Side effects of Mounjaro & how to manage them</h1>
+        <p class="article-hero__desc">Mounjaro comes with common side effects like nausea or fatigue. Discover how to manage them and when to seek help for a safer weight loss experience.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+<div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80" alt="Injection pen" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>Side effects of Mounjaro &amp; how to manage them</h1>
+</div>
+<p>
+</p>
+<p>You're not alone in wondering, <strong>“What will Mounjaro do to my body?”</strong></p>
+<p>Of course, it's natural to want to know the full picture.</p>
+<p><em>What does it feel like in those first few days? <br/> What are the side effects, and do they get better?</em></p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="mounjaro-side-effects.html#key-takeaways">Key takeaways:</a></li>
+<li><a href="mounjaro-side-effects.html#how-does-mounjaro-work">How does Mounjaro work?</a></li>
+<li><a href="mounjaro-side-effects.html#what-are-the-side-effects-of-taking-mounjaro">What are the side effects of taking Mounjaro?</a></li>
+<li><a href="mounjaro-side-effects.html#how-to-manage-common-side-effects-of-mounjaro">How to manage common side effects of Mounjaro?</a></li>
+<li><a href="mounjaro-side-effects.html#what-makes-some-people-more-sensitive-to-mounjaro-than-others">What makes some people more sensitive to Mounjaro than others?</a></li>
+<li><a href="mounjaro-side-effects.html#when-should-you-visit-the-doctor">When should you visit the doctor?</a></li>
+<li><a href="mounjaro-side-effects.html#do-the-side-effects-go-away-over-time">Do the side effects go away over time?</a></li>
+<li><a href="mounjaro-side-effects.html#practical-tips-to-feel-better-while-your-body-adjusts">Practical tips to feel better while your body adjusts</a></li>
+<li><a href="mounjaro-side-effects.html#everybody-reacts-differently,-and-that's-okay.">Everybody reacts differently, and that's okay.</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways:</h2>
+<div>
+<ul>
+<li>Mounjaro may cause mild side effects, such as <strong>nausea, fatigue, constipation,</strong> and <strong>vomiting.</strong></li>
+<li>Most side effects are common in the early weeks and usually settle with time.</li>
+<li>Stay hydrated and eat small, frequent meals to manage nausea and fatigue.</li>
+<li>Uncommon but serious side effects like <strong>pancreatitis, severe dehydration,</strong> or <strong>allergic reaction</strong> need prompt medical attention.</li>
+<li>Every person may react differently to Mounjaro, but proper care and healthy choices can help.</li>
+</ul>
+</div>
+<p>Maybe you saw it in the news.</p>
+<p>Maybe it's the hot topic of your family chat group.</p>
+<p>Or maybe you saw another celebrity go through a major weight loss transformation.</p>
+<p>Mounjaro has made headlines worldwide as a new medicine for treating type 2 diabetes and obesity. The pharmaceutical company Eli Lilly launched it in India in March 2025, and now, everyone wants to lose weight the quick and easy way.</p>
+<p>But, is there a catch to it?</p>
+<p>This guide will help you understand the side effects of taking Mounjaro, what they look like, and how they can be managed.</p> </div>
+<div>
+<h2>How does Mounjaro work?</h2>
+<p>Before we discuss Mounjaro’s side effects, it is helpful to understand how the weight loss medicine works. This medicine copies the actions of two gut hormones, GLP-1 and GIP.</p>
+<p>Whenever we eat, these hormones come into action and:</p>
+<ul>
+<li><strong>Control blood sugar levels:</strong> <br/> This is made possible by helping the body use insulin more effectively.</li>
+<li><strong>Slow down digestion:</strong> <br/> As Mounjaro slows down the rate at which your stomach empties food, you feel full for a longer time.</li>
+<li><strong>Sends fullness signals to the brain:</strong> <br/>By triggering the neurons, they signal the brain that you’re full, which makes it easier to eat less.</li>
+</ul>
+<p>This way, you:</p>
+<ul>
+<li>Feel satisfied with smaller portions.</li>
+<li>Experience less hunger between meals.</li>
+<li>Have fewer food cravings.</li>
+<li>Process sugar more efficiently.</li>
+<li>Gradually lose weight.</li>
+</ul>
+<div>
+<div>
+<span>How does Mounjaro work?</span>
+<div>
+<div>
+
+<p>Copies gut hormones (GLP-1 &amp; GIP)</p>
+</div>
+<div>
+
+<p>Slows digestion so you stay satisfied longer</p>
+</div>
+<div>
+
+<p>Signals your brain that you’re full</p>
+</div>
+</div>
+<ul>
+<li>Smaller portions keep you full</li>
+<li>Fewer cravings between meals</li>
+<li>Steadier bloos sugar control</li>
+<li>Gradual, healthy weight loss</li>
+</ul>
+</div>
+</div>
+<p>Because Mounjaro slows digestion and changes how your gut communicates with your brain, your body needs time to adjust.</p>
+<p>That's why, experiencing side effects while taking Mounjaro during the first few weeks is common.</p>
+<p>The good news is that these effects are dose-dependent, usually mild, and they go away with time.</p>
+<p>But adapting to them can be uncomfortable in the beginning.</p>
+<p>That’s why doctors start with a low dose and increase it gradually to give your gut time to adapt.</p>
+<p>This table shows the timeline of different side effects:</p>
+<div>
+<div>
+<div>
+<span>Side effects guide</span>
+<p>Your medication journey timeline</p>
+</div>
+<div>
+<div>
+<div>
+<p><strong>Common side effects</strong></p>
+<p>These typically improve over time.</p>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<p><strong>Nausea</strong></p>
+<ul>
+<li>Starts within 72 hours</li>
+<li>Peaks by 4-8 weeks</li>
+<li>Reduces by 12-16 weeks</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<p><strong>Diarrhea</strong></p>
+<ul>
+<li>Starts within 72 hours</li>
+<li>Peaks by 4-12 weeks</li>
+<li>Reduces by 8-12 weeks</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<p><strong>Vomiting</strong></p>
+<ul>
+<li>Starts within 72 hours</li>
+<li>Peaks by 4-8 weeks</li>
+<li>Reduces by 12-16 weeks</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<p><strong>Constipation</strong></p>
+<ul>
+<li>Starts within 72 hours</li>
+<li>Peaks by 4-12 weeks</li>
+<li>Reduces by 8-12 weeks</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<p>If you experience pancreatitis, gallbladder issues, and kidney problems, please contact your healthcare provider immediately.</p>
+</div>
+<div>
+<p><strong>Remember</strong></p>
+<p>Most side effects are temporary and improve as your body adjusts. Stay hydrated, eat smaller meals, and be
+        patient with the process!</p>
+</div>
+<div>
+<a href="mounjaro-injection.html">Find out more about the  Mounjaro weight loss injection</a>
+</div> </div>
+<div>
+<h2>What are the side effects of taking Mounjaro?</h2>
+<p>Studies <a href="mounjaro-side-effects.html#refid1_36"><sup>[1]</sup></a><a href="mounjaro-side-effects.html#refid2_36"><sup>[2]</sup></a><a href="mounjaro-side-effects.html#refid3_36"><sup>[3]</sup></a><a href="mounjaro-side-effects.html#refid4_36"><sup>[4]</sup></a> show that taking Mounjaro usually results in two types of side effects:</p>
+<ul>
+<li><strong>Mild/less serious:</strong> They are temporary and usually do not require immediate medical attention.</li>
+<li><strong>Serious:</strong> These do not happen frequently but need urgent medical attention.</li>
+</ul>
+<picture>
+<source alt="Side effects of taking Mounjaro" height="904" width="750">
+<source alt="Side effects of taking Mounjaro" height="769" width="500">
+
+</source></source></picture>
+<div>
+<p>
+<strong>Mild/less serious side effects</strong>
+</p>
+<div>
+<div>
+<ul>
+<li>Tiredness</li>
+<li>Dizziness</li>
+<li>Hair loss</li>
+<li>Taste change</li>
+<li>Tingling or numbness</li>
+<li>Injection site allergies</li>
+<li>Nausea</li>
+<li>Diarrhoea</li>
+<li>Vomiting</li>
+<li>Abdominal pain</li>
+<li>Heartburn</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Indigestion (dyspepsia)</li>
+<li>Abdominal bloating</li>
+<li>Constipation</li>
+<li>Belching (burping)</li>
+<li>Flatulence (farting)</li>
+<li>Decreased appetite</li>
+<li>Low blood sugar (especially with drugs like sulfonylureas and insulin)</li>
+<li>Low blood pressure</li>
+<li>Dehydration</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<p>
+<strong>Serious side effects</strong>
+</p>
+<div>
+<div>
+<ul>
+<li>Severe, consistent stomach and back pain</li>
+<li>Vomiting and/or diarrhoea</li>
+<li>Rash</li>
+<li>Hives (urticaria)</li>
+<li>Swelling of face, lips, mouth, and throat</li>
+<li>Difficulty breathing or swallowing</li>
+<li>Gallstones or an inflamed gallbladder</li>
+<li>Severe upper stomach pain</li>
+<li>Jaundice (yellowing of skin/eyes)</li>
+<li>Pale/clay-coloured stools</li>
+<li>Fever</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Diarrhoea</li>
+<li>Nausea</li>
+<li>Vomiting</li>
+<li>Dehydration</li>
+<li>Acute kidney injury</li>
+<li>Intestinal blockage or very slow digestion</li>
+<li>Severe stomach pain</li>
+<li>Bloating/difficulty passing wind</li>
+<li>Persistent nausea, vomiting, diarrhoea</li>
+<li>Urge to pass stool without results</li>
+<li>Possible vision changes</li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<p>Thyroid tumours are a serious side effect. If you experience any of these symptoms, seek immediate medical
+    attention.</p>
+<ul>
+<li>A lump or swelling in the neck</li>
+<li>Hoarseness of voice</li>
+<li>Difficulty in swallowing or breathing</li>
+</ul>
+</div>
+</div>
+<div>
+<h2>How to manage common side effects of Mounjaro?</h2>
+<p>Don’t worry. The good news is that the mild side effects can be managed at home with a few simple steps. But if the symptoms don’t settle or seem to get worse, see your doctor without delay.</p>
+<span>How to manage Mounjaro side effects</span>
+<ul>
+<li>
+<p> For nausea:</p>
+<div>
+<ul>
+<li>Eat 5–6 small meals instead of 3 large ones.</li>
+<li>Begin your meals with thin <em>dal</em> or clear soup.</li>
+<li>Reduce your intake of <em>masala</em> and oil for some time.</li>
+<li>Eat slowly and chew thoroughly.</li>
+<li>Drink <em>adrak chai, pudina tea, jeera water, or nimbu paani.</em></li>
+<li>Try <em>nimbu pani</em> with black salt.</li>
+<li>Use <strong><em>pudina chutney or hing in dals.</em></strong></li>
+</ul>
+</div>
+</li>
+<li>
+<p> For vomiting:</p>
+<div>
+<ul>
+<li>Drink ORS.</li>
+<li>Have <em>khichdi</em>, or curd rice, once you are able to eat.</li>
+<li>Avoid lying down immediately after meals.</li>
+<li>Take small sips of water frequently.</li>
+<li>Try evening injections to sleep through symptoms.</li>
+</ul>
+</div>
+</li>
+<li>
+<p> For diarrhoea:</p>
+<div>
+<ul>
+<li>Rehydrate with <em>nimbu paani, nariyal paani, or lassi.</em></li>
+<li>Eat rice, banana, and curd.</li>
+<li>Avoid leafy greens and high-fibre foods.</li>
+<li>Try <em>isabgol</em> (psyllium husk) after medical advice.</li>
+</ul>
+</div>
+</li>
+<li>
+<p> For constipation:</p>
+<div>
+<ul>
+<li>Drink 8–10 glasses of water daily.</li>
+<li>Try <em>triphala churna</em> (only after consulting your doctor).</li>
+<li>Add soaked <em>methi</em> seeds to your diet.</li>
+<li>Increase your intake of vegetables, whole grains, and papaya.</li>
+</ul>
+</div>
+</li>
+<li>
+<p> For decreased appetite:</p>
+<div>
+<ul>
+<li>Focus on protein-rich foods like <em>dal, paneer,</em> soya, etc.</li>
+<li>Eat 4-6 small meals instead of 3 large meals, on fixed timings.</li>
+<li>Eat nutrient-dense, seasonal vegetables.</li>
+<li>Consider a multivitamin (only on the recommendation of a doctor).</li>
+<li>Eat only when hungry, and do not force-feed yourself.</li>
+</ul>
+</div>
+</li>
+<li>
+<p> For fatigue:</p>
+<div>
+<ul>
+<li>Stay well-hydrated.</li>
+<li>Add energy-giving foods like <em>ragi, jowar, sattu,</em> etc.</li>
+<li>Maintain adequate protein intake.</li>
+<li>Include iron-rich foods like spinach and beetroot.</li>
+</ul>
+</div>
+</li>
+<li>
+<p> For headaches:</p>
+<div>
+<ul>
+<li>Hydrate well.</li>
+<li>Maintain a regular sleep routine.</li>
+<li>Use over-the-counter pain relievers if needed.</li>
+<li>Try <em>tulsi</em> or chamomile tea for cooling relief.</li>
+</ul>
+</div>
+</li>
+<li>
+<p> For injection site reactions:</p>
+<div>
+<ul>
+<li>Rotate the injection sites (abdomen, thigh, upper arm).</li>
+<li>Let the alcohol dry fully before injecting.</li>
+<li>Use a cold compress if there's discomfort.</li>
+</ul>
+</div>
+</li>
+</ul>
+<p>While some side effects are expected or mild and resolve on their own, serious side effects may need immediate medical attention.</p>
+</div>
+<div>
+<h2>What makes some people more sensitive to Mounjaro than others?</h2>
+<p>But why are some people more prone to side effects than others? There can be different reasons, like:</p>
+<ul>
+<li>How your body processes Mounjaro</li>
+<li>Your present health status</li>
+<li>Your gut health</li>
+<li>Your past medical history</li>
+<li>How quickly has the dose been/is increased</li>
+<li>Your lifestyle and eating habits</li>
+<li>Your consistency in taking Mounjaro</li>
+<li>Any possible drug interactions</li>
+</ul> </div>
+<div>
+<h2>When should you visit the doctor?</h2>
+<p>Reach out to your doctor if you notice/experience:</p>
+<ul>
+<li>Severe pain in the abdomen, especially if it spreads to the back or is accompanied by fever and/or vomiting</li>
+<li>Severe or persistent diarrhoea or vomiting</li>
+<li>Pain in the upper abdominal region, yellowing of skin/eyes (jaundice), or fever</li>
+<li>Shaking, sweating, confusion, dizziness, or fainting</li>
+<li>A rash, swelling (of the face, lips, or throat), or trouble breathing</li>
+<li>A lump in the neck, difficulty swallowing, or hoarseness of voice</li>
+<li>Your symptoms persist or worsen, especially after an increase in dose</li>
+<li>The side effects affect your ability to eat, work, or function</li>
+<li>New symptoms, but not directly related to taking Mounjaro (hair loss, fatigue, etc.)</li>
+<li>Difficulty in tolerating side effects every time the dose changes</li>
+</ul>
+</div>
+<div>
+<h2>Do the side effects go away over time?</h2>
+<p>The good news is that most people who take Mounjaro gradually adapt to the side effects, especially the common gastrointestinal ones. These usually last for 3 months and get better as the body learns to adjust. But this can be different for different people.</p>
+<p>In studies like the <a href="https://jamanetwork.com/journals/jama/fullarticle/2812936">SURMOUNT-4</a><a href="mounjaro-side-effects.html#refid5_36"><sup>[5]</sup></a> trial (that lasted up to 72 weeks), most common side effects diminished after 16–24 weeks, but some users reported mild, intermittent symptoms with continued use.</p>
+<p>Serious side effects like pancreatitis, gallbladder problems, or kidney issues do not resolve spontaneously and need a different approach/medical intervention.</p>
+</div>
+<div>
+<h2>Practical tips to feel better while your body adjusts</h2>
+<div>
+<p><em>“Whatever weight loss that you get on Mounjaro or Sema or Ozempic for that matter, 30% of that weight loss is your muscle mass loss. So to prevent that, your diet should include more of protein like fish and chicken. Among the vegetarians, you have pulses, paneer, soya, and tofu.”</em></p>
+<p> - <strong>Dr. Vijay Panikar,</strong> consultant endocrinologist, Lilavati Hospital</p>
+</div>
+<p>In addition to the advice above, here are some simple tips you can try:</p>
+<ul>
+<li>Eat light and nutritious foods. For example, swap ice cream with fruits, or a wheat roti for a millet one.</li>
+<li>Try to get a minimum of 7 hours of good-quality sleep.</li>
+<li>Make sure you do a minimum of 30 minutes of physical activity daily. You can break it down to small 10-minute workouts if you like.</li>
+<li>Add small, simple stress management techniques to your routine, like deep breathing, journaling, or meditation.
+  </li>
+</ul> </div>
+<div>
+<h2>Everybody reacts differently, and that's okay.</h2>
+<p>Some people feel completely at ease while taking Mounjaro. Others may feel tired, nauseous or off-balance before things settle. But knowing what to expect and when to reach out for help can make all the difference.</p>
+<p>We hope this guide gives you the information you need so you can have a more open conversation with your doctor about Mounjaro.</p>
+<p>Yes, side effects are real, but are also manageable in most cases. You don't have to tough it out alone.</p>
+<p>Aktive connects you with doctors, nutritionists, and real people who understand the ups and downs of this process.</p>
+</div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>Should I stop taking Mounjaro if I have side effects?</p>
+<div><p></p><p>Not necessarily. Mild side effects are expected and often temporary. However, if you’re experiencing persistent vomiting, severe abdominal pain, mood changes, or signs of dehydration, it is best to stop and consult your doctor immediately.</p></div>
+</li>
+<li>
+<p>Are Mounjaro side effects worse at higher doses?</p>
+<div><p></p><p>They can be. Each dose escalation may bring back or intensify symptoms like nausea, fatigue, or digestive upset. That’s why gradual increases, as per your doctor’s advice, are important.</p></div>
+</li>
+<li>
+<p>Does everyone experience side effects from Mounjaro?</p>
+<div><p></p><p>No, side effects vary from person to person. Some people experience minimal discomfort, while others may struggle during the first few weeks. Factors like diet, other medications, and medical history influence your experience.</p></div>
+</li>
+<li>
+<p>Does Mounjaro cause hair loss or thinning?</p>
+<div><p></p><p>Hair loss isn't listed as a known side effect of Mounjaro, but some users have reported it anecdotally. This might be due to rapid weight loss, calorie restriction, or nutritional deficiencies. If you notice excessive hair fall, do check with your doctor.</p></div>
+</li>
+<li>
+<p>Can I drink alcohol while taking Mounjaro?</p>
+<div><p></p><p>Alcohol can increase the risk of side effects like nausea and low blood sugar, more so in people with diabetes. It's best to limit or avoid alcohol, especially when you have just started out. Always ask your doctor what’s safe for you.</p></div>
+</li>
+<li>
+<p>Can side effects change from dose to dose?</p>
+<div><p></p><p>Yes. Even if you tolerated a lower dose well, side effects may reappear briefly when your dose is increased. That’s why titration (gradual increase) is built into most Mounjaro regimens.</p>
+</div>
+</li>
+<li>
+<p>Can I take Mounjaro if I have IBS or other gut issues?</p>
+<div><p></p><p>Caution is advised. Mounjaro may worsen GI symptoms like bloating, constipation, or diarrhoea — especially in people with IBS, IBD, or a history of gut sensitivity. Discuss your condition with your doctor before starting it.</p></div>
+</li>
+<li>
+<p>Is it safe to take Mounjaro during your period or if you have PCOS?</p>
+<div><p></p><p>There’s no evidence that Mounjaro worsens menstrual symptoms.</p>
+<p>In fact, for women with PCOS, weight loss and insulin sensitivity improvements may support hormonal balance. However, consult your gynaecologist if your periods become irregular or heavier while on Mounjaro.</p></div>
+</li>
+<li>
+<p>Can Mounjaro cause weight loss that's too fast or unhealthy?</p>
+<div><p></p><p>Yes, some people may lose weight more quickly than intended, especially if they’re unable to eat enough due to nausea or appetite suppression.</p>
+<p>But rapid weight loss can lead to fatigue, hair thinning, or muscle loss. If you're losing more than 1–1.5 kg per week, you may need to talk to your doctor or dietitian about adjusting your food intake.</p></div>
+</li>
+<li>
+<p>Can I take over-the-counter medicines to help with side effects?</p>
+<div><p></p><p>Some people use remedies like antacids, fibre supplements, or anti-nausea meds — but always check with your doctor before combining anything with Mounjaro. Drug interactions are possible.</p></div>
+</li>
+<li>
+<p>Can I take Mounjaro while pregnant?</p>
+<div><p></p><p>It’s best not to take Mounjaro during pregnancy. At present, there isn’t enough data on how safe it is for pregnant women. Animal studies have shown possible harm to the baby, such as developmental issues.</p>
+<p>If you find out you’re pregnant while on Mounjaro, stop taking it right away and speak to your doctor about further course of action.</p></div>
+</li>
+<li>
+<p>Can I take Mounjaro while breastfeeding?</p>
+<div><p></p><p>Mounjaro isn’t recommended if you’re breastfeeding.</p>
+<p>There are no studies in humans yet. While animal studies show that the drug might pass into breast milk, we’re not sure how it affects babies. It’s safest to check with your doctor for better alternatives to manage your health during this time.</p></div>
+</li>
+<li>
+<p>How can I manage Mounjaro side effects during weddings or festivals?</p>
+<div><p></p><p>Adjusting to Mounjaro might be slightly tricky during festivals, but here is how you can enjoy worry-free:</p>
+<ul>
+<li>Eat a simple, light meal before attending the event.</li>
+<li>Pick mild food options from the buffet, like plain rice, <em>dal,</em> salad, curd or lightly spiced <em>sabzis.</em></li>
+<li>Stay hydrated with water, <em>nimbu paani</em>, or coconut water, especially in warm weather or long events.</li>
+<li>If possible, avoid increasing your dose just before the function. You can plan this timing with your doctor.</li>
+</ul></div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>September, 15 2025</strong></p><p>Publish date <strong>September, 15 2025</strong></p></div> </div>
+<div>
+<p><strong>References:</strong></p>
+<ul>
+<li>[1] Mishra, R., Raj, R., Elshimy, G., Zapata, I., Kannan, L., Majety, P., Edem, D., &amp; Correa, R. (2023). Adverse events related to tirzepatide. <em>Journal of the Endocrine Society,</em> 7(4). <a href="https://doi.org/10.1210/jendso/bvad016">https://doi.org/10.1210/jendso/bvad016</a></li>
+<li>[2] Eli Lilly and Company. (2022). <em>HIGHLIGHTS OF PRESCRIBING INFORMATION.</em> <a href="https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/215866s000lbl.pdf">https://www.accessdata.fda.gov/drugsatfda_docs/label/2022/215866s000lbl.pdf</a></li>
+<li>[3] Kadowaki, T., Kiyosue, A., Shingaki, T., Oura, T., &amp; Yokote, K. (2025). Efficacy and safety of once-weekly tirzepatide in Japanese patients with obesity disease (SURMOUNT-J): a multicentre, randomised, double-blind, placebo-controlled phase 3 trial. <em>The Lancet Diabetes &amp; Endocrinology.</em> <a href="https://doi.org/10.1016/s2213-8587(24)00377-2">https://doi.org/10.1016/s2213-8587(24)00377-2</a></li>
+<li>[4] Kadowaki, T., Chin, R., Ozeki, A., Imaoka, T., &amp; Ogawa, Y. (2022). Safety and efficacy of tirzepatide as an add-on to single oral antihyperglycaemic medication in patients with type 2 diabetes in Japan (SURPASS J-combo): a multicentre, randomised, open-label, parallel-group, phase 3 trial. <em>The Lancet Diabetes &amp; Endocrinology, 10(9),</em> 634–644. <a href="https://doi.org/10.1016/s2213-8587(22)00187-5">https://doi.org/10.1016/s2213-8587(22)00187-5</a></li>
+<li>[5] Aronne, L. J., Sattar, N., Horn, D. B., Bays, H. E., Wharton, S., Lin, W., Ahmad, N. N., Zhang, S., Liao, R., Bunck, M. C., Jouravskaya, I., Murphy, M. A., Fretes, J. O., Coronel, M. J., Gutnisky, L. L., Frechtel, G. D., Gelersztein, E., Aizenberg, D., Maldonado, N., . . . Nardandrea, J. P. (2023). Continued treatment with tirzepatide for maintenance of weight reduction in adults with obesity. <em>JAMA, 331(1),</em> 38. <a href="https://doi.org/10.1001/jama.2023.24945">https://doi.org/10.1001/jama.2023.24945</a> </li>
+</ul> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Calories in an apple: Everything you need to know | Figur Health</title>
+  <meta name="description" content="Wondering how many calories are in an apple? Discover the calorie count, health benefits, and 5 easy apple recipes to support your weight loss goals."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Nutrition</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">15 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>Calories in an apple: Everything you need to know</h1>
+        <p class="article-hero__desc">Wondering how many calories are in an apple? Discover the calorie count, health benefits, and 5 easy apple recipes to support your weight loss goals.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+
+ <div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80" alt="Healthy fruit" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>Calories in an apple: Everything you need to know</h1>
+</div>
+<p>
+</p>
+<p>An apple with skin, weighing 100g, has around <strong>56 calories and 0.2g of protein</strong>. 
+</p><p>But are apples really healthy? Do they help you lose weight?</p>
+<p>We have the answer. </p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="calories-in-apple.html#key-takeaways">Key takeaways</a></li>
+<li><a href="calories-in-apple.html#how-many-calories-are-there-in-an-apple">How many calories are there in an apple?</a></li>
+<li><a href="calories-in-apple.html#what-is-the-nutritional-value-of-an-apple">What is the nutritional value of an apple?</a></li>
+<li><a href="calories-in-apple.html#what-are-the-health-benefits-of-eating-an-apple">What are the health benefits of eating an apple?</a></li>
+<li><a href="calories-in-apple.html#are-apples-good-for-weight-loss">Are apples good for weight loss?</a></li>
+<li><a href="calories-in-apple.html#what-is-the-best-time-to-eat-apples">What is the best time to eat apples?</a></li>
+<li><a href="calories-in-apple.html#5-healthy-apple-recipes-to-try">5 healthy apple recipes to try</a></li>
+<li><a href="calories-in-apple.html#and-the-verdict-is....">And the verdict is....</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways</h2>
+
+<div>
+<ul>
+<li>A 100g apple gives you about <strong>56 calories</strong>.</li>
+<li>These <strong>calories can vary</strong> based on size, type, and if they are peeled.</li>
+<li>Apples are <strong>low in calories</strong> and <strong>rich in fibre and antioxidants</strong>.</li>
+<li>Studies show that <strong>apples benefit health</strong> and <strong>help lose weight</strong>.</li>
+</ul>
+</div>
+<p>In today's times, where we want things at the touch of a button, apples are one of the easiest and nutritious snacks to reach for. No prep, no packaging, and no fuss.</p>
+<p>You are hungry, and you crave something sweet. <em>But, sugar is unhealthy, right?</em></p>
+<p>That's exactly where an apple comes in.</p>
+<div>
+<p><em><strong>It is light, filling, and healthy.</strong></em></p>
+</div>
+<p>It also travels well in your bag (or tiffin).</p>
+<p>In this guide, we'll explore:</p>
+<ul>
+<li>How many calories are there in an apple?</li>
+<li>What is the nutritional value of an apple?</li>
+<li>What makes apples healthy?</li>
+<li>When is the best time to eat apples?</li>
+<li>What are some fun yet nutritious apple recipes?</li>
+</ul> </div>
+<div>
+<h2>How many calories are there in an apple?</h2>
+<p>Many factors, like the variety, ripeness, presence (or absence) of skin, storage, etc., significantly impact an apple's nutritional value and calories.</p>
+<p>Here’s a <strong>quick list of the calories in different types of apples</strong>, so you can count your calories and plan your meals wisely.</p>
+<ul>
+<li>One whole apple (100g) comes with <strong>56 calories</strong>.</li>
+<li>An apple without skin (peeled) (100g) contains about <strong>48 calories</strong>. The absence of skin reduces fibre and calories.</li>
+<li>A small apple (150g) has up to <strong>77 calories</strong>.</li>
+<li>A whole, medium-sized apple (approx. 182g) contains <strong>94.6 calories</strong>.</li>
+<li>A ½ medium apple (approx 91g) has up to <strong>47 calories</strong>.</li>
+<li>2 medium apples (approx 364g) contain almost <strong>189 calories</strong>.</li>
+<li>3 medium apples (546g) have up to <strong>284 calories</strong>.</li>
+<li>4 medium apples (728g) bring the total to almost <strong>378 calories</strong>.</li>
+<li>A whole green apple (100g) has <strong>59 calories</strong>.</li>
+<li>A big apple (200-250g) contains about <strong>95-125 calories</strong>.</li>
+</ul>
+<p>If you wish to start a calorie-deficient diet, check out our article on <a href="cico-for-weight-loss.html">calories in, calories out (CICO)</a>.</p>
+</div>
+<div>
+<h2>What is the nutritional value of an apple?</h2>
+<p>A plain apple is far more nutritious than you can imagine. Below, find out what an apple is made of.</p>
+
+<p>In addition to the above nutrients, apples also contain compounds like:</p>
+<ul>
+<li>Flavonoids (found in the peel)</li>
+<li>Quercetin</li>
+<li>Catechin</li>
+<li>Phloridzin</li>
+<li>Phloretin</li>
+<li>chlorogenic acid</li>
+<li>Carotenoids</li>
+</ul>
+<p>These compounds work together and increase apples' antioxidant, disease-fighting, and health-boosting properties.</p>
+<div>
+<p><a href="https://www.instagram.com/flexible.eating.nutritionist/reel/Cq-3kzeRVs7/">Dr. Ravleen Sarkaria</a> states, <em>“An apple is a perfect volume-friendly food to eat in a calorie deficit. 86% of a medium-sized apple is water, and it provides 16% of the recommended fibre intake for women. The combination of high fibre and water makes one feel full and satisfied.</em></p>
+</div> </div>
+<div>
+<h2>What are the health benefits of eating an apple?</h2>
+<p>In childhood, we were taught that an apple a day keeps the doctor away. But how true is it? </p>
+<p><strong>Read on to know how apples benefit our health.</strong></p>
+<picture>
+<source alt="benefits of Apple" height="473" width="750">
+<source alt="benefits of Apple" height="473" width="750">
+
+</source></source></picture>
+<p><strong>Immunity booster:</strong></p>
+<ul>
+<li>Vitamin C and antioxidants work together and help fight infections.</li>
+<li>Did you know that the antioxidant activity of a 100g apple is equal to approximately 1500mg of vitamin C?</li>
+<li>Eating apples increases enzymes that boost the blood's antioxidant capacity.</li>
+</ul>
+<p><strong>Antioxidant support:</strong></p>
+<ul>
+<li>The bioactive compounds in apples protect you from heart disease by reducing harmful radicals and molecules that cause inflammation.</li>
+<li>Antioxidants also improve how the body metabolises fats.</li>
+</ul>
+<p><strong>Controls blood sugar:</strong></p>
+<ul>
+<li>In apples, polyphenols (quercetin and anthocyanin) help the body use insulin better and stabilise blood sugar. They also help prevent the liver from releasing too much glucose into the bloodstream.</li>
+</ul>
+<p><strong>May prevent colon cancer:</strong></p>
+<ul>
+<li>Flavonoids and polyphenols in apples may help prevent colon cancer by fighting free radical damage and slowing the growth of cancer cells.</li>
+</ul>
+<p><strong>Liver detox:</strong></p>
+<ul>
+<li>Help the liver produce more glutathione, which is needed to flush out harmful toxins.</li>
+</ul>
+<p><strong>Stronger bones:</strong></p>
+<ul>
+<li>A unique compound called phloridzin helps improve bone density and protect it from further damage (especially in post-menopausal women).</li>
+</ul>
+<p><strong>Ease breathing:</strong></p>
+<ul>
+<li>Apples may reduce the inflammation in the airways. This lowers the risk of diseases like asthma.</li>
+</ul>
+<p><strong>Better brain health:</strong></p>
+<ul>
+<li>Apples may improve brain health and cognitive ability.</li>
+</ul> </div>
+<div>
+<h2>Are apples good for weight loss?</h2>
+<div>
+
+<div>
+<p><strong>Benefits of eating apples for weight loss</strong></p>
+<ul>
+<li>Low in calories, high in water</li>
+<li>Fibre-rich fruit that keeps you full</li>
+<li>Contains polyphenols for anti-obesity</li>
+<li>Supports gut health</li>
+</ul>
+</div>
+</div>
+<p>Yes, but more in a supportive capacity. Here’s how apples can be helpful in your weight loss efforts:</p>
+<ul>
+<li>It is low in calories and high in water.</li>
+<li>The fibre-rich fruit slows digestion and keeps you full for longer.</li>
+<li>Fibre slows the release of sugar into the bloodstream for fewer glucose spikes.</li>
+<li>It contains polyphenols (a compound found in plants), which offer <a href="https://www.mdpi.com/2218-273X/14/2/221#:~:text=Furthermore%2C%20polyphenols%20can%20inhibit%20the,weight%20control%20and%20calorie%20burning.">anti-obesity effects</a><a href="calories-in-apple.html#refid1_37"><sup>[1]</sup></a>.</li>
+<li>The pectin in apples binds with the bad cholesterol in the gut and prevents its harmful effects.</li>
+<li>The gut bacteria break down pectin, releasing <a href="https://www.nature.com/articles/srep37589">short-chain fatty acids (SCFAs)</a>, which favour weight loss.</li>
+</ul>
+<p>In a <a href="https://www.sciencedirect.com/science/article/pii/S0002916522003896">study</a><a href="calories-in-apple.html#refid2_37"><sup>[2]</sup></a> from the American Journal of Clinical Nutrition, it was found that <strong>apples supported weight loss</strong> by lowering harmful fats, reducing inflammation, increasing antioxidant activity, and keeping the metabolism healthy.</p>
+<p>In another <a href="https://nutritionj.biomedcentral.com/articles/10.1186/s12937-015-0040-1">study</a><a href="calories-in-apple.html#refid3_37"><sup>[3]</sup></a> from Nutrition Journal, it was seen that the children who ate whole apple or consumed apple products were <strong>30% and 25% less likely to experience obesity</strong>.</p>
+<p>These studies prove that although eating apples does not directly help you lose weight, they can assist you in doing so. But, they do not directly help burn belly fat.</p>
+<p>However, <strong>there’s more to apples than just weight loss</strong>. Let’s take a look at its health benefits.</p>
+<p><strong>An apple a day does keep the doctor away</strong></p>
+<p>While most of us eat apples to stay healthy or lose weight, some have found them surprisingly helpful in other ways. </p>
+<p>One <a href="https://www.reddit.com/r/loseit/comments/ke9u6v/apples_the_magic_bullet/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button">Reddit</a> user with diverticular disease [when small pouches (diverticula) form in the large intestine wall] reported zero flare-ups since they added apples to their diet.</p> </div>
+<div>
+<h2>What is the best time to eat apples?</h2>
+<p>The best part about eating an apple is that it provides steady energy for quite some time. So this makes it a good option to be eaten:</p>
+<ul>
+<li>1-2 hours before or after exercise.</li>
+<li>As a mid-afternoon snack, preferably 2-3 hours after lunch.</li>
+</ul>
+<p><strong>Apples should be avoided late at night,</strong> within 1-2 hours of bedtime, because their fructose and fibre <strong>may cause bloating or discomfort</strong> in the tummy.</p>
+</div>
+<div>
+<h2>5 healthy apple recipes to try</h2>
+<p>Do you find eating the same raw apple every day too monotonous? Time to make things interesting with these five healthy apple recipes!</p>
+<h3>1. Apple-date milkshake:</h3>
+<div>
+
+<div>
+<ul>
+<li>Cut an apple into small cubes.</li>
+<li>Add chopped dates, thick chilled curd, a drop of vanilla essence, and ½ cup water.</li>
+<li>Blend nicely until smooth.</li>
+<li>Pour into glasses and enjoy!</li>
+</ul>
+</div>
+</div>
+<h3>2. Apple chaat:</h3>
+<div>
+
+<div>
+<ul>
+<li>Mix chopped apple with ginger, pink salt, chaat masala, black pepper, lemon juice, and a little honey in a bowl. </li>
+<li>Garnish with mint leaves, and it's ready!</li>
+</ul>
+</div>
+</div>
+<h3>3. Apple date ladoos (no sugar, no maida):</h3>
+<div>
+
+<div>
+<ul>
+<li>Cook the apple and date paste together in a pan until the moisture evaporates.</li>
+<li>Mix in some ghee and roasted nut powder.</li>
+<li>Add cinnamon or cardamom for flavour.</li>
+<li>Now, spread the mix on butter paper and cut it into squares or roll it into laddoos. Enjoy!</li>
+</ul>
+</div>
+</div>
+<h3>4. Apple salad:</h3>
+<div>
+
+<div>
+<ul>
+<li>Chop an apple and some soaked walnuts. </li>
+<li>Add greens (lettuce, cabbage, etc.).</li>
+<li>Make a dressing with hung curd, olive oil, maple syrup (or honey), salt, and pepper, and mix nicely.</li>
+<li>Transfer to a serving tray and relish fresh.</li>
+</ul>
+</div>
+</div>
+<h3>5. Apple-anjeer porridge:</h3>
+<div>
+
+<div>
+<ul>
+<li>Soak anjeer (figs) overnight and blend them nicely.</li>
+<li>Now take grated apple, cardamom powder, and saffron.</li>
+<li>Add them to a cup of milk and cook until the mix thickens.</li>
+<li>Transfer to a bowl and enjoy!</li>
+</ul>
+</div>
+</div> </div>
+<div>
+<h2>And the verdict is....</h2>
+<p>Yes, apples are awesome! <strong>They are gut-friendly, fibre-rich, and a storehouse of antioxidants</strong>. They offer a variety of benefits in a convenient package. What's impressive is how these mechanisms work together to nourish the body.</p>
+<p>You don't have to overload your meals with apples; just start small.</p>
+<p>Try sliced apples one day and chaat the next. On days you need to rush, an apple smoothie can do the trick.</p>
+<p>We'd love to hear your experience. </p>
+<p>Of course, apples are just one piece of the puzzle. If you have tried everything from fad diets to exhausting workouts for weight loss and still can't see any results, it's time to do things the scientific way.</p>
+<p><a href="logout.html">Aktive</a> offers an approach that uses evidence-based strategies to lose weight without sacrificing your favourite foods or over-stretching your routine.</p>
+<p>Try now and see the difference.</p> </div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>Is apple good for diabetes?</p>
+<div><p></p><p><strong>Yes, apples have slightly more sugar than others</strong>. A medium-sized apple has approximately 19 grams of sugar.</p>
+<p>But the good part is that these are not added sugars. They are naturally bound with fibre and water, which slows their absorption in the bloodstream.</p>
+<p>Apples are also a low-glycemic index fruit (36-40), which means they don't spike blood sugar levels quickly like other sources of carbohydrates do.</p>
+<p>So, while apples contain sugar, their fibre and water content deliver various benefits for diabetics. As long as you eat them in moderation with a balanced diet, you are good to go.</p></div>
+</li>
+<li>
+<p>Are apples good for PCOS or thyroid issues?</p>
+<div><p></p><p><strong>Yes</strong>, apples, with their low glycemic index and high fibre content, are very beneficial in managing insulin resistance and weight problems, which are often seen in women with PCOS.</p>
+<p>The antioxidants in apples may also <strong>lower inflammation</strong>.</p>
+<p>When it comes to thyroid issues, apples don't play a direct role.</p>
+<p>But they do not contain any goitrogens (compounds that interfere with thyroid hormone production), so you can eat them alright.</p>
+<p>Apples are <strong>low in calories</strong>, so they can easily help you maintain weight.</p></div>
+</li>
+<li>
+<p>Is it better to eat apples raw or cooked?</p>
+<div><p></p><p><strong>Raw apples are rich in fibre, vitamin C, and antioxidants</strong>.</p>
+<p>Their fibre content makes it more gut-friendly, satiating, and helps control blood sugar.</p>
+<p>But some people <strong>may feel bloated or gassy</strong> after eating them. </p>
+<p>Cooked apples (baked, boiled, or stewed) are a great option for people with dental issues, sensitive stomachs, or irritable bowel syndrome (IBS). Their softer texture makes them <strong>easy to eat and digest</strong>.</p>
+<p>But, heating <strong>may decrease the availability of vitamin C, water, and some antioxidants</strong>.</p>
+<p>Cooking also <strong>increases the sugar concentration</strong>. This negates the health benefits.</p></div>
+</li>
+<li>
+<p>Can apples cause gas or bloating?</p>
+<div><p></p><p><strong>Yes</strong>, apples can cause gas or bloating in some people, as:</p>
+<ul>
+<li>The soluble fibre (pectin) ferments easily in the gut and produces gas.</li>
+<li>They contain high fructose, which is difficult to digest for people with irritable bowel syndrome (IBS) or malabsorption issues.</li>
+<li>They contain fermentable carbs like sorbitol, which can trigger bloating in some people.</li>
+</ul>
+<p>To tackle this issue, <strong>you can eat apples in smaller portions</strong>, chew them properly, or eat them cooked.</p>
+<p>You can also <strong>pair them with low-FODMAP foods</strong> (e.g. lactose-free yogurt) to balance them out.</p></div>
+</li>
+<li>
+<p>Is it okay to eat apples with milk or yogurt?</p>
+<div><p></p><p><strong>Yes, apples can be eaten with yogurt or milk.</strong></p>
+<p><strong>But yogurt pairs better</strong>, as it adds protein and probiotics, which are beneficial for gut health and balancing blood sugar.</p>
+<p>Milk is fine too, but it is less beneficial and <strong>may cause bloating</strong> in lactose-sensitive people. </p>
+<p>You can choose to <strong>eat apples with plain yogurt or low-fat milk</strong>. But do watch for added sugar.</p></div>
+</li>
+<li>
+<p>Should I peel apples before eating?</p>
+<div><p></p><p>Usually, <strong>one should not peel apples before eating</strong>. This is because apple skin contains a good amount of vitamins (like A, C, E, and K), minerals, and antioxidants.</p>
+<p>Removing the peel <strong>can strip away the nutrients</strong>.</p>
+<p>But, you may need to peel an apple in these instances:</p>
+<ul>
+<li>If you are worried about pesticide residues on the skin.</li>
+<li>The skin triggers your digestive issues.</li>
+<li>A recipe that specifically requires peeled apples.</li>
+</ul>
+<p>So, eating the apple with the skin intact is okay for most people. But <strong>wash the apple well before eating</strong> to remove any surface residues.</p></div>
+</li>
+<li>
+<p>Which apple is best for weight loss – red or green?</p>
+<div><p></p><p><strong>Both green and red apples are nearly equal</strong> in terms of their health benefits.</p>
+<p>However, <strong>green apples are tart than sweet</strong> and <strong>have more fibre</strong>, which can help you manage your blood sugar better and reduce those sweet cravings.</p>
+<p><strong>Red apples are slightly sweeter</strong> and <strong>have anthocyanins</strong> (pigments that give them a red colour), which increase their antioxidant and anti-inflammatory properties.</p>
+<p>If weight loss is your goal, <strong>go for green apples more often</strong>, but feel free to enjoy red apples in between.</p></div>
+</li>
+<li>
+<p>Are apples good for skin and hair health? </p>
+<div><p></p><p>Being a good source of vitamins (C, K, and B-complex) and antioxidants, <strong>apples repair your skin</strong> by producing more collagen and protecting it from free radicals.</p>
+<p>However, you must <strong>supplement your diet with protein</strong> and foods rich in vitamins B and E, selenium, and zinc to strengthen your hair.</p></div>
+</li>
+<li>
+<p>Can I eat apples during intermittent fasting? </p>
+<div><p></p><p><strong>Yes, you can eat apples during intermittent fasting</strong>, but only in your eating window and not in the fasting period.</p>
+<p>Apples are the perfect addition to your diet plan as they are <strong>low-calorie, high-fibre and micronutrient-rich fruits</strong>. This helps you feel full and satisfied for longer periods.</p></div>
+</li>
+<li>
+<p>Is it okay to eat apples every day?</p>
+<div><p></p><p>According to physician <a href="https://www.youtube.com/watch?v=BCwvUQD816o&amp;t=1s">Dr. Santosh Singh</a>, even though apples are good, one must exercise caution while eating them because the fiibre-rich fruit can cause gas and bloating and, when eaten in its raw form, it can increase the risk of foodborne infections in people with low immunity.</p>
+<p>Like with all fruits, when it comes eating apples, moderation is key.</p></div>
+</li>
+<li>
+<p>Is apple juice as healthy as whole apples? </p>
+<div><p></p><p>It's always better <strong>to enjoy apples in their whole/raw form</strong>, as apple juice lacks fibre and is more sugar-dense than the former.</p>
+<p>Whole apples are healthier because <strong>they don't spike your blood sugar quickly</strong>. Their high fibre content also ensures your gut works properly all the time!</p>
+<p>Also, commercial juices have preservatives and additives that lower their positive effects.</p></div>
+</li>
+<li>
+<p>Can babies and toddlers eat apples?</p>
+<div><p></p><p><strong>Yes, apples are considered safe for babies 6 months or older.</strong> As a good source of minerals, vitamins, carbohydrates, and fibre, apples help <strong>improve digestion and build immunity</strong> in infants (and children).</p>
+<p>In fact, apples are among the first solid foods babies are introduced to.</p>
+<p>They are cooked and pureed so they can be digested easily. Toddlers (1-3 years) can enjoy raw, grated, or thinly sliced apples.</p>
+<p>But consult a paediatrician before you get started.</p>
+<p>Always <strong>introduce apples in small amounts</strong> to monitor any allergies or unwanted effects.</p></div>
+</li>
+<li>
+<p>Do apples lower cholesterol?</p>
+<div><p></p><p>Yes, apples can help lower cholesterol. They contain pectin (a complex carbohydrate), which binds to the bad cholesterol and limits its absorption in the blood.</p>
+<p>Being rich in antioxidants, apples prevent the oxidation of bad cholesterol and protect from plaque formation in blood vessels.</p></div>
+</li>
+<li>
+<p>Apples vs oranges vs bananas—which are healthier?</p>
+<div><p></p><p>We looked into the data (<a href="https://fdc.nal.usda.gov/food-details/1750339/nutrients">here</a>, <a href="https://fdc.nal.usda.gov/food-details/746771/nutrients">here</a>, and <a href="https://fdc.nal.usda.gov/food-details/1105314/nutrients">here</a>) for a 100g serving of each fruit and have compiled the results for you.</p>
+<p>If your goal is:</p>
+<ul>
+<li><strong>Weight loss</strong>: Pick orange, as it is low in calories (47 kcal) and sugar (8.57 g).</li>
+<li><strong>Immunity boost</strong>: Choose oranges. They are high in vitamin C (59.1 mg), which covers 65–80% of daily needs.</li>
+<li><strong>Energy &amp; workout fuel</strong>: Bananas are the best choice as they are rich in carbs (23 g) and potassium (326 mg).</li>
+<li><strong>To get more fibre</strong>: Eating a banana will provide the highest fibre content (4.62 g, new AOAC method).</li>
+<li><strong>Balanced light snack</strong>: Grab an apple, as they have calories (56 kcal), sugar (12.2 g), and fibre (2 g) in moderate amounts.</li>
+</ul></div>
+</li>
+<li>
+<p>Can I eat 2 apples a day for weight loss?</p>
+<div><p></p><p>Yes, why not? Apples can be a nutritious addition to your weight loss plan. 2 medium-sized apples contain <strong>almost 189 calories</strong>, which makes a low-calorie snack.</p>
+<p>Their high fibre and water content, along with antioxidants, also lend a helping hand in keeping your cravings in check. So you can eat 2 apples daily, but be mindful of the total calories you consume in a day.</p></div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>June, 11 2025</strong></p><p>Publish date <strong>June, 04 2025</strong></p></div> </div>
+<div>
+<p><strong>References:</strong></p>
+<ul>
+<li>[1] Mamun, M. a. A., Rakib, A., Mandal, M., Kumar, S., Singla, B., &amp; Singh, U. P. (2024). Polyphenols: role in modulating immune function and obesity. Biomolecules, 14(2), 221. <a href="https://doi.org/10.3390/biom14020221">https://doi.org/10.3390/biom14020221</a></li>
+<li>[2] Liddle, D. M., Lin, X., Cox, L. C., Ward, E. M., Ansari, R., Wright, A. J., &amp; Robinson, L. E. (2021). Daily apple consumption reduces plasma and peripheral blood mononuclear cell–secreted inflammatory biomarkers in adults with overweight and obesity: a 6-week randomized, controlled, parallel-arm trial. American Journal of Clinical Nutrition, 114(2), 752–763. <a href="https://doi.org/10.1093/ajcn/nqab094">https://doi.org/10.1093/ajcn/nqab094</a></li>
+<li>[3] O’Neil, C. E., Nicklas, T. A., &amp; Fulgoni, V. L. (2015). Consumption of apples is associated with a better diet quality and reduced risk of obesity in children: National Health and Nutrition Examination Survey (NHANES) 2003–2010. Nutrition Journal, 14(1). <a href="https://doi.org/10.1186/s12937-015-0040-1">https://doi.org/10.1186/s12937-015-0040-1</a></li>
+</ul> </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

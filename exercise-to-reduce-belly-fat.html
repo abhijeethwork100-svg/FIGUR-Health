@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>10 exercises to reduce belly fat: No gym subscription needed | Figur Health</title>
+  <meta name="description" content="Looking to lose stubborn belly fat at home? Try these 10 easy exercises and improve your overall health today!"/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Exercise</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">17 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>10 exercises to reduce belly fat: No gym subscription needed</h1>
+        <p class="article-hero__desc">Looking to lose stubborn belly fat at home? Try these 10 easy exercises and improve your overall health today!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+<div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80" alt="Exercise banner" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>10 exercises to reduce belly fat: No gym subscription needed</h1>
+</div>
+<p>
+</p>
+<p>Get rid of belly fat with simple exercises that are sure to strengthen your muscles and burn calories from the comfort of your home. Read on to know more about 10 amazing exercises to lose belly fat.</p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="exercise-to-reduce-belly-fat.html#key-takeaways">Key takeaways:</a></li>
+<li><a href="exercise-to-reduce-belly-fat.html#what-is-belly-fat">What is belly fat?</a></li>
+<li><a href="exercise-to-reduce-belly-fat.html#top-10-exercises-to-lose-belly-fat">Top 10 exercises to lose belly fat</a></li>
+<li><a href="exercise-to-reduce-belly-fat.html#beginners-tips-to-lose-belly-fat-with-exercises">Beginners tips to lose belly fat with exercises</a></li>
+<li><a href="exercise-to-reduce-belly-fat.html#diy-fitness-your-very-own-belly-fat-workout">DIY fitness: Your very own belly fat workout</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways:</h2>
+<div>
+<ul>
+<li>You need to exercise regularly to lose belly fat. A minimum of 3-5 workouts weekly can give you good results.</li>
+<li>Doing different kinds of exercises for your core helps you lose fat better.</li>
+<li>Spot reduction is a myth. Instead of targeting fat loss in the belly, maintain a calorie deficit and engage in workouts that keep you active. </li>
+<li>A diet with the right amount of fruits, vegetables, lean proteins, carbs, and healthy fats is essential for fat loss. </li>
+</ul>
+</div>
+<p>Everyone is worried about <em>motapa,</em> or stubborn fat, resting on their belly. It is a taboo in the strictest sense. Women can't fit in their dream dress, and men can't button up their jeans - the belly protrudes and stops them from looking their best. But the belly fat problem isn't just restricted to fitting into your favourite kurta or trousers.</p>
+<p>Some <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10363491/#:~:text=The%20prevalence%20of%20abdominal%20obesity%20was%20found%20to%20be%20high%20in%20India.%20Overall%2C%2040%25%20of%20women%20and%2012%25%20of%20men%20are%20abdominally%20obese%20in%20the%20country%2C%20but%2049.3%25%20of%20women%20in%20the%20age%20group%20of%2030%E2%80%9339%20and%2056.7%25%20of%20women%20in%20the%20age%20group%20of%2040%E2%80%9349%20cross%20the%20cut%2Doff%20mark">studies</a><a href="exercise-to-reduce-belly-fat.html#refid1_27"><sup>[1]</sup></a> show that belly fat affects approximately 40% of women and 12% of men in India.</p>
+<p>Excessive belly fat can have serious <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6702693/#:~:text=Several%20health%20risks%20are%20associated%20with%20high%20amounts%20of%20TBF%2C%20VAT%20and%20SAT%2C%20including%20insulin%20resistance%2C%20hepatic%20steatosis%2C%20metabolic%20syndrome%20and%20hypertension">health consequences</a><a href="exercise-to-reduce-belly-fat.html#refid2_27"><sup>[2]</sup></a>, such as:</p>
+<ul>
+<li>Insulin resistance</li>
+<li>Liver disease</li>
+<li>High blood pressure</li>
+<li>Heart disease</li>
+<li>Certain cancers</li>
+</ul>
+<p>And if you think that you can lose belly fat without exercise, with spot reduction or liposuction, you are wrong. In fact, exercise, diet, and a well-maintained work-life balance are key to losing fat, even belly fat. </p>
+<p>That said, in this guide, we will cover the best exercises to lose belly fat.</p>
+<p>Whether you're working in an office, taking care of your family at home, or studying hard at college, we've got something that fits your routine. </p> </div>
+<div>
+<h2>What is belly fat?</h2>
+<p>As the term suggests, belly fat is fat stored in the abdomen (tummy region). It is made of <strong>adipose tissue,</strong> which is a storehouse of fat. </p>
+<p>There are two main types of fat in our bodies:</p>
+<ol>
+<li>Subcutaneous Fat (SAT)</li>
+<li>Visceral Fat (VAT)</li>
+</ol>
+<p>Excess visceral fat can be more dangerous, as it can disturb insulin levels and cause inflammation.</p>
+<p>As we age, fat changes its form and function in the body. Females often gain more subcutaneous fat around the hips and thighs. In contrast, for males, visceral fat tends to sink deep within the belly.</p>
+<p>In addition, hormones, genetics, and even ethnicity affect fat distribution. For example, Asian Indian women tend to have <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10363491/#:~:text=A%20literature%20review,were%20less.4">more visceral fat</a><a href="exercise-to-reduce-belly-fat.html#refid1_27"><sup>[1]</sup></a> compared to Caucasians.</p>
+<p><em>"First, measure your waist - right around the belly button, not where your pants sit. If it's over 80 cm for women or 90 cm for men, it's time to make some changes."</em><br/><strong><a href="https://www.youtube.com/watch?v=EaWkHQMNNZg">Dr. Pal Manickam,</a></strong> M.D., Board-Certified Gastroenterologist</p>
+<p>Working out can help you lose weight by helping you maintain a <a href="cico-for-weight-loss.html">calorie deficit.</a></p>
+<p>Different types of exercises can help you lose that stubborn fat in different ways. The best part is these exercises to reduce belly fat work for both females and males. So, really, anyone can say goodbye to that belly fat now.</p>
+<p>Scroll down to explore 10 easy exercises to get started.</p> </div>
+<div>
+<h2>Top 10 exercises to lose belly fat</h2>
+<p>Let's look at some great exercises to help you lose that belly fat. Don't worry if you're just starting - we've got some beginner-friendly tips, too.</p>
+<div>
+<div>
+<span>Cardio exercises</span>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1200&q=80" alt="Exercise" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+<div>
+<span>1. Brisk walking</span>
+<p><strong>How to do it:</strong></p>
+<p>Stand tall and take one step forward and then the next. Swing your arms naturally as you go. You should be able to talk, but you might feel out of breath</p>
+<p><strong>Try this:</strong></p>
+<p>Start by walking for 15-20 minutes three days a week. As you get better, try walking for 30-45 minutes at least five days a week. Eventually, with dedication and consistency, you will be able to walk <a href="10000-steps-for-weight-loss.html">10,000 steps a day</a> and lose weight.</p>
+<p><strong>Why it's good:</strong></p>
+<p>It's an easy exercise to reduce belly fat. It is also light on your joints, burns calories, controls sugar cravings, relieves joint pain, boosts your immunity, and reduces the chances of contracting <a href="https://www.health.harvard.edu/staying-healthy/5-surprising-benefits-of-walking#:~:text=But%20an%20American,using%20supplemental%20hormones.">breast cancer.</a></p>
+<div>
+<p><strong>Quick tips:</strong></p>
+<ul>
+<li>Wear comfortable shoes.</li>
+<li>Drink plenty of water before, after, or while taking a walk - especially if you feel thirsty.</li>
+<li>Use a step counter or a fitness tracking app to note your progress.</li>
+<li>Join a walking group or community in your area to achieve quicker and more satisfying results. </li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80" alt="Exercise" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+<div>
+<span>2. Jogging/running</span>
+<p><strong>How to do it:</strong></p>
+<p>Keep your upper body relaxed. Land on the middle of your foot, not your heel. Look ahead, not at your feet. In fact, you can start working up a slight jog if you are brisk walking long enough.</p>
+<p><strong>Try this:</strong></p>
+<p>You can mix 1-2 minutes of jogging with walking. Slowly increase your time to 20-30 minutes of non-stop jogging. Do this or 3-4 times a week.</p>
+<p><strong>Why it's good:</strong></p>
+<p>Jogging improves heart health, weight loss, and sleep. It also makes the bones stronger. </p>
+<div>
+<p><strong>Quick tips:</strong></p>
+<ul>
+<li>Get quality running shoes with a good sole and ankle support.</li>
+<li>Warm up with a short walk first.</li>
+<li>Stretch muscles post workout to prevent soreness. </li>
+<li>Get an accountability partner to consistently follow the routine.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=1200&q=80" alt="Running" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+<div>
+<span>3. Jumping rope</span>
+<p><strong>How to do it:</strong></p>
+<p>Hold the rope handles with a light grip. Keep your elbows close to your sides. Jump only high enough to let the rope pass under your feet. When you land, do so on the balls of your feet.</p>
+<p><strong>Try this:</strong></p>
+<p>Start by jumping for 30 seconds, followed by a 30-second rest. Do this 5-10 times. Gradually jump for longer as you improve.</p>
+<p><strong>Why it's good:</strong></p>
+<p>It's an energetic workout that increases the power of the core and leg muscles. It also improves your balance and coordination. </p>
+<div>
+<p><strong>Quick tips:</strong></p>
+<ul>
+<li>Always jump on a soft surface like a yoga mat.</li>
+<li>Jump low and quick. Higher jumps can injure your knees, shinbone, and back. </li>
+<li>Avoid kicking your heels back while jumping.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<span>Strength training exercises</span>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80" alt="Yoga" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+<div>
+<span>4. Bodyweight squats</span>
+<p><strong>How to do it:</strong></p>
+<p>To do squats for belly fat loss, stand with feet apart. Bend your knees to lower yourself as if you are sitting on an invisible chair. Keep your chest up. Breathe out, and push through your heels to stand back up. If you prefer and are able to, you can also jump up after the squat.</p>
+<p><strong>Try this:</strong></p>
+<p>Three sets of 12-15 squats (you can do fewer reps than this in the beginning). Rest for 30-60 seconds between sets.</p>
+<p><strong>Why it's good:</strong></p>
+<p>Bodyweight squats enhance hip strength, make your core stable, and reduce the tightness in the lower back. They make your hips more flexible and protect the spine from injury. It also helps burn fat even after you're done exercising.</p>
+<div>
+<p><strong>Quick tips:</strong></p>
+<ul>
+<li>Always keep your knees and toes in line.</li>
+<li>Try to tighten your tummy when you move.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?auto=format&fit=crop&w=1200&q=80" alt="Workout" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+<div>
+<span>5. Push-ups</span>
+<p><strong>How to do it:</strong></p>
+<p>Begin in a plank with your hands slightly wider than your shoulders. Lower your chest toward the floor while keeping your body straight. Push back up to return to the starting position.</p>
+<p><strong>Try this:</strong></p>
+<p>Do three sets of 8-12 push-ups. Keep a gap of 60 seconds in between for rest. </p>
+<p><strong>Why it's good:</strong></p>
+<p>It strengthens your chest, shoulders, arms, and core and helps improve heart health and muscle endurance.</p>
+<div>
+<p><strong>Quick tips:</strong></p>
+<ul>
+<li>Keep your core tight and steady.</li>
+<li>Ask somebody to see if your hips are level and in line with your body.</li>
+<li>Remember to breathe in as you go down and breathe out as you push up.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1554284126-aa88f22d8b74?auto=format&fit=crop&w=1200&q=80" alt="Stretching" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+<div>
+<span>6. Lunges</span>
+<p><strong>How to do it:</strong></p>
+<p>Stand with your feet hip-width apart. Step forward with one leg and lower your hips. Both knees should bend to about 90 degrees. Then, push back to the starting position.</p>
+<p><strong>Try this:</strong></p>
+<p>Do three sets of 10-12 lunges per leg. Switch legs after you do each rep.</p>
+<p><strong>Why it's good:</strong></p>
+<p>It targets different muscles, such as the quadriceps, calves, hamstrings, and glutes. It also improves balance and engages the core.</p>
+<p><strong>Just starting?</strong></p>
+<p>Do your lunges in the same spot (don't step forward). For support, use a wall or chair.</p>
+<div>
+<p><strong>Quick tips:</strong></p>
+<ul>
+<li>Keep your upper body straight while doing the pose.</li>
+<li>The front knee should be in line with your toes. Bend accordingly. </li>
+<li>The heels should bear your weight.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?auto=format&fit=crop&w=1200&q=80" alt="Gym workout" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+<div>
+<span>7. Plank hold</span>
+<p><strong>How to do it:</strong></p>
+<p>Start in a push-up position or on your forearms. Keep your body in a straight line from head to heels. Tighten your core and bottom muscles. Hold. </p>
+<p><strong>Try this:</strong></p>
+<p>Warm yourself up with a single set and hold for 20-30 seconds. Slowly increase the time and sets as you get stronger.</p>
+<p><strong>Why it's good:</strong></p>
+<p>It strengthens the entire core, especially the lower back and abdominals, and improves posture.</p>
+<div>
+<p><strong>Quick tips:</strong></p>
+<ul>
+<li>Keep your hips aligned with your body.</li>
+<li>Always keep your neck relaxed.</li>
+<li>Keep your breathing steady.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<span>High-intensity exercises</span>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80" alt="Fitness" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+<div>
+<span>8. Burpees</span>
+<p><strong>How to do it:</strong></p>
+<p>To perform this aerobic exercise for belly fat loss, stand up straight. Now, squat down and place your hands on the floor. Kick your feet back and assume a plank position (you can do a push-up here if you like.) Bring your feet back close to your hands. Then, jump up and reach your arms above your head.</p>
+<p><strong>Try this:</strong></p>
+<p>Start with three sets of 5-10 burpees. Rest for 60-90 seconds between sets.</p>
+<p><strong>Why it's good:</strong></p>
+<p>This full-body workout burns lots of calories quickly. It's also great for improving strength and cardiovascular (heart and lungs) fitness.</p>
+<div>
+<p><strong>Quick tips:</strong></p>
+<ul>
+<li>Land softly (preferably on a thick yoga mat) to keep your joints safe.</li>
+<li>Maintain steady breathing.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=1200&q=80" alt="Exercise" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+<div>
+<span>9. Mountain climber</span>
+<p><strong>How to do it:</strong></p>
+<p>Begin with a high plank position. Bring one knee towards your chest, then quickly switch legs. It's like running in place in a plank position.</p>
+<p><strong>Try this:</strong></p>
+<p>At first, do it for 30 seconds, then rest for 15 seconds. Repeat this 3-5 times.</p>
+<p><strong>Why it's good:</strong></p>
+<p>It is a good workout for your core, arms, and legs and improves coordination. </p>
+<div>
+<p><strong>Quick tips:</strong></p>
+<ul>
+<li>Keep your hips low and steady.</li>
+<li>Keep your core stable throughout the pose. </li>
+<li>Maintain steady breathing, but don't hold your breath too much.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div>
+<div>
+<span>Yoga exercise to reduce belly fat</span>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1549060279-7e168fcee0c2?auto=format&fit=crop&w=1200&q=80" alt="Cardio" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+<div>
+<span>10. Surya namaskar (sun salutation)</span>
+<p><strong>How to do it:</strong></p>
+<p>It's a set of 12 poses that flow together: you stand, bend, lunge, go into a plank, do a push-up, move into a cobra, downward dog, bend, and return to standing.</p>
+<p><strong>Try this:</strong></p>
+<p>Start slowly with 3-5 rounds. Gradually increase to 10-12 rounds as you get better. </p>
+<p><strong>Why it's good:</strong></p>
+<p>It exercises almost all the major muscle groups of your body and improves flexibility. It helps calm your mind and reduce stress.</p>
+<div>
+<p><strong>Quick tips:</strong></p>
+<ul>
+<li>Sync your breathing with each movement.</li>
+<li>Move slowly and gently.</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div> </div>
+<div>
+<h2>Beginners tips to lose belly fat with exercises</h2>
+<p>Trying out exercises to lose belly fat for beginners? Try these tips to keep it simple:</p>
+<ul>
+<li><strong>Brisk walking:</strong> Start slow and increase the pace gradually. Stop or take a break if it gets too overwhelming for you. Can’t walk outdoors? Walk at home, in your balcony, living room, or even bedroom.</li>
+<li><strong>Jogging/running:</strong> Curate a playlist to set the rhythm for your jog. Run on softer ground like grass to reduce the impact on your joints.</li>
+<li><strong>Jumping rope:</strong> Practice jumping without the rope or use a beaded rope for slow movement and better control.</li>
+<li><strong>Bodyweight squats:</strong> Use a chair or wall for support. Don't go down as far if it's too hard.</li>
+<li><strong>Push-ups:</strong> If regular push-ups overwhelm you, try knee push-ups or support yourself with a wall or a sturdy table.</li>
+<li><strong>Lunges:</strong> Do your lunges in the same spot. For support, use a wall or chair.</li>
+<li><strong>Planks:</strong> Practice with shorter hold times. Use your knees for support.</li>
+<li><strong>Burpees:</strong> Leave out the push-ups initially. Step your feet back one at a time. Instead of running, stand up at the end.</li>
+<li><strong>Mountain climbers:</strong> Start with a slower pace, fewer repetitions, and more rest between sets.</li>
+<li><strong><em>Surya namaskar</em> (sun salutations):</strong> Hold each pose for a shorter time. While forward bending, bend your knees to avoid any strain. Use a chair for support while lunging.</li>
+</ul> </div>
+<div>
+<h2>DIY fitness: Your very own belly fat workout</h2>
+<p>Now, let's combine all these exercises and create a plan that works for you. Whether you're just starting out or you're a fitness pro, here are three belly fat loss workout routines you can choose from.</p>
+<p>You can also customise your plan according to the days of the week that work out best for you.</p>
+<p>To start with, we have a beginner workout routine to reduce belly fat.</p>
+<p>The exercises in this routine are light on your body yet are effective enough to get that adrenaline pumping and keep you motivated with every passing day. </p>
+<div>
+<span>Beginner workout routine to lose belly fat</span>
+<div>
+<div>
+<p><svg height="24" width="24"><path></path><path></path><rect height="18" width="18"></rect><path></path></svg> <strong>Frequency</strong></p>
+<p>3 times a week</p>
+</div>
+<div>
+<p><svg height="24" width="24"><line></line><line></line><circle></circle></svg> <strong>Time spent per session</strong></p>
+<p>20 minutes</p>
+</div>
+</div>
+<div>
+<p><svg height="24" width="24"><path></path></svg> <strong>Exercise routine per session</strong></p>
+<ul>
+<li>Brisk walking for 15 minutes</li>
+<li>10 bodyweight squats</li>
+<li>5 knee push-ups</li>
+<li>Plank hold For 10 seconds</li>
+<li>5 rounds of surya namaskar</li>
+</ul>
+</div>
+</div>
+<p>Now that you have mastered the basic workout routine to get rid of belly fat, why not level up a little bit and try an intermediate workout routine for fat loss?</p>
+<p>The exercises in this routine are the same as the exercises in the beginner workout routine, but they are a bit more intense and will give you just the right amount of push to a healthier version of yourself.</p>
+<div>
+<span>Intermediate workout routine to lose belly fat</span>
+<div>
+<div>
+<p><svg height="24" width="24"><path></path><path></path><rect height="18" width="18"></rect><path></path></svg> <strong>Frequency</strong></p>
+<p>4 times a week</p>
+</div>
+<div>
+<p><svg height="24" width="24"><line></line><line></line><circle></circle></svg> <strong>Time spent per session</strong></p>
+<p>30 minutes</p>
+</div>
+</div>
+<div>
+<p><svg height="24" width="24"><path></path></svg> <strong>Exercise routine per session</strong></p>
+<ul>
+<li>Jog for 20 minutes</li>
+<li>15 push-ups</li>
+<li>20 lunges</li>
+<li>Mountain climbers for 30 seconds</li>
+<li>Plank hold for 30 seconds</li>
+<li>8 rounds of surya namaskar</li>
+</ul>
+</div>
+</div>
+<p>If you have aced the intermediate workout routine and have noticed belly fat loss already, it is time to switch to an advanced workout routine to lose more belly fat. </p>
+<p>The exercises, once again, stay the same, but they will test your commitment to health and fitness. However, stick to the routine and you will see results like never before. So, are you ready?</p>
+<div>
+<span>Advanced workout routine to lose belly fat</span>
+<div>
+<div>
+<p><svg height="24" width="24"><path></path><path></path><rect height="18" width="18"></rect><path></path></svg> <strong>Frequency</strong></p>
+<p>5 times a week</p>
+</div>
+<div>
+<p><svg height="24" width="24"><line></line><line></line><circle></circle></svg> <strong>Time spent per session</strong></p>
+<p>45 minutes</p>
+</div>
+</div>
+<div>
+<p><svg height="24" width="24"><path></path></svg> <strong>Exercise routine per session</strong></p>
+<ul>
+<li>Running or jumping ropes for 30 minutes</li>
+<li>20 burpees</li>
+<li>30 bodyweight squats</li>
+<li>20 push-ups</li>
+<li>Mountain climber for 45 seconds</li>
+<li>Plank hold For 1 minute</li>
+<li>12 rounds of surya namaskar</li>
+</ul>
+</div>
+</div>
+<h3>How to level up your workouts for weight loss:</h3>
+<ul>
+<li><strong>Add 5 minutes</strong> to your cardio each week.</li>
+<li><strong>Increase reps</strong> by 2-3 each week.</li>
+<li><strong>Hold planks</strong> for 5 seconds longer each week.</li>
+<li><strong>Add one more</strong> <em>surya namaskar</em> round to your routine each week.</li>
+</ul>
+<h3>Conclusion</h3>
+<p>Cheers! You've made it all the way to here.</p>
+<p>Getting a flat stomach is about looking good, feeling your best, and maintaining good health. Try these belly fat loss exercises one by one, and you will see the difference. One day, you will look good in that kurta or saree, and you’ll know, it was all worth it.</p>
+<p>To see better, more visible results for belly fat, try the scientifically proven weight loss treatment <a href="weight-loss/index.html">Aktive</a> and lose up to 10% of your body weight in just six months.</p>
+<p>Don't lose heart if you cannot follow all workouts immediately. You simply need to start and keep moving forward. Your body will appreciate every squat, push-up, and burpee you do.</p>
+<p>Just like Rome wasn't built in a day, losing belly fat takes time. With consistency, you will experience changes in how you look and feel. </p> </div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>Why should I mix different exercises?</p>
+<div><p></p><p>Mixing different exercises every day can make it easier to stick to your fitness plan in the long run. When you mix cardio, strength training, and flexibility exercises, you improve your endurance, strength, flexibility, and balance all at once. Combining different exercises can help you lose fat faster. It also reduces the risk of injury by spreading physical stress across various muscle groups and joints.</p></div>
+</li>
+<li>
+<p>How often should I do these exercises to see results?</p>
+<div><p></p><p>To see the results of your efforts, try to follow these workouts at least 3-5 times a week. The key is to stay consistent and gradually increase the intensity as you progress. As everyone's body is different, so it might take a few weeks to start noticing changes. Pairing your workouts with a healthy diet will help you see results faster.</p> </div>
+</li>
+<li>
+<p>How can I lose belly fat in a week?</p>
+<div><p></p><p>It is not possible to lose belly fat in a week. To dissolve accumulated fat, long-term consistency is key. Exercising at least thrice a week without fail and taking weight loss treatment plans such as Aktive will help you reduce belly fat at home in a healthier way.</p></div>
+</li>
+<li>
+<p>How to reduce belly fat without exercise?</p>
+<div><p></p><p>Unfortunately, you cannot reduce belly fat without exercise. Unless you follow the CICO method, or the ‘Calories in, Calories out' method, your body will not use the accumulated fat in as energy to survive, and so, there will be no fat loss. You will have to follow a proper exercise routine and eat right to reduce belly fat.</p> </div>
+</li>
+<li>
+<p>Can I lose belly fat by doing only yoga?</p>
+<div><p></p><p>Yoga is great for flexibility, stress relief, and mindfulness. However, on its own, it may not be enough to lose belly fat. You can combine yoga with cardio and strength training to experience the benefits of improved strength and flexibility. These activities burn more calories and help you shed overall body fat, including belly fat.</p></div>
+</li>
+<li>
+<p>Is it necessary to go to a gym for these exercises?</p>
+<div><p></p><p>No, you don't need to exercise in a gym to reduce belly fat. Most of these can be done at home with little or no equipment. A lot of bodyweight workouts, yoga, and basic cardio can be done from the comfort of your home. If you like using weights or machines, sure, a gym offers more options, but it's not mandatory to be there.</p></div>
+</li>
+<li>
+<p>How long will it take to see results from these exercises?</p>
+<div><p></p><p>The golden word here is patience. It depends on when you start working out, how balanced your diet is, and how consistent you are. Generally, you might start noticing a reduction in belly fat in 4-6 weeks. Focus on inch loss, don't obsess over the numbers on the scale, and you'll be good to go.</p> </div>
+</li>
+<li>
+<p>Can I do these exercises if I have back pain?</p>
+<div><p></p><p>Yes, but be careful. If you have back pain, always pick the low-impact versions of standard workouts to avoid strain. It's also wise to consult a doctor or physical therapist for personalised advice.</p></div>
+</li>
+<li>
+<p>What if I exercise too much?</p>
+<div><p></p><p>Overexercising has its pitfalls. In a bid to lose belly fat faster, you might exert too much pressure on your body with too many exercises. But doing so can cause Rhabdomyolysis, a condition in which muscle tissue breaks down and releases kidney-damaging protein due to overexertion.</p>
+<p>It is always advisable to exercise only as much as your body allows you to. Listen to your body and know when to stop. Fat loss will happen if you are gradual and committed.</p></div>
+</li>
+<li>
+<p>What should I do if I do not lose weight even after exercising consistently?</p>
+<div><p></p><p>This is a possible scenario. If you aren't losing weight even after exercising regularly, you might be missing out on key aspects of weight loss, such as diet and rest. Eat right, eat well, and get enough rest to let exercise affect your weight. Your <em>sabzis,</em> <em>dals,</em> <em>chapatis</em> are all good sources of protein, fibre, and vitamins. Eat these foods to see better results.</p>
+<p>You might also have an underlying medical issue, such as thyroid, diabetes, or PCOS. Your medicines might also be making you gain weight as a side effect. You should contact your doctor in that case and figure out what exactly it is that is stopping you from gaining weight.</p></div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>April, 25 2025</strong></p><p>Publish date <strong>January, 15 2025</strong></p></div> </div>
+<div>
+<p><strong>References:</strong></p>
+<ul>
+<li>[1] Chaudhary, M., &amp; Sharma, P. (2023). Abdominal obesity in India: analysis of the National Family Health Survey-5 (2019–2021) data. <em>The Lancet Regional Health - Southeast Asia,</em> 14, 100208. <a href="https://doi.org/10.1016/j.lansea.2023.100208">https://doi.org/10.1016/j.lansea.2023.100208</a></li>
+<li>[2] Mittal, B. (2019). Subcutaneous adipose tissue &amp; visceral adipose tissue. <em>The Indian Journal of Medical Research,</em> 149(5), 571. <a href="https://doi.org/10.4103/ijmr.ijmr_1910_18">https://doi.org/10.4103/ijmr.ijmr_1910_18</a></li>
+</ul> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

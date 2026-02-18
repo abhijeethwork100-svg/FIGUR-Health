@@ -1,0 +1,865 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>9 almost zero-calorie foods that’ll help you lose weight | Figur Health</title>
+  <meta name="description" content="Discover 9  low-calorie foods that keep you full longer. From cucumber to bell peppers, learn which foods support weight loss without counting every calorie."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Nutrition</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">15 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>9 almost zero-calorie foods that’ll help you lose weight</h1>
+        <p class="article-hero__desc">Discover 9  low-calorie foods that keep you full longer. From cucumber to bell peppers, learn which foods support weight loss without counting every calorie.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+<div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80" alt="Low calorie foods" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>9 almost zero-calorie foods that’ll help you lose weight</h1>
+</div>
+<p>
+</p>
+<p><em>Zero-calorie foods</em>. Sounds like a dream, doesn't it?</p>
+<p>But here’s the thing…except for plain water, no food is truly calorie-free.</p>
+<p>But that doesn't mean you cannot find healthy, low-calorie foods in your kitchen.</p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="zero-calorie-foods.html#key-takeaways">Key takeaways</a></li>
+<li><a href="zero-calorie-foods.html#what-are-zero-calorie-or-low-calorie-foods">What are zero-calorie or low-calorie foods?</a></li>
+<li><a href="zero-calorie-foods.html#why-do-we-need-zero-calorie-or-low-calorie-foods">Why do we need zero-calorie or low-calorie foods?</a></li>
+<li><a href="zero-calorie-foods.html#9-best-low-calorie-foods-to-try-for-weight-loss">9 best low-calorie foods to try for weight loss</a></li>
+<li><a href="zero-calorie-foods.html#how-to-eat-low-calorie-foods-smartly">How to eat low-calorie foods smartly?</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways</h2>
+<div>
+<ul>
+<li><strong>Only water has zero calories</strong>.</li>
+<li>Low-calorie foods are rich in water and fibre.</li>
+<li>These foods don’t burn fat, but they support weight loss when paired with a balanced diet.</li>
+<li>Eating low-calorie foods can reduce cravings and make you feel full.</li>
+</ul>
+</div>
+<p>If you're trying to eat lighter without feeling starved, these low-calorie foods deserve a permanent place on your plate.</p>
+<p>Read this list to discover <strong>everyday foods that are low in calories</strong> and are readily available at your local vegetable market. Nothing fancy, nothing gourmet, nothing pricey. It’s affordable and accessible.</p>
+<p>So, are you ready to discover a more innovative way to stay healthy?</p> </div>
+<div>
+<h2>What are zero-calorie or low-calorie foods?</h2>
+<p><strong>First things first: no fruit, vegetable, or dish is truly "zero calorie."</strong> The only real zero-calorie ingredient is plain water.</p>
+<p><strong>So, what are low-calorie foods?</strong></p>
+<p>There isn't a fixed definition, but here’s a general idea.</p>
+<p>Low-calorie foods, as the name suggests, are foods that contain <strong>very few calories per serving</strong>. They can add volume, fibre, or water to your meal.</p>
+<p>If images of a cucumber or a watermelon are floating in your mind, you are on the right track.</p>
+<p>You can eat these foods in larger quantities and still fulfil your daily calorie goals.</p>
+<p>However, keep in mind that these foods do not help you burn fat on their own. They only support weight loss when consumed as part of a healthy, balanced diet.</p>
+<p>Basically, low-calorie foods <strong>make you feel full</strong> and don’t add up much to your daily calorie intake, so you eat well and don’t crave more food.</p>
+</div>
+<div>
+<h2>Why do we need zero-calorie or low-calorie foods?</h2>
+<p>We have all grown up with the idea that when we eat less, we lose more weight.</p>
+<p>However, the truth is that when we starve ourselves, we end up feeling hungrier, more tired, and more prone to cravings. And that isn't sustainable.</p>
+<p>Here's why eating low-calorie foods is a wise choice:</p>
+<ul>
+<li>We can eat more without overstepping our daily calorie needs.</li>
+<li>They’re rich in fibre, so they digest slowly and keep you satisfied.</li>
+<li>They help manage hunger and stick to your routine.</li>
+<li>They do not restrict your eating habits.</li>
+</ul>
+<p>Without much ado, let’s see which low-calorie foods we need to add to our diet.</p> </div>
+<div>
+<h2>9 best low-calorie foods to try for weight loss</h2>
+<div>
+<table>
+<thead>
+<tr>
+<th>Foods</th>
+<th>Calories</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cucumber (<em>kheera</em>)</td>
+<td>Approx. 10 kcal per 100g</td>
+</tr>
+<tr>
+<td>Spinach (<em>palak</em>)</td>
+<td>Approx. 22-28 kcal per 100g</td>
+</tr>
+<tr>
+<td>Zucchini</td>
+<td>Approx. 16-19 kcal per 100g</td>
+</tr>
+<tr>
+<td>Mushrooms (<em>Khumb/Khumbi/Kukurmutta</em>)</td>
+<td>Approx. 25-31 kcal per 100g</td>
+</tr>
+<tr>
+<td>Watermelon (<em>Tarbuj</em>)</td>
+<td>Approx. 30 kcal per 100g</td>
+</tr>
+<tr>
+<td>Strawberries (<em>Jharber/Hisalu</em>)</td>
+<td>Approx. 33-36 kcal per 100g</td>
+</tr>
+<tr>
+<td>Unsweetened lemon water (<em>Nimbu paani</em>)</td>
+<td>Approx. 15 kcal per 100g lemon</td>
+</tr>
+<tr>
+<td>Unsweetened green tea</td>
+<td>Approx. 3 kcal per cup (236.5ml)</td>
+</tr>
+<tr>
+<td>Bell peppers (<em>Shimla mirch</em>)</td>
+<td>Approx. 17 kcal per 100g</td>
+</tr>
+</tbody>
+</table>
+</div>
+<ul>
+<li>
+<p>1. Cucumber (Kheera)</p>
+<div>
+<div>
+<div><p><strong>Calories:</strong> Approx. 10 calories per 100g</p></div>
+<div>
+<div>
+<p>Crisp, cooling, and made up of over 95% water, <em>kheera</em> is a classic Indian summer staple. It also contains small amounts of potassium and vitamin K, which makes it a great option for hydration and mild electrolyte support.</p>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1563379926898-05f4575a45d8?auto=format&fit=crop&w=1200&q=80" alt="Cucumber" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<p><strong>Did you know?</strong></p>
+<p>Cucumber has been cultivated for over 3,000 years. It was even used in ancient Indian and Egyptian cultures as a cooling remedy!</p>
+</div>
+<br/>
+<p><strong>How to add it to your diet:</strong></p>
+<ul>
+<li>Chop and mix with other veggies to make <em>kachumber/koshimbir</em>.</li>
+<li>Dip in hung curd and enjoy.</li>
+<li>Blend into a refreshing mint <em>chaas</em>.</li>
+<li>Add it to the <em>thalipeeth</em> dough and roast as usual.</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<p>2. Spinach (Palak)</p>
+<div>
+<div>
+<div><p><strong>Calories:</strong> Approx. 22-28 calories per 100g</p></div>
+<div>
+<div>
+<p>The bright green foliage of <em>palak</em> is a powerhouse of iron, folate, and vitamin A.</p>
+<p>Popeye’s favourite food adds bulk, fibre, and colour to your plate,  nourishing you well.</p>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80" alt="Spinach leaves" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<p><strong>How to add it to your diet:</strong></p>
+<ul>
+<li>Add to <em>dals</em> and <em>sabzi</em>.</li>
+<li>Use the puree in soup.</li>
+<li>Knead into your <em>rotis</em> or <em>theplas</em>.</li>
+<li>Make nutritious baked green <em>kebabs</em>.</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<p>3. Zucchini (Courgette)</p>
+<div>
+<div>
+<div><p><strong>Calories:</strong> Approx. 16-19 calories per 100g.</p></div>
+<div>
+<div>
+<p>Light, juicy, and mild in taste, zucchini is a vegetable that is steadily growing in popularity across India. It is rich in antioxidants (like lutein and zeaxanthin), folate, potassium, vitamin C, and fibre. It has nearly 95% water, and almost no fat!</p>
+<p>The best part is that zucchini can easily be incorporated into Indian dishes, making it perfect for days when you want to eat more volume but stay within your calorie limit.</p>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80" alt="Zucchini" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<p><strong>How to add it to your diet:</strong></p>
+<ul>
+<li>Slice and add to stir-fries with <em>paneer</em> or tofu.</li>
+<li>Spiralise into noodles and pair with a simple tomato-onion gravy.</li>
+<li>Grate into <em>the cheela</em> or oats batter.</li>
+<li>Add cubed zucchini to soups, stews, or mixed veggie <em>sabzi</em>.</li>
+<li>Stuff with cooked dal or millet mix, sprinkle masalas, and bake small cutlets.</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<p>4. Mushrooms (Khumb/Khumbi/Kukurmutta)</p>
+<div>
+<div>
+<div><p><strong>Calories:</strong> Approx. 25-31 calories per 100g</p></div>
+<div>
+<div>
+<p>Earthy, chewy, and surprisingly filling, mushrooms are rich in B vitamins, selenium, and antioxidants.</p>
+<p>Interestingly, when exposed to sunlight, they’re also one of the rare vegetarian sources of vitamin D!</p>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80" alt="Mushrooms" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<p><strong>How to add it to your diet:</strong></p>
+<ul>
+<li>Use it as a delicious addition to stir-fries.</li>
+<li>Make <em>masala</em> mushroom <em>bhurji</em> or cook with mixed vegetables.</li>
+<li>Enjoy as mushroom soup seasoned with pepper and oregano for flavour.</li>
+</ul>
+<div>
+<strong>Pro tip:</strong>
+<p>Most of the vegetables mentioned above pair well with grilled or raw paneer. With just the right amount of <a href="100g-paneer-protein-and-calories.html">protein and calories in 100g <em>paneer</em></a>, this white delight can cover a huge portion of your daily protein needs.</p>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<p>5. Watermelon (Tarbuj)</p>
+<div>
+<div>
+<div><p><strong>Calories:</strong> Approx. 30 calories per 100g</p></div>
+<div>
+<div>
+<p>If there’s something that makes water blush red, it’s watermelon. It is over 90% water, naturally sweet, and just what your body craves on a hot day.</p>
+<p>It’s also a source of vitamin C and lycopene (a powerful antioxidant).</p>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?auto=format&fit=crop&w=1200&q=80" alt="Watermelon" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<strong>Fun fact:</strong>
+<p>Watermelon is technically both a fruit <em>and</em> a vegetable, since it belongs to the cucumber family.</p>
+</div>
+<br/>
+<p><strong>How to add it to your diet:</strong></p>
+<ul>
+<li>Sprinkle <em>kala/sendha namak</em> on watermelon and enjoy as a fruit <em>chaat</em>.</li>
+<li>Blend into a summer cooler (no added sugar).</li>
+<li>You can also experiment with <em>sabzi</em>/curry made from watermelon rinds.</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<p>6. Strawberries (Jharber/Hisalu)</p>
+<div>
+<div>
+<div><p><strong>Calories:</strong> Approx. 33-36 calories per 100g</p></div>
+<div>
+<div>
+<p>Juicy, tangy-sweet, and rich in antioxidants, strawberries are a great source of vitamin C and manganese. Each berry holds almost 200 seeds on the outside!</p>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?auto=format&fit=crop&w=1200&q=80" alt="Fresh strawberries" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<p><strong>How to add it to your diet:</strong></p>
+<ul>
+<li>Mix into curd bowls.</li>
+<li>Blend into smoothies.</li>
+<li>Freeze into tiny popsicles.</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<p>7. Unsweetened lemon water (Nimbu pani)</p>
+<div>
+<div>
+<div><p><strong>Calories:</strong> Approx. 15 calories per 100g lemon</p></div>
+<div>
+<div>
+<p>Lemon water is that easy, everyday habit that reduces your cravings, improves digestion, and adds vitamin C with every sip.</p>
+<p>In ancient Rome, lemons were so prized that they were considered a symbol of luxury!</p>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80" alt="Lemon water" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<p><strong>How to add it to your diet:</strong></p>
+<ul>
+<li>Sip warm in the morning or after meals with <em>jeera</em>, mint, or <em>ajwain</em>.</li>
+</ul>
+<br/>
+<div>
+<p>Short on time and looking for a light yet filling breakfast? A veggie-loaded poha with peanuts and a squeeze of lemon is the perfect low-calorie breakfast.</p>
+<p><strong>Read:</strong> Here's how you can <a href="poha-benefits.html">enjoy <em>poha</em> smartly for weight loss</a>.</p>
+</div>
+</div>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<p>8. Unsweetened green tea</p>
+<div>
+<div>
+<div><p><strong>Calories:</strong> Approx. 3 calories per cup (236.5ml)</p></div>
+<div>
+<div>
+<p>Green tea has become a ritual for many during tea breaks. This is thanks to its light taste and antioxidant content. It is rich in catechins, which work as a metabolism booster.</p>
+<p>Bonus? You can steep the same leaves 2–3 times and enjoy your tea multiple times.</p>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1200&q=80" alt="Green tea" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<p><strong>How to add it to your diet:</strong></p>
+<ul>
+<li>Drink plain or infuse with <em>tulsi</em>, ideally on an empty stomach or between meals.</li>
+</ul>
+<p>Try these <a href="indian-homemade-drinks-for-weight-loss.html">7 best Indian homemade drinks</a> for weight loss to stay refreshed and energised without overloading on calories.</p>
+</div>
+</div>
+</li>
+</ul>
+<ul>
+<li>
+<p>9. Bell peppers (Shimla mirch)</p>
+<div>
+<div>
+<div><p><strong>Calories:</strong> Approx. 17 calories per 100g</p></div>
+<div>
+<div>
+<p>Crunchy and colourful, bell peppers are a good choice if you are looking to add volume without the calories.</p>
+<p>Red and yellow peppers have the most antioxidants, while green ones offer a slightly earthy, traditional flavour.</p>
+<p>Bell peppers are a good source of fibre, vitamins A &amp; C, and have a low glycaemic index. This makes them ideal for keeping you full and managing cravings.</p>
+<p>They are easy to cook and make Indian, Asian or continental dishes yummier.</p>
+</div>
+<div>
+<img src="https://images.unsplash.com/photo-1498837167922-ddd27525d352?auto=format&fit=crop&w=1200&q=80" alt="Bell peppers" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<p><strong>How to add it to your diet:</strong></p>
+<ul>
+<li>Add to stir-fries with mushrooms or paneer.</li>
+<li>Use in <em>upma, poha,</em> or omelettes.</li>
+<li>Roast and blend into a smooth red bell pepper <em>chutney</em> or soup.</li>
+<li>With millet <em>khichdi</em> or fried rice.</li>
+<li>Slice and dip into hummus or hung curd.</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+<div>
+<p><strong>A spicy bonus</strong></p>
+<p>Who said spices can’t have fun? Eating healthy does not mean your food should taste bland. So let’s open that <em>masala-dani</em> and elevate the taste.</p>
+<p>P.S. These spices are also sure to support your weight loss efforts.</p>
+<ul>
+<li><strong><em>Dalchini</em> (cinnamon):</strong> A sweet-smelling spice that helps curb sugar cravings and keeps your blood sugar stable. Add a pinch to tea or oats when you want something sweet but light.</li>
+<li><strong><em>Jeera</em> (cumin):</strong> A go-to for bloating and sluggish digestion. Sip <a href="jeera-water-benefits.html"><em>jeera</em> water</a> on an empty stomach or use it in <em>tadkas</em> and <em>chaas</em> (as jeera powder).</li>
+<li><strong><em>Ajwain</em> (carom seeds):</strong> That bitter kick you taste in <em>parathas</em>? <em>Ajwain</em> is also known to ease acidity and support fat digestion. You can add these seeds to <em>rotis</em> or steep a teaspoon with warm water after a heavy meal.</li>
+</ul>
+</div>
+</div>
+<div>
+<h2>How to eat low-calorie foods smartly?</h2>
+<p>You’ve got your hand on a low-calorie food. But the trick lies in eating them smartly. Here’s what you can do to consume your low-calorie foods more effectively.</p>
+<ul>
+<li>Begin with a sprout salad or pair sautéed veggies alongside your main meal.</li>
+<li>Cook gravies using tomatoes and onions instead of cream or butter.</li>
+<li>Avoid deep-fried options, such as <em>pakoras</em>, <em>samosas</em>, and <em>puris</em>, for everyday meals.</li>
+<li>Go easy on <em>ghee</em> and oil (even in <em>tadkas</em>).</li>
+<li>Hydrate smartly with buttermilk, <em>jaljeera</em>, or coconut water instead of sugary drinks.</li>
+<li>Choose roasted snacks like <em>makhana</em> or <em>chana</em> over fried munchies.</li>
+<li>Use methods like steaming, grilling, roasting, sautéing, or pressure cooking instead of frying.</li>
+<li>Switch to non-stick pans or <em>tawas</em> to cut down your oil use naturally.</li>
+</ul>
+<div>
+<strong>Time to ‘fill up’</strong>
+<p>Weight loss doesn't mean starving yourself. When you focus on the right foods in the right combinations, your meals can be both delicious and healthy.</p>
+<p>Traditional low-calorie foods can absolutely support your weight loss plans. You simply need to know how to use them wisely.</p>
+<p>Eating a healthy diet is one aspect of weight loss. But a structured approach that prioritises your food habits, movement, and recovery can make all the difference.</p>
+<p>If you are looking for a weight loss plan that actually works for you, try Aktive.</p>
+<a href="quiz%3Fc=1.html">Check eligibility</a>
+</div> </div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>How many calories should I eat daily?</p>
+<div><p></p><p>Your daily calorie intake depends on several factors, including age, weight, activity level, and your specific fitness goals.</p>
+<p>Typically, it is recommended that women consume between 1,200 -1,600 calories per day, while men may need 1,500 -1,800 calories.</p>
+<p>However, instead of worrying about numbers, you can manage your calorie intake by creating balanced meals and monitoring your portions.</p>
+<p>Adding more foods that are high in water and fibre can reduce your hunger and keep you full for longer.</p></div>
+</li>
+<li>
+<p>Can I eat more if I eat low-calorie foods?</p>
+<div><p></p><p>Yes. That’s the beauty of it.</p>
+<p>Low-calorie, high-volume foods like <em>lauki</em>, cucumber, spinach, and clear soups allow you to eat <em>more</em> food and feel full, all while staying within your calorie target.</p>
+<p>However, a diet consisting exclusively of low-calorie foods may not keep you full or provide sufficient nutrition.</p>
+<p>For this reason, you will need to balance your meals with a combination of protein, carbohydrates, and healthy fats.</p></div>
+</li>
+<li>
+<p>Can I eat these low-calorie foods every day?</p>
+<div><p></p><p>Yes, you can.</p>
+<p>Vegetables like <em>kheera</em>, spinach, <em>lauki</em>, and mushrooms are meant for daily eating. They are light, hydrating, and full of fibre and micronutrients.</p>
+<p>Just keep variety in your meals and pair these vegetables with protein (<em>such as dal, paneer</em>, or curd) and healthy carbs like multigrain <em>roti</em> or brown rice. That is enough for balanced nutrition.</p></div>
+</li>
+<li>
+<p>Are low-calorie foods enough for nutrition, or do I need supplements?</p>
+<div><p></p><p>Low-calorie foods are great, but they are not enough on their own.</p>
+<p>Vegetables and fruits can give you fibre and micronutrients, but they are low in protein and healthy fats. These are two things your body needs every day.</p>
+<p>Every meal should include:</p>
+<ul>
+<li>Low-calorie vegetables for fibre and vitamins.</li>
+<li>A protein source (<em>dal, paneer</em>, curd, eggs).</li>
+<li>Healthy carbs like multigrain <em>roti</em> or brown rice.</li>
+<li>A small amount of healthy fat from <em>ghee</em>, nuts, or seeds.</li>
+</ul>
+<p>If you eat a varied Indian diet that covers all food groups, supplements are usually not needed unless you have a specific deficiency.</p>
+<p>However, if you are severely restricting calories or avoiding entire food groups, consult your doctor to determine if you may need vitamin B12, vitamin D, iron, or calcium supplements.</p></div>
+</li>
+<li>
+<p>What are empty-calorie foods?</p>
+<div><p></p><p>These are foods that provide calories but are low in nutrients. Some examples are:</p>
+<ul>
+<li>Sugar</li>
+<li>Soft drinks</li>
+<li>Energy drinks</li>
+<li>Fried snacks</li>
+<li>Desserts</li>
+<li>Bakery items</li>
+<li>Processed foods</li>
+</ul>
+<p>They often sneak into the diet through <em>chai</em>-time cravings or during celebrations/festivities. To cut down their intake, you can replace them with whole foods or roasted snacks.</p></div>
+</li>
+<li>
+<p>What are negative-calorie foods?</p>
+<div><p></p><p><strong>Negative-calorie foods are a myth.</strong></p>
+<p>Even low-calorie foods like <em>lauki</em>, tomatoes, <em>palak</em>, or mushrooms do not make your body burn more calories than they contain. The thermic effect of food is too small for that.</p>
+<p>For a food to become “negative,” your body would need to burn more than 100 percent of its calories during digestion, which is impossible. Therefore, the concept lacks scientific backing.</p></div>
+</li>
+<li>
+<p>What is volume eating?</p>
+<div><p></p><p>Volume eating means consuming more foods that have a high bulk (due to fibre or water), but very few calories.</p>
+<p>This includes raw veggies, leafy greens, clear soups, and fruits with high water content. It helps you eat more, feel full, and still stay within your calorie limit.</p></div>
+</li>
+<li>
+<p>How do I make a complete Indian meal under 300 calories?</p>
+<div><p></p><p>You can try these meal combinations:</p>
+<ul>
+<li>1 small multigrain <em>roti</em> with a bowl of <em>lauki sabzi</em> and a cup of <em>dal</em>, and cucumber salad.</li>
+<li>1 bowl of <em>dal</em>, a small portion of rice and some salad.</li>
+<li>1 <em>ragi roti</em>, 1 cup <em>bhindi sabzi</em>, and 1-1.5 cups of <em>moong dal</em>.</li>
+<li>2 <em>idlis</em> + <em>sambar</em>.</li>
+<li>Millet-based <em>khichdi</em> + salad.</li>
+</ul></div>
+</li>
+<li>
+<p>Can I drink lemon water multiple times a day for faster weight loss?</p>
+<div><p></p><p><strong>You can have plain lemon water 2–3 times a day</strong> if it suits your digestion.</p>
+<p>Although it doesn’t directly melt fat, it reduces bloating and helps control your appetite. It also keeps you hydrated.</p>
+<p>Lemon water is a good replacement for sugary <em>chai</em> or juices. But overdoing it can be harmful to your digestion and teeth.</p></div>
+</li>
+<li>
+<p>Why am I not losing weight even with low-calorie foods?</p>
+<div><p></p><p>Eating low-calorie foods is a <strong>key aspect of weight loss</strong>.</p>
+<p>However, a variety of factors also have an impact on weight loss, such as:</p>
+<ul>
+<li>Hidden calories from oils, snacks, or dressings.</li>
+<li>Underlying health issues that affect your metabolism or ability to stay fit.</li>
+<li>Not exercising enough.</li>
+<li>Overeating foods that seem "healthy," such as nuts, homemade snacks, or smoothies.</li>
+<li>Changing your daily routine frequently, which can make it challenging to stay consistent.</li>
+</ul>
+<p>In fact, starving yourself or not consuming enough protein can trigger your body into survival mode, making it even more challenging to lose weight.</p>
+<p>Is your diet low-calorie but not protein-rich? Explore our <a href="high-protein-indian-diet-plan.html">7-day protein-rich diet plan for weight loss</a>, pair it with low-calorie foods, and watch the magic happen.</p>
+<p>If the scale isn’t moving despite your efforts, consider consulting a dietitian to identify any nutritional gaps or underlying issues.</p></div>
+</li>
+<li>
+<p>Do I need to count calories if I eat these low-calorie foods?</p>
+<div><p></p><p>Not really, but a little awareness can be helpful.</p>
+<p>Low-calorie, high-volume foods naturally stop you from overeating because they fill you up quickly. If half your plate is vegetables like <em>kheera</em>, <em>palak</em>, or <em>lauki</em>, you are already on the right path.</p>
+<p>What you still need to watch out for are the calorie-dense foods.</p>
+<p>Excessive oil consumption while cooking or overeating dry fruits or <em>paneer</em>, because they are considered "healthy", can add up faster than you think.</p>
+<p>So start with portion control and good food choices instead of counting every calorie.</p>
+<p>If your weight loss slows down, tracking your food intake for a week or two can help identify hidden calories.</p></div>
+</li>
+<li>
+<p>Should I avoid rice altogether if I want to lose weight?</p>
+<div><p></p><p><strong>Not at all</strong>.</p>
+<p>It’s about quantity and what you eat with it. Instead of a full plate, try half a <em>katori</em> of rice with <em>sabzi</em>, <em>dal</em>, and salad.</p>
+<p>Swap regular white rice with brown rice, red rice, <em>poha</em>, <em>daliya</em>, or millet varieties for more fibre.</p></div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>January, 12 2026</strong></p><p>Publish date <strong>January, 12 2026</strong></p></div> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

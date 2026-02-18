@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The science of GLP-1 | Figur Health</title>
+  <meta name="description" content="Understand the science of GLP-1 medications for weight loss. Learn how they work, their benefits, side effects, and the science behind their success."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Science</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">7 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>The science of GLP-1</h1>
+        <p class="article-hero__desc">Understand the science of GLP-1 medications for weight loss. Learn how they work, their benefits, side effects, and the science behind their success.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="content-wrapper">
+<h2>What are GLP-1 medications?</h2>
+<div>
+<p>GLP-1 drugs refer to <strong>glucagon-like peptide-1 receptor agonists,</strong> also known as GLP-1 analogues or incretin mimetics. </p>
+<p>You may have heard of brands like <a href="wegovy-for-weight-loss.html"><strong>Wegovy</strong> </a>,<a href="ozempic-for-weight-loss.html"><strong>Ozempic</strong></a>, or <a href="rybelsus-tablets-for-weight-loss.html"><strong>Rybelsus</strong></a>, made popular by Hollywood and Bollywood celebrities. These are GLP-1 treatments (containing <strong>Semaglutide</strong>) that can accelerate your weight loss journey by affecting your hunger levels and your metabolism. </p>
+<p>GLP-1 medicines must be used long-term, in conjunction with exercise and a sensible diet, in order to achieve maximum results. Many people choose to take them in tablet form so as to avoid self-injection and because it’s quick and easy. However, it is also possible to inject GLP-1 agonists once per week.</p>
+<p>Over time, you slowly increase the dosage level, giving your body plenty of time to adjust. Higher doses of GLP-1 offer greater weight loss results.</p> </div>
+<h2>The discovery of GLP-1 </h2>
+<div>
+<ul>
+<li><span>1987</span>
+<p><strong>Positive side effect diabetes</strong></p>
+<p>Originally, GLP-1 agonists were created to treat diabetes. People with diabetes have too much sugar in their blood, and GLP-1 drugs help by increasing incretin hormone levels that stimulate insulin production. Insulin is required to bring blood sugar levels down, by letting sugar become absorbed from the blood into nearby cells. </p>
+</li>
+<li><span>2000</span>
+<p><strong>Testing effect on digestion</strong></p>
+<p>When testing the effect of GLP-1 agonists, it was also discovered that they reduced the rate of digestion and slowed down stomach emptying. This caused a decrease in appetite and led many trialled patients to lose weight. </p>
+</li>
+<li><span>2014</span>
+<p><strong>Approved for weight loss</strong></p>
+<p>It wasn’t until many years of further testing that the first GLP-1 drug was approved for the treatment of weight loss in obese individuals. It has since worked to help thousands of people across the globe achieve their weight loss goals. </p>
+</li>
+</ul> </div>
+<h2>The science of GLP-1: How does it work?</h2>
+<div>
+<p>GLP-1 drugs work to aid in weight loss by doing several different things. They work by:</p>
+<div>
+
+<p><strong>Suppressing your usual appetite:</strong></p>
+</div>
+<p>Your body naturally produces GLP-1 hormones (such as glucagon) in the small intestine. They are responsible for sending your brain the signal that you are full. GLP-1 drugs mimic these naturally occurring hormones by binding to the GLP-1 receptor hormones in the brain. This results in increased feelings of fullness.</p>
+<div>
+
+<p><strong>Slowing down gastric emptying:</strong></p>
+</div>
+<p>GLP-1 also acts on the stomach and slows down the rate at which it empties its contents into the small intestine. This delayed gastric emptying can help you feel full longer after eating, reducing the frequency of meals and snacks.</p>
+<div>
+<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80" alt="Blood sugar management" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+<p><strong>Regulating blood sugar:</strong></p>
+</div>
+<p>GLP-1 drugs have a glucose-lowering effect by enhancing insulin secretion from pancreatic beta cells and inhibiting glucagon release. When blood sugar levels are better controlled, it can reduce cravings for high-calorie, sugary foods, which aids in successful weight loss.</p>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fp=1&amp;c=1.html">Do I qualify?</a>
+</div> </div>
+<h2>Is GLP-1 scientifically proven?</h2>
+<div>
+<p>GLP-1 treatments have been thoroughly researched and studied since they were released in the 2000s. </p>
+<p>One <a href="https://www.nejm.org/doi/10.1056/NEJMoa2032183">study</a> taken on just under 2,000 obese people (with a BMI of 30 or above) showcases the effectiveness of the drug. It was a <strong>double-blind trial</strong>, meaning that neither the patients nor those conducting the study knew who was taking the GLP-1 treatment, and who was using a placebo. The trial took place over 68 weeks. </p>
+<img alt="An infographic displaying results from a study on Semaglutide" height="441" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/>
+<p>Results found that: </p>
+<ul>
+<li>Over 68 weeks of regularly taking GLP-1 (Semaglutide), the mean change in body weight was  <strong>-14.8% </strong>. </li>
+<li>In contrast to this, people who were taking a placebo drug (and relied on lifestyle changes alone) had a mean change in body weight of  <strong>-2.4% </strong>.</li>
+</ul>
+<div>
+<div>
+<img alt="An infographic displaying average weight lost in a study on Semaglutide " height="409" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="364"/>
+</div>
+<div>
+<p>In kilos, on average:</p>
+<ul>
+<li>The Semaglutide group lost 15.3 kg</li>
+<li>The placebo group lost 2.6kg</li>
+</ul>
+<p>Patients taking Semaglutide lost significantly more weight than those taking the placebo drug - up to 15% of their original body weight.</p>
+</div>
+</div>
+</div>
+<h2>Tablets vs injections</h2>
+<div>
+<p>Semaglutide is available in the form of daily tablets or weekly injections. The type of treatment you use is usually down to preference. </p>
+<p>The following table outlines the key differences between these two types of GLP-1:</p>
+<div>
+<table>
+<thead> <tr>
+<th>Tablets</th>
+<th>Injections</th> </tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<ul>
+<li>Taken once daily </li>
+<li>Available doses: 3 mg, 7 mg, 14 mg </li>
+<li>Must be taken on an empty stomach </li>
+<li>Tablets are quick and easy to take</li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Taken once weekly </li>
+<li>Available doses: 0.25 mg, 0.5 mg, 1 mg, 1.7 mg, 2.4 mg </li>
+<li>Can be taken at any point during the day </li>
+<li>Injections take a little longer to be administered</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td><a href="weight-loss/index.html">View programme</a></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div> </div>
+<h2>How long does it take to start working?</h2>
+<div>
+<p>GLP-1 treatments are not a quick fix. In order for weight loss to be healthy and sustainable, it needs to be slow and steady. There is no miracle cure that will make you lose weight overnight.
+</p>
+<div>
+<div>
+<img alt="An infographic showing progressive weight loss over 12 months" height="291" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="364"/>
+</div>
+<div>
+<p>That being said, you’re likely to start noticing results after the first couple of months of treatment. You know your body best, so you’ll be the first to notice that your clothes are slightly looser, or that parts of your body have decreased in size.</p>
+</div>
+<div>
+<img alt="An infographic showing progressive weight loss over 12 months " height="291" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="364"/>
+</div>
+<div>
+<p>More significant weight loss takes place when you’ve been on treatment for at least six months. This is because, you’ll have stayed in a calorie deficit for a prolonged amount of time, and you’ll have had ample time to increase your semaglutide dose. </p>
+</div>
+<div>
+<img alt="An infographic showing progressive weight loss over 12 months " height="291" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="364"/>
+</div>
+<div>
+<p>Once you reach the maximum maintenance dose, you’ll notice that you’re progressing faster than ever in your journey towards better health.</p>
+</div>
+</div>
+<p>Taking higher doses means that there’s more of the treatment in your system. More GLP-1 means less appetite and fewer calories consumed, which means more weight loss. </p> </div>
+<h2>Importance of doses</h2>
+<div>
+<p>Semaglutide is available in different doses:</p>
+<img alt="An infographic displaying different doses of Semaglutide pens and tablets" height="176" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="364"/>
+<p>It is critical that anyone who starts taking GLP-1 treatment begins on the lowest possible starting dose. Your body needs time to adjust to a new medication - beginning on a higher dose comes with risks.</p>
+<img alt="An infographic showing Semaglutide starting doses" height="176" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="364"/>
+<p>Every four weeks you can increase your dose to the next level up. Your body needs ample time to adjust to the treatment so as to limit your chances of side effects. </p>
+<img alt=" An infographic showing how the dose can only be increased every 4 weeks" height="176" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="364"/>
+<p>It’s very important not to increase your dose sooner, or to skip dosage levels. In this case, your body will not respond as it should. You’ll likely suffer from adverse gastric side effects that may disrupt your progress or put a halt to your weight loss journey altogether. </p> </div>
+<h2>What are the benefits?</h2>
+<div>
+<p>The main benefits of taking GLP-1 medication are weight loss and lower blood glucose levels. </p>
+<p>Weight loss itself has multiple health benefits, including a <strong>lowered risk of</strong>:</p>
+<ul>
+<li>heart disease and heart failure </li>
+<li>stroke</li>
+<li>kidney disease</li>
+<li>type 2 diabetes </li>
+<li>some forms of cancer </li>
+<li>musculoskeletal disorders</li>
+</ul>
+<p>Many of these conditions can become life-threatening.</p>
+<p>By aiding in successful weight loss, GLP-1 treatments can improve your long-term health and reduce your chances of developing serious weight-related health conditions.</p>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+</div> </div>
+<h2>How you can make the most out of GLP-1</h2>
+<div>
+<p>While taking GLP-1 is the first step towards achieving your weight loss goals, you do need to implement certain diet and lifestyle changes in order to get the most out of your treatment.</p>
+<h3>Healthy food</h3>
+<p>It’s important to focus on choosing healthy foods in order to gain the required nutrients from your diet. Eating three chocolate bars a day won't suffice, even if you’re remaining in a calorie deficit. </p>
+<div>
+<table>
+<thead> <tr>
+<th>Foods to choose</th>
+<th>Foods to avoid </th> </tr>
+</thead>
+<tbody>
+<tr>
+<td>
+<ul>
+<li>Lean protein sources (chicken, tofu, lean mince, greek yoghurt, cottage cheese)</li>
+<li>Wholegrains (brown rice over white) </li>
+<li>Healthy fats (olive oil, avocados, fatty fish) </li>
+<li>Vegetables, including dark leafy greens </li>
+</ul>
+</td>
+<td>
+<ul>
+<li>Alcohol (high in sugar)</li>
+<li>Fast food or greasy takeaways </li>
+<li>White, processed carbohydrates (white rice or bread) </li>
+<li>High sugar foods</li>
+<li>Fatty, highly processed meats like salami and bacon </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<h3>Exercise</h3>
+<p>Doing exercise on a regular basis will also help you get the most out of your treatment. We recommend that you do roughly 30 minutes of cardio or weight training two to three times per week. Feel free to start slower and gradually build your fitness levels up. </p> </div>
+<h2>What if it doesn’t work?</h2>
+<div>
+<p>GLP-1 drugs work effectively for the majority of people who use them. However, there are always exceptions. </p>
+<p>If Semaglutide isn’t working for you, it may be a sign that your body doesn’t respond to this type of treatment. It’s unlikely, but it can happen. </p>
+<p>Alternatively, Semaglutide might not work if you experience side effects that are unmanageable. Most people suffer from mild nausea or gastric issues at the start of treatment, before their bodies have had time to adjust. After this period, the side effects subside.</p>
+<p>However, some individuals are not as lucky. They might experience severe side effects throughout treatment, ultimately causing them to give up on GLP-1. </p>
+<div>
+<h2>Take the next step</h2>
+<p>We believe Aktive can really help you towards better health, more energy, and boosting your self-esteem.</p>
+<p>Find out more about our programme or take the quiz to see if you qualify.</p>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fp=1&amp;c=1.html">Do I qualify</a>
+</div>
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

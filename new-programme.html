@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Figur Health Programme — Science-Based Weight Loss</title>
+  <meta name="description" content="Discover how Figur Health's programme works: GLP-1 medication, doctor consultation, and ongoing support. Lose 5× more weight than diet alone." />
+  <link rel="stylesheet" href="shared.css" />
+  <style>
+    .page-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 100px 0 80px;
+      position: relative;
+      overflow: hidden;
+    }
+    .page-hero::after {
+      content: '';
+      position: absolute;
+      width: 600px; height: 600px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.07) 0%, transparent 70%);
+      top: -150px; right: -100px; pointer-events: none;
+    }
+    .page-hero__inner { position: relative; z-index: 1; max-width: 700px; }
+    .page-hero__inner .badge { margin-bottom: 20px; }
+    .page-hero__inner h1 { color: var(--white); font-size: clamp(2rem,4vw,3.2rem); letter-spacing:-0.03em; margin-bottom:20px; }
+    .page-hero__inner p { color: rgba(255,255,255,0.75); font-size:1.1rem; line-height:1.7; max-width:560px; margin-bottom:36px; }
+
+    /* Milestones timeline */
+    .timeline { position: relative; padding-left: 32px; }
+    .timeline::before {
+      content: '';
+      position: absolute;
+      left: 11px; top: 8px; bottom: 8px;
+      width: 2px;
+      background: linear-gradient(to bottom, var(--gold), transparent);
+    }
+    .timeline__item { position: relative; padding-bottom: 40px; }
+    .timeline__item:last-child { padding-bottom: 0; }
+    .timeline__dot {
+      position: absolute;
+      left: -32px; top: 4px;
+      width: 22px; height: 22px;
+      border-radius: 50%;
+      background: var(--gold);
+      border: 3px solid var(--white);
+      box-shadow: 0 0 0 3px rgba(212,175,55,0.2);
+    }
+    .timeline__month { font-size: 0.78rem; font-weight: 700; letter-spacing:0.08em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 6px; }
+    .timeline__title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.05rem; color: var(--navy); margin-bottom: 8px; }
+    .timeline__desc { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; }
+
+    /* Included section */
+    .included-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+    .included-item {
+      display: flex; gap: 16px; align-items: flex-start;
+      background: var(--white); border: 1px solid var(--grey-100);
+      border-radius: var(--radius-md); padding: 24px;
+      transition: all var(--transition);
+    }
+    .included-item:hover { box-shadow: var(--shadow-sm); transform: translateY(-2px); }
+    .included-item__icon {
+      width: 44px; height: 44px; border-radius: var(--radius-sm);
+      background: rgba(212,175,55,0.1); display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; color: var(--gold);
+    }
+    .included-item__title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.95rem; margin-bottom: 6px; color: var(--navy); }
+    .included-item__desc { font-size: 0.875rem; color: var(--text-secondary); line-height: 1.6; }
+
+    /* Comparison table */
+    .compare-table { width: 100%; border-collapse: collapse; font-size: 0.9rem; }
+    .compare-table th, .compare-table td { padding: 14px 20px; text-align: left; border-bottom: 1px solid var(--grey-100); }
+    .compare-table th { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.8rem; letter-spacing:0.06em; text-transform:uppercase; color: var(--grey-500); background: var(--grey-50); }
+    .compare-table th:first-child { border-radius: var(--radius-sm) 0 0 0; }
+    .compare-table th:last-child  { border-radius: 0 var(--radius-sm) 0 0; }
+    .compare-table td:not(:first-child) { text-align: center; }
+    .compare-table tr:last-child td { border-bottom: none; }
+    .compare-table .check { color: #22c55e; font-size: 1.1rem; }
+    .compare-table .cross { color: #ef4444; font-size: 1.1rem; }
+    .compare-table .highlight-col { background: rgba(212,175,55,0.06); font-weight: 600; color: var(--navy); }
+
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start; }
+    .two-col--reverse { }
+
+    @media (max-width: 768px) {
+      .included-grid { grid-template-columns: 1fr; }
+      .two-col { grid-template-columns: 1fr; gap: 40px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img" /></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html" class="active">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="#eligibility" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero">
+    <div class="container">
+      <div class="page-hero__inner">
+        <span class="badge badge--gold">The Programme</span>
+        <h1>The weight loss programme that works</h1>
+        <p>With our unique combination of clinically proven GLP-1 medication, personalised plans, and ongoing medical support, your journey to lasting results starts here.</p>
+        <div style="display:flex;gap:16px;flex-wrap:wrap;">
+          <a href="#how-it-works" class="btn btn--primary btn--lg">See how it works</a>
+          <a href="#eligibility" class="btn btn--outline btn--lg">Check eligibility</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHAT'S INCLUDED -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <span class="badge badge--navy">What you get</span>
+          <h2 style="margin-top:16px;font-size:clamp(1.6rem,2.5vw,2.2rem);letter-spacing:-0.02em;">Everything you need.<br/>All in one programme.</h2>
+          <div class="gold-divider"></div>
+          <p class="text-muted" style="line-height:1.7;margin-bottom:36px;">Figur Health isn't just a prescription — it's a fully supported programme designed to give you the best chance of long-term success.</p>
+          <div class="alert alert--gold">
+            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;margin-top:2px;"><circle cx="9" cy="9" r="7"/><path d="M9 6v4M9 13v.5"/></svg>
+            <span>Members lose on average <strong>21% of their body weight</strong> within 16 months of starting the programme.</span>
+          </div>
+        </div>
+        <div class="included-grid">
+          <div class="included-item">
+            <div class="included-item__icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l2 2 4-4"/><circle cx="11" cy="11" r="9"/></svg>
+            </div>
+            <div>
+              <div class="included-item__title">Medical consultation</div>
+              <div class="included-item__desc">A licensed doctor reviews your health profile and prescribes the right treatment for you.</div>
+            </div>
+          </div>
+          <div class="included-item">
+            <div class="included-item__icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h16M3 12h10M3 16h6"/><rect x="3" y="4" width="16" height="14" rx="2"/></svg>
+            </div>
+            <div>
+              <div class="included-item__title">GLP-1 prescription</div>
+              <div class="included-item__desc">Personalised prescription for Mounjaro, Wegovy, Ozempic, or Rybelsus — whatever suits you best.</div>
+            </div>
+          </div>
+          <div class="included-item">
+            <div class="included-item__icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="18" height="12" rx="2"/><path d="M16 6V4a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><path d="M11 11v4"/><path d="M9 13h4"/></svg>
+            </div>
+            <div>
+              <div class="included-item__title">Home delivery</div>
+              <div class="included-item__desc">Medication dispensed by a registered pharmacist and delivered discreetly to your door, pan-India.</div>
+            </div>
+          </div>
+          <div class="included-item">
+            <div class="included-item__icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 2L11 13 8 9 2 16"/><path d="M15 2h5v5"/></svg>
+            </div>
+            <div>
+              <div class="included-item__title">Progress tracking</div>
+              <div class="included-item__desc">Monitor your weight loss journey with regular check-ins, a weight diary, and dose adjustments.</div>
+            </div>
+          </div>
+          <div class="included-item">
+            <div class="included-item__icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="8" r="4"/><path d="M4 20c0-3.3 3.1-6 7-6s7 2.7 7 6"/></svg>
+            </div>
+            <div>
+              <div class="included-item__title">Weight loss specialist</div>
+              <div class="included-item__desc">Access to a dedicated weight loss specialist who provides ongoing guidance and adjustments.</div>
+            </div>
+          </div>
+          <div class="included-item">
+            <div class="included-item__icon">
+              <svg width="22" height="22" viewBox="0 0 22 22" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 7h14M4 12h10M4 17h7"/></svg>
+            </div>
+            <div>
+              <div class="included-item__title">Meal &amp; fitness plans</div>
+              <div class="included-item__desc">No calorie counting. Simple, realistic Indian meal plans and a light exercise routine to accelerate results.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS STEPS -->
+  <section class="section section--grey" id="how-it-works">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge--navy">Simple process</span>
+        <h2>Achieving your goals is as easy as 1-2-3</h2>
+        <p>From your first medical question to receiving your prescription — the whole process takes as little as 48 hours.</p>
+      </div>
+
+      <div class="grid grid-3" style="gap:32px;">
+        <div class="card card--gold-accent">
+          <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:3rem;color:rgba(212,175,55,0.2);line-height:1;margin-bottom:16px;">01</div>
+          <h3 style="font-size:1.1rem;margin-bottom:12px;">Complete your medical quiz</h3>
+          <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">Answer a short set of medical questions about your health history. Our doctors use this to confirm our treatment is safe and suitable for you.</p>
+        </div>
+        <div class="card card--gold-accent">
+          <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:3rem;color:rgba(212,175,55,0.2);line-height:1;margin-bottom:16px;">02</div>
+          <h3 style="font-size:1.1rem;margin-bottom:12px;">Doctor review &amp; prescription</h3>
+          <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">A licensed Indian doctor reviews your answers and prescribes the most appropriate GLP-1 medication. Your personalised programme is then created.</p>
+        </div>
+        <div class="card card--gold-accent">
+          <div style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:3rem;color:rgba(212,175,55,0.2);line-height:1;margin-bottom:16px;">03</div>
+          <h3 style="font-size:1.1rem;margin-bottom:12px;">Receive &amp; start treatment</h3>
+          <p class="text-muted" style="font-size:0.9rem;line-height:1.7;">Your medication is dispensed and delivered to your door. Take one injection weekly (or daily tablet) and begin your weight loss journey immediately.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WEIGHT LOSS TIMELINE -->
+  <section class="section">
+    <div class="container">
+      <div class="two-col">
+        <div>
+          <span class="badge badge--navy">What to expect</span>
+          <h2 style="margin-top:16px;font-size:clamp(1.6rem,2.5vw,2.2rem);letter-spacing:-0.02em;">Your weight loss journey, month by month</h2>
+          <div class="gold-divider"></div>
+          <p class="text-muted" style="line-height:1.7;margin-bottom:40px;">Results vary by individual, but here's a general guide to what most Figur Health members experience throughout their programme.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__month">Weeks 1–4</div>
+            <div class="timeline__title">Getting started &amp; first signs</div>
+            <div class="timeline__desc">Your body begins adapting to the medication. Most people notice a reduction in appetite within the first week. Early weight loss of 1–2 kg is common.</div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__month">Month 2–3</div>
+            <div class="timeline__title">Momentum builds</div>
+            <div class="timeline__desc">Appetite suppression becomes more consistent. Many members report 3–5 kg of weight loss by the end of month three. Energy levels start improving.</div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__month">Month 4–6</div>
+            <div class="timeline__title">Visible transformation</div>
+            <div class="timeline__desc">Clothing starts fitting differently. Most members see 6–9 kg of weight loss. Dosage is often adjusted here for continued progress.</div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__month">Month 7–12</div>
+            <div class="timeline__title">Sustained progress</div>
+            <div class="timeline__desc">Consistent week-on-week loss. Health markers like blood pressure and blood sugar often improve significantly. Total loss of 10–16 kg is typical.</div>
+          </div>
+          <div class="timeline__item">
+            <div class="timeline__dot"></div>
+            <div class="timeline__month">Month 13–16</div>
+            <div class="timeline__title">Goal achieved</div>
+            <div class="timeline__desc">Clinical trials show an average of 21% body weight reduction at 16 months. Our team transitions you to a maintenance plan to help keep the weight off long term.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMPARISON TABLE -->
+  <section class="section section--grey">
+    <div class="container">
+      <div class="section-header">
+        <span class="badge badge--navy">Why Figur Health?</span>
+        <h2>How we compare</h2>
+        <p>See how Figur Health stacks up against traditional diets and exercise programmes.</p>
+      </div>
+
+      <div style="overflow-x:auto; border-radius:var(--radius-md); border:1px solid var(--grey-100); box-shadow:var(--shadow-sm);">
+        <table class="compare-table">
+          <thead>
+            <tr>
+              <th>What you get</th>
+              <th style="color:var(--gold-dark);background:rgba(212,175,55,0.08);">Figur Health</th>
+              <th>Diet alone</th>
+              <th>Exercise alone</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Average weight loss (6 months)</td>
+              <td class="highlight-col">8–12 kg</td>
+              <td>2–3 kg</td>
+              <td>1–2 kg</td>
+            </tr>
+            <tr>
+              <td>Appetite suppression (medical)</td>
+              <td class="highlight-col"><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+            </tr>
+            <tr>
+              <td>Doctor-supervised plan</td>
+              <td class="highlight-col"><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+            </tr>
+            <tr>
+              <td>Personalised to your health profile</td>
+              <td class="highlight-col"><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+            </tr>
+            <tr>
+              <td>Ongoing support &amp; check-ins</td>
+              <td class="highlight-col"><span class="check">✓</span></td>
+              <td><span class="cross">✗</span></td>
+              <td><span class="cross">✗</span></td>
+            </tr>
+            <tr>
+              <td>Blood sugar &amp; metabolic improvement</td>
+              <td class="highlight-col"><span class="check">✓</span></td>
+              <td>Partial</td>
+              <td>Partial</td>
+            </tr>
+            <tr>
+              <td>Delivered to your door</td>
+              <td class="highlight-col"><span class="check">✓</span></td>
+              <td>—</td>
+              <td>—</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ELIGIBILITY CHECK -->
+  <section class="section" id="eligibility">
+    <div class="container">
+      <div style="max-width:640px; margin: 0 auto; text-align:center;">
+        <span class="badge badge--navy">Check your eligibility</span>
+        <h2 style="margin-top:16px;font-size:clamp(1.8rem,3vw,2.4rem);letter-spacing:-0.02em;">Do I qualify for Figur Health?</h2>
+        <div class="gold-divider gold-divider--center"></div>
+        <p class="text-muted" style="margin-bottom:40px;line-height:1.7;">Our programme is designed for adults with a BMI of 27 or above, or those with weight-related health conditions. Our medical quiz takes 5 minutes and tells you if you're a good fit.</p>
+
+        <div class="grid grid-2" style="text-align:left;margin-bottom:40px;">
+          <div class="card" style="padding:20px;">
+            <div style="font-weight:700;font-size:0.85rem;color:var(--navy);margin-bottom:8px;">✓ You may be eligible if you:</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:0.875rem;color:var(--text-secondary);">
+              <li>• Are 18 years or older</li>
+              <li>• Have a BMI of 27 or higher</li>
+              <li>• Have tried other weight loss methods</li>
+              <li>• Don't have certain medical contraindications</li>
+            </ul>
+          </div>
+          <div class="card" style="padding:20px;background:var(--grey-50);">
+            <div style="font-weight:700;font-size:0.85rem;color:var(--navy);margin-bottom:8px;">✗ Not suitable if you:</div>
+            <ul style="list-style:none;display:flex;flex-direction:column;gap:8px;font-size:0.875rem;color:var(--text-secondary);">
+              <li>• Are pregnant or breastfeeding</li>
+              <li>• Have Type 1 diabetes</li>
+              <li>• Have a history of pancreatitis</li>
+              <li>• Are under 18 years of age</li>
+            </ul>
+          </div>
+        </div>
+
+        <a href="medical-quiz.html" class="btn btn--primary btn--lg">
+          Take the medical quiz
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+        </a>
+        <p style="font-size:0.8rem;color:var(--grey-300);margin-top:16px;">No commitment required. Your information is kept strictly confidential.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Ready to start your journey?</h2>
+      <p>Join thousands of people across India who are losing weight the smart, scientific way. Your first step is free.</p>
+      <a href="#eligibility" class="btn btn--primary btn--lg">Check my eligibility</a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img" /></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul><li><a href="new-programme.html">How it works</a></li><li><a href="new-science.html">The science</a></li><li><a href="mounjaro-injection.html">Mounjaro</a></li><li><a href="wegovy-for-weight-loss.html">Wegovy</a></li><li><a href="ozempic-for-weight-loss.html">Ozempic</a></li><li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li></ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul><li><a href="new-health-guide.html">Health guide</a></li><li><a href="new-success-stories.html">Success stories</a></li><li><a href="new-faqs.html">FAQs</a></li><li><a href="become-partner.html">Become a partner</a></li><li><a href="contact-us.html">Contact us</a></li></ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Cookie Policy</a></li><li><a href="#">Medical Disclaimer</a></li></ul></div>
+      </div>
+      <div class="footer__bottom"><span>© 2025 Figur Health. All rights reserved.</span><span>Medical information on this site is not a substitute for professional medical advice.</span></div>
+    </div>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    const navCta = document.getElementById('navCta');
+    hamburger.addEventListener('click', () => { navLinks.classList.toggle('open'); navCta.classList.toggle('open'); });
+  </script>
+</body>
+</html>

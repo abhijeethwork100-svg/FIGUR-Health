@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wegovy launched in India: What you need to know about it | Figur Health</title>
+  <meta name="description" content="Wegovy, a revolutionary weight loss injection, is now available in India. Find out how it works, who can take it, what it costs, and the side effects."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Wegovy</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">9 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>Wegovy launched in India: What you need to know about it</h1>
+        <p class="article-hero__desc">Wegovy, a revolutionary weight loss injection, is now available in India. Find out how it works, who can take it, what it costs, and the side effects.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+<div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80" alt="Wegovy injection" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>Wegovy launched in India: What you need to know about it</h1>
+</div>
+<p>
+</p>
+<div>
+<p><em>Wegovy = weight loss.</em></p>
+</div>
+<p>Every year, around the world, millions rely on this weekly injection to lose weight and keep it off. </p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="wegovy-injection.html#key-takeaways">Key takeaways:</a></li>
+<li><a href="wegovy-injection.html#wegovy-launched-in-india">Wegovy launched in India</a></li>
+<li><a href="wegovy-injection.html#how-does-wegovy-work">How does Wegovy work?</a></li>
+<li><a href="wegovy-injection.html#how-much-weight-can-you-lose-on-wegovy">How much weight can you lose on Wegovy?</a></li>
+<li><a href="wegovy-injection.html#are-you-eligible-to-take-wegovy">Are you eligible to take Wegovy?</a></li>
+<li><a href="wegovy-injection.html#wegovy-dosages-in-india">Wegovy dosages in India</a></li>
+<li><a href="wegovy-injection.html#how-to-take-wegovy">How to take Wegovy</a></li>
+<li><a href="wegovy-injection.html#does-wegovy-have-any-side-effects">Does Wegovy have any side effects?</a></li>
+<li><a href="wegovy-injection.html#what-are-the-alternatives-to-wegovy">What are the alternatives to Wegovy?</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways:</h2>
+<div>
+<ul>
+<li>Wegovy, a weight loss injectable manufactured by Novo Nordisk, is now approved by the CDSCO in India.</li>
+<li>The injection’s active ingredient, Semaglutide, helps reduce appetite and achieve weight loss.</li>
+<li>Wegovy will be sold in India in 5 doses: 0.25 mg, 0.5 mg, 1 mg, 1.7 mg, and 2.4 mg.</li>
+<li>Overweight or obese Indians with a BMI of more than 27 are eligible to take Wegovy.</li>
+</ul>
+</div>
+<p>But, the average obese person in India had yet to experience how a shot can dissolve his/her weight loss struggle.</p>
+<div>
+<p><strong>🎉 The wait ended on June 25, 2025,</strong> when Danish manufacturer Novo Nordisk officially launched weight loss injection Wegovy in India.</p>
+</div>
+<p>Which means, overweight or obese Indians can now lose weight from the comfort of their homes with this weight loss injection.</p>
+<p>If you are struggling with weight loss, Wegovy might be the solution for you. <strong>No hard diets. No intensive gym sessions -</strong> you can drop your weight with just one injection every week.</p>
+<p>In this article, let us dive deep into:</p>
+<ul>
+<li>What is Wegovy?</li>
+<li>How does it work?</li>
+<li>Does it have any side effects?</li>
+<li>What is Wegovy priced in India?</li>
+</ul>
+<p>Read on to find out.</p> </div>
+<div>
+<h2>Wegovy launched in India</h2>
+<p>After pharmaceutical giant Eli Lilly’s <a href="mounjaro-injection.html">Mounjaro launch in India</a> back in March 2025, global pharmaceutical company Novo Nordisk decided to step up its game by capturing the Indian anti-obesity drug market with Wegovy’s launch.</p>
+<p>Wegovy will be sold in India as a once-weekly <strong>FlexTouch pre-filled injection pen</strong> along with <strong>four disposable needles,</strong> making it easy to use.</p>
+<div>
+<p><strong>Vikram Shrotriya,</strong> Managing Director, Novo Nordisk India, shared, “Obesity is not just a personal health concern - it is a chronic disease and a national epidemic that India cannot afford to ignore. We are bringing Wegovy with the convenience of a world-class, state-of-the-art pen device, and an India-specific price.”</p>
+</div>
+<h3>Is Wegovy already available in India?</h3>
+<p>Wegovy has already launched in India.</p>
+</div>
+<div>
+<h2>How does Wegovy work?</h2>
+<p>Wegovy is made of semaglutide, which is a GLP-1 receptor agonist. Semaglutide mimics the GLP-1 hormone in the body and does the following:</p>
+<div>
+
+<p><strong>Releases insulin</strong></p>
+</div>
+<p>The GLP-1 hormone signals the pancreas to release insulin when blood sugar levels rise. This moves sugar into the cells to generate energy.</p>
+<div>
+
+<p><strong>Slows digestion</strong></p>
+</div>
+<p>The hormone slows down the pace of food movement through the stomach. This results in feeling fuller for longer after eating.</p>
+<div>
+
+<p><strong>Reduces sugar production in the liver</strong></p>
+</div>
+<p>The hormone decreases sugar production in the liver when it is not required.</p>
+<div>
+
+<p><strong>Controls appetite</strong></p>
+</div>
+<p>GLP-1 also affects the areas of the brain that control appetite. As a result, you end up feeling less hungry.</p>
+<p>All these actions eventually lead to gradual weight loss.</p>
+</div>
+<div>
+<h2>How much weight can you lose on Wegovy?</h2>
+<p>Wegovy does help users lose significant weight.</p>
+<p>A <a href="https://www.wegovy.com/about-wegovy/managing-weight-with-wegovy.html#:~:text=of%20adults%20taking,5%25%20taking%20placebo">68-week study</a> was conducted with 1961 participants. These participants were either obese or overweight with at least one obesity-related medical condition.</p>
+<p>Some participants were administered a Wegovy injection along with a reduced-calorie diet and exercise, while others were given a placebo along with diet and exercise.</p>
+<p>The average starting weight of both groups was 105 kg.</p>
+<p>The results at the end of the study were as follows:</p>
+
+<p>However, these figures are not set in stone. Depending on various individual factors, such as your starting weight, medical history, and lifestyle habits, your weight loss journey with Wegovy can look different from other people.</p>
+<p>Patience, diet, and exercise can go a long way in supporting your weight loss efforts with Wegovy.</p>
+</div>
+<div>
+<h2>Are you eligible to take Wegovy?</h2>
+<p>Although Wegovy helps people effortlessly lose weight, can any obese or overweight person take the weight loss injection in India?</p>
+<p>Wegovy is a prescription-only weight loss injection.</p>
+<p>This means you need a doctor’s prescription to take it for weight loss. This also means that your doctor should find it reasonable to prescribe Wegovy to you.</p>
+<div>
+<h3>You are eligible for Wegovy if you have:</h3>
+<p><strong>A BMI of:</strong></p>
+<p>&gt; 30 kg/m2</p>
+<p>&gt; 27 kg/m2 with at least one weight-related medical condition, such as:</p>
+<ul>
+<li>Prediabetes</li>
+<li>Type 2 diabetes</li>
+<li>High blood pressure</li>
+<li>History of heart attack or stroke</li>
+<li>You have type 2 diabetes, and all other forms of medication have failed to manage it</li>
+</ul>
+</div>
+<br/>
+<div>
+<h3>You might not be eligible to take Wegovy if you have:</h3>
+<ul>
+<li>Type 1 diabetes</li>
+<li>Pancreatitis (inflammation in the pancreas)</li>
+<li>Personal or family history of Medullary Thyroid Carcinoma (MTC), a type of thyroid cancer</li>
+<li>Multiple Endocrine Neoplasia Syndrome Type 2 (MEN 2)</li>
+<li>Allergy to Wegovy  or any of the ingredients present in Wegovy</li>
+</ul>
+</div>
+<p>Inform your doctor if any or all of the following apply to you before taking Wegovy:</p>
+<ul>
+<li>You are taking birth control pills</li>
+<li>You have severe problems with your stomach or kidneys, such as gastroparesis (slowed emptying of the stomach)</li>
+<li>You are taking other diabetic medicines, such as sulfonylureas or insulin</li>
+<li>You have a history of diabetic retinopathy (vision issues due to diabetes)</li>
+<li>You are scheduled for surgery that involves anaesthesia or sleep medicines</li>
+<li>You are pregnant or planning to become pregnant</li>
+<li>You are breastfeeding or planning to breastfeed</li>
+</ul> </div>
+<div>
+<h2>Wegovy dosages in India</h2>
+<p>In India, Wegovy will be available in the following dosages: 0.25 mg, 0.5 mg, 1 mg, 1.7 mg, 2.4 mg.</p>
+<p>This is what a usual Wegovy dosage chart looks like:</p>
+<picture>
+<source alt="Dosage chart" height="870" width="750">
+<source alt="Dosage chart" height="696" width="400">
+
+</source></source></picture> </div>
+<div>
+<h2>How to take Wegovy</h2>
+<p>Taking the Wegovy injection for weight loss is quite an easy process.</p>
+<p>Wegovy is available as FlexTouch, a pre-filled injection pen.</p>
+<h3>What’s inside a Wegovy package?</h3>
+<p>Inside a Wegovy package, you get:</p>
+<ul>
+<li>1 pre-filled injection pen</li>
+<li>4 disposable needles</li>
+</ul>
+<p>Wegovy is designed to be taken <strong>once a week.</strong> It is to be taken under the skin (subcutaneously).</p>
+<p><strong>Ideal injection sites for Wegovy:</strong></p>
+<ul>
+<li><strong>Stomach</strong> (2 inches away from the belly button)</li>
+<li><strong>Upper thighs</strong></li>
+<li><strong>Upper arms</strong></li>
+</ul>
+<div>
+<p><strong>Pro tip:</strong></p>
+<p>You can inject Wegovy in the same body part each week, but ensure that you rotate the areas on that particular body part to avoid irritation.</p>
+</div>
+<p>It is advised that you take Wegovy <strong>on the same day, at the same time every week.</strong></p>
+<p>Wegovy can be self-injected. For first-time users, a healthcare professional can demonstrate how to inject Wegovy.</p>
+<!-- <a class="CtaBtn" href="https://www.aktive.co.in/quiz?c=1">How to take Wegovy for weight loss</a> -->
+</div>
+<div>
+<h2>Does Wegovy have any side effects?</h2>
+<p>Every medicine comes with a few side effects. Wegovy is no exception.</p>
+<div>
+<p>
+<strong>Some of the most common Wegovy side effects (occur in more than 1 of 10 people) include:</strong>
+</p>
+<div>
+<div>
+<ul>
+<li>Headache</li>
+<li>Nausea</li>
+<li>Vomiting</li>
+<li>Diarrhoea</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Constipation</li>
+<li>Stomach pain</li>
+<li>Fatigue</li>
+</ul>
+</div>
+</div>
+</div>
+<br/>
+<div>
+<p>
+<strong>Common side effects (affecting 1 in 10 people) include:</strong>
+</p>
+<div>
+<div>
+<ul>
+<li>Feeling dizzy</li>
+<li>Upset stomach</li>
+<li>Burping</li>
+<li>Gas</li>
+<li>Bloating in the stomach</li>
+<li>Gastritis (inflamed stomach)</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Acid reflux or heartburn</li>
+<li>Hair loss</li>
+<li>Injection site reactions</li>
+<li>Change in taste</li>
+<li>Low blood sugar (hypoglycemia) in diabetic patients</li>
+</ul>
+</div>
+</div>
+</div>
+<br/>
+<div>
+<p>
+<strong>Wegovy also has some serious but rare side effects. These include:</strong>
+</p>
+<div>
+<div>
+<ul>
+<li>Pancreatitis (inflammation of the pancreas)</li>
+<li>Gallbladder problems</li>
+<li>Hypoglycemia (low blood sugar)</li>
+<li>Kidney failure</li>
+<li>Vision change in type 2 diabetics</li>
+<li>Increased heart rate</li>
+</ul>
+</div>
+<div>
+<ul>
+<li>Depression/suicidal thoughts</li>
+<li>Allergic reactions (swelling of face, nose, lips)</li>
+<li>Rash</li>
+<li>Difficulty swallowing/breathing</li>
+</ul>
+</div>
+</div>
+</div>
+<p>These side effects usually subside within a few days to a few weeks.</p>
+</div>
+<div>
+<h2>What are the alternatives to Wegovy?</h2>
+<p>The anti-obesity market in India is on a steep rise. Owing to this, many major international pharmaceutical companies are in the race to dominate the region.</p>
+<p>Wegovy isn’t the only weight loss injection available to overweight or obese Indians. Prior to its launch, Eli Lilly entered the market in March 2025 with the weight loss drug <strong>Mounjaro.</strong></p>
+<p>Here is a clear comparison between Mounjaro and Wegovy so you can choose what’s best for your weight loss goals.</p>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Mounjaro</th>
+<th>Wegovy</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Average weight loss</td>
+<td>Upto  <strong>21% body weight</strong> in 16 months<a href="wegovy-injection.html#refid1_39"><sup>[1]</sup></a></td>
+<td>Upto  <strong>15% body weight</strong> in 16 months<a href="wegovy-injection.html#refid2_39"><sup>[2]</sup></a></td>
+</tr>
+<tr>
+<td>When to take</td>
+<td>Once every week</td>
+<td>Once every week</td>
+</tr>
+<tr>
+<td>Available as</td>
+<td>Injection pen (KwikPen)</td>
+<td>Injection pen (FlexTouch)</td>
+</tr>
+<tr>
+<td>Common side effects</td>
+<td>Feeling sick (nausea), vomiting, diarrhoea, stomach pain</td>
+<td>Feeling sick (nausea), vomiting, diarrhoea, fatigue</td>
+</tr>
+<tr>
+<td>Added benefits</td>
+<td>Also helps manage <strong>type 2 diabetes</strong> in people with diabetes</td>
+<td>May help <strong>protect the heart</strong> in people with existing heart conditions</td>
+</tr>
+<tr>
+<td>Active ingredient</td>
+<td>Tirzepatide</td>
+<td>Semaglutide</td>
+</tr>
+<tr>
+<td>How it works</td>
+<td>Mimic GLP-1 and GIP hormones to reduce appetite, control blood sugar, and support weight loss.</td>
+<td>Mimics GLP-1 hormone to reduce appetite and support weight loss.</td>
+</tr>
+</tbody>
+</table>
+<p>If you are on the fence when it comes to Mounjaro vs Wegovy, check this out:</p>
+<!-- <p><a href="https://www.aktive.co.in/">Mounjaro vs Wegovy: Which weight loss drug works better?</a></p> -->
+<div>
+<p><strong>Looking for an oral alternative to weight loss injections?</strong></p>
+<p><strong>Rybelsus,</strong> manufactured by Novo Nordisk, is approved in India for type 2 diabetes management, but since it shares the same active ingredient as Wegovy, <a href="rybelsus-tablets-for-weight-loss.html">Rybelsus is also prescribed off-label for weight loss.</a></p>
+</div>
+<br/>
+<div>
+<p><strong>Revolutionary weight loss programme: Now available at Aktive</strong></p>
+<p>If you are looking for a safe, effective, and sustainable weight loss programme, your search ends at Aktive.</p>
+<p>Get your personalised weight loss programme at Aktive, and lose upto 21% of your body weight in 16 months. No restrictive diets. No intense workout schedules.</p>
+<p>Just pure weight loss, right from the comfort of your home.</p>
+</div> </div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>What should I do if my Wegovy injection pen isn’t working correctly?</p>
+<div><p></p><p>Please contact your doctor immediately if your Wegovy injection pen isn’t working correctly. You can also contact the manufacturer, Novo Nordisk and request a replacement.</p></div>
+</li>
+<li>
+<p>Why are there different coloured Wegovy injection pens?</p>
+<div><p></p><p>Wegovy injection pens come in five different colours to denote the five different dosages, such as:</p>
+<ul>
+<li><strong>0.25 mg:</strong> Green injection pen</li>
+<li><strong>0.5 mg:</strong> Pink injection pen</li>
+<li><strong>1 mg:</strong> Brown injection pen</li>
+<li><strong>1.7 mg:</strong> Blue injection pen</li>
+<li><strong>2.4 mg:</strong> Black injection pen</li>
+</ul></div>
+</li>
+<li>
+<p> Can I change the day or time to take the Wegovy injection?</p>
+<div><p></p><p>Yes, however, it is recommended that you take the Wegovy injection on the same day and at the same time every week.</p>
+<p>If you want to change the day and time you take the Wegovy injection, you can do so two or more days after taking your last Wegovy dose.</p>
+</div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>July, 09 2025</strong></p><p>Publish date <strong>July, 09 2025</strong></p></div> </div>
+<div>
+<p><strong>References:</strong></p>
+<ul>
+<li> [1] Aronne, L. J., Sattar, N., Horn, D. B., Bays, H. E., Wharton, S., Lin, W., Ahmad, N. N., Zhang, S., Liao, R., Bunck, M. C., Jouravskaya, I., Murphy, M. A., Fretes, J. O., Coronel, M. J., Gutnisky, L. L., Frechtel, G. D., Gelersztein, E., Aizenberg, D., Maldonado, N., . . . Nardandrea, J. P. (2023). Continued treatment with tirzepatide for maintenance of weight reduction in adults with obesity. JAMA, 331(1), 38. <a href="https://jamanetwork.com/journals/jama/fullarticle/2812936">https://doi.org/10.1001/jama.2023.24945</a></li>
+<li> [2] Garvey, W. T., Batterham, R. L., Bhatta, M., Buscemi, S., Christensen, L. N., Frias, J. P., Jódar, E., Kandler, K., Rigas, G., Wadden, T. A., &amp; Wharton, S. (2022). Two-year effects of semaglutide in adults with overweight or obesity: the STEP 5 trial. Nature Medicine, 28(10), 2083–2091. <a href="https://www.nature.com/articles/s41591-022-02026-4">https://doi.org/10.1038/s41591-022-02026-4</a>
+</li>
+</ul> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

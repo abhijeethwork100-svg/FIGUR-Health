@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>5 food cravings: What they mean & how to stop them | Figur Health</title>
+  <meta name="description" content="Craving sweets, chocolate or fried food? Find out what 5 common cravings say about your health—and get smart food swaps to beat them naturally."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Health</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">13 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>5 food cravings: What they mean & how to stop them</h1>
+        <p class="article-hero__desc">Craving sweets, chocolate or fried food? Find out what 5 common cravings say about your health—and get smart food swaps to beat them naturally.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+<div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80" alt="Food cravings" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>5 food cravings: What they mean &amp; how to stop them</h1>
+</div>
+<p>
+</p>
+<p>How often have we stood in front of the fridge at midnight and binged on ice cream?</p>
+<p>Or gorged on <em>vada pav</em> just because “we felt like it?”</p>
+<p>“I shouldn't be eating this,” you say. But ate it anyway. After a few bites, the guilt starts to creep in.</p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="how-to-control-food-cravings.html#key-takeaways">Key Takeaways:</a></li>
+<li><a href="how-to-control-food-cravings.html#what-are-food-cravings">What are food cravings?</a></li>
+<li><a href="how-to-control-food-cravings.html#why-do-we-have-cravings">Why do we have cravings?</a></li>
+<li><a href="how-to-control-food-cravings.html#5-different-food-cravings-and-what-they-mean">5 different food cravings and what they mean</a></li>
+<li><a href="how-to-control-food-cravings.html#how-to-stop-food-cravings">How to stop food cravings?</a></li>
+<li><a href="how-to-control-food-cravings.html#can-cravings-be-a-sign-of-disease">Can cravings be a sign of disease?</a></li>
+<li><a href="how-to-control-food-cravings.html#cravings-are-signals,-not-failures">Cravings are signals, not failures</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key Takeaways:</h2>
+<div>
+<ul>
+<li>A craving is an intense urge to eat a particular food.</li>
+<li>Food cravings are often driven by hormonal imbalances, learned habits, emotional triggers, nutrient deficiencies or brain chemistry.</li>
+<li>Stress and lack of good sleep affect your hunger hormones. This leads to more frequent and intense cravings.</li>
+<li>Persistent cravings may also be the result of specific health issues and need medical attention.</li>
+<li>It is possible to rewire your cravings. You can break the loop by replacing the trigger with a healthier habit.</li>
+</ul>
+</div>
+<p>Sounds familiar? Most of us have experienced cravings at some point. We are all guilty of some indulgent snacking. </p>
+<p>The problem arises when these cravings start affecting our weight.</p>
+<p>But what if we say these cravings aren't simply about a lack of willpower or discipline?</p>
+<p>In this guide, we'll decode <strong>the science behind food cravings,</strong> explain why some foods are impossible to resist, and check out some <strong>simple ways to reduce cravings</strong> minus the guilt.</p>
+<p>Let's understand our cravings, not fight them.</p> </div>
+<div>
+<h2>What are food cravings?</h2>
+<p><strong>Intense, specific, and hard to resist</strong>—these are the three things that define a food craving. It is a powerful urge to eat food even when you are not feeling hungry. </p>
+<p>When your brain sees or smells something tempting, it remembers how good it felt last time and activates your reward system by releasing dopamine (the ultimate pleasure-seeking hormone). This pushes you to eat that food again, even if you're full.</p>
+<p>Unlike true hunger, where the body needs food to nourish and energise itself, cravings are usually focused on particular foods that are sweet, salty, or high in fat.</p>
+<p>But why do we experience cravings? There are biological, environmental, and psychological factors at play.</p> </div>
+<div>
+<h2>Why do we have cravings?</h2>
+<picture>
+<source alt="What causes food cravings" height="473" width="750">
+<source alt="What causes food cravings" height="473" width="750">
+
+</source></source></picture>
+<p>The common causes of cravings include:</p>
+<ul>
+<li>Hormonal imbalances that affect hunger and stress.</li>
+<li>Nutrient deficiency, such as lack of protein, fibre, magnesium, vitamin B-12, iron, and even water. </li>
+<li>Poor sleep affects hunger signals.</li>
+<li>Sensory triggers such as smell, taste, and texture. </li>
+<li>Certain medical conditions, such as diabetes, anaemia, etc. </li>
+<li>Hormonal changes during the menstrual cycle.</li>
+<li>A dip in oestrogen and an increase in prolactin (breastfeeding hormone) during pregnancy. </li>
+<li>Fluctuations in testosterone levels.</li>
+<li>Stress, sadness, loneliness, or boredom leading to an increase in cortisol (a stress hormone) levels.</li>
+<li>Repeated eating patterns out of habit.</li>
+</ul>
+<p>Now you know that cravings aren't your enemy but your body's way of communicating with you. </p>
+<p>So, the more we decode these signals, the better we manage our health and weight.</p> </div>
+<div>
+<h2>5 different food cravings and what they mean</h2>
+<p>It’s time to decode your food cravings!</p>
+<p>Let's see what they mean nutritionally and some smart swaps to help you manage them better.</p>
+<ol>
+<li><a href="how-to-control-food-cravings.html#cravings1">Sweet and chocolaty treats</a></li>
+<li><a href="how-to-control-food-cravings.html#cravings2">Starchy indulgence</a></li>
+<li><a href="how-to-control-food-cravings.html#cravings3">Fried or fatty foods</a></li>
+<li><a href="how-to-control-food-cravings.html#cravings4">Twisted tanginess (salty and sour foods)</a></li>
+<li><a href="how-to-control-food-cravings.html#cravings5">Bubbly (or not) beverages and substances</a></li>
+</ol>
+<h3>1. Sweet and chocolaty treats</h3>
+<p>When you feel tired or simply PMSing, your body wants a quick burst of energy. And the front-runners are:</p>
+<ul>
+<li>Chocolate</li>
+<li>Sugary foods</li>
+</ul>
+<p><strong>Why does it happen?</strong></p>
+<p>Do you find yourself craving some chocolates, <em>laddu</em>, <em>halwa</em>, or that yummy cream biscuit?</p>
+<ul>
+<li>Chocolate is a decadent combination of sugar, fat (cocoa butter), special compounds (phenylethylamine, theobromine), and magnesium.</li>
+<li>On the other hand, sugary foods boost serotonin and dopamine, the hormones that make us feel good.</li>
+<li>Over time, this creates a loop: feel low → crave sweet → feel better (for a bit) → feel low → repeat.</li>
+</ul>
+<p>So, to beat these cravings, you need <strong>foods that are nutrient-dense</strong> (whole grains, proteins, fibre, healthy fats), keep you feeling full, and control your mood swings.</p>
+<picture>
+<source alt="Sweet and chocolaty treats" height="473" width="750">
+<source alt="Sweet and chocolaty treats" height="473" width="750">
+
+</source></source></picture>
+<p><strong>Avoid these:</strong></p>
+<ul>
+<li>Chocolate pastry or cake</li>
+<li>Chocolate milkshake</li>
+<li>Hot chocolate sundae</li>
+<li><em>Gulab Jamun</em></li>
+<li><em>Rabdi-jalebi</em></li>
+<li><em>Ras malai</em></li>
+<li><em>Ukadiche modak</em> with ghee</li>
+<li><em>Kheer</em></li>
+</ul>
+<p><strong>Smart swaps:</strong></p>
+<ul>
+<li>Pumpkin or sunflower seeds</li>
+<li>Dark chocolate with 70% cocoa</li>
+<li>Nuts (almonds, cashews, etc.)</li>
+<li><em>Dalia</em> (whole grain porridge)</li>
+<li>Fresh fruits (bananas, figs, dried apricots, etc.)</li>
+<li>Foods made using natural stevia</li>
+<li><em>Gud</em> (jaggery), but in moderation</li>
+<li><em>Paneer bhurji</em>, eggs, whole grain <em>rotis</em></li>
+<li>Protein-rich dishes like moong <em>dal</em>, spinach <em>paratha</em>, and <em>methi thepla</em></li>
+</ul>
+<h3>2. Starchy indulgence</h3>
+<p>What happens when PMS, stress, or a gloomy winter day strikes?</p>
+<p>You need something soft and warm.</p>
+<p>And starchy foods like bread or toast are like carb-filled hugs, just the right amount of warmth, crisp, and fuzz.</p>
+<p><strong>Why does it happen?</strong></p>
+<ul>
+<li>Bread, specifically white or refined bread, causes an insulin spike.</li>
+<li>This insulin spike means tryptophan, an amino acid, stays in the bloodstream for longer.</li>
+<li>This tryptophan enters the brain and makes serotonin (the feel-good chemical). You feel calm and soothing after eating a slice of bread, at least temporarily.</li>
+</ul>
+<p>To manage these cravings better, you need a <strong>mix of complex carbs and protein</strong> to balance blood sugar and keep you full for long.</p>
+<picture>
+<source alt="Starchy indulgence" height="473" width="750">
+<source alt="Starchy indulgence" height="473" width="750">
+
+</source></source></picture>
+<p><strong>Avoid these:</strong></p>
+<ul>
+<li><em>Pav</em> (used in pav bhaji or vada pav)</li>
+<li>Bakery buns or chai-toast</li>
+<li><em>Naan</em> or <em>kulcha</em></li>
+</ul>
+<p><strong>Smart swaps:</strong></p>
+<ul>
+<li><em>Ragi roti</em></li>
+<li><em>Jowar bhakri</em></li>
+<li>Whole wheat <em>paratha</em></li>
+<li><em>Bajra roti</em></li>
+<li>Multigrain <em>dosa</em></li>
+</ul>
+<h3>3. Fried or fatty foods</h3>
+<p>Do you feel tempted to eat that crispy <em>pakora</em>, delicious cheeseburger or a cheesy wrap?</p>
+<p><strong>Why does it happen?</strong></p>
+<ul>
+<li>Fatty foods can be a source of comfort, especially when stress or boredom strikes.</li>
+<li>Besides carbs, the body also uses fats as an energy source. And energy activates the brain's reward system with more dopamine. </li>
+<li>Also, you may lack healthy fats and fat-soluble vitamins (A, D, E, and K).</li>
+</ul>
+<p><strong>Foods rich in healthy fats and fat-soluble nutrients</strong> can be effective in reducing your cravings.</p>
+<picture>
+<source alt="Fried or fatty foods" height="473" width="750">
+<source alt="Fried or fatty foods" height="473" width="750">
+
+</source></source></picture>
+<p><strong>Avoid these:</strong></p>
+<ul>
+<li><em>Samosas</em></li>
+<li>Pakoras (onion or potato fritters)</li>
+<li>Chicken dishes</li>
+</ul>
+<p><strong>Smart swaps:</strong></p>
+<ul>
+<li>Roasted or air-fried <em>makhana</em></li>
+<li>Ragi chips, roasted <em>chana, masala</em> lotus seeds</li>
+<li>Nuts (almonds, walnuts, pistachios) or peanut <em>chikki</em></li>
+<li>Roasted flaxseed</li>
+<li>Sweet potato wedges (oven-baked) with hummus or curd dip</li>
+<li>Coconut or groundnut chutney</li>
+<li>Grilled <em>paneer tikka</em> with mint chutney</li>
+<li>For vitamins (A, D, E, and K) - papaya, mango, sun-dried mushrooms, almonds, sunflower seeds, and leafy green vegetables.</li>
+</ul>
+<h3>4. Twisted tanginess (salty and sour foods)</h3>
+<p>If salted french fries, <em>pani puri</em>, or tangy pickles are on your mind, your body might be asking for foods that are:</p>
+<ol>
+<li>Salty</li>
+<li>Sour</li>
+</ol>
+<p><strong>Why does it happen?</strong></p>
+<ul>
+<li>When you crave salt, your body needs to replenish its sodium or chloride levels. These are electrolytes and are responsible for maintaining fluid balance and blood pressure.</li>
+<li>If you get <em>achaar</em> ka vichar, this may be due to low vitamin C or a sluggish digestive system that needs acidity. </li>
+</ul>
+<p>To beat these cravings, you need <strong>swaps that restore electrolytes</strong> and provide gentle digestive support.</p>
+<picture>
+<source alt="Twisted tanginess (salty and sour foods)" height="473" width="750">
+<source alt="Twisted tanginess (salty and sour foods)" height="473" width="750">
+
+</source></source></picture>
+<p><strong>Avoid these:</strong></p>
+<ul>
+<li><em>Chaat</em> (<em>pani puri, sev puri, dahi puri</em>)</li>
+<li>Salted chips and wafers</li>
+<li>Pickles (mango, lemon, chilli)</li>
+<li><em>Amla murabba</em> (sweetened gooseberry preserve)</li>
+<li>Sour candies</li>
+<li>Sour <em>golas</em> (snow cones)</li>
+</ul>
+<p><strong>Smart swaps:</strong></p>
+<ul>
+<li>Rock salt in lemon water</li>
+<li>Fermented foods like <em>idli and dosa</em></li>
+<li>Coconut water or <em>chaas</em> (buttermilk) with roasted <em>jeera</em></li>
+<li><em>Amla juice,</em> lemon juice in <em>dals</em>, or <em>sabzis</em></li>
+<li>Tamarind-based chutneys (in moderation)</li>
+<li>Roasted <em>chana</em>, <em>masala makhana, baked khakra</em></li>
+</ul>
+<h3>5. Bubbly (or not) beverages and substances</h3>
+<p>Whether it's your dose of, tea and coffee, an evening drink (alcohol) or substances, or a tall glass of cola (fizzy drinks), sometimes, the craving is more about comfort or stimulation than keeping your thirst at bay.</p>
+<p><strong>Why does it happen?</strong></p>
+<ul>
+<li><strong>Tea and coffee:</strong> Being good sources of caffeine, these beverages block adenosine (a sleep-promoting chemical) receptors in the brain and help you stay awake.</li>
+</ul>
+<p>So when the body feels low, tired, or simply thirsty, you may find yourself heading to the coffee machine.</p>
+<ul>
+<li><strong>Alcoholic beverages and recreational substances:</strong> It's chemistry. And the winner is always dopamine (not you).</li>
+</ul>
+<p>When you crave relief, relaxation, or stimulation, these substances either calm you down or give you a dopamine high or a quick hit of pleasure.</p>
+<p>But they wear off fast, making your brain depend on them just to feel okay.</p>
+<ul>
+<li><strong>Fizzy/sugary drinks:</strong> Craving a cola or sharbat? You probably need a quick dose of energy.</li>
+</ul>
+<p>More sugar means more dopamine for the brain. Also, the acidic taste of carbonated drinks leaves you feeling 'refreshed.'</p>
+<p>In reality, the high sugar content of these drinks draws more water from the body and leaves us thirsty.</p>
+<p>The best way to handle these cravings is to <strong>choose hydrating, mineral-rich, or mood-boosting drinks</strong> that nourish your body and not just your taste buds.</p>
+<picture>
+<source alt="Bubbly (or not) beverages and substances" height="473" width="750">
+<source alt="Bubbly (or not) beverages and substances" height="473" width="750">
+
+</source></source></picture>
+<p><strong>Avoid these:</strong></p>
+<ul>
+<li><strong>Tea/Coffee:</strong> <em>Masala chai</em>, filter coffee, cold coffee, black coffee</li>
+<li><strong>Alcohol/Substances:</strong> Beer, rum, vodka, cigarettes, e-cigarettes, recreational drugs</li>
+<li><strong>Sugary drinks:</strong> <em>Sharbat</em>, cola, lemon soda, ginger ale, <em>roohafza</em>, sweet lassi</li>
+</ul>
+<p><strong>Smart swaps:</strong></p>
+<ul>
+<li><strong>Tea and coffee:</strong>
+<ul>
+<li>Coconut water </li>
+<li>Buttermilk with pink salt</li>
+<li>Decaf coffee</li>
+<li>Herbal teas (<em>tulsi</em>, chamomile, etc.),</li>
+<li>Lemon water and plain water</li>
+</ul>
+</li>
+<li><strong>Alcoholic beverages and recreational substances:</strong>
+<ul>
+<li>Coconut water</li>
+<li>Dark chocolate</li>
+<li>Exercise</li>
+<li>Ginseng tea</li>
+<li>Sunflower seeds</li>
+</ul>
+</li>
+<li><strong>Cool drinks or fizzy beverages:</strong>
+<ul>
+<li><em>Nimbu pani</em></li>
+<li><em>Jaljeera</em></li>
+<li><a href="indian-homemade-drinks-for-weight-loss.html#:~:text=4.-,Buttermilk,-What%20is%20buttermilk">Buttermilk</a> <em>(chaas)</em></li>
+<li><em>Aam panna</em></li>
+<li><em>Kokum sharbat</em></li>
+</ul>
+</li>
+</ul>
+</div>
+<div>
+<h2>How to stop food cravings?</h2>
+<p>First and foremost, it's okay to have cravings. We are human, after all!</p>
+<p>But you can choose not to act on every craving you have. Acknowledging and understanding this is important.</p>
+<ul>
+<li>Include more protein, healthy fats, and fibre in every meal to keep your sugar levels steady and prevent unnecessary snacking. </li>
+<li>Eat nourishing foods every 3-4 hours. Skipping meals can increase food cravings.</li>
+<li>Consider meal portions. </li>
+<li>Drink a few sips of water to quench your cravings.</li>
+<li>Observe, understand, and replace your triggers for emotional eating. </li>
+<li>Stay away from tempting junk foods. Try to eat only healthy snacks like roasted <em>chana</em>, <em>makhana</em>, fruits and nuts.</li>
+<li>Feel free to indulge in your favourite high-calorie foods occasionally—but do so in moderation.</li>
+<li>Mix and match your habits. If you munch on popcorn while watching TV, try sipping herbal tea instead. </li>
+</ul>
+<p>A <a href="https://www.reddit.com/r/nutrition/comments/1iduok9/comment/ma2f842/?utm_source=share&amp;utm_medium=web3x&amp;utm_name=web3xcss&amp;utm_term=1&amp;utm_content=share_button">Reddit user</a> recommends keeping busy with different activities (plus some extra tips) so they can keep your mind off the next meal.</p> </div>
+<div>
+<h2>Can cravings be a sign of disease?</h2>
+<p><strong>It is okay</strong> to crave your favourite treat sometimes. <strong>It is normal</strong> and does not necessarily mean the presence of disease. </p>
+<p>But if those cravings are persistent, intense, and accompanied by other symptoms, these may be <strong>hidden signs of certain health conditions.</strong> Visiting a doctor may help you uncover these clues. </p>
+<p>Here is a list of some cravings and the conditions they represent:</p>
+<div>
+<table>
+<thead>
+<tr>
+<th colspan="2">Type of craving/behaviour and what it may indicate</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>
+<p><strong>Salty foods</strong></p>
+</td>
+<td>
+<p>May indicate sodium deficiency, often seen in Addison’s disease or cystic fibrosis</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Sugar cravings</strong></p>
+</td>
+<td>
+<p>May indicate low blood sugar levels (hypoglycemia)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Sugar cravings</strong> <span>+</span> <strong>fatigue</strong></p>
+</td>
+<td>
+<p>May indicate insulin resistance (where the body's cells don't respond effectively to insulin)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Persistent, extreme hunger (Polyphagia)</strong></p>
+</td>
+<td>
+<p>May indicate diabetes, hyperthyroidism (overactive thyroid), or atypical depression (a type of depressive disorder)</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Ice, chalk, or mud (pica)</strong></p>
+</td>
+<td>
+<p>May indicate iron deficiency/anaemia</p>
+</td>
+</tr>
+<tr>
+<td>
+<p><strong>Fatty foods</strong></p>
+</td>
+<td>
+<p>May indicate liver/gallbladder/bile issues</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div> </div>
+<div>
+<h2>Cravings are signals, not failures</h2>
+<p>Cravings are only the tip of the iceberg. However, indulging in them also doesn't mean you have weak willpower.</p>
+<p>In reality, cravings are shaped by habit loops, hormones, emotions, or medical issues. With the right approach, <strong>they can be managed easily.</strong> Even research shows that reducing how often you eat craved foods can make those urges fade over time.</p>
+<p>Combining this strategy with balanced meals, better sleep, and mindfulness will help you achieve long-term weight loss.</p>
+<p>If you’re ready to turn that knowledge into action, <a href="logout.html">Aktive’s</a> expert-backed approach helps you build real, sustainable habits—without giving up on the foods you love.</p>
+</div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>Why do I crave sweets even after meals? </p>
+<div><p></p><p>There are a <strong>variety of reasons</strong> why you might crave sweets even after enjoying a full meal:</p>
+<ul>
+<li>If your meals don't have adequate protein, healthy fats or complex carbs.</li>
+<li>If you have grown up with the habit of eating desserts after meals.</li>
+<li>You restrict your sugar intake to the extent it leads to feeling deprived.</li>
+<li>You are stressed (which leads to food cravings).</li>
+<li>Your sleep quality has declined lately.</li>
+</ul></div>
+</li>
+<li>
+<p>What does craving fried food mean? </p>
+<div><p></p><p>If you are craving fried foods, there’s more to it than the crunch. Your body likely <strong>needs healthier fats, fat-soluble vitamins</strong> (A, D, E and K), <strong>and omega-3 fatty acids.</strong></p>
+<p>Sometimes, these cravings may also manifest because of a <strong>lack of sodium, carbohydrates, and zinc.</strong> Dehydration, stress, and lack of sleep can also increase these cravings.</p></div>
+</li>
+<li>
+<p>Can my gut bacteria make me crave junk food? </p>
+<div><p></p><p><strong>Shockingly, yes!</strong> More and more <a href="https://www.nature.com/articles/s41575-020-0341-5">research</a><a href="how-to-control-food-cravings.html#refid1_35"><sup>[1]</sup></a> indicates that the harmful bacteria inside our gut secrete chemicals similar to hunger hormones.</p>
+<p>These hormones signal the brain to crave processed or unhealthy foods so the bacteria can feed themselves. To avoid this, hydrate well and eat more fermented and fibre-rich foods.</p></div>
+</li>
+<li>
+<p>How do I know if a craving is emotional or physical?</p>
+<div><p></p><p>To understand whether a craving is emotional or physical, <strong>you can use these cues</strong> to identify:</p>
+<p><strong>Emotional craving:</strong></p>
+<ul>
+<li>It is often sudden.</li>
+<li>You feel the urge to eat specific comfort foods. </li>
+<li>You may not feel satisfied even after having eaten.</li>
+<li>It can bring out feelings of guilt or shame.</li>
+</ul>
+<p><strong>Physical hunger:</strong></p>
+<ul>
+<li>It develops gradually.</li>
+<li>It is open to different food types.</li>
+<li>It usually stops when the stomach is full.</li>
+<li>It doesn’t trigger any negative emotions.</li>
+</ul></div>
+</li>
+<li>
+<p>Can cravings be controlled naturally?</p>
+<div><p></p><p><strong>Yes, it is possible to control cravings naturally.</strong> Here’s what you can do:</p>
+<ul>
+<li>Eat more foods rich in protein and healthy fats.</li>
+<li>Try drinking water before meals.</li>
+<li>Add more high-fibre foods.</li>
+<li>Eat slowly and mindfully so you can differentiate between true hunger and emotional triggers.</li>
+</ul></div>
+</li>
+<li>
+<p>Why do I crave food late in the night or while watching sports/movies? </p>
+<div><p></p><p><strong>Habit, boredom, and emotional comfort</strong> are the three reasons why we have the urge to snack, even when it's unnecessary. </p>
+<p>When distracted, we tend to eat more and for as long as that particular OTT content or sports event is live, even if the body isn't truly hungry. </p>
+<p>To manage this issue, you can <strong>prepare healthy snack bowls</strong> in advance, <strong>keep a water bottle nearby</strong>, and ask yourself if you are willing to <strong>eat an apple</strong>. If not, then you can skip eating during that time.</p></div>
+</li>
+<li>
+<p>Do food cravings mean I’m not eating enough? </p>
+<div><p></p><p><strong>Many times, yes.</strong></p>
+<p>When you don't eat enough, your body is pushed into a "survival mode." So, it starts <strong>craving quick energy boosts</strong> in the form of sugar, carbs, salty, or high-fat foods.</p>
+<p><strong>Eating balanced and nourishing foods</strong> with enough protein, fibre, and healthy fats can prevent you from bingeing.</p></div>
+</li>
+<li>
+<p>Is it okay to give in to cravings sometimes? </p>
+<div><p></p><p><strong>Yes, it is alright to indulge occasionally.</strong> In fact, it keeps you away from feeling deprived and prevents you from binge eating later. </p></div>
+</li>
+<li>
+<p>Do food cravings mean I’m pregnant?</p>
+<div><p></p><p>Although pregnancies are famous for their intense and unusual ‘cravings,’ <strong>they are not the only sign of pregnancy.</strong></p>
+<p>A visit to the gynaecologist can help you confirm whether you are pregnant.</p></div>
+</li>
+<li>
+<p>Can smelling food make you crave it more? </p>
+<div><p></p><p><strong>Yes.</strong> The smell of food is a big trigger for your appetite as it can bring back memories of pleasurable eating experiences.</p>
+<p>This is why certain smells like those of freshly baked cookies, fried snacks, or homemade meals can intensify your cravings.</p></div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>June, 13 2025</strong></p><p>Publish date <strong>May, 12 2025</strong></p></div> </div>
+<div>
+<p><strong>References:</strong></p>
+<ul>
+<li>[1] Gupta, A., Osadchiy, V., &amp; Mayer, E. A. (2020). Brain–gut–microbiome interactions in obesity and food addiction. <em>Nature Reviews Gastroenterology &amp; Hepatology,</em> 17(11), 655–672. <a href="https://doi.org/10.1038/s41575-020-0341-5">https://doi.org/10.1038/s41575-020-0341-5</a></li>
+</ul> </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

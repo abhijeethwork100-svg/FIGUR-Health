@@ -1,0 +1,839 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Discover 11 types of millets in India and their health benefits | Figur Health</title>
+  <meta name="description" content="Find out why millets are the future of healthy eating! Learn about the types of millets, their benefits, and why they should be part of your daily diet."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Nutrition</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">15 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>Discover 11 types of millets in India and their health benefits</h1>
+        <p class="article-hero__desc">Find out why millets are the future of healthy eating! Learn about the types of millets, their benefits, and why they should be part of your daily diet.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div class="main-wrapper article-wrapper">
+<div>
+
+ <div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80" alt="Millets" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
+</div>
+</div>
+<div>
+<div>
+<p></p>
+<div>
+<h1>Discover 11 types of millets in India and their health benefits</h1>
+</div>
+<p>
+</p>
+<p>Millets, the staple superfood, are healthy, delicious, and grow in the driest climates. They can end global hunger. </p>
+<p>But, what are the types of millets in India? What are the health benefits of eating millets? </p>
+<p>We know the answer.</p> </div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<span>In this article:</span>
+<ul>
+<li><a href="types-of-millets.html#key-takeaways">Key takeaways:</a></li>
+<li><a href="types-of-millets.html#what-are-millets">What are millets?</a></li>
+<li><a href="types-of-millets.html#the-11-types-of-millets-in-india">The 11 types of millets in India</a></li>
+<li><a href="types-of-millets.html#some-lesser-known-millet-health-benefits">Some lesser-known millet health benefits</a></li>
+<li><a href="types-of-millets.html#are-there-any-side-effects-of-eating-millets">Are there any side effects of eating millets?</a></li>
+<li><a href="types-of-millets.html#run-of-the-mill-not-anymore…">Run of the mill? Not anymore…</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div>
+<div>
+<div>
+<h2>Key takeaways:</h2>
+
+<div>
+<ul>
+<li>Millets are the ‘crops of the future’ - they are nutritious, easy to digest, can grow in droughts, and do not need much water to grow.</li>
+<li>There are majorly 11 types of millets in India - from <em>jowar</em> to <em>bajra,</em> from <em>ragi</em> to <em>rajgira,</em> these millets are proven superfoods. </li>
+<li>Millets not only provide nutrition, but also improve heart health, gut health, and protect from cancer. </li>
+<li>Millets are the best.</li>
+</ul>
+</div>
+<p><a href="https://artsandculture.google.com/story/7-facts-about-millets/yAVxWP3aKLPOhA?hl=en">According to Google Arts and Culture,</a> these climate-smart grains are <strong>“the first crops”</strong> and <strong>“the crops of the future”.</strong></p>
+
+<div>
+<ul>
+<li>They are packed with nutrition.</li>
+<li>They need minimal water to grow.</li>
+<li>They can tolerate insects and are drought resistant.</li>
+<li>They have a small carbon footprint.</li>
+<li>They are extremely delicious.</li>
+</ul>
+</div>
+<p><strong>90 million people around the world eat millets.</strong></p>
+<p>Now, why would they do that if millets aren’t healthy?</p>
+<p>Our ancestors relied on millets as a staple part of their daily diet. But somewhere, in our quest to find modern solutions to age-old health problems, we lost touch with our roots. </p>
+<p>However, millets are now making a comeback, and how!</p>
+<p>Which is why, in this article, we’ll explore:</p>
+<ul>
+<li>What are millets?</li>
+<li>11 types of millets in India</li>
+<li>What are the benefits of millets?</li>
+<li>Can you eat millets and lose weight?</li>
+<li>How much millet is too much millet?</li>
+</ul> </div>
+<div>
+<h2>What are millets?</h2>
+<p>Millets are cereal grasses that belong to the Poaceae family. Millets predate other grains - they have been cultivated in Asia and Africa for 4000 years. </p>
+<p>These tiny grains can grow in places where rain is rare. So, in drought-affected areas, where food scarcity is evident, millets can <strong>help satiate hunger.</strong></p>
+<p>They are <strong>gluten-free,</strong> have a <strong>low glycemic index</strong> (GI), and also <strong>help treat various diseases</strong>, such as anaemia and calcium deficiency.  </p>
+<p>In fact, in Ayurvedic texts in India and several Chinese texts, millets are also noted for their medical value and healing properties.</p>
+<p>Millets are so widely eaten around the world that the United Nations Food and Agricultural Organization named 2023 as the <strong><a href="https://www.fao.org/millets-2023/en#:~:text=The%20United%20Nations%20General%20Assembly,resilient%20to%20changes%20in%20climate.">‘Year of the Millets’</a></strong>.</p>
+<p>Essentially, there are two types of millets: major millets and minor millets.</p>
+<p><strong>Major millets (widely cultivated):</strong> Sorghum (<em>jowar</em> ), pearl millet (<em>bajra</em> ), and finger millet (<em>ragi</em> )</p>
+<p><strong>Minor millets (cultivated in small quantities, but are more nutritious):</strong> foxtail millet (<em>kangni</em> ), little millet (<em>kutki</em> ), kodo millet (<em>kodon</em> ), proso millet (<em>chena</em> ), brown top millet (<em>choti kangni</em> ), and barnyard millet (<em>sawan</em> )</p>
+<p>Now that we know what are millets, let us explore the 11 types of millets in India, and how they benefit our health. </p> </div>
+<div>
+<h2>The 11 types of millets in India</h2>
+<p>We know about <em>jowar</em>, <em>bajra</em>, or <em>sawan</em>. But there are many more to be explored. Read on to know more.</p>
+<ol>
+<li><a href="types-of-millets.html#millets1">Sorghum millet (<em>Jowar</em>)</a></li>
+<li><a href="types-of-millets.html#millets2">Pearl millet (<em>Bajra</em>)</a></li>
+<li><a href="types-of-millets.html#millets3">Finger millet (<em>Ragi</em>)</a></li>
+<li><a href="types-of-millets.html#millets4">Foxtail millet (<em>Kangni</em>)</a></li>
+<li><a href="types-of-millets.html#millets5">Barnyard millet (<em>Sawan</em>)</a></li>
+<li><a href="types-of-millets.html#millets6">Proso millet (<em>Chena</em>)</a></li>
+<li><a href="types-of-millets.html#millets7">Little millet (<em>Kutki</em>)</a></li>
+<li><a href="types-of-millets.html#millets8">Kodo millet (<em>Kodon</em>)</a></li>
+<li><a href="types-of-millets.html#millets9">Browntop millet (<em>Choti kangni</em>)</a></li>
+<li><a href="types-of-millets.html#millets10">Buckwheat millet (<em>Kuttu</em>)</a></li>
+<li><a href="types-of-millets.html#millets11">Amaranth millet (<em>Rajgira</em>)</a></li>
+</ol>
+<br/>
+<h3>1. Sorghum millet (Jowar)</h3>
+<p>This millet is probably the first food grain that comes to mind when we think of weight loss, and rightfully so. </p>
+<p>Rich in iron, magnesium, and fibre, this gluten-free grain <strong>keeps the heart healthy.</strong></p>
+<div>
+
+<div>
+<p><strong>Colour:</strong> Light brown to reddish.</p>
+<p><strong>Shape:</strong> Small, round grains with a smooth texture.</p>
+<p><strong>5 <em>jowar</em> recipes you can try</strong></p>
+<ul>
+<li><em>Jowar roti</em></li>
+<li>Roasted <em>jowar bhel</em></li>
+<li><em>Jowar dosa</em></li>
+<li><em>Jowar upma</em></li>
+<li><em>Jowar poha</em></li>
+</ul>
+</div>
+</div>
+<h3>2. Pearl millet (Bajra)</h3>
+<p>The millet with an earthy flavour, <em>bajra,</em> is packed with iron, zinc, magnesium, fibre, and antioxidants.</p>
+<p>Its high fibre content is <strong>good for gut health</strong> and high cholesterol levels. </p>
+<p>Eating <em>bajra</em> regularly may <a href="https://www.japsonline.com/admin/php/uploads/299_pdf.pdf">lower the risk</a> of chronic diseases like diabetes, heart conditions, and cancer.</p>
+<div>
+
+<div>
+<p><strong>Colour:</strong> Light brown or greyish.</p>
+<p><strong>Shape:</strong> Small, round grains</p>
+<p><strong>4 <em>bajra</em> recipes you can try</strong></p>
+<ul>
+<li><em>Bajra roti</em></li>
+<li><em>Bajra khichdi</em></li>
+<li><em>Bajra upma</em></li>
+<li><em>Bajra cheela</em></li>
+</ul>
+</div>
+</div>
+<h3>3. Finger millet (Ragi)</h3>
+<p>This rustic red millet is loved by all for its high calcium content.</p>
+<p>Use it as a substitute for both wheat and rice. </p>
+<p>These fibre-rich grains <strong>encourage healthy brain function, immunity and tissue repair.</strong></p>
+<div>
+
+<div>
+<p><strong>Colour:</strong> Reddish-brown.</p>
+<p><strong>Shape:</strong> Small and round.</p>
+<p><strong>5 <em>ragi</em> recipes you can try</strong></p>
+<ul>
+<li><em>Ragi kanji</em></li>
+<li><em>Ragi dosa</em></li>
+<li><em>Ragi idlis</em></li>
+<li><em>Ragi cheela</em></li>
+<li><em>Ragi laddoos</em></li>
+</ul>
+</div>
+</div>
+<h3>4. Foxtail millet (Kangni)</h3>
+<p>Did you know that foxtail millet, also known as <em>kangni,</em> contains twice the amount of protein in rice?</p>
+<p>It also helps you <strong>maintain muscle health,</strong> cardiovascular well-being, and immunity.</p>
+<div>
+
+<div>
+<p><strong>Colour:</strong> Yellowish-brown.</p>
+<p><strong>Shape:</strong> Small and elongated grains.</p>
+<p><strong>5 <em>kangni</em> recipes you can try</strong></p>
+<ul>
+<li><em>Kangni pulao</em></li>
+<li><em>Kangni pongal</em></li>
+<li><em>Kangni upma (thinai upma)</em></li>
+<li><em>Kangni salad</em></li>
+<li><em>Kangni tikki</em></li>
+</ul>
+</div>
+</div>
+<h3>5. Barnyard millet (Sawan)</h3>
+<p>A fasting favourite, people love barnyard millet (<em>sawan</em>) because it is <strong>light yet nutritious.</strong></p>
+<p>It is <strong>easily digestible</strong> and also rich in protein, calcium, magnesium, zinc, iron, protein, fat, vitamins, and essential amino acids.</p>
+<div>
+
+<div>
+<p><strong>Colour:</strong> White to light brown.</p>
+<p><strong>Shape:</strong> Small and oval grains.</p>
+<p><strong>5 <em>sawan</em> recipes you can try</strong></p>
+<ul>
+<li><em>Sawan</em> rice and peanut curry</li>
+<li><em>Sawan daliya</em></li>
+<li><em>Sawan khichdi</em></li>
+<li><em>Sawan idli/dhokla</em></li>
+<li><em>Sawan poha</em></li>
+</ul>
+</div>
+</div>
+<h3>6. Proso millet (Chena)</h3>
+<p>This millet is a storehouse of magnesium, zinc, phosphorus, potassium, iron, folic acid, niacin, and vitamin B-complex.</p>
+<p>It is excellent for keeping the <strong>bones, nerves and skin healthy.</strong></p>
+<div>
+
+<div>
+<p><strong>Colour:</strong> Creamy white.</p>
+<p><strong>Shape:</strong> Small, round grains.</p>
+<p><strong>3 <em>chena</em> recipes you can try</strong></p>
+<ul>
+<li><em>Chena poha</em></li>
+<li><em>Chena cheela</em></li>
+<li><em>Chena salad</em></li>
+</ul>
+</div>
+</div>
+<h3>7. Little millet (Kutki)</h3>
+<p>Little millet, or <em>kutki,</em> can be cooked fairly quickly.</p>
+<p>Including this millet in your diet helps <strong>prevent constipation.</strong></p>
+<div>
+
+<div>
+<p><strong>Colour:</strong> Light cream to yellowish</p>
+<p><strong>Shape:</strong> Small, round grains.</p>
+<p><strong>3 <em>kutki</em> recipes you can try</strong></p>
+<ul>
+<li><em>Kutki pongal</em></li>
+<li><em>Kutki khichdi</em></li>
+<li><em>Kutki bhel</em></li>
+</ul>
+</div>
+</div>
+<h3>8. Kodo millet (Kodon)</h3>
+<p>Kodo millet, or <em>kodon,</em> is known for its benefits on the gut and weight loss.</p>
+<p>It is also a <strong>great alternative to rice</strong> and is <strong>rich in antioxidants and fibre.</strong></p>
+<div>
+
+<div>
+<p><strong>Colour:</strong> Pale red to dark grey.</p>
+<p><strong>Shape:</strong> Small, oval grains.</p>
+<p><strong>3 <em>kodon</em> recipes you can try</strong></p>
+<ul>
+<li><em>Kodon pulao</em></li>
+<li><em>Kodon paratha</em></li>
+<li><em>Kodon dal </em> soup</li>
+</ul>
+</div>
+</div>
+<h3>9. Browntop millet (Choti kangni)</h3>
+<p>When it comes to <a href="https://www.ijhsr.org/IJHSR_Vol.14_Issue.5_May2024/IJHSR21.pdf">fibre content,</a> browntop millet tops the list.</p>
+<p>It <strong>keeps the body fat-free</strong> and <strong>makes the heart healthy.</strong></p>
+<p>They also <strong>prevent cell damage</strong> and <strong>protect from stomach ulcers.</strong></p>
+<div>
+
+<div>
+<p><strong>Colour:</strong> Brownish</p>
+<p><strong>Shape:</strong> Small, round grains</p>
+<p><strong>3 <em>choti kangni</em> recipes you can try</strong></p>
+<ul>
+<li><em>Chotti kangni dosa</em></li>
+<li><em>Chotti kangni roti</em></li>
+<li><em>Chotti kangni upma</em></li>
+</ul>
+</div>
+</div>
+<h3>10. Buckwheat millet (Kuttu)</h3>
+<p>Buckwheat millet (<em>kuttu</em>) contains a special flavonoid called rutin, which has antioxidant and anti-inflammatory properties. </p>
+<p>This <strong>prevents high blood pressure, coronary artery disease,</strong> and <strong>bleeding disorders.</strong></p>
+<div>
+
+<div>
+<p><strong>Colour:</strong> Dark brown.</p>
+<p><strong>Shape:</strong> Small, pyramid-shaped grains.</p>
+<p><strong>4 <em>kuttu</em> recipes you can try</strong></p>
+<ul>
+<li><em>Kuttu atta roti/paratha</em></li>
+<li><em>Kuttu</em> pancakes </li>
+<li><em>Kuttu khichdi</em></li>
+<li><em>Kuttu dosa</em></li>
+</ul>
+</div>
+</div>
+<h3>11. Amaranth millet (Rajgira)</h3>
+<p>Another 'fast-friendly' millet, amaranth or <em>rajgira</em> is rich in protein, calcium and iron. </p>
+<p>The millet <strong>boosts immunity</strong> and <strong>strengthens the bones.</strong></p>
+<div>
+
+<div>
+<p><strong>Colour:</strong> Light cream or reddish.</p>
+<p><strong>Shape:</strong> Tiny, round grains.</p>
+<p><strong>3 <em>rajgira</em> recipes you can try</strong></p>
+<ul>
+<li><em>Rajgira roti</em></li>
+<li><em>Rajgira chikki</em> and <em>laddoos</em></li>
+<li><em>Rajgira</em> cutlet</li>
+</ul>
+</div>
+</div>
+
+<p>For some more insights on eating millets right, expert nutritionist Rujuta Diwekar is here to help!</p>
+<blockquote><div> <a href="https://www.instagram.com/reel/CoEU1t0jkxt/?utm_source=ig_embed&amp;utm_campaign=loading"> <div> <div></div> <div> <div></div> <div></div></div></div><div></div> <div><svg height="50px" width="50px"><g><g><g><path></path></g></g></g></svg></div><div> <div>View this post on Instagram</div></div><div></div> <div><div> <div></div> <div></div> <div></div></div><div> <div></div> <div></div></div><div> <div></div> <div></div> <div></div></div></div> <div> <div></div> <div></div></div></a><p><a href="https://www.instagram.com/reel/CoEU1t0jkxt/?utm_source=ig_embed&amp;utm_campaign=loading">A post shared by Rujuta Diwekar (@rujuta.diwekar)</a></p></div></blockquote>
+ </div>
+<div>
+<h2>Some lesser-known millet health benefits</h2>
+<p>Before we jump into how millets make us healthier, let us have a look at the nutritional value of small-grained cereals. </p>
+<h3>Nutritional value of millets</h3>
+<p>So, what makes millets so <a href="https://eatrightindia.gov.in/millets2023/assets/documents/Millets%20-%20Nutritious%20Cereal%20of%20India.pdf">nutritious</a><a href="types-of-millets.html#refid1_34"><sup>[1]</sup></a>? Check out the label below:</p>
+
+<p>In addition, millets are also dense in antioxidants (polyphenols, flavonoids, tannins), heart-healthy compounds (phytosterols &amp; policosanols), gut-friendly fibre (prebiotics &amp; resistant starch), and slow-digesting starch (β-glucans &amp; arabinoxylans). </p>
+<h3>What does this mean for our health?</h3>
+<p><strong>Millets are superfoods.</strong></p>
+<p>No doubt, they will have several benefits for physical health and even mental wellbeing.</p>
+<p>In one <a href="https://onlinelibrary.wiley.com/doi/10.1111/mcn.12791">study</a><a href="types-of-millets.html#refid2_34"><sup>[2]</sup></a>, primary school children in India were given multi-millet health mixes, which included kodo millet (<em>kodon</em> ), little millet (<em>kutki</em> ), foxtail millet (<em>kangni</em> ), and finger millet (<em>ragi</em> ) along with pulses. </p>
+<p>It had the following effect:</p>
+<ul>
+<li>The children gained weight.</li>
+<li>Their malnutrition levels improved.</li>
+<li>The children’s growth did not remain stunted. </li>
+</ul>
+<p>A randomised <a href="https://www.cabidigitallibrary.org/doi/full/10.5555/20143199833">clinical trial</a><a href="types-of-millets.html#refid3_34"><sup>[3]</sup></a> made adolescent girls eat bajra laddoos regularly. It increased the haemoglobin levels in the girls’ blood significantly. </p>
+<h3>16 lesser-known millet health benefits</h3>
+<p>Millets are not just a regular source of fibre and protein. Its benefits go beyond just your diet. </p>
+<p>The Nutricereals are known to manage lifestyle diseases and combat several illnesses as well. </p>
+<p>Millets are a great food choice for type 2 diabetic patients. Eating a millet-based diet: </p>
+<ul>
+<li><a href="https://www.researchgate.net/publication/272564498_Efficacy_of_value_added_foxtail_millet_therapeutic_food_in_the_management_of_diabetes_and_dyslipidamea_in_type_2_diabetic_patients">Improves glycemic control</a><a href="types-of-millets.html#refid4_34"><sup>[4]</sup></a></li>
+<li>helps the body <a href="https://www.researchgate.net/publication/272564498_Efficacy_of_value_added_foxtail_millet_therapeutic_food_in_the_management_of_diabetes_and_dyslipidamea_in_type_2_diabetic_patients">produce less insulin</a><a href="types-of-millets.html#refid4_34"><sup>[4]</sup></a></li>
+<li><a href="https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2022.940404/full">Reduces kidney disease risk</a><a href="types-of-millets.html#refid5_34"><sup>[5]</sup></a></li>
+<li><a href="https://link.springer.com/article/10.1007/s13197-020-04309-5">decreases post-prandial glucose levels</a><a href="types-of-millets.html#refid6_34"><sup>[6]</sup></a> and <a href="https://www.frontiersin.org/journals/sustainable-food-systems/articles/10.3389/fsufs.2023.1226474/full">HbA1C levels</a><a href="types-of-millets.html#refid7_34"><sup>[7]</sup></a></li>
+</ul>
+<p>Millets are also good at:</p>
+<ul>
+<li>Preventing cholesterol synthesis in the body. </li>
+<li>Reducing the risk of cardiovascular diseases and stroke. </li>
+<li><a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10676454/">Preventing carcinogenesis</a><a href="types-of-millets.html#refid8_34"><sup>[8]</sup></a>, i.e. stopping normal cells from turning into cancer cells.</li>
+<li>Helping with better digestion and <a href="https://link.springer.com/article/10.1007/s13197-013-0978-y">regular bowel movements</a><a href="types-of-millets.html#refid9_34"><sup>[9]</sup></a>. </li>
+<li>Managing blood pressure levels.</li>
+</ul>
+<p>Apart from this, millets help manage: </p>
+<ul>
+<li>Irritable bowel syndrome (IBS)</li>
+<li>Gastric ulcers</li>
+<li>Celiac disease</li>
+<li>Gluten insensitivity</li>
+<li>Alzheimer’s disease</li>
+<li>Parkison’s disease</li>
+</ul> </div>
+<div>
+<h2>Are there any side effects of eating millets?</h2>
+<p>Even superfoods like millets come with their small share of downsides. They include:</p>
+<ul>
+<li>Bloating, gas, cramping, and irregular motions.</li>
+<li>Abnormal production of thyroid hormones.</li>
+<li>Slowed down iron absorption.</li>
+<li>Constipation, if eaten in excess.</li>
+<li>Dehydration, if not well hydrated.</li>
+</ul> </div>
+<div>
+<h2>Run of the mill? Not anymore…</h2>
+<p>Millets were superfoods before superfoods were even a thing.</p>
+<p>These grains are a storehouse of fibre, essential nutrients, and slow-digesting carbohydrates.</p>
+<p>A perfect gluten-free grain, an easy, environmentally friendly alternative to rice, and an ideal food choice for weight loss, millets are here to help you seize the day.</p>
+<p>Want to maximise the benefits of millets?</p>
+<ul>
+<li>Try <a href="calories-in-1-roti.html">millet <em>rotis</em></a> instead of whole wheat rotis</li>
+<li>Swap regular porridge with ragi porridge</li>
+<li>Eat millet <em>khichdi</em> in place of the usual one.</li>
+</ul>
+<p>You will feel full for longer while the slow-digesting carbohydrates in the millets will defeat the cravings and energy crashes.  </p>
+<p>Looking to lose weight? Eating healthy is just one facet of weight loss. </p>
+<p>A weight loss approach that works for one person may not always work for the other.</p>
+<p><a href="logout.html">Aktive</a> uses scientifically proven and doctor-backed weight loss plans, so you can shed the extra weight without breaking a sweat. </p>
+<p>So, what are you waiting for?</p> </div>
+<div>
+<h2>FAQs</h2>
+<section>
+<ul>
+<li>
+<p>Which millet is the healthiest? </p>
+<div><p></p><p>The healthiest millet can be decided based on what specific need it serves. </p>
+<ul>
+<li>If it is for bone health, finger millet (<em>ragi</em> ) is the best choice as it is a rich source of calcium.</li>
+<li>If you need more protein, foxtail (<em>kangni</em> ) and proso millets (<em>chena</em> ) are there to help.</li>
+<li>If you wish to add more fibre, browntop (<em>choti kangni</em> ) and barnyard millets (<em>sawan</em> ) will keep your gut functioning like a well-oiled engine.</li>
+<li>If iron supplementation is your goal, then barnyard millet (<em>sawan</em> ) is the way to go. </li>
+</ul>
+<p>Ultimately, all millets are healthy. When eaten as a part of a balanced diet, they certainly have a lot to offer.</p></div>
+</li>
+<li>
+<p>How do millets compare nutritionally to other grains like rice and wheat? </p>
+<div><p></p><p>Nutrition-wise, millets certainly offer more than wheat and rice. They have:</p>
+<ul>
+<li>12-16% protein, which is higher than rice (6–8%) and wheat (8–12%).</li>
+<li>11-14% fibre, whereas rice (white, polished) has only 0.2-0.8% of it.</li>
+<li>A lower glycemic index (approx. 52-68), compared to rice (73–89) and wheat (70–75).</li>
+<li>Very little to no gluten, which makes them a better grain choice for people with celiac disease and gluten intolerance.</li>
+<li>More vitamins like niacin (B3), folate, and vitamin E.</li>
+<li>More minerals like:
+    <ul>
+<li>Calcium.</li>
+<li>Iron.</li>
+<li>Magnesium and zinc.</li>
+</ul>
+</li>
+</ul>
+<p>This makes millets the better choice of grains for fulfilling our nutritional needs and managing weight. </p></div>
+</li>
+<li>
+<p>Are millets suitable for people with gluten intolerance? </p>
+<div><p></p><p>Yes. Being gluten-free, millets are an excellent choice of grains for people troubled with celiac disease or gluten intolerance (non-celiac gluten sensitivity).</p>
+<p>You can enjoy eating millet as <em>rotis</em>, <em>khichdi</em>, <em>dosa/idli</em>, <em>upma</em> or porridge, and not worry about the effects of gluten intolerance.</p></div>
+</li>
+<li>
+<p>Should millets be stored to maintain their freshness? </p>
+<div><p></p><p>To ensure your millets stay fresh, you can try the following:</p>
+<ul>
+<li>Clean the millets and dry them in the sun for 2-3 days. Alternatively, you can dry roast them.</li>
+<li>Some suggest coating your hands lightly with some castor or mustard oil and rubbing the millets in your palms. Soak them in water before you cook as this will remove that oil coating.</li>
+<li>Always store millets in a clean, airtight container. Keep them in a cool, dry place, preferably away from direct sunlight.</li>
+<li>Vacuum-sealed bags are a good option if you have to store millets in bulk.</li>
+<li>Refrigerate or freeze them, especially if you stay in a humid environment. </li>
+</ul></div>
+</li>
+<li>
+<p>Can children consume millets safely?</p>
+<div><p></p><p>Absolutely. Millets are a storehouse of nutrients and their addition to the diet (in moderate amounts) ensures children remain physically and mentally healthy. </p>
+<ul>
+<li>Finger millet (<em>ragi</em> ) provides calcium for strong bones, teeth, and muscles.</li>
+<li>Foxtail millet (<em>kangni</em> ) and little millet (<em>kutki</em> ) are gut-friendly and light on the stomach.</li>
+<li>The protein content in amaranth (<em>rajgira</em> ) is essential to ensure good physical growth.</li>
+<li>You can introduce children to millets by preparing millet porridge, pancakes, or <em>dosa</em> for them.</li>
+</ul></div>
+</li>
+<li>
+<p>Which millet can be eaten everyday?</p>
+<div><p></p><p>Millets are highly nutritious and versatile and can be eaten everyday. However, it is best to consume them in small amounts first and gradually increase their intake as every person's digestive system may respond differently to them. </p>
+<p>Some millets that can be eaten everyday include:</p>
+<ul>
+<li>Pearl Millet (<em>bajra</em> )</li>
+<li>Finger millet (<em>ragi</em> )</li>
+<li>Foxtail millet (<em>kangni</em> )</li>
+<li>Proso millet (<em>chena</em> )</li>
+<li>Barnyard millet (<em>sawan</em> )</li>
+</ul></div>
+</li>
+<li>
+<p>Are there any specific dietary restrictions that millets cater to? </p>
+<div><p></p><p>Millets are indeed an advantage for individuals who have dietary restrictions such as:</p>
+<ul>
+<li>Celiac disease.</li>
+<li>Gluten intolerance.</li>
+<li>Lactose intolerance.</li>
+<li>Vegans. </li>
+<li>Diabetes.</li>
+</ul></div>
+</li>
+<li>
+<p>What is the best way to cook millets?</p>
+<div><p></p><p>Follow these steps to cook millets and get the most out of them:</p>
+<ul>
+<li>Always rinse thoroughly to remove debris.</li>
+<li>Soak them for 30 minutes to 5 hours as this will reduce the cooking time.</li>
+<li>For every 1 cup of millet, use 2.5 cups of water to cook it. This millet-to-water ratio can be higher if you are making porridge or <em>khichdi.</em></li>
+<li>Cook millets on high heat first, and then simmer. This will prevent a mushy consistency.</li>
+<li>You can use pressure cooking to accelerate the cooking time.</li>
+<li>As millets are gluten-free, xanthan gum (1 tsp per cup) or psyllium husk can be used for binding the flour while making rotis.</li>
+<li>Add rice or tapioca flour to millet rotis for better texture.</li>
+</ul></div>
+</li>
+<li>
+<p>How can I prepare millets in a healthy way?</p>
+<div><p></p><p>Here are some tips you can try:</p>
+<ul>
+<li>Soaking millets for some hours (or overnight) will lower the anti-nutrients and increase their absorption in the body.</li>
+<li>Sprouting them increases the availability of proteins and vitamins.</li>
+<li>Eat them with vegetables and other protein sources for a balanced meal.</li>
+<li>Rotate different millets for more health benefits. </li>
+</ul></div>
+</li>
+</ul>
+</section>
+</div>
+<div>
+<a href="weight-loss/index.html">View programme</a>
+<a href="quiz%3Fc=1.html">Do I qualify?</a>
+</div>
+<div>
+<p><strong>About the author:</strong></p>
+<p><strong>Gauri Ghatnekar-Desai</strong> holds a PG Diploma in Emergency Medical Services from Symbiosis Institute of Health Sciences, Pune.</p>
+<p>As a professional healthcare writer, she creates simple, accurate, detail-oriented content for health organisations, healthcare providers, and patients.</p>
+<p>Beyond the desk, she enjoys reading, travelling, and adventure sports.</p>
+<div><p>Update date <strong>April, 25 2025</strong></p><p>Publish date <strong>April, 08 2025</strong></p></div> </div>
+<div>
+<p><strong>References:</strong></p>
+<ul>
+<li>[1] NIN, USDA, Taylor, J., Emmambux, M., Sood, S., Joshi, D., Chandra, A., &amp; Kumar, A. (2019). Millets- the Nutri-Cereals of India. In <em>Millets- The Nutri-Cereals of India.</em> <a href="https://www.millets.res.in/pub/2018/The_Story_of_Millets.pdf">https://www.millets.res.in/pub/2018/The_Story_of_Millets.pdf</a></li>
+<li>[2] Durairaj, M., Gurumurthy, G., Nachimuthu, V., Muniappan, K., &amp; Balasubramanian, S. (2019). Dehulled small millets: The promising nutricereals for improving the nutrition of children. <em>Maternal and Child Nutrition</em>, 15(S3). <a href="https://doi.org/10.1111/mcn.12791">https://doi.org/10.1111/mcn.12791</a></li>
+<li>[3] <em>Intervention trials with pearl millet based iron rich ladoo and Iron Folic Acid (IFA) tablets on hemoglobin status of adolescent females in Bikaner city. (n.d.).</em> CABI Databases. <a href="https://www.cabidigitallibrary.org/doi/full/10.5555/20143199833">https://www.cabidigitallibrary.org/doi/full/10.5555/20143199833</a></li>
+<li>[4] Jali, M. V., Kamatar, M. Y., Jali, S. M., &amp; Naik, R. (2012). Efficacy of value added foxtail millet therapeutic food in the management of diabetes and dyslipidamea in. . . <em>ResearchGate.</em><a href="https://www.researchgate.net/publication/272564498_Efficacy_of_value_added_foxtail_millet_therapeutic_food_in_the_management_of_diabetes_and_dyslipidamea_in_type_2_diabetic_patients">https://www.researchgate.net/publication/272564498_Efficacy_of_value_added_foxtail_millet_therapeutic_food_in_the_management_of_diabetes_and_dyslipidamea_in_type_2_diabetic_patients</a></li>
+<li>[5] Liu, X., Qiu, B., Liu, W., Zhang, Y., Wang, X., Li, X., Li, L., &amp; Zhang, D. (2022). The preventive effects of fermented and germinated foxtail millet whole grain on kidney damage in a diabetic mouse model. <em>Frontiers in Nutrition, 9.</em> <a href="https://doi.org/10.3389/fnut.2022.940404">https://doi.org/10.3389/fnut.2022.940404</a></li>
+<li>[6] Geetha, K., Yankanchi, G. M., Hulamani, S., &amp; Hiremath, N. (2020). Glycemic index of millet based food mix and its effect on pre diabetic subjects. <em>Journal of Food Science and Technology</em>, 57(7), 2732–2738. <a href="https://doi.org/10.1007/s13197-020-04309-5">https://doi.org/10.1007/s13197-020-04309-5.</a></li>
+<li>[7] Anitha, S., Tsusaka, T. W., Botha, R., Givens, D. I., Rajendran, A., Parasannanavar, D. J., Subramaniam, K., Bhandari, R. K., &amp; Kane-Potaka, J. (2024). Impact of regular consumption of millets on fasting and post-prandial blood glucose level: a systematic review and meta-analysis. <em>Frontiers in Sustainable Food Systems, 7.</em> <a href="https://doi.org/10.3389/fsufs.2023.1226474">https://doi.org/10.3389/fsufs.2023.1226474.</a></li>
+<li>[8] Gupta, M., Asfaha, D. M., &amp; Ponnaiah, G. (2023). Millets: a nutritional powerhouse with anti-cancer potential. <em>Cureus</em>. <a href="https://doi.org/10.7759/cureus.47769">https://doi.org/10.7759/cureus.47769</a></li>
+<li>[9] Gupta, R. K., Gangoliya, S. S., &amp; Singh, N. K. (2013). Reduction of phytic acid and enhancement of bioavailable micronutrients in food grains. <em>Journal of Food Science and Technology</em>, 52(2), 676–684. <a href="https://doi.org/10.1007/s13197-013-0978-y">https://doi.org/10.1007/s13197-013-0978-y</a></li>
+</ul> </div>
+</div>
+</div>
+
+
+</div>
+</div>
+</div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

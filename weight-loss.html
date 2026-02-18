@@ -1,0 +1,939 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>The weight loss programme that works | Figur Health</title>
+  <meta name="description" content="Explore Aktive’s science-backed weight loss treatment programme designed to help you achieve lasting results. Start your journey toward a healthier you today."/>
+  <link rel="stylesheet" href="shared.css"/>
+  <style>
+    /* ---- Article hero ---- */
+    .article-hero {
+      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
+      padding: 72px 0 56px;
+      position: relative; overflow: hidden;
+    }
+    .article-hero::after {
+      content: '';
+      position: absolute; width: 500px; height: 500px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
+      top: -100px; right: -80px; pointer-events: none;
+    }
+    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
+    .article-hero__meta {
+      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+      margin-bottom: 20px; font-size: 0.82rem;
+    }
+    .article-hero__cat {
+      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
+      color: var(--gold); font-size: 0.75rem;
+    }
+    .article-hero__sep { color: rgba(255,255,255,0.25); }
+    .article-hero__info { color: rgba(255,255,255,0.55); }
+    .article-hero h1 {
+      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
+      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
+    }
+    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+
+    /* ---- Layout ---- */
+    .article-layout {
+      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
+      align-items: start; padding: 64px 0 96px;
+    }
+    .article-body { min-width: 0; }
+    .article-sidebar { position: sticky; top: 88px; }
+
+    /* ---- Article typography ---- */
+    .article-body h2 {
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 1.5rem; color: var(--navy);
+      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    }
+    .article-body h3 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1.15rem; color: var(--navy);
+      margin: 32px 0 12px; letter-spacing: -0.01em;
+    }
+    .article-body h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
+    }
+    .article-body p {
+      font-size: 1rem; color: var(--text-secondary);
+      line-height: 1.8; margin-bottom: 18px;
+    }
+    .article-body ul, .article-body ol {
+      margin: 16px 0 20px 24px; color: var(--text-secondary);
+      line-height: 1.75; font-size: 0.97rem;
+    }
+    .article-body li { margin-bottom: 8px; }
+    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
+    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
+    .article-body a:hover { color: var(--navy); }
+
+    /* Images */
+    .article-body img {
+      max-width: 100%; border-radius: var(--radius-md);
+      margin: 24px 0; display: block;
+      box-shadow: var(--shadow-sm);
+    }
+
+    /* Tables */
+    .article-body table {
+      width: 100%; border-collapse: collapse;
+      margin: 28px 0; font-size: 0.9rem;
+      border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm);
+    }
+    .article-body th {
+      background: var(--navy); color: var(--white);
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
+      padding: 14px 18px; text-align: left;
+    }
+    .article-body td {
+      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
+      color: var(--text-secondary); line-height: 1.55;
+    }
+    .article-body tr:last-child td { border-bottom: none; }
+    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+
+    /* Blockquote / callout */
+    .article-body blockquote {
+      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
+      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      margin: 28px 0; font-style: italic; color: var(--navy);
+    }
+
+    /* Key takeaways box */
+    .key-takeaways {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px 32px;
+      margin: 0 0 40px;
+    }
+    .key-takeaways h2 {
+      color: var(--gold) !important; font-size: 1rem !important;
+      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
+    }
+    .key-takeaways p, .key-takeaways li {
+      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
+    }
+    .key-takeaways ul { margin-left: 20px; }
+
+    /* ---- Sidebar ---- */
+    .sidebar-card {
+      background: var(--white); border-radius: var(--radius-md);
+      border: 1px solid var(--grey-100); padding: 24px;
+      margin-bottom: 20px; box-shadow: var(--shadow-sm);
+    }
+    .sidebar-card h4 {
+      font-family: 'Montserrat', sans-serif; font-weight: 700;
+      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
+      color: var(--grey-500); margin-bottom: 16px;
+    }
+    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .toc-list li a {
+      font-size: 0.875rem; color: var(--text-secondary);
+      display: flex; gap: 10px; align-items: flex-start;
+      transition: color var(--transition); line-height: 1.5;
+    }
+    .toc-list li a:hover { color: var(--gold-dark); }
+    .toc-list li a::before {
+      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
+      background: var(--gold); margin-top: 7px;
+    }
+
+    .sidebar-cta {
+      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
+      border-radius: var(--radius-md); padding: 28px; text-align: center;
+    }
+    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
+    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
+
+    /* ---- Divider ---- */
+    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
+
+    @media (max-width: 900px) {
+      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
+      .article-sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="container">
+      <div class="nav__inner">
+        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <ul class="nav__links" id="navLinks">
+          <li><a href="new-index.html">Home</a></li>
+          <li><a href="new-programme.html">Programme</a></li>
+          <li><a href="new-science.html">Science</a></li>
+          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="new-success-stories.html">Success Stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+        </ul>
+        <div class="nav__cta" id="navCta">
+          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+        </div>
+        <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ARTICLE HERO -->
+  <section class="article-hero">
+    <div class="container">
+      <div class="article-hero__inner">
+        <div class="article-hero__meta">
+          <span class="article-hero__cat">Weight Loss</span>
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">11 min read</span>
+          
+          <span class="article-hero__sep">·</span>
+          <span class="article-hero__info">By Figur Health Medical Team</span>
+        </div>
+        <h1>The weight loss programme that works</h1>
+        <p class="article-hero__desc">Explore Aktive’s science-backed weight loss treatment programme designed to help you achieve lasting results. Start your journey toward a healthier you today.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ARTICLE BODY -->
+  <div class="container">
+    <div class="article-layout">
+
+      <!-- Main content -->
+      <article class="article-body" id="article-body">
+        <div id="wrap">
+
+<!-- Top Bar End -->
+<!-- Bottom Bar End -->
+<div>
+<div>
+<ul>
+<li><a href="logout.html">Home</a></li>
+
+<li><a href="weight-loss/index.html">Programme</a></li>
+<li><span>Menu</span></li>
+</ul>
+</div>
+</div>
+<!-- Bottom Bar End --> <!-- Start content -->
+<!-- Contain Common Blocks do not touch -->
+<!-- End of Attach COmmon Block file -->
+
+<div>
+<section>
+<div>
+<div>
+<div>
+<h1>The weight loss programme that works</h1> <p>With our unique combination of medication and personalised support, your journey to lasting results starts here.</p> </div>
+<div>
+<div>
+<div>
+<div>
+<div>
+<img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=1200&q=80" alt="Medication" loading="lazy" style="width:100%;height:auto;border-radius:8px;"> </div>
+</div>
+<div>
+<div>
+<p>What is included?</p>
+<ul>
+<li>New generation weight loss injection
+               <ul>
+<li>1 month supply</li>
+<li>Reduces appetite</li>
+<li>Makes you feel full for longer</li>
+</ul>
+</li>
+<li>Meal plan
+               <ul>
+<li>Personalised 7-day plan</li>
+</ul>
+</li>
+<li>Fitness plan
+               <ul>
+<li>3 days a week exercise plan</li>
+</ul>
+</li>
+<li>Exclusive subscription <a href="javascript:void(0);">benefits </a>
+<ul>
+<li>Access to doctors and nutritionists</li>
+</ul>
+</li>
+</ul>
+</div> <div>
+<div>
+<div>
+<span> Starting from ₹13,125 per month </span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+<div>
+<p>
+<strong>Curious which treatment it is?</strong>
+<span></span>
+</p>
+<p>Based on your medical situation, we recommend the best suitable <a href="the-science-glp.html">GLP-1 treatment</a>. Start the quiz now for your personalised suggestion.</p> </div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div>
+<h2>Achieving your goals is as easy as <br/> 1-2-3</h2>
+<div>
+<h3>What do you need to do?</h3>
+<div><span></span> <p>Take one injection weekly. It will reduce your appetite; you will eat less.</p></div>
+<div><span></span> <p>Eat sensibly. No need to count calories. Our meal plans can help.</p></div>
+<div><span></span> <p>Be active. No gym visits. Our fitness plan helps with light exercise, thrice a week.</p></div>
+</div>
+<div>
+<h3>How to start?</h3>
+<div><span></span> Medical consultation: answer the medical questions to see if our treatment is safe for you.</div>
+<div><span></span> Based on your results, we create a personalised Aktive weight loss programme for you.</div>
+<div><span></span>If our partner doctors approve you for treatment, you will receive your weight loss injections’ first month’s supply in a few days.</div>
+</div>
+<div>
+<a href="quiz%3Fp=1&amp;c=1.html">Start consultation</a>
+<p>See if you qualify. It’s free.</p>
+</div>
+</div>
+</section>
+<section>
+<div>
+<div>
+<div>
+<h2>Unsure what to expect? Check out the milestones of your weight loss journey.</h2>
+<a href="quiz%3Fp=1&amp;c=1.html">Start consultation</a>
+</div>
+<div></div>
+<ul>
+<li>
+<p><strong>1st day</strong></p>
+<ul>
+<li>Congratulations, your journey starts today!</li>
+<li>Take your first weight loss injection today.</li>
+<li>Weigh yourself so you can track your progress.</li>
+<li>Have a look at how our meal plan and fitness plan can help you.</li>
+</ul>
+</li>
+<li>
+<p><strong>1st week</strong></p>
+<ul>
+<li>You have taken your first injection by now.</li>
+<li>In just one injection, you will notice that you feel fuller more quickly.</li>
+<li>Listen to your body and stop eating once you're full.</li>
+<li>You should also check in on your diet. Are you making healthy choices?</li>
+</ul>
+</li>
+<li>
+<p><strong>1st month</strong></p>
+<ul>
+<li>You have taken four injections by now.</li>
+<li>You are ready for your next shipment, which includes a higher dosage.</li>
+<li>You feel improvements in your mood, sleep, and energy levels.</li>
+<li>Now that you have more energy, you can intensify your exercise routine.</li>
+</ul>
+</li>
+<li>
+<p><strong>2nd month</strong></p>
+<ul>
+<li>You are on a higher dosage now.</li>
+<li>You've likely noticed that your clothes feel baggy - feels great, right?</li>
+<li>You feel less hungry, and your calorie intake has decreased as well.</li>
+<li>You don’t see it, but your blood pressure, cholesterol, and blood sugar levels reduce significantly.</li>
+</ul>
+</li>
+<li>
+<p><strong>3rd month</strong></p>
+<ul>
+<li>Your dose has increased even further.</li>
+<li>You've probably dropped a clothes size or two.</li>
+<li>Your body has learned to maintain a lower food intake.</li>
+<li>Your new lifestyle will have a long-lasting impact on your weight and well-being.</li>
+</ul>
+</li>
+<li>
+<p><strong>4th month</strong></p>
+<ul>
+<li>Your dose has increased even more.</li>
+<li>You will continue to lose weight if you stick to the plan.</li>
+</ul>
+</li>
+<li>
+<p><strong>16th month</strong></p>
+<ul>
+<li>By now, you have lost up to 21% of your body weight.</li>
+<li>You experience an increase in energy levels.</li>
+<li>Your health feels much better, and reports reflect that.</li>
+<li>You might experience a weight loss plateau, but it is temporary.</li>
+</ul>
+</li>
+</ul>
+<a href="quiz%3Fp=1&amp;c=1.html">Start consultation</a>
+</div>
+</div>
+</section>
+<div>
+<svg height="312" width="1440">
+<path></path>
+</svg>
+</div>
+<section>
+<div>
+<div>
+<h2>People lost <span>5 times</span> more weight with our programme than with diet and exercise alone</h2>
+<div>
+<div>
+
+<p>Your weight</p>
+<p><strong>Diet &amp; exercise</strong></p>
+<p><strong>Aktive plan</strong></p>
+<div>
+<span>Day 1</span>
+<span>Month 6</span>
+<span>Month 16</span>
+</div>
+</div>
+<p>The result of a clinical trial published in 2022 with 2539 adults with our treatment and a placebo over 72 weeks.</p>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div>
+<div>
+<div>
+<img alt="woman-img" height="775" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="507"/>
+</div>
+<div>
+<h2>Our unique combination of medication &amp; support gets you the results</h2>
+</div>
+</div>
+<div>
+<div>
+<span></span>
+<h3><strong>Might be your genes</strong></h3>
+<div>
+<p>Up to 80% of weight issues may be influenced by genetics.</p>
+<p>Our treatment helps you feel full, so you naturally eat less.</p>
+</div>
+</div>
+<div>
+<span></span>
+<h3><strong>Most diets fail due to hunger</strong></h3>
+<div>
+<p>The average diet for women lasts only 4 weeks, for men 6 weeks<sup><a href="weight-loss/index.html#disclaimer-section">1</a></sup>.</p>
+<p>Our personalised meal plans help you to eat healthy, not to starve yourself and fail.</p>
+</div>
+</div>
+<div>
+<span></span>
+<h3><strong>Our treatment works</strong></h3>
+<div>
+<p>Studies<sup><a href="weight-loss/index.html#disclaimer-section">2</a></sup> have proven the effectiveness of medication for weight loss.</p>
+<p>Just one injection every week can curb your cravings and reduce calorie intake.</p>
+</div>
+</div>
+<div>
+<span></span>
+<h3><strong>Simple steps, full support</strong></h3>
+<div>
+<p>Many people struggle with weight loss due to a lack of motivation.</p>
+<p>Our team of experts is here to guide and support you every step of the way.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<div>
+<svg>
+<path></path>
+</svg>
+</div>
+ <section>
+<div>
+<div>
+<h2>With Aktive, it’s simple: access medication, resources, and expert support to achieve your goals.</h2> <div>
+<h3>Support from a team of experts</h3>
+<div>
+<div>
+<img alt="Weight loss specialists" height="172" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="343"/>
+<p><strong>Weight loss specialists</strong></p>
+<p>Our team of specialist partner doctors is renowned in the field of weight loss. With their expertise, you can trust that you are receiving the best care possible.</p>
+</div>
+<div>
+<img alt="Nutritional advice" height="172" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="343"/>
+<p><strong>Nutritional advice</strong></p>
+<p>Our partner nutritionist provides advice and tips tailored to your lifestyle. She answers your questions and provides the support you need.</p>
+</div>
+<div>
+<img alt="Health coaching" height="172" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="343"/>
+<p><strong>Health coaching</strong></p>
+<p>Specialising in weight management, our experienced partner health coaches offer the guidance and encouragement necessary to keep you on track.</p>
+</div>
+<div>
+<img alt="Support team" height="172" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="343"/>
+<p><strong>Support team</strong></p>
+<p>Whether you have questions or need advice, our knowledgeable support team is ready to assist you with any concerns.</p>
+</div>
+</div>
+</div>
+<div>
+<h3>Services included in your plan</h3>
+<div>
+<div>
+<img alt="Meal plans" height="172" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="343"/>
+<p><strong>Meal plans</strong></p>
+<p>Enjoy our easy-to-follow meal plans and simple recipes that make healthy eating both enjoyable and convenient.</p>
+</div>
+<div>
+<img alt="Health hub" height="172" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="343"/>
+<p><strong>Fitness plan</strong></p>
+<p>No gym required. Created by experts, it includes easy-to-follow home workouts tailored to your fitness level.</p>
+</div>
+<div>
+<img alt="Home delivery" height="172" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="343"/>
+<p><strong>Home delivery</strong></p>
+<p>Experience hassle-free, on-time monthly deliveries of your treatment right to your doorstep.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div>
+<div>
+<div>
+<div>
+<h2>All your questions answered</h2>
+</div>
+
+<ul>
+<li>
+<p>Why is your treatment more effective than other weight loss methods?</p>
+<div>
+
+<p>Our treatment works on many levels. The active ingredient works by making your body produce more of a <a href="the-science-glp.html">specific hormone</a> that affects how hungry you feel.</p>
+<p>Increasing these hormone levels slows down digestion and stomach emptying. It affects your appetite because your brain gets the signal "I'm full' much quicker. Which means you eat less.</p>
+<p>The medication also resets your metabolism. You have a set point that your body defends to maintain. It gives you hunger signals if you drop below this point. The hormones reset this point to a lower level.</p>
+<p>This makes it easier to stick to new eating habits.</p> </div>
+</li>
+<li>
+<p>What should I go for - weight loss injection or tablet?</p>
+<div>
+<p>At Aktive, we offer both weight loss injections and tablets.</p>
+<p>While both forms of weight loss medicines are effective in the long run, what will really work for you depends on your weight loss goals, which form you are most comfortable with, and the efficacy of the medicine.</p>
+<ul>
+<li>Weight loss injections:
+  <ul>
+<li>Reduce up to 21% of your body weight within 16 months.</li>
+<li>Have to be taken once a week.</li>
+<li>Have to be self-administered or taken with assistance from a healthcare professional.</li>
+</ul>
+</li>
+<li>Weight loss tablets:
+  <ul>
+<li>Reduce up to 15% of your body weight within 12 months.</li>
+<li>Have to be taken once a day.</li>
+<li>Can be taken easily with a glass of water at home.</li>
+</ul>
+</li>
+</ul>
+<p>In the end, it is up to you to decide which form of medicine works best for you. Aktive is here to help you lose weight, no matter what you choose. </p> </div>
+</li>
+<li>
+<p>I've heard of the Hollywood 'skinny jab' - is this the same?</p>
+<div>
+<p>Yes. The popular term 'skinny jab' refers to treatments. However, while it sounds like it will make you 'skinny', that is not necessarily correct.</p>
+<p>It is a prescription medication designed to aid weight loss for health reasons.</p>
+<p>Like any prescription medication, our partner doctors will still need to consider your medical history before prescribing it.</p> </div>
+</li>
+<li>
+<p>How much weight can I lose on your plan?</p>
+<div>
+<p>Clinical trials have demonstrated that our weight loss injection is quite effective. Adults lost an average of 21% of their body weight after 16 months.</p>
+<p>However, weight loss is not a linear journey. How much weight you’ll lose on our plan depends on various individual factors such as your starting weight, medical history, regular diet, and exercise schedule.</p> </div>
+</li>
+<li>
+<p>When do I qualify for your plan?</p>
+<div>
+<p>Our weight loss plan is available on prescription for people who have a body mass index (BMI) of 27 or above.</p>
+<p>Some other health issues can prevent our partner doctors from prescribing these medications to you. You can find out if it's safe by taking our quiz. It’s free.</p> </div>
+</li>
+<li>
+<p>What is BMI?</p>
+<div>
+<p>Body Mass Index (BMI) is a way of calculating your ideal body weight based on your height. When you take our quiz, it will calculate your BMI so you can know if you’re eligible. There are also online tools to calculate your BMI.</p>
+<ul>
+<li>Underweight: BMI below 18.5</li>
+<li>Healthy weight: from 18.5 to 24.9</li>
+<li>Overweight: from 25 to 29.9</li>
+<li>Obese: from 30 to 39.9</li>
+</ul> </div>
+</li>
+<li>
+<p>Why am I struggling to lose weight?</p>
+<div>
+<p>For some people, eating less and exercising more is not enough. Studies show that your genes can significantly affect how you carry weight. For some people, genetic influence can be as high as 80%.</p>
+<p>If you’re not seeing progress, you may want to reevaluate your strategy - and our treatment might be the answer. By feeling full more quickly and for longer, it’s easier to reduce your calorie intake and lose weight successfully.</p> </div>
+</li>
+<li>
+<p>Do I need to go on a diet?</p>
+<div>
+<p>Following a healthy lifestyle is the best way to get the best results from weight loss treatment. You should reduce the number of calories you consume and eat a healthy, balanced diet.</p>
+<p>Our personalised meal plan helps you to avoid eating very fatty and sugary foods, as they are high in calories and lacking in nutrients.</p>
+<p>Our fitness plan helps with light exercise, 3 times a week. Both factors will help you get the most out of your weight loss treatment and speed up results.</p> </div>
+</li>
+<li>
+<p>Why do I need to do the medical consultation?</p>
+<div>
+<p>Our partner doctors review your answers to determine if our weight loss plan is safe for you. As we provide prescription medications, it’s important you answer all questions honestly.</p> </div>
+</li>
+<li>
+<p>Do I know immediately if I qualify for treatment?</p>
+<div>
+<p>Once you’ve placed your order, our partner doctors review your medical history. If they have additional questions, we'll contact you via email. We will not take payment unless you qualify and we can send you the treatment.</p> </div>
+</li>
+<li>
+<p>What's included in the weight loss subscription plan?</p>
+<div>
+<p>Our subscription includes a delivery service every 4 weeks, with each package containing 4 weeks of treatment. Our partner doctors will check your health every month and monitor your progress. Our plans also include support from a nutritionist and health coach. This way, we can give you the support you need. Our plans are all-inclusive: treatment, free delivery, personalised meal plan, fitness plan and support from our weight loss specialists.</p> </div>
+</li>
+<li>
+<p>Will you monitor my health and progress?</p>
+<div>
+<p>Yes, our partner doctors will ask you to update your health information before each delivery. This way, they can monitor how you are doing and give you additional advice if needed.</p> </div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section>
+<div>
+<div>
+<div>
+<div>
+<h2>Your health guide</h2>
+</div>
+<!-- ARTICLE GRID START -->
+<div>
+<div>
+<div>
+<a href="mounjaro-weight-loss-timeline.html">
+<img alt="Mounjaro weight loss timeline: A complete guide" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="zero-calorie-foods.html">
+<img alt="9 almost zero-calorie foods that’ll help you lose weight" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="mounjaro-weight-loss-tips.html">
+<img alt="How to increase weight loss on Mounjaro?" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="ways-to-increase-weight-loss-on-wegovy.html">
+<img alt="How to increase weight loss on Wegovy?" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="indian-breakfast-recipes-for-weight-loss.html">
+<img alt="8 healthy Indian breakfast recipes for weight loss" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="high-protein-indian-diet-plan.html">
+<img alt="7-day high-protein diet plan for weight loss (Indian recipes)" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="chana-protein-per-100g.html">
+<img alt="How much protein does 100g chana have?" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="protein-in-100g-soyabean.html">
+<img alt="Protein in 100g soya: Benefits, nutrition, &amp; daily intake guide" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="how-to-take-wegovy.html">
+<img alt="How to inject Wegovy  - A complete guide" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="mounjaro-dosage-for-weight-loss.html">
+<img alt="Mounjaro dosage for weight loss" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="wegovy-side-effects.html">
+<img alt="Wegovy side effects" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="mounjaro-side-effects.html">
+<img alt="mounjaro side effects" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="wegovy-injection.html">
+<img alt="wegovy injection" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="how-to-take-mounjaro.html">
+<img alt="How to take Mounjaro injection?" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="hot-water-benefits.html">
+<img alt="11 benefits of drinking hot water you didn’t know about" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="black-coffee-for-weight-loss.html">
+<img alt="Can you drink black coffee for weight loss? Let’s find out" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="calories-in-apple.html">
+<img alt="Calories in an apple: Everything you need to know" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="calories-in-a-mango.html">
+<img alt="How many calories does a mango have? Find out here" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="how-to-control-food-cravings.html">
+<img alt="5 food cravings: What they mean &amp; how to stop them" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="dosa-calories.html">
+<img alt="How many calories does a dosa have?" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="types-of-millets.html">
+<img alt="Discover 11 types of millets in India and their health benefits" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="mounjaro-injection.html">
+<img alt="Weight loss drug Mounjaro launched in India" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="yoga-poses-for-weight-loss.html">
+<img alt="5 simple yoga poses for weight loss at home" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="100g-paneer-protein-and-calories.html">
+<img alt="Explained: Calories &amp; protein in 100g paneer" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="benefits-of-surya-namaskar.html">
+<img alt="Explained: Benefits of surya namaskar &amp; how to perform it" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="calories-in-1-roti.html">
+<img alt="Confused about the calories in 1 roti? We can help!" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="how-to-lose-weight-with-pcos.html">
+<img alt="How to lose weight with PCOS? Try these 10 simple tips" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="exercise-to-reduce-belly-fat.html">
+<img alt="10 exercises to reduce belly fat: No gym subscription needed" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="dry-fruits-benefits.html">
+<img alt="Why these 9 dry fruits are must-have for your health" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="poha-benefits.html">
+<img alt="Can a dish of poha a day keep the doctor away?" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="makhana-health-benefits.html">
+<img alt="Makhanas benefits for weight loss: 10 easy recipes to try today" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="chia-seeds-for-weight-loss.html">
+<img alt="9 easy ways to eat chia seeds for weight loss" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="indian-homemade-drinks-for-weight-loss.html">
+<img alt="7 best Indian homemade drinks to try for weight loss" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="wegovy-for-weight-loss.html">
+<img alt="What to know before taking Wegovy for weight loss?" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="rybelsus-tablets-for-weight-loss.html">
+<img alt="How Rybelsus tablet helped Indians lose weight" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="jeera-water-benefits.html">
+<img alt="How jeera water benefits your weight (and your health)" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="ozempic-for-weight-loss.html">
+<img alt="All about Ozempic injection for weight loss" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="cico-for-weight-loss.html">
+<img alt="CICO diet for weight loss: All you need to know" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+<div>
+<a href="10000-steps-for-weight-loss.html">
+<img alt="Can 10,000 steps a day keep the doctor away?" height="451" src="data:image/gif;base64,R0lGODlhAQABAAD/ACwAAAAAAQABAAACADs=" width="554"/> </a>
+</div>
+</div>
+<div>
+<a href="javascript:void(0)"> More articles </a>
+</div>
+</div>
+<!-- ARTICLE GRID START END -->
+</div>
+</div>
+</div>
+</section>
+<section>
+<div>
+<div><h3>Disclaimer and sources</h3>
+<p>Aktive is a digital platform that connects users with registered healthcare professionals and licensed pharmacies. Aktive does not provide medical advice, diagnosis, or treatment, nor does it dispense medications. All medical consultations, clinical decisions, and prescriptions are made solely by the independent doctors using the platform. The supply and dispensing of any prescribed medication are carried out by third-party, registered pharmacies.</p>
+<p>Treatment should be taken alongside a healthy diet and lifestyle. Because everybody is different, individual results vary and depend on lifestyle.</p>
+<p>The information on our website is based on clinical results. You can read the studies below.</p>
+<div>
+<a href="https://www.greatgreenwall.org/supplements/diet-failure-statistics/">[1] Diet Failure Statistics 2023 | Why Do Diets Fail? Source: The Journal of Clinical Nutrition.</a>
+<a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2206038">[2] Jastreboff, A. M., Aronne, L. J., Ahmad, N. N., Wharton, S., Connery, L., Alves, B., Kiyosue, A., Zhang, S., Liu, B., Bunck, M. C., &amp; Stefanski, A. (2022). Tirzepatide once weekly for the treatment of obesity. New England Journal of Medicine, 387(3), 205–216. https://doi.org/10.1056/nejmoa2206038</a>
+</div>
+</div> 
+</div>
+</section>
+</div>
+ <!-- End content -->
+
+ </div>
+      </article>
+
+      <!-- Sidebar -->
+      <aside class="article-sidebar">
+        <div class="sidebar-card" id="toc-card">
+          <h4>In this article</h4>
+          <ul class="toc-list" id="toc-list">
+            <!-- JS fills this -->
+          </ul>
+        </div>
+        <div class="sidebar-cta">
+          <h4>Ready to lose weight?</h4>
+          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
+          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
+            Check eligibility
+          </a>
+        </div>
+      </aside>
+
+    </div>
+  </div>
+
+  <!-- RELATED CTA -->
+  <div class="cta-strip">
+    <div class="container">
+      <h2>Put this knowledge into action</h2>
+      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
+      <a href="new-programme.html" class="btn btn--primary btn--lg">
+        Check my eligibility
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
+      </a>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+        </div>
+        <div class="footer__col"><h4>Programme</h4><ul>
+          <li><a href="new-programme.html">How it works</a></li>
+          <li><a href="new-science.html">The science</a></li>
+          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
+          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
+          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
+          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul>
+          <li><a href="new-health-guide.html">Health guide</a></li>
+          <li><a href="new-success-stories.html">Success stories</a></li>
+          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="contact-us.html">Contact us</a></li>
+        </ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul>
+          <li><a href="#">Privacy Policy</a></li>
+          <li><a href="#">Terms of Service</a></li>
+          <li><a href="#">Medical Disclaimer</a></li>
+        </ul></div>
+      </div>
+      <div class="footer__bottom">
+        <span>© 2025 Figur Health. All rights reserved.</span>
+        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav
+    const hamburger = document.getElementById('hamburger');
+    const navLinks  = document.getElementById('navLinks');
+    const navCta    = document.getElementById('navCta');
+    if (hamburger) hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+    });
+
+    // Build table of contents from h2s
+    const tocList = document.getElementById('toc-list');
+    const h2s = document.querySelectorAll('.article-body h2');
+    if (tocList && h2s.length) {
+      h2s.forEach((h, i) => {
+        h.id = h.id || 'section-' + i;
+        const li = document.createElement('li');
+        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
+        tocList.appendChild(li);
+      });
+    } else if (tocList) {
+      document.getElementById('toc-card').style.display = 'none';
+    }
+
+    // Style key-takeaways sections
+    document.querySelectorAll('.article-body h2').forEach(h2 => {
+      const txt = h2.textContent.toLowerCase();
+      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
+        const section = document.createElement('div');
+        section.className = 'key-takeaways';
+        let next = h2.nextElementSibling;
+        const kids = [h2.cloneNode(true)];
+        while (next && !['H2','H3'].includes(next.tagName)) {
+          kids.push(next.cloneNode(true));
+          const tmp = next.nextElementSibling;
+          next.remove();
+          next = tmp;
+        }
+        kids.forEach(k => section.appendChild(k));
+        h2.replaceWith(section);
+      }
+    });
+
+    // Scroll animation
+    const obs = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
+    }, {threshold:0.08});
+    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
+      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
+      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
+      obs.observe(el);
+    });
+  </script>
+</body>
+</html>

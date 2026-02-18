@@ -1,163 +1,59 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Health guide | Figur Health</title>
-  <meta name="description" content="Learn how to manage weight loss with expert-backed tips on diet and lifestyle. Build healthier habits for lasting change with our health guide."/>
-  <link rel="stylesheet" href="shared.css"/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Guide — Weight Loss Tips, Nutrition & GLP-1 Guides | Figur Health</title>
+  <meta name="description" content="Expert-written guides on GLP-1 medications, Indian nutrition, weight loss tips, and healthy living. Your complete Figur Health knowledge hub." />
+  <link rel="stylesheet" href="shared.css" />
   <style>
-    /* ---- Article hero ---- */
-    .article-hero {
-      background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%);
-      padding: 72px 0 56px;
-      position: relative; overflow: hidden;
-    }
-    .article-hero::after {
-      content: '';
-      position: absolute; width: 500px; height: 500px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(212,175,55,0.06) 0%, transparent 70%);
-      top: -100px; right: -80px; pointer-events: none;
-    }
-    .article-hero__inner { position: relative; z-index: 1; max-width: 760px; }
-    .article-hero__meta {
-      display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
-      margin-bottom: 20px; font-size: 0.82rem;
-    }
-    .article-hero__cat {
-      font-weight: 700; letter-spacing: 0.07em; text-transform: uppercase;
-      color: var(--gold); font-size: 0.75rem;
-    }
-    .article-hero__sep { color: rgba(255,255,255,0.25); }
-    .article-hero__info { color: rgba(255,255,255,0.55); }
-    .article-hero h1 {
-      color: var(--white); font-size: clamp(1.7rem,3.5vw,2.6rem);
-      letter-spacing: -0.025em; line-height: 1.15; margin-bottom: 20px;
-    }
-    .article-hero__desc { color: rgba(255,255,255,0.72); font-size: 1.05rem; line-height: 1.7; }
+    .page-hero { background: linear-gradient(135deg, var(--navy) 0%, #0d2240 60%, #152f55 100%); padding: 80px 0 64px; position: relative; overflow: hidden; }
+    .page-hero::after { content: ''; position: absolute; width: 500px; height: 500px; border-radius: 50%; background: radial-gradient(circle, rgba(212,175,55,0.07) 0%, transparent 70%); top: -100px; right: -80px; pointer-events: none; }
+    .page-hero__inner { position: relative; z-index: 1; text-align: center; max-width: 660px; margin: 0 auto; }
+    .page-hero__inner .badge { margin-bottom: 20px; }
+    .page-hero__inner h1 { color: var(--white); font-size: clamp(2rem,4vw,3rem); letter-spacing:-0.03em; margin-bottom:16px; }
+    .page-hero__inner p { color: rgba(255,255,255,0.75); font-size:1.05rem; line-height:1.7; }
 
-    /* ---- Layout ---- */
-    .article-layout {
-      display: grid; grid-template-columns: 1fr 300px; gap: 64px;
-      align-items: start; padding: 64px 0 96px;
-    }
-    .article-body { min-width: 0; }
-    .article-sidebar { position: sticky; top: 88px; }
+    .articles-masonry { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+    .articles-masonry .featured { grid-column: span 2; }
 
-    /* ---- Article typography ---- */
-    .article-body h2 {
-      font-family: 'Montserrat', sans-serif; font-weight: 800;
-      font-size: 1.5rem; color: var(--navy);
-      margin: 44px 0 16px; letter-spacing: -0.02em; line-height: 1.25;
+    .article-card-lg {
+      background: var(--white); border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm); border: 1px solid var(--grey-100); transition: all var(--transition);
+      display: block; text-decoration: none;
     }
-    .article-body h3 {
-      font-family: 'Montserrat', sans-serif; font-weight: 700;
-      font-size: 1.15rem; color: var(--navy);
-      margin: 32px 0 12px; letter-spacing: -0.01em;
+    .article-card-lg:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .article-card-lg .article-card__img-lg {
+      width: 100%; height: 260px;
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-mid) 100%);
+      display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 3rem;
     }
-    .article-body h4 {
-      font-family: 'Montserrat', sans-serif; font-weight: 700;
-      font-size: 1rem; color: var(--navy); margin: 24px 0 10px;
-    }
-    .article-body p {
-      font-size: 1rem; color: var(--text-secondary);
-      line-height: 1.8; margin-bottom: 18px;
-    }
-    .article-body ul, .article-body ol {
-      margin: 16px 0 20px 24px; color: var(--text-secondary);
-      line-height: 1.75; font-size: 0.97rem;
-    }
-    .article-body li { margin-bottom: 8px; }
-    .article-body strong, .article-body b { color: var(--navy); font-weight: 700; }
-    .article-body a { color: var(--gold-dark); text-decoration: underline; text-underline-offset: 3px; }
-    .article-body a:hover { color: var(--navy); }
+    .article-card-lg .article-card__body { padding: 28px; }
+    .article-card-lg .article-card__tag { font-size: 0.72rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 10px; }
+    .article-card-lg .article-card__title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 1.15rem; color: var(--navy); margin-bottom: 12px; line-height: 1.35; }
+    .article-card-lg .article-card__excerpt { font-size: 0.9rem; color: var(--text-secondary); line-height: 1.65; }
+    .article-card-lg .article-card__meta { display: flex; align-items: center; gap: 12px; margin-top: 16px; font-size: 0.78rem; color: var(--grey-300); }
 
-    /* Images */
-    .article-body img {
-      max-width: 100%; border-radius: var(--radius-md);
-      margin: 24px 0; display: block;
-      box-shadow: var(--shadow-sm);
+    .article-card-sm {
+      background: var(--white); border-radius: var(--radius-md); overflow: hidden;
+      box-shadow: var(--shadow-sm); border: 1px solid var(--grey-100); transition: all var(--transition);
+      display: block; text-decoration: none;
     }
+    .article-card-sm:hover { box-shadow: var(--shadow-md); transform: translateY(-3px); }
+    .article-card-sm .article-card__img-sm {
+      width: 100%; height: 160px;
+      background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy) 100%);
+      display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 2rem;
+    }
+    .article-card-sm .article-card__body { padding: 20px; }
+    .article-card-sm .article-card__tag { font-size: 0.7rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-dark); margin-bottom: 8px; }
+    .article-card-sm .article-card__title { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 0.93rem; color: var(--navy); line-height: 1.4; }
 
-    /* Tables */
-    .article-body table {
-      width: 100%; border-collapse: collapse;
-      margin: 28px 0; font-size: 0.9rem;
-      border-radius: var(--radius-md); overflow: hidden;
-      box-shadow: var(--shadow-sm);
-    }
-    .article-body th {
-      background: var(--navy); color: var(--white);
-      font-family: 'Montserrat', sans-serif; font-weight: 700;
-      font-size: 0.8rem; letter-spacing: 0.05em; text-transform: uppercase;
-      padding: 14px 18px; text-align: left;
-    }
-    .article-body td {
-      padding: 12px 18px; border-bottom: 1px solid var(--grey-100);
-      color: var(--text-secondary); line-height: 1.55;
-    }
-    .article-body tr:last-child td { border-bottom: none; }
-    .article-body tr:nth-child(even) td { background: var(--grey-50); }
+    .articles-grid-4 { display: grid; grid-template-columns: repeat(4, 1fr); gap: 20px; }
+    .articles-grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
 
-    /* Blockquote / callout */
-    .article-body blockquote {
-      border-left: 4px solid var(--gold); background: rgba(212,175,55,0.06);
-      padding: 20px 24px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
-      margin: 28px 0; font-style: italic; color: var(--navy);
-    }
-
-    /* Key takeaways box */
-    .key-takeaways {
-      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
-      border-radius: var(--radius-md); padding: 28px 32px;
-      margin: 0 0 40px;
-    }
-    .key-takeaways h2 {
-      color: var(--gold) !important; font-size: 1rem !important;
-      letter-spacing: 0.08em; text-transform: uppercase; margin: 0 0 16px !important;
-    }
-    .key-takeaways p, .key-takeaways li {
-      color: rgba(255,255,255,0.8) !important; font-size: 0.93rem !important;
-    }
-    .key-takeaways ul { margin-left: 20px; }
-
-    /* ---- Sidebar ---- */
-    .sidebar-card {
-      background: var(--white); border-radius: var(--radius-md);
-      border: 1px solid var(--grey-100); padding: 24px;
-      margin-bottom: 20px; box-shadow: var(--shadow-sm);
-    }
-    .sidebar-card h4 {
-      font-family: 'Montserrat', sans-serif; font-weight: 700;
-      font-size: 0.8rem; letter-spacing: 0.08em; text-transform: uppercase;
-      color: var(--grey-500); margin-bottom: 16px;
-    }
-    .toc-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .toc-list li a {
-      font-size: 0.875rem; color: var(--text-secondary);
-      display: flex; gap: 10px; align-items: flex-start;
-      transition: color var(--transition); line-height: 1.5;
-    }
-    .toc-list li a:hover { color: var(--gold-dark); }
-    .toc-list li a::before {
-      content: ''; flex-shrink: 0; width: 6px; height: 6px; border-radius: 50%;
-      background: var(--gold); margin-top: 7px;
-    }
-
-    .sidebar-cta {
-      background: linear-gradient(135deg, var(--navy), var(--navy-mid));
-      border-radius: var(--radius-md); padding: 28px; text-align: center;
-    }
-    .sidebar-cta p { color: rgba(255,255,255,0.7); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px; }
-    .sidebar-cta h4 { color: var(--white); margin-bottom: 8px; font-size: 1rem; letter-spacing: 0; text-transform: none; }
-
-    /* ---- Divider ---- */
-    .article-divider { border: none; border-top: 1px solid var(--grey-100); margin: 40px 0; }
-
-    @media (max-width: 900px) {
-      .article-layout { grid-template-columns: 1fr; gap: 40px; padding: 40px 0 64px; }
-      .article-sidebar { position: static; }
-    }
+    @media (max-width: 1024px) { .articles-masonry { grid-template-columns: repeat(2,1fr); } .articles-masonry .featured { grid-column: span 1; } .articles-grid-4 { grid-template-columns: repeat(2,1fr); } }
+    @media (max-width: 768px) { .articles-masonry { grid-template-columns: 1fr; } .articles-grid-4, .articles-grid-3 { grid-template-columns: 1fr; } }
   </style>
 </head>
 <body>
@@ -166,835 +62,416 @@
   <nav class="nav">
     <div class="container">
       <div class="nav__inner">
-        <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
+        <a href="index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img" /></a>
         <ul class="nav__links" id="navLinks">
-          <li><a href="new-index.html">Home</a></li>
-          <li><a href="new-programme.html">Programme</a></li>
-          <li><a href="new-science.html">Science</a></li>
-          <li><a href="new-health-guide.html" class="active">Health Guide</a></li>
-          <li><a href="new-success-stories.html">Success Stories</a></li>
-          <li><a href="new-faqs.html">FAQs</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="programme.html">Programme</a></li>
+          <li><a href="science.html">Science</a></li>
+          <li><a href="health-guide.html" class="active">Health Guide</a></li>
+          <li><a href="success-stories.html">Success Stories</a></li>
+          <li><a href="faqs.html">FAQs</a></li>
         </ul>
         <div class="nav__cta" id="navCta">
-          <a href="new-faqs.html" class="btn btn--outline btn--sm">Learn more</a>
-          <a href="new-programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
+          <a href="faqs.html" class="btn btn--outline btn--sm">Learn more</a>
+          <a href="programme.html" class="btn btn--primary btn--sm">Check eligibility</a>
         </div>
         <button class="nav__hamburger" id="hamburger"><span></span><span></span><span></span></button>
       </div>
     </div>
   </nav>
 
-  <!-- ARTICLE HERO -->
-  <section class="article-hero">
+  <!-- HERO -->
+  <section class="page-hero">
     <div class="container">
-      <div class="article-hero__inner">
-        <div class="article-hero__meta">
-          <span class="article-hero__cat">Health Guide</span>
-          <span class="article-hero__sep">·</span>
-          <span class="article-hero__info">10 min read</span>
-          
-          <span class="article-hero__sep">·</span>
-          <span class="article-hero__info">By Figur Health Medical Team</span>
-        </div>
+      <div class="page-hero__inner">
+        <span class="badge badge--gold">Knowledge Hub</span>
         <h1>Health guide</h1>
-        <p class="article-hero__desc">Learn how to manage weight loss with expert-backed tips on diet and lifestyle. Build healthier habits for lasting change with our health guide.</p>
+        <p>Expert-written guides on GLP-1 medications, Indian nutrition, weight loss, and healthy living. Everything you need to succeed on your journey.</p>
       </div>
     </div>
   </section>
 
-  <!-- ARTICLE BODY -->
-  <div class="container">
-    <div class="article-layout">
-
-      <!-- Main content -->
-      <article class="article-body" id="article-body">
-        <div class="main-wrapper article-wrapper">
-<div>
-<h1>Health guide</h1>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80" alt="Weight loss journey" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Mounjaro weight loss timeline: A complete guide</h2>
-<p>Without further ado, most people on Mounjaro can see changes in their weight within <strong>4 - 8 weeks.</strong> The most significant changes in weight are seen between 9 and 26 weeks.</p>
-<p>According to a <a href="https://www.nejm.org/doi/full/10.1056/NEJMoa2206038">clinical trial</a><a href="health-guide.html#refid1_48"><sup>[1]</sup></a>, people can lose up to 21% of their starting body weight after 72 weeks.</p> <a href="mounjaro-weight-loss-timeline.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80" alt="Low calorie foods" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>9 almost zero-calorie foods that’ll help you lose weight</h2>
-<p><em>Zero-calorie foods</em>. Sounds like a dream, doesn't it?</p>
-<p>But here’s the thing…except for plain water, no food is truly calorie-free.</p>
-<p>But that doesn't mean you cannot find healthy, low-calorie foods in your kitchen.</p> <a href="zero-calorie-foods.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80" alt="Weight loss tips" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>How to increase weight loss on Mounjaro?</h2>
-<p>You have started taking Mounjaro. You might be wondering:</p>
-<p><em>“What should I eat now that I don’t feel as hungry?”</em></p>
-<p><em>“Is exercise still important if I’m losing weight anyway?”</em></p>
-<p><em>“How do I manage fatigue, digestion, or sleep on Mounjaro?”</em></p> <a href="mounjaro-weight-loss-tips.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1200&q=80" alt="Weight loss ways" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>How to increase weight loss on Wegovy?</h2>
-<p><em>“Do I really need to change my lifestyle on Wegovy, or will the medicine do all the work?”</em></p>
-<p>Yes, Wegovy can help you lose weight. But if you're hoping for long-term results, you need something more powerful than the medication - you.</p>
-<p>The real game-changer.</p> <a href="ways-to-increase-weight-loss-on-wegovy.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80" alt="Low calorie breakfast" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>8 healthy Indian breakfast recipes for weight loss</h2>
-<p>Have you ever skipped breakfast, thinking you’ll lose weight faster?</p>
-<p>And ended up feeling starved by 11 AM?</p>
-<p>Does a heavy <em>paratha</em> leave you sluggish? Then you are not alone.</p> <a href="indian-breakfast-recipes-for-weight-loss.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80" alt="High protein foods" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>7-day high-protein diet plan for weight loss (Indian recipes)</h2>
-<p>Do you believe that protein is only for athletes and bodybuilders?</p>
-<p>Not quite.</p>
-<p><em>We all need protein</em> to lose weight.</p> <a href="high-protein-indian-diet-plan.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80" alt="Chana" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>How much protein does 100g chana have?</h2>
-<p>Without further ado, a 100g raw <em>kala chana</em> contains as much as <strong>21.3g of protein!</strong></p>
-<p>Raw dehulled <em>chana</em> (chickpeas with their outer skins removed) has <strong>25.3g—28.9g</strong> in a 100g serving.</p>
-<p>And this is why our grandmothers insisted on eating <em>gud chana</em> since childhood.</p> <a href="chana-protein-per-100g.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80" alt="Soybeans" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Protein in 100g soya: Benefits, nutrition, &amp; daily intake guide</h2>
-<p><strong>100g of boiled soya has about 18g of protein.</strong></p>
-<p>But most Indians, especially vegetarian Indians, don't eat enough protein.</p>
-<p>We think <em>dal</em> gives us enough protein. It doesn’t. That’s where soya enters the picture.</p> <a href="protein-in-100g-soyabean.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80" alt="Wegovy dosage" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Wegovy dosage guide for weight loss</h2>
-<p>You are planning to start Wegovy for weight loss.</p>
-<p>But not sure how the dosage schedule works? </p>
-<p>Let us help you out.</p> <a href="wegovy-dosage.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80" alt="Wegovy injection" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>How to inject Wegovy  - A complete guide</h2>
-<p>You’re ready to start Wegovy for weight loss, and it’s a big step.</p>
-<p>Not just because it involves a needle.</p>
-<p>You’re not sure if it’ll help, if it’ll hurt, or if you’ll mess it up.</p> <a href="how-to-take-wegovy.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80" alt="A dosage chart showing different Mounjaro doses" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Mounjaro dosage chart for weight loss</h2>
-<p>If you are starting Mounjaro (Tirzepatide), chances are you're feeling hopeful and confused at the same time.</p>
-<p>It's easy to wonder, “Am I doing this right?”</p>
-<p>We’re here to help you figure out just that.</p> <a href="mounjaro-dosage-for-weight-loss.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80" alt="Wegovy FlexTouch pen" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>How to manage Wegovy side effects?</h2>
-<p><strong>“Has anyone had horrible side effects on Wegovy?”</strong></p>
-<p>A worried Reddit user asked this question.</p>
-<p>And if you're here, reading this, chances are you're wondering the same.</p> <a href="wegovy-side-effects.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80" alt="Injection pen" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Side effects of Mounjaro &amp; how to manage them</h2>
-<p>You're not alone in wondering, <strong>“What will Mounjaro do to my body?”</strong></p>
-<p>Of course, it's natural to want to know the full picture.</p>
-<p><em>What does it feel like in those first few days? <br/> What are the side effects, and do they get better?</em></p> <a href="mounjaro-side-effects.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80" alt="Wegovy injection" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Wegovy launched in India: What you need to know about it</h2>
-<div>
-<p><em>Wegovy = weight loss.</em></p>
-</div>
-<p>Every year, around the world, millions rely on this weekly injection to lose weight and keep it off. </p> <a href="wegovy-injection.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80" alt="Mounjaro medication" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>How to take Mounjaro injection?</h2>
-<p>You have just started on Mounjaro and might be unsure how to inject it correctly. And the idea of injecting oneself can be overwhelming. But with practice and the right technique, it can be surprisingly simple.</p> <a href="how-to-take-mounjaro.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80" alt="Hot water" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>11 benefits of drinking hot water you didn’t know about</h2>
-<p>For most people hot water = comforting hot showers.</p>
-<p>But did you know, drinking hot water helps your body destress and benefits your health as well?</p>
-<p>Here’s how.</p> <a href="hot-water-benefits.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1482049016688-2d3e1b311543?auto=format&fit=crop&w=1200&q=80" alt="Black coffee" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Can you drink black coffee for weight loss? Let’s find out</h2>
-<p>Coffee isn’t just fuel for the body - it is one of the best ways to stay healthy. When it comes to weight loss, more and more people are swapping their sweet, milky chai or green tea for black coffee.</p>
-<p><strong>It’s bolder, darker, and dare we say—healthier.</strong> But does black coffee really help lose weight?</p> <a href="black-coffee-for-weight-loss.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1200&q=80" alt="Healthy fruit" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Calories in an apple: Everything you need to know</h2>
-<p>An apple with skin, weighing 100g, has around <strong>56 calories and 0.2g of protein</strong>. 
-</p><p>But are apples really healthy? Do they help you lose weight?</p>
-<p>We have the answer. </p> <a href="calories-in-apple.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?auto=format&fit=crop&w=1200&q=80" alt="Mango calories" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>How many calories does a mango have? Find out here</h2>
-<p>And the answer is - A whole <strong>100g serving of mango</strong> contains around <strong>64-86 calories</strong>.</p>
-<p>But the joy now comes with a pinch of guilt. “Should I eat mangoes if I am trying to lose weight?”</p>
-<p>Here’s the answer.</p> <a href="calories-in-a-mango.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=1200&q=80" alt="Food cravings" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>5 food cravings: What they mean &amp; how to stop them</h2>
-<p>How often have we stood in front of the fridge at midnight and binged on ice cream?</p>
-<p>Or gorged on <em>vada pav</em> just because “we felt like it?”</p>
-<p>“I shouldn't be eating this,” you say. But ate it anyway. After a few bites, the guilt starts to creep in.</p> <a href="how-to-control-food-cravings.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80" alt="Dosa" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>How many calories does a dosa have?</h2>
-
-<div>
-<p><em>Thin. Crispy. Golden</em></p>
-</div>
-<p><em>Dosa</em> has become the perfect Sunday brunch.</p>
-<p>But did you know, a medium-sized dosa (97g), has about 168 calories, 3.9 g protein, and 3.7g fat.</p> <a href="dosa-calories.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80" alt="Millets" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Discover 11 types of millets in India and their health benefits</h2>
-<p>Millets, the staple superfood, are healthy, delicious, and grow in the driest climates. They can end global hunger. </p>
-<p>But, what are the types of millets in India? What are the health benefits of eating millets? </p>
-<p>We know the answer.</p> <a href="types-of-millets.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80" alt="Mounjaro KwikPen" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Weight loss drug Mounjaro launched in India</h2>
-
-<p>Weight loss used to be an impossible dream. At least, this was the case in India, where, according to Eli Lilly, <a href="https://www.aninews.in/news/business/eli-lilly-launches-mounjaro-in-india-for-anti-obesity-treatment20250320142529/">101 million</a> people are currently struggling with obesity and type 2 diabetes. Then came the weight loss drugs - and in the blink of an eye, the tables turned.</p>
-<div>
-<p><strong>With Aktive, you get:</strong></p>
-<div>
-<p><span></span> Treatments by partner doctors</p>
-<p><span></span> Customised diet &amp; fitness plans</p>
-<p><span></span> Free doorstep delivery</p>
-</div>
-
-</div> <a href="mounjaro-injection.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80" alt="Yoga poses" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>5 simple yoga poses for weight loss at home</h2>
-<p>Caught up in your daily routine and struggling to find some time for your health?</p>
-<p>It’s time to give your body the care it deserves.</p>
-<p>Read on to find out how you can <strong>lose weight with 5 simple yoga poses</strong> in your safe space, your home. </p> <a href="yoga-poses-for-weight-loss.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=1200&q=80" alt="Paneer" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Explained: Calories &amp; protein in 100g paneer</h2>
-<p>Is <em>paneer</em> your friend or foe?</p>
-<p>Many can’t resist this soft, bright white cube in the form of grilled <em>tandoori paneer</em>, <em>paneer frankie,</em> or even <em>paneer butter masala.</em></p>
-<p>Trying to lose weight? Does <em>paneer,</em> with its calorie and protein count, help or harm your weight loss plans?</p>
-<p>Let us answer.</p> <a href="100g-paneer-protein-and-calories.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?auto=format&fit=crop&w=1200&q=80" alt="Surya Namaskar" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Explained: Benefits of surya namaskar &amp; how to perform</h2>
-<p>What if you could <strong>burn calories,</strong> build strength, become flexible, and feel peaceful in <strong>less than 30 minutes?</strong></p>
-<p>This is not some get-fit-quick scheme.</p>
-<p>Rather, it is a <strong>full-body reset</strong> derived from ancient Indian knowledge.</p> <a href="benefits-of-surya-namaskar.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80" alt="Roti" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Confused about the calories in 1 roti? We can help!</h2>
-<p>Let’s answer this right away—a <a href="https://wjpr.s3.ap-south-1.amazonaws.com/article_issue/a4567073d02df52687b4aba71c1a5e10.pdf">medium-sized <em>roti</em></a> contains <strong>up to 106 calories</strong>, 22.32g of carbohydrates, 3.84g to 5.28g of protein, 2.84g of fibre, and 0.52g of fats.</p> <a href="calories-in-1-roti.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80" alt="Women's health" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>How to lose weight with PCOS? Try these 10 simple tips</h2>
-<p>Polycystic Ovary Syndrome (PCOS) is a stubborn health issue. About <a href="https://communities.springernature.com/posts/polycystic-ovary-syndrome-among-indian-women#:~:text=The%20frequency%20of%20PCOS%20varies%20throughout%20India%20between%203.7%25%20and%2022.5%25%20depending%20on%20the%20demographics%20and%20conditions">3.7%-22.5% of Indian women</a> have PCOS. The health concern can make it hard for you to lose weight. </p>
-<p>If you have PCOS, you must be all too familiar with the struggle. But what if we told you, there’s a way to <strong>lose weight with PCOS</strong>.</p> <a href="how-to-lose-weight-with-pcos.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80" alt="Exercise banner" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>10 exercises to reduce belly fat: No gym subscription needed</h2>
-<p>Get rid of belly fat with simple exercises that are sure to strengthen your muscles and burn calories from the comfort of your home. Read on to know more about 10 amazing exercises to lose belly fat.</p> <a href="exercise-to-reduce-belly-fat.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1494390248081-4e521a5940db?auto=format&fit=crop&w=1200&q=80" alt="Fresh produce" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Why these 9 dry fruits are must-have for your health</h2>
-<p>Dry fruits are actually superfoods. They benefit our health in more ways than one. But did you know, dry fruits can also help you lose weight? Read on to know how different dry fruits can get you one step closer to healthier versions of yourself.</p> <a href="dry-fruits-benefits.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1559847844-5315695dadae?auto=format&fit=crop&w=1200&q=80" alt="Poha" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Can a dish of poha a day keep the doctor away?</h2>
-<p>Who doesn’t love <em>poha</em>? If you have grown up in a desi household, your mornings would most likely be enveloped in the savoury, wafty fragrance of <em>poha</em> being cooked on medium heat. But, did you know, <em>poha</em> can be much more than a delightful breakfast dish? Read on to know how a plate of <em>poha</em> can benefit your health.</p> <a href="poha-benefits.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1553787499-bf9f07640615?auto=format&fit=crop&w=1200&q=80" alt="Makhana" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Makhanas benefits for weight loss: 10 easy recipes to try today</h2>
-<p>It is tasty. It is crispy. It is healthy.</p>
-<p>It is <em>phool makhana</em> (fox nuts), the perfect food to binge on when hunger strikes, without worrying about putting on weight! But, is it really that healthy? Yes! Turns out, there’s more to <em>makhana</em> then meets the eye.</p> <a href="makhana-health-benefits.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80" alt="Chia seeds for weight loss" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>9 easy ways to eat chia seeds for weight loss</h2>
-
-<p>Who knew a tiny seed will one day help you lose weight? Just a teaspoon of chia seeds in a pre-workout drink or the ever-nourishing <em>khichdi</em> can help you reach your weight loss goals. But, how to eat chia seeds for weight loss? Let’s find out.</p> <a href="chia-seeds-for-weight-loss.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1500375592092-40eb2168fd21?auto=format&fit=crop&w=1200&q=80" alt="Healthy drinks" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>7 best Indian homemade drinks to try for weight loss</h2>
-
-<p>On a scorching summer afternoon, a glass of buttermilk or <em>gond katira</em> quenches thirst and cools down the body. But did you know these same drinks (and many others) can help you lose weight, too?</p> <a href="indian-homemade-drinks-for-weight-loss.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80" alt="Health programme" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>What to know before taking Wegovy for weight loss?</h2>
-
-<p>Wegovy has revolutionised the science of weight loss. But is the once-weekly weight loss injection really worth the hype? Does it help maintain weight loss in the long run? Does it come with adverse side effects? Scroll down to find the answers.</p> <a href="wegovy-for-weight-loss.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&w=1200&q=80" alt="Semaglutide tablets" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>How Rybelsus tablet helped Indians lose weight</h2>
-
-<p>Rybelsus, the oral form of semaglutide, is a pill designed to control appetite and help with weight loss. But is this just a quick, temporary health hack or a new horizon in weight management? Read on to find out.</p> <a href="rybelsus-tablets-for-weight-loss.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1200&q=80" alt="Health and wellness" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>How jeera water benefits weight loss</h2>
-
-<p>Everyone is talking about this simple yet powerful drink from the Indian cuisine. It's not an exotic import. It’s not a trendy infusion endorsed by Bollywood celebs, the elite, and the rich. Instead, it's a humble drink that has been a part of our heritage for centuries - <em>jeera</em> water (cumin water). This simple drink, made from just two ingredients, has become popular, and for good reason.</p> <a href="jeera-water-benefits.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&w=1200&q=80" alt="Injection pen" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>All about Ozempic injection for weight loss</h2>
-
-<p>Ozempic has taken the world by storm. This simple injection has helped thousands of people lose weight drastically so far. But what is Ozempic? How does it work? Is it ideal for you? Read on to find out. </p> <a href="ozempic-for-weight-loss.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1200&q=80" alt="Calorie counting" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>CICO diet for weight loss: All you need to know</h2>
-<p>The Calories In, Calories Out method for weight loss is the founding principle of the world’s most popular diets. But how exactly does the CICO diet for weight loss work? How to practice it in daily life? Read on to find out.</p>
- <a href="cico-for-weight-loss.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-<div>
-<div>
-<div>
-<div>
-<img src="https://images.unsplash.com/photo-1506629082955-511b1aa562c8?auto=format&fit=crop&w=1200&q=80" alt="Walking 10000 steps" loading="lazy" style="width:100%;height:auto;border-radius:8px;">
-</div>
-</div>
-<div>
-<div>
-<!-- <p class="p12 article-title"></p> -->
-<p></p>
-<h2>Can 10,000 steps a day keep the doctor away?</h2>
-<p>Learn about the story and science behind the 10,000-step count for weight loss. Get practical tips on how to start walking your way to fitness.</p>
- <a href="10000-steps-for-weight-loss.html">Read full article</a>
-</div>
-</div>
-</div>
-</div>
-</div>
-
-</div>
-      </article>
-
-      <!-- Sidebar -->
-      <aside class="article-sidebar">
-        <div class="sidebar-card" id="toc-card">
-          <h4>In this article</h4>
-          <ul class="toc-list" id="toc-list">
-            <!-- JS fills this -->
-          </ul>
-        </div>
-        <div class="sidebar-cta">
-          <h4>Ready to lose weight?</h4>
-          <p>Get a doctor-prescribed GLP-1 programme tailored to your health profile.</p>
-          <a href="new-programme.html" class="btn btn--primary btn--sm" style="width:100%;justify-content:center;">
-            Check eligibility
-          </a>
-        </div>
-      </aside>
-
+  <!-- CATEGORY FILTER -->
+  <section class="section--sm" style="background:var(--grey-50);border-bottom:1px solid var(--grey-100);">
+    <div class="container">
+      <div class="pill-nav" id="categoryFilter">
+        <button class="pill-nav__item active" data-category="all">All articles</button>
+        <button class="pill-nav__item" data-category="comparison">🆚 Comparisons</button>
+        <button class="pill-nav__item" data-category="mounjaro">Mounjaro</button>
+        <button class="pill-nav__item" data-category="wegovy">Wegovy</button>
+        <button class="pill-nav__item" data-category="ozempic">Ozempic</button>
+        <button class="pill-nav__item" data-category="nutrition">Nutrition</button>
+        <button class="pill-nav__item" data-category="exercise">Exercise</button>
+        <button class="pill-nav__item" data-category="health">Health</button>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- RELATED CTA -->
+  <!-- FEATURED ARTICLES -->
+  <section class="section">
+    <div class="container">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:32px;">
+        <div>
+          <span class="badge badge--navy">Featured</span>
+          <h2 style="margin-top:12px;font-size:1.8rem;letter-spacing:-0.02em;">Editor's picks</h2>
+        </div>
+      </div>
+
+      <div class="articles-masonry">
+        <!-- NEW: Tirzepatide vs Semaglutide — featured comparison article -->
+        <a href="tirzepatide-vs-semaglutide.html" class="article-card-lg featured" data-category="comparison" style="border:2px solid var(--gold);">
+          <div class="article-card__img-lg" style="background:linear-gradient(135deg,var(--navy) 0%,#0d2240 100%);position:relative;overflow:hidden;">
+            <!-- Mini chart SVG illustration -->
+            <svg width="160" height="80" viewBox="0 0 160 80" fill="none" style="position:absolute;bottom:16px;left:50%;transform:translateX(-50%);">
+              <polyline points="0,72 20,58 40,44 60,30 80,18 100,10 120,5 140,3 160,2" stroke="#D4AF37" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <polyline points="0,72 20,64 40,55 60,46 80,38 100,32 120,28 140,26 160,25" stroke="rgba(255,255,255,0.45)" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+              <circle cx="160" cy="2"  r="5" fill="#D4AF37"/>
+              <circle cx="160" cy="25" r="4" fill="rgba(255,255,255,0.55)"/>
+            </svg>
+            <div style="position:absolute;top:20px;left:20px;background:var(--gold);color:var(--navy);font-size:0.65rem;font-weight:800;letter-spacing:0.08em;text-transform:uppercase;border-radius:20px;padding:4px 10px;">New · Head-to-head</div>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__tag" style="color:var(--gold-dark);">GLP-1 Comparison · 14 min read</div>
+            <div class="article-card__title">Tirzepatide vs Semaglutide: Which drug produces more weight loss? (Data &amp; graphs)</div>
+            <p class="article-card__excerpt">The definitive, data-driven comparison — including SURMOUNT-5 head-to-head trial results, interactive weight-loss graphs, and what the science says about which GLP-1 wins on efficacy.</p>
+            <div class="article-card__meta">
+              <span>📅 2025</span>
+              <span>·</span>
+              <span>NEJM-referenced</span>
+              <span>·</span>
+              <span style="color:var(--gold-dark);font-weight:700;">★ Editor's pick</span>
+            </div>
+          </div>
+        </a>
+
+        <a href="mounjaro-weight-loss-timeline.html" class="article-card-lg featured" data-category="mounjaro">
+          <div class="article-card__img-lg">
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M6 36 Q12 12 24 24 Q36 36 42 12"/><circle cx="24" cy="24" r="4" fill="currentColor"/></svg>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Mounjaro · 8 min read</div>
+            <div class="article-card__title">Mounjaro weight loss timeline: What to expect month by month</div>
+            <p class="article-card__excerpt">Most people on Mounjaro can see changes in their weight within 4–8 weeks. The most significant changes in weight are typically seen between months 3–6. Here's a complete, week-by-week breakdown of what to expect.</p>
+            <div class="article-card__meta">
+              <span>📅 2024</span>
+              <span>·</span>
+              <span>Mounjaro guide</span>
+            </div>
+          </div>
+        </a>
+        <a href="wegovy-for-weight-loss.html" class="article-card-lg" data-category="wegovy">
+          <div class="article-card__img-lg">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><circle cx="20" cy="20" r="12"/><path d="M20 14v8l5 3"/></svg>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Wegovy · 7 min read</div>
+            <div class="article-card__title">Wegovy for weight loss: Everything you need to know</div>
+            <p class="article-card__excerpt">A complete guide to Wegovy (semaglutide) — how it works, expected results, dosage, side effects, and how to get started in India.</p>
+            <div class="article-card__meta"><span>📅 2024</span><span>·</span><span>Wegovy guide</span></div>
+          </div>
+        </a>
+        <a href="zero-calorie-foods.html" class="article-card-lg" data-category="nutrition">
+          <div class="article-card__img-lg">
+            <svg width="40" height="40" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><path d="M20 8 Q28 14 28 22 A8 8 0 0 1 12 22 Q12 14 20 8z"/><path d="M20 30v4"/></svg>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Nutrition · 5 min read</div>
+            <div class="article-card__title">9 almost zero-calorie foods that'll help you lose weight</div>
+            <p class="article-card__excerpt">These filling, nutritious foods let you eat freely without guilt — and they pair perfectly with any GLP-1 weight loss programme.</p>
+            <div class="article-card__meta"><span>📅 2024</span><span>·</span><span>Nutrition guide</span></div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- MEDICATIONS SECTION -->
+  <section class="section section--grey" id="medications">
+    <div class="container">
+      <div style="margin-bottom:32px;">
+        <span class="badge badge--navy">Medications</span>
+        <h2 style="margin-top:12px;font-size:1.8rem;letter-spacing:-0.02em;">GLP-1 medication guides</h2>
+      </div>
+      <div class="articles-grid-4">
+        <!-- Tirz vs Sema comparison card -->
+        <a href="tirzepatide-vs-semaglutide.html" class="article-card-sm" data-category="comparison" style="border:1px solid var(--gold);box-shadow:0 0 0 1px rgba(212,175,55,0.2);">
+          <div class="article-card__img-sm" style="background:linear-gradient(135deg,var(--navy) 0%,#0d2240 100%);">
+            <svg width="36" height="36" viewBox="0 0 36 36" fill="none" stroke="#D4AF37" stroke-width="1.8" stroke-linecap="round">
+              <polyline points="2,30 10,18 18,10 26,5 34,2" stroke="#D4AF37" stroke-width="2.5"/>
+              <polyline points="2,30 10,24 18,19 26,16 34,15" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+            </svg>
+          </div>
+          <div class="article-card__body">
+            <div class="article-card__tag" style="color:var(--gold-dark);">🆚 Comparison · New 2025</div>
+            <div class="article-card__title">Tirzepatide vs Semaglutide — the definitive data-driven comparison</div>
+          </div>
+        </a>
+
+        <a href="mounjaro-injection.html" class="article-card-sm" data-category="mounjaro">
+          <div class="article-card__img-sm">💉</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Mounjaro</div>
+            <div class="article-card__title">How to inject Mounjaro — a complete guide</div>
+          </div>
+        </a>
+        <a href="mounjaro-side-effects.html" class="article-card-sm" data-category="mounjaro">
+          <div class="article-card__img-sm">⚠️</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Mounjaro</div>
+            <div class="article-card__title">Mounjaro side effects: what to expect and manage</div>
+          </div>
+        </a>
+        <a href="mounjaro-dosage-for-weight-loss.html" class="article-card-sm" data-category="mounjaro">
+          <div class="article-card__img-sm">📋</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Mounjaro</div>
+            <div class="article-card__title">Mounjaro dosage chart for weight loss</div>
+          </div>
+        </a>
+        <a href="mounjaro-weight-loss-tips.html" class="article-card-sm" data-category="mounjaro">
+          <div class="article-card__img-sm">💡</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Mounjaro</div>
+            <div class="article-card__title">Tips to maximise weight loss on Mounjaro</div>
+          </div>
+        </a>
+        <a href="wegovy-injection.html" class="article-card-sm" data-category="wegovy">
+          <div class="article-card__img-sm">💉</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Wegovy</div>
+            <div class="article-card__title">How to inject Wegovy — a step-by-step guide</div>
+          </div>
+        </a>
+        <a href="wegovy-dosage.html" class="article-card-sm" data-category="wegovy">
+          <div class="article-card__img-sm">📋</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Wegovy</div>
+            <div class="article-card__title">Wegovy dosage guide for weight loss</div>
+          </div>
+        </a>
+        <a href="wegovy-side-effects.html" class="article-card-sm" data-category="wegovy">
+          <div class="article-card__img-sm">⚠️</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Wegovy</div>
+            <div class="article-card__title">How to manage Wegovy side effects</div>
+          </div>
+        </a>
+        <a href="ways-to-increase-weight-loss-on-wegovy.html" class="article-card-sm" data-category="wegovy">
+          <div class="article-card__img-sm">📈</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Wegovy</div>
+            <div class="article-card__title">Ways to increase weight loss on Wegovy</div>
+          </div>
+        </a>
+        <a href="ozempic-for-weight-loss.html" class="article-card-sm" data-category="ozempic">
+          <div class="article-card__img-sm">🔬</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Ozempic</div>
+            <div class="article-card__title">Ozempic for weight loss: does it work?</div>
+          </div>
+        </a>
+        <a href="rybelsus-tablets-for-weight-loss.html" class="article-card-sm" data-category="ozempic">
+          <div class="article-card__img-sm">💊</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Rybelsus</div>
+            <div class="article-card__title">Rybelsus tablets for weight loss: the oral GLP-1 option</div>
+          </div>
+        </a>
+        <a href="how-to-take-mounjaro.html" class="article-card-sm" data-category="mounjaro">
+          <div class="article-card__img-sm">📖</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Mounjaro</div>
+            <div class="article-card__title">How to take Mounjaro for best results</div>
+          </div>
+        </a>
+        <a href="how-to-take-wegovy.html" class="article-card-sm" data-category="wegovy">
+          <div class="article-card__img-sm">📖</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Wegovy</div>
+            <div class="article-card__title">How to take Wegovy for best results</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NUTRITION & EXERCISE -->
+  <section class="section">
+    <div class="container">
+      <div style="margin-bottom:32px;">
+        <span class="badge badge--navy">Nutrition &amp; Exercise</span>
+        <h2 style="margin-top:12px;font-size:1.8rem;letter-spacing:-0.02em;">Food, fitness &amp; Indian health</h2>
+      </div>
+      <div class="articles-grid-3">
+        <a href="high-protein-indian-diet-plan.html" class="article-card-sm" data-category="nutrition">
+          <div class="article-card__img-sm">🥘</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Nutrition</div>
+            <div class="article-card__title">7-day high-protein Indian diet plan for weight loss</div>
+          </div>
+        </a>
+        <a href="indian-breakfast-recipes-for-weight-loss.html" class="article-card-sm" data-category="nutrition">
+          <div class="article-card__img-sm">🍽️</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Nutrition</div>
+            <div class="article-card__title">8 healthy Indian breakfast recipes for weight loss</div>
+          </div>
+        </a>
+        <a href="exercise-to-reduce-belly-fat.html" class="article-card-sm" data-category="exercise">
+          <div class="article-card__img-sm">🏃</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Exercise</div>
+            <div class="article-card__title">Best exercises to reduce belly fat fast</div>
+          </div>
+        </a>
+        <a href="10000-steps-for-weight-loss.html" class="article-card-sm" data-category="exercise">
+          <div class="article-card__img-sm">👟</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Exercise</div>
+            <div class="article-card__title">Can walking 10,000 steps a day help you lose weight?</div>
+          </div>
+        </a>
+        <a href="yoga-poses-for-weight-loss.html" class="article-card-sm" data-category="exercise">
+          <div class="article-card__img-sm">🧘</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Exercise</div>
+            <div class="article-card__title">Best yoga poses for weight loss</div>
+          </div>
+        </a>
+        <a href="benefits-of-surya-namaskar.html" class="article-card-sm" data-category="exercise">
+          <div class="article-card__img-sm">☀️</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Exercise</div>
+            <div class="article-card__title">Benefits of Surya Namaskar for weight loss</div>
+          </div>
+        </a>
+        <a href="calories-in-1-roti.html" class="article-card-sm" data-category="nutrition">
+          <div class="article-card__img-sm">🫓</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Nutrition</div>
+            <div class="article-card__title">How many calories are in 1 roti?</div>
+          </div>
+        </a>
+        <a href="calories-in-a-mango.html" class="article-card-sm" data-category="nutrition">
+          <div class="article-card__img-sm">🥭</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Nutrition</div>
+            <div class="article-card__title">Calories in a mango: Can you eat mangoes while losing weight?</div>
+          </div>
+        </a>
+        <a href="calories-in-apple.html" class="article-card-sm" data-category="nutrition">
+          <div class="article-card__img-sm">🍎</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Nutrition</div>
+            <div class="article-card__title">Calories in an apple and its weight loss benefits</div>
+          </div>
+        </a>
+        <a href="100g-paneer-protein-and-calories.html" class="article-card-sm" data-category="nutrition">
+          <div class="article-card__img-sm">🧀</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Nutrition</div>
+            <div class="article-card__title">100g paneer: protein content and calories explained</div>
+          </div>
+        </a>
+        <a href="dosa-calories.html" class="article-card-sm" data-category="nutrition">
+          <div class="article-card__img-sm">🫔</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Nutrition</div>
+            <div class="article-card__title">Dosa calories: is dosa good for weight loss?</div>
+          </div>
+        </a>
+        <a href="poha-benefits.html" class="article-card-sm" data-category="nutrition">
+          <div class="article-card__img-sm">🍚</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Nutrition</div>
+            <div class="article-card__title">Poha benefits for weight loss and health</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HEALTH & WELLNESS -->
+  <section class="section section--grey">
+    <div class="container">
+      <div style="margin-bottom:32px;">
+        <span class="badge badge--navy">Health &amp; Wellness</span>
+        <h2 style="margin-top:12px;font-size:1.8rem;letter-spacing:-0.02em;">Health conditions &amp; lifestyle</h2>
+      </div>
+      <div class="articles-grid-3">
+        <a href="how-to-lose-weight-with-pcos.html" class="article-card-sm" data-category="health">
+          <div class="article-card__img-sm">🩺</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Health</div>
+            <div class="article-card__title">How to lose weight with PCOS effectively</div>
+          </div>
+        </a>
+        <a href="black-coffee-for-weight-loss.html" class="article-card-sm" data-category="nutrition">
+          <div class="article-card__img-sm">☕</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Nutrition</div>
+            <div class="article-card__title">Black coffee for weight loss: does it actually work?</div>
+          </div>
+        </a>
+        <a href="hot-water-benefits.html" class="article-card-sm" data-category="health">
+          <div class="article-card__img-sm">💧</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Health</div>
+            <div class="article-card__title">Hot water benefits for weight loss and health</div>
+          </div>
+        </a>
+        <a href="jeera-water-benefits.html" class="article-card-sm" data-category="health">
+          <div class="article-card__img-sm">🌿</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Health</div>
+            <div class="article-card__title">Jeera water benefits for weight loss</div>
+          </div>
+        </a>
+        <a href="chia-seeds-for-weight-loss.html" class="article-card-sm" data-category="nutrition">
+          <div class="article-card__img-sm">🌱</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Nutrition</div>
+            <div class="article-card__title">Chia seeds for weight loss: benefits and how to use</div>
+          </div>
+        </a>
+        <a href="cico-for-weight-loss.html" class="article-card-sm" data-category="health">
+          <div class="article-card__img-sm">⚖️</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Health</div>
+            <div class="article-card__title">CICO diet for weight loss: calories in, calories out explained</div>
+          </div>
+        </a>
+        <a href="how-to-control-food-cravings.html" class="article-card-sm" data-category="health">
+          <div class="article-card__img-sm">🧠</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Health</div>
+            <div class="article-card__title">How to control food cravings effectively</div>
+          </div>
+        </a>
+        <a href="dry-fruits-benefits.html" class="article-card-sm" data-category="nutrition">
+          <div class="article-card__img-sm">🥜</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Nutrition</div>
+            <div class="article-card__title">Dry fruits benefits for weight loss and health</div>
+          </div>
+        </a>
+        <a href="makhana-health-benefits.html" class="article-card-sm" data-category="nutrition">
+          <div class="article-card__img-sm">🍿</div>
+          <div class="article-card__body">
+            <div class="article-card__tag">Nutrition</div>
+            <div class="article-card__title">Makhana health benefits for weight loss</div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
   <div class="cta-strip">
     <div class="container">
-      <h2>Put this knowledge into action</h2>
-      <p>Figur Health combines clinically proven GLP-1 medication with personalised support — the science-backed way to lose weight for good.</p>
-      <a href="new-programme.html" class="btn btn--primary btn--lg">
-        Check my eligibility
+      <h2>Ready to go beyond the reading?</h2>
+      <p>Put these insights into action with Figur Health's clinically proven weight loss programme.</p>
+      <a href="programme.html" class="btn btn--primary btn--lg">Check my eligibility
         <svg width="16" height="16" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8h10M9 4l4 4-4 4"/></svg>
       </a>
     </div>
@@ -1005,87 +482,38 @@
     <div class="container">
       <div class="footer__grid">
         <div class="footer__brand">
-          <a href="new-index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img"/></a>
-          <p>Science-backed weight loss for modern India. GLP-1 medication, doctor support, and lasting results — delivered to your door.</p>
+          <a href="index.html" class="nav__logo"><img src="brand-logo.svg" alt="Figur Health" class="nav__logo-img" /></a>
+          <p>Science-backed weight loss for modern India.</p>
         </div>
-        <div class="footer__col"><h4>Programme</h4><ul>
-          <li><a href="new-programme.html">How it works</a></li>
-          <li><a href="new-science.html">The science</a></li>
-          <li><a href="mounjaro-injection.html">Mounjaro</a></li>
-          <li><a href="wegovy-for-weight-loss.html">Wegovy</a></li>
-          <li><a href="ozempic-for-weight-loss.html">Ozempic</a></li>
-          <li><a href="rybelsus-tablets-for-weight-loss.html">Rybelsus</a></li>
-        </ul></div>
-        <div class="footer__col"><h4>Learn</h4><ul>
-          <li><a href="new-health-guide.html">Health guide</a></li>
-          <li><a href="new-success-stories.html">Success stories</a></li>
-          <li><a href="new-faqs.html">FAQs</a></li>
-          <li><a href="contact-us.html">Contact us</a></li>
-        </ul></div>
-        <div class="footer__col"><h4>Legal</h4><ul>
-          <li><a href="#">Privacy Policy</a></li>
-          <li><a href="#">Terms of Service</a></li>
-          <li><a href="#">Medical Disclaimer</a></li>
-        </ul></div>
+        <div class="footer__col"><h4>Programme</h4><ul><li><a href="programme.html">How it works</a></li><li><a href="science.html">The science</a></li><li><a href="mounjaro-injection.html">Mounjaro</a></li><li><a href="wegovy-for-weight-loss.html">Wegovy</a></li></ul></div>
+        <div class="footer__col"><h4>Learn</h4><ul><li><a href="health-guide.html">Health guide</a></li><li><a href="success-stories.html">Success stories</a></li><li><a href="faqs.html">FAQs</a></li><li><a href="contact-us.html">Contact us</a></li></ul></div>
+        <div class="footer__col"><h4>Legal</h4><ul><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms of Service</a></li><li><a href="#">Medical Disclaimer</a></li></ul></div>
       </div>
-      <div class="footer__bottom">
-        <span>© 2025 Figur Health. All rights reserved.</span>
-        <span>Content is for informational purposes only. Always consult a qualified medical professional.</span>
-      </div>
+      <div class="footer__bottom"><span>© 2025 Figur Health. All rights reserved.</span></div>
     </div>
   </footer>
 
   <script>
-    // Mobile nav
     const hamburger = document.getElementById('hamburger');
-    const navLinks  = document.getElementById('navLinks');
-    const navCta    = document.getElementById('navCta');
-    if (hamburger) hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
-      navCta.classList.toggle('open');
-    });
+    const navLinks = document.getElementById('navLinks');
+    const navCta = document.getElementById('navCta');
+    hamburger.addEventListener('click', () => { navLinks.classList.toggle('open'); navCta.classList.toggle('open'); });
 
-    // Build table of contents from h2s
-    const tocList = document.getElementById('toc-list');
-    const h2s = document.querySelectorAll('.article-body h2');
-    if (tocList && h2s.length) {
-      h2s.forEach((h, i) => {
-        h.id = h.id || 'section-' + i;
-        const li = document.createElement('li');
-        li.innerHTML = '<a href="#' + h.id + '">' + h.textContent + '</a>';
-        tocList.appendChild(li);
+    // Category filter
+    const filterBtns = document.querySelectorAll('.pill-nav__item');
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const cat = btn.dataset.category;
+        document.querySelectorAll('[data-category]').forEach(card => {
+          if (cat === 'all' || card.dataset.category === cat) {
+            card.style.display = '';
+          } else {
+            card.style.display = 'none';
+          }
+        });
       });
-    } else if (tocList) {
-      document.getElementById('toc-card').style.display = 'none';
-    }
-
-    // Style key-takeaways sections
-    document.querySelectorAll('.article-body h2').forEach(h2 => {
-      const txt = h2.textContent.toLowerCase();
-      if (txt.includes('key takeaway') || txt.includes('key points') || txt.includes('in brief')) {
-        const section = document.createElement('div');
-        section.className = 'key-takeaways';
-        let next = h2.nextElementSibling;
-        const kids = [h2.cloneNode(true)];
-        while (next && !['H2','H3'].includes(next.tagName)) {
-          kids.push(next.cloneNode(true));
-          const tmp = next.nextElementSibling;
-          next.remove();
-          next = tmp;
-        }
-        kids.forEach(k => section.appendChild(k));
-        h2.replaceWith(section);
-      }
-    });
-
-    // Scroll animation
-    const obs = new IntersectionObserver((entries) => {
-      entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });
-    }, {threshold:0.08});
-    document.querySelectorAll('.article-body h2, .article-body h3, .article-body p, .article-body table, .article-body img').forEach(el => {
-      el.style.opacity = '0'; el.style.transform = 'translateY(14px)';
-      el.style.transition = 'opacity 0.45s ease, transform 0.45s ease';
-      obs.observe(el);
     });
   </script>
 </body>

@@ -109,24 +109,47 @@ img { max-width: 100%; display: block; }
 .nav__logo {
   display: flex;
   align-items: center;
-  gap: 0;
+  gap: 10px;
   text-decoration: none;
 }
 
 .nav__logo-img {
-  height: 48px;
+  height: 44px;
   width: auto;
   display: block;
-  /* SVG has a cream background — give it a tight white pill so it pops on navy */
   background: #FAFAFA;
   border-radius: 8px;
   padding: 3px 6px;
   object-fit: contain;
+  flex-shrink: 0;
 }
 
-/* Keep text fallback hidden now that we have a real logo */
 .nav__logo-text {
-  display: none;
+  display: flex;
+  flex-direction: column;
+  line-height: 1;
+}
+
+.nav__logo-text .logo-name {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 800;
+  font-size: 1.25rem;
+  color: var(--white);
+  letter-spacing: -0.02em;
+}
+
+.nav__logo-text .logo-name .logo-dot {
+  color: var(--gold);
+}
+
+.nav__logo-text .logo-sub {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.6rem;
+  font-weight: 600;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(212,175,55,0.7);
+  margin-top: 2px;
 }
 
 .nav__logo-mark {

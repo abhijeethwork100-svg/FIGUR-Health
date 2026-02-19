@@ -10,4 +10,4 @@ Disallow: /messaging.html
 Disallow: /delivery-address.html
 Disallow: /referral.html
 
-Sitemap: https://figurhealth.com/sitemap.xml
+Sitemap: https://figur.health/sitemap.xml

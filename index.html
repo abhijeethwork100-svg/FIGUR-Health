@@ -999,8 +999,15 @@
     const navLinks = document.getElementById('navLinks');
     const navCta = document.getElementById('navCta');
     hamburger.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+      const isOpen = navLinks.classList.toggle('open');
       navCta.classList.toggle('open');
+      if (isOpen) {
+        // Position CTA right below the links panel
+        const linksBottom = navLinks.getBoundingClientRect().bottom + window.scrollY;
+        navCta.style.top = linksBottom + 'px';
+      } else {
+        navCta.style.top = '';
+      }
     });
 
     // Scroll animation (IntersectionObserver)

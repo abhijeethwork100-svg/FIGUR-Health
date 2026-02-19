@@ -310,7 +310,15 @@
     const hamburger = document.getElementById('hamburger');
     const navLinks = document.getElementById('navLinks');
     const navCta = document.getElementById('navCta');
-    hamburger.addEventListener('click', () => { navLinks.classList.toggle('open'); navCta.classList.toggle('open'); });
+    hamburger.addEventListener('click', () => {
+      const isOpen = navLinks.classList.toggle('open');
+      navCta.classList.toggle('open');
+      if (isOpen) {
+        navCta.style.top = (navLinks.getBoundingClientRect().bottom + window.scrollY) + 'px';
+      } else {
+        navCta.style.top = '';
+      }
+    });
 
     const observer = new IntersectionObserver((entries) => {
       entries.forEach(e => { if (e.isIntersecting) { e.target.style.opacity='1'; e.target.style.transform='translateY(0)'; } });

@@ -1,3 +1,13 @@
-User-agent: *
+# Figur Health — robots.txt
+# Allow all public pages, block private/account pages
 
-Sitemap: https://www.aktive.co.in/sitemap.xml
+User-agent: *
+Disallow: /logout.html
+Disallow: /upcoming-shipment.html
+Disallow: /completed-shipment.html
+Disallow: /my-profile.html
+Disallow: /messaging.html
+Disallow: /delivery-address.html
+Disallow: /referral.html
+
+Sitemap: https://figurhealth.com/sitemap.xml
